@@ -107,6 +107,27 @@
       "font": {
         "color": "white"
       }
+    },
+    "FACEREC": {
+      "classifierName": "Facial Recognition Technologies",
+      "color": "MediumSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CELL": {
+      "classifierName": "Cell Phone Analytics",
+      "color": "DarkCyan",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SOCIAL": {
+      "classifierName": "Social Media Analysis",
+      "color": "CornflowerBlue",
+      "font": {
+        "color": "white"
+      }
     }
   },
   "nodes": [
@@ -1402,6 +1423,234 @@
       "id": 258,
       "label": "Dark Web Evidence",
       "group": "DIGIT"
+    },
+    {
+      "id": 259,
+      "label": "Facial Recognition Overview",
+      "group": "FACEREC",
+      "shape": "box"
+    },
+    {
+      "id": 260,
+      "label": "Biometric Identification Principles",
+      "group": "FACEREC"
+    },
+    {
+      "id": 261,
+      "label": "Face Detection Algorithms",
+      "group": "FACEREC"
+    },
+    {
+      "id": 262,
+      "label": "Facial Landmark Detection",
+      "group": "FACEREC"
+    },
+    {
+      "id": 263,
+      "label": "Eigenface Method",
+      "group": "FACEREC"
+    },
+    {
+      "id": 264,
+      "label": "Deep Learning Face Recognition",
+      "group": "FACEREC"
+    },
+    {
+      "id": 265,
+      "label": "Convolutional Neural Networks",
+      "group": "FACEREC"
+    },
+    {
+      "id": 266,
+      "label": "3D Facial Mapping",
+      "group": "FACEREC"
+    },
+    {
+      "id": 267,
+      "label": "Law Enforcement Face Databases",
+      "group": "FACEREC"
+    },
+    {
+      "id": 268,
+      "label": "NGI Facial Recognition System",
+      "group": "FACEREC"
+    },
+    {
+      "id": 269,
+      "label": "CCTV Surveillance Analysis",
+      "group": "FACEREC"
+    },
+    {
+      "id": 270,
+      "label": "Facial Superimposition",
+      "group": "FACEREC"
+    },
+    {
+      "id": 271,
+      "label": "Age Progression Modeling",
+      "group": "FACEREC"
+    },
+    {
+      "id": 272,
+      "label": "Facial Recognition Admissibility",
+      "group": "FACEREC"
+    },
+    {
+      "id": 273,
+      "label": "Algorithmic Bias in Facial Recognition",
+      "group": "FACEREC"
+    },
+    {
+      "id": 274,
+      "label": "Cell Phone Forensics Overview",
+      "group": "CELL",
+      "shape": "box"
+    },
+    {
+      "id": 275,
+      "label": "SIM Card Analysis",
+      "group": "CELL"
+    },
+    {
+      "id": 276,
+      "label": "IMEI Device Identification",
+      "group": "CELL"
+    },
+    {
+      "id": 277,
+      "label": "Cell Tower Records",
+      "group": "CELL"
+    },
+    {
+      "id": 278,
+      "label": "Call Detail Records (CDR)",
+      "group": "CELL"
+    },
+    {
+      "id": 279,
+      "label": "Tower Triangulation",
+      "group": "CELL"
+    },
+    {
+      "id": 280,
+      "label": "GPS Location Data Extraction",
+      "group": "CELL"
+    },
+    {
+      "id": 281,
+      "label": "Application Data Extraction",
+      "group": "CELL"
+    },
+    {
+      "id": 282,
+      "label": "Social Media Evidence Recovery",
+      "group": "CELL"
+    },
+    {
+      "id": 283,
+      "label": "Deleted Data Recovery on Mobile",
+      "group": "CELL"
+    },
+    {
+      "id": 284,
+      "label": "Mobile Operating System Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 285,
+      "label": "iOS Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 286,
+      "label": "Android Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 287,
+      "label": "Cellebrite UFED",
+      "group": "CELL"
+    },
+    {
+      "id": 288,
+      "label": "Cloud Data Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 289,
+      "label": "Social Media Forensics Overview",
+      "group": "SOCIAL",
+      "shape": "box"
+    },
+    {
+      "id": 290,
+      "label": "Open-Source Intelligence (OSINT)",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 291,
+      "label": "Facebook Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 292,
+      "label": "Twitter/X Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 293,
+      "label": "Instagram Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 294,
+      "label": "LinkedIn Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 295,
+      "label": "Social Media Legal Process",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 296,
+      "label": "Profile Data Preservation",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 297,
+      "label": "Social Media Authentication",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 298,
+      "label": "Geolocation from Social Posts",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 299,
+      "label": "Post Timestamp Analysis",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 300,
+      "label": "Deleted Post Recovery",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 301,
+      "label": "Image Metadata in Social Media",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 302,
+      "label": "Social Network Analysis",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 303,
+      "label": "Social Media Admissibility (FRE 901)",
+      "group": "SOCIAL"
     }
   ],
   "edges": [
@@ -2692,6 +2941,210 @@
     {
       "from": 258,
       "to": 256
+    },
+    {
+      "from": 259,
+      "to": 238
+    },
+    {
+      "from": 260,
+      "to": 259
+    },
+    {
+      "from": 261,
+      "to": 260
+    },
+    {
+      "from": 262,
+      "to": 261
+    },
+    {
+      "from": 263,
+      "to": 262
+    },
+    {
+      "from": 264,
+      "to": 262
+    },
+    {
+      "from": 265,
+      "to": 264
+    },
+    {
+      "from": 266,
+      "to": 259
+    },
+    {
+      "from": 267,
+      "to": 259
+    },
+    {
+      "from": 268,
+      "to": 267
+    },
+    {
+      "from": 269,
+      "to": 259
+    },
+    {
+      "from": 270,
+      "to": 259
+    },
+    {
+      "from": 271,
+      "to": 270
+    },
+    {
+      "from": 272,
+      "to": 259
+    },
+    {
+      "from": 272,
+      "to": 8
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 274,
+      "to": 238
+    },
+    {
+      "from": 275,
+      "to": 274
+    },
+    {
+      "from": 276,
+      "to": 274
+    },
+    {
+      "from": 277,
+      "to": 274
+    },
+    {
+      "from": 278,
+      "to": 277
+    },
+    {
+      "from": 279,
+      "to": 277
+    },
+    {
+      "from": 280,
+      "to": 274
+    },
+    {
+      "from": 280,
+      "to": 251
+    },
+    {
+      "from": 281,
+      "to": 274
+    },
+    {
+      "from": 282,
+      "to": 281
+    },
+    {
+      "from": 283,
+      "to": 274
+    },
+    {
+      "from": 284,
+      "to": 274
+    },
+    {
+      "from": 285,
+      "to": 284
+    },
+    {
+      "from": 286,
+      "to": 284
+    },
+    {
+      "from": 287,
+      "to": 274
+    },
+    {
+      "from": 288,
+      "to": 274
+    },
+    {
+      "from": 289,
+      "to": 238
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 289
+    },
+    {
+      "from": 292,
+      "to": 289
+    },
+    {
+      "from": 293,
+      "to": 289
+    },
+    {
+      "from": 294,
+      "to": 289
+    },
+    {
+      "from": 295,
+      "to": 289
+    },
+    {
+      "from": 295,
+      "to": 8
+    },
+    {
+      "from": 296,
+      "to": 289
+    },
+    {
+      "from": 297,
+      "to": 289
+    },
+    {
+      "from": 298,
+      "to": 290
+    },
+    {
+      "from": 298,
+      "to": 251
+    },
+    {
+      "from": 299,
+      "to": 289
+    },
+    {
+      "from": 300,
+      "to": 289
+    },
+    {
+      "from": 301,
+      "to": 249
+    },
+    {
+      "from": 301,
+      "to": 289
+    },
+    {
+      "from": 302,
+      "to": 290
+    },
+    {
+      "from": 303,
+      "to": 297
+    },
+    {
+      "from": 303,
+      "to": 8
     }
   ]
 }

@@ -16,14 +16,14 @@ chapter is organized around authentic casework methodologies used by practicing
 forensic scientists, crime scene investigators, medical examiners, and digital
 forensics specialists.
 
-The course is structured as six thematic modules spanning 15 chapters:
+The course is structured as six thematic modules spanning 18 chapters:
 
 - **Module 1** — Forensic infrastructure and crime scene methodology
 - **Module 2** — Physical and microscopic trace evidence
 - **Module 3** — Biological evidence and biochemistry
 - **Module 4** — Chemical and biomolecular analysis
 - **Module 5** — Anatomical and ecological analysis
-- **Module 6** — Materials science and digital evidence
+- **Module 6** — Materials science, digital evidence, facial recognition, cell phone analytics, and social media analysis
 
 By the end of the course, students will be able to apply scientific reasoning
 to solve simulated casework, communicate findings in the language of expert
@@ -85,6 +85,30 @@ context. It is also suitable for dual-enrollment programs at community colleges.
 15. **Digital forensics and cybercrime** — volatile vs. non-volatile storage,
     write-blockers, forensic imaging, MD5/SHA-256 hashing, EXIF metadata
     recovery, network forensics basics, encryption and steganography
+16. **Digital face recognition technologies** — biometric identification
+    principles, 2D and 3D facial detection algorithms, facial landmark
+    detection, eigenface method, deep learning approaches (convolutional neural
+    networks), law enforcement facial recognition databases (NGI-Facial),
+    CCTV and surveillance footage analysis, facial superimposition, age
+    progression modeling, Daubert admissibility of facial recognition evidence,
+    and algorithmic bias assessment
+17. **Cell phone analytics and mobile forensics** — SIM card extraction and
+    analysis, IMEI device identification, cell tower records and Call Detail
+    Records (CDR), tower triangulation for geographic location estimation, GPS
+    coordinate extraction, application data and social media evidence recovery,
+    deleted data recovery from mobile devices, iOS vs. Android forensic tool
+    chains (Cellebrite UFED), cloud data extraction and legal process, and
+    privacy law considerations for mobile evidence
+18. **Social media analysis and open-source intelligence (OSINT)** — principles
+    of legally compliant open-source intelligence gathering; evidence collection
+    from Facebook, Twitter/X, Instagram, and LinkedIn; profile data preservation
+    and authentication; obtaining platform records through legal process
+    (preservation letters, subpoenas, and court orders); geolocation inference
+    from post content and embedded metadata; timestamp analysis and chronological
+    reconstruction; deleted post recovery techniques; social network analysis
+    (mapping relationships and communication patterns); image metadata in social
+    media uploads; and authentication and admissibility standards for social
+    media evidence under Federal Rules of Evidence 901
 
 ## Topics NOT Covered
 
@@ -97,6 +121,14 @@ following topics are explicitly excluded:
   (explosive chemistry is treated at the post-blast diagnostic level only)
 - Detailed hacking or intrusion techniques (digital forensics covers evidence
   recovery and analysis, not offensive cyber operations)
+- Offensive techniques for bypassing facial recognition systems (spoofing
+  attacks, adversarial patches, or deepfake generation)
+- Cell interception methods using IMSI catchers or SS7 protocol exploits
+  (mobile forensics covers evidence recovery from devices and carrier records
+  only, not active interception)
+- Unauthorized access to private social media accounts or scraping in violation
+  of platform Terms of Service (OSINT collection is limited to publicly
+  available content and lawfully obtained platform records)
 - Graphic depictions of violence or crime-scene gore
 
 ## Learning Outcomes
@@ -120,6 +152,16 @@ following competencies organized by the 2001 Bloom's Taxonomy:
   reaction).
 - **Identify** the 206 bones of the human skeleton and major anatomical landmarks
   used in forensic biological profiling.
+- **List** the primary biometric modalities used in forensic identification
+  (face, fingerprint, iris, voice) and the law enforcement databases associated
+  with each.
+- **Recall** the key data fields stored in a Call Detail Record (CDR) and the
+  investigative information each field provides.
+- **List** the four major social media platforms commonly examined in digital
+  investigations and the primary evidence categories each platform stores.
+- **Recall** the three legal mechanisms used to obtain social media records from
+  platforms (preservation letter, subpoena, and court order) and the scope of
+  data each compels.
 
 ### Understand
 
@@ -137,6 +179,18 @@ following competencies organized by the 2001 Bloom's Taxonomy:
   accelerants collected from airtight arson debris cans.
 - **Describe** how fracture mechanics (radial vs. concentric lines) encode the
   direction and sequence of impact forces in shattered glass.
+- **Explain** how a convolutional neural network (CNN) extracts facial feature
+  vectors for biometric matching and why training data diversity affects
+  system accuracy and fairness.
+- **Describe** how cell tower triangulation estimates a mobile device's
+  geographic location from signal timing data and the relative positions of
+  three or more towers.
+- **Explain** the difference between publicly accessible open-source social
+  media content and private content that requires legal process to access,
+  and why that distinction governs investigative collection methods.
+- **Describe** how geotagged images and platform check-in features on
+  Instagram and Facebook can corroborate or contradict a subject's claimed
+  location.
 
 ### Apply
 
@@ -154,6 +208,18 @@ following competencies organized by the 2001 Bloom's Taxonomy:
   Hours (ADH) models and ambient temperature data.
 - **Select** the correct chemical or physical development method for latent
   prints based on the porosity of the substrate surface.
+- **Apply** a facial recognition workflow — image preprocessing, landmark
+  extraction, and feature vector comparison — to evaluate whether two
+  surveillance images depict the same individual.
+- **Extract** and interpret Call Detail Records and cell tower logs to
+  reconstruct the geographic movement of a mobile device across an
+  investigative timeline.
+- **Preserve** and authenticate a social media post as digital evidence using
+  accepted screen-capture documentation, URL notation, and hash verification
+  protocols.
+- **Apply** social network analysis techniques to map communication
+  relationships and identify key actors in a criminal network from platform
+  connection and messaging data.
 
 ### Analyze
 
@@ -172,6 +238,19 @@ following competencies organized by the 2001 Bloom's Taxonomy:
   or authorship.
 - **Differentiate** between the legal evidentiary thresholds of criminal law
   (beyond a reasonable doubt) and civil law (preponderance of evidence).
+- **Analyze** the sources of error in facial recognition matches — including
+  pose variation, illumination, aging, and algorithmic bias — and assess their
+  cumulative impact on evidentiary weight.
+- **Distinguish** between data recoverable directly from a mobile device and
+  data that requires a carrier subpoena or cloud legal process, explaining the
+  legal authority needed for each.
+- **Analyze** a series of posts across multiple platforms to construct a
+  chronological activity timeline and assess its consistency with physical
+  and digital evidence from other disciplines.
+- **Distinguish** between content data, metadata, and subscriber information
+  available from social media platforms and identify the specific legal
+  authority (subpoena, court order, or search warrant) required for each
+  category.
 
 ### Evaluate
 
@@ -190,6 +269,18 @@ following competencies organized by the 2001 Bloom's Taxonomy:
   detect fraudulent duplication.
 - **Evaluate** the integrity of a digital evidence acquisition by verifying
   cryptographic hash values before and after forensic imaging.
+- **Evaluate** whether facial recognition evidence in a case meets the Daubert
+  Standard, citing peer-reviewed false-positive rate studies and documented
+  bias disparities across demographic groups.
+- **Assess** the chain-of-custody implications of extracting mobile evidence
+  using different acquisition methods (logical, file system, physical, and
+  chip-off) and the data categories each method reaches.
+- **Evaluate** whether a social media exhibit meets the authentication
+  requirements of Federal Rule of Evidence 901 and anticipate the most common
+  defense challenges to its admissibility.
+- **Assess** the reliability of deleted post recovery techniques and the
+  conditions — platform retention policy, device cache, third-party archive —
+  under which recovered content retains sufficient evidentiary integrity.
 
 ### Create
 
@@ -209,3 +300,16 @@ following competencies organized by the 2001 Bloom's Taxonomy:
 - **Design** a peer-reviewed laboratory protocol for a novel trace-evidence
   comparison scenario that includes hypothesis, methods, controls, and an
   evidence admissibility argument under the Daubert Standard.
+- **Develop** a mobile device examination report that integrates CDR location
+  data, application usage logs, and social media timestamps into a coherent
+  investigative timeline with full chain-of-custody documentation.
+- **Design** a facial recognition admissibility argument — including error
+  rate analysis, demographic bias assessment, and examiner qualification
+  criteria — suitable for expert testimony under the Daubert Standard.
+- **Develop** a social media evidence package — including preserved
+  screenshots, hash verification records, legal process documentation, and
+  an OSINT activity log — that meets court submission standards.
+- **Design** an open-source intelligence collection plan for a
+  missing-persons investigation that balances investigative thoroughness
+  with Fourth Amendment constraints and platform Terms of Service
+  boundaries.
