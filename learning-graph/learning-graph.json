@@ -1,0 +1,3150 @@
+{
+  "metadata": {
+    "title": "Forensic Science Learning Graph",
+    "description": "A comprehensive learning graph for a high school forensic science course covering 258 concepts across 15 chapters and 6 modules: forensic infrastructure, trace evidence, biological evidence, chemical analysis, anatomical analysis, and digital evidence.",
+    "creator": "Dan McCreary",
+    "date": "2026-06-01",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CSI": {
+      "classifierName": "Crime Scene Investigation",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PRINTS": {
+      "classifierName": "Fingerprint Analysis",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "TRACE": {
+      "classifierName": "Trace Evidence",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SERO": {
+      "classifierName": "Forensic Serology",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "BPA": {
+      "classifierName": "Bloodstain Pattern Analysis",
+      "color": "DarkRed",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DNA": {
+      "classifierName": "Forensic DNA Profiling",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CHEM": {
+      "classifierName": "Chemical Analysis & Toxicology",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "FIRE": {
+      "classifierName": "Fire, Arson & Explosives",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ANTHRO": {
+      "classifierName": "Forensic Anthropology",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ENTOM": {
+      "classifierName": "Forensic Entomology",
+      "color": "OliveDrab",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ARMS": {
+      "classifierName": "Firearms, Ballistics & Toolmarks",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DOCX": {
+      "classifierName": "Document Examination",
+      "color": "Peru",
+      "font": {
+        "color": "black"
+      }
+    },
+    "DIGIT": {
+      "classifierName": "Digital Forensics",
+      "color": "DimGray",
+      "font": {
+        "color": "white"
+      }
+    },
+    "FACEREC": {
+      "classifierName": "Facial Recognition Technologies",
+      "color": "MediumSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CELL": {
+      "classifierName": "Cell Phone Analytics",
+      "color": "DarkCyan",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SOCIAL": {
+      "classifierName": "Social Media Analysis",
+      "color": "CornflowerBlue",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Forensic Science Overview",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Scientific Method in Forensics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 3,
+      "label": "Locard Exchange Principle",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 4,
+      "label": "Daubert Standard",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "Frye Standard",
+      "group": "FOUND"
+    },
+    {
+      "id": 6,
+      "label": "Expert Witness Role",
+      "group": "FOUND"
+    },
+    {
+      "id": 7,
+      "label": "Expert Witness Ethics",
+      "group": "FOUND"
+    },
+    {
+      "id": 8,
+      "label": "Evidence Admissibility",
+      "group": "FOUND"
+    },
+    {
+      "id": 9,
+      "label": "Fourth Amendment Rights",
+      "group": "FOUND"
+    },
+    {
+      "id": 10,
+      "label": "Fifth Amendment Rights",
+      "group": "FOUND"
+    },
+    {
+      "id": 11,
+      "label": "Search and Seizure Law",
+      "group": "FOUND"
+    },
+    {
+      "id": 12,
+      "label": "Warrant Requirements",
+      "group": "FOUND"
+    },
+    {
+      "id": 13,
+      "label": "Criminal Law vs Civil Law",
+      "group": "FOUND"
+    },
+    {
+      "id": 14,
+      "label": "Criminal vs Civil Standards",
+      "group": "FOUND"
+    },
+    {
+      "id": 15,
+      "label": "Criminal Justice Structure",
+      "group": "FOUND"
+    },
+    {
+      "id": 16,
+      "label": "Chain of Custody",
+      "group": "CSI"
+    },
+    {
+      "id": 17,
+      "label": "Seven S's of Crime Scene",
+      "group": "CSI"
+    },
+    {
+      "id": 18,
+      "label": "Crime Scene Perimeter Security",
+      "group": "CSI"
+    },
+    {
+      "id": 19,
+      "label": "Primary vs Secondary Scenes",
+      "group": "CSI"
+    },
+    {
+      "id": 20,
+      "label": "Crime Scene Documentation",
+      "group": "CSI"
+    },
+    {
+      "id": 21,
+      "label": "Crime Scene Photography",
+      "group": "CSI"
+    },
+    {
+      "id": 22,
+      "label": "Crime Scene Sketching",
+      "group": "CSI"
+    },
+    {
+      "id": 23,
+      "label": "Scaled Sketch Techniques",
+      "group": "CSI"
+    },
+    {
+      "id": 24,
+      "label": "Triangulation Measurement",
+      "group": "CSI"
+    },
+    {
+      "id": 25,
+      "label": "Evidence Search Patterns",
+      "group": "CSI"
+    },
+    {
+      "id": 26,
+      "label": "Grid Search Pattern",
+      "group": "CSI"
+    },
+    {
+      "id": 27,
+      "label": "Spiral Search Pattern",
+      "group": "CSI"
+    },
+    {
+      "id": 28,
+      "label": "Zone Search Pattern",
+      "group": "CSI"
+    },
+    {
+      "id": 29,
+      "label": "Evidence Identification",
+      "group": "CSI"
+    },
+    {
+      "id": 30,
+      "label": "Evidence Collection Protocols",
+      "group": "CSI"
+    },
+    {
+      "id": 31,
+      "label": "Evidence Packaging Materials",
+      "group": "CSI"
+    },
+    {
+      "id": 32,
+      "label": "Druggist Fold Technique",
+      "group": "CSI"
+    },
+    {
+      "id": 33,
+      "label": "Biohazard Evidence Containers",
+      "group": "CSI"
+    },
+    {
+      "id": 34,
+      "label": "Physical Evidence Types",
+      "group": "CSI"
+    },
+    {
+      "id": 35,
+      "label": "Trace Evidence",
+      "group": "CSI"
+    },
+    {
+      "id": 36,
+      "label": "Dactyloscopy",
+      "group": "PRINTS"
+    },
+    {
+      "id": 37,
+      "label": "Friction Ridge Skin",
+      "group": "PRINTS"
+    },
+    {
+      "id": 38,
+      "label": "Dermal Papillae",
+      "group": "PRINTS"
+    },
+    {
+      "id": 39,
+      "label": "Fingerprint Pattern: Loops",
+      "group": "PRINTS"
+    },
+    {
+      "id": 40,
+      "label": "Fingerprint Pattern: Whorls",
+      "group": "PRINTS"
+    },
+    {
+      "id": 41,
+      "label": "Fingerprint Pattern: Arches",
+      "group": "PRINTS"
+    },
+    {
+      "id": 42,
+      "label": "Ulnar vs Radial Loops",
+      "group": "PRINTS"
+    },
+    {
+      "id": 43,
+      "label": "Whorl Subtypes",
+      "group": "PRINTS"
+    },
+    {
+      "id": 44,
+      "label": "Tented Arch Pattern",
+      "group": "PRINTS"
+    },
+    {
+      "id": 45,
+      "label": "Minutiae Points",
+      "group": "PRINTS"
+    },
+    {
+      "id": 46,
+      "label": "Ridge Endings",
+      "group": "PRINTS"
+    },
+    {
+      "id": 47,
+      "label": "Bifurcations",
+      "group": "PRINTS"
+    },
+    {
+      "id": 48,
+      "label": "Patent Fingerprints",
+      "group": "PRINTS"
+    },
+    {
+      "id": 49,
+      "label": "Plastic Fingerprints",
+      "group": "PRINTS"
+    },
+    {
+      "id": 50,
+      "label": "Latent Fingerprints",
+      "group": "PRINTS"
+    },
+    {
+      "id": 51,
+      "label": "Fingerprint Substrates",
+      "group": "PRINTS"
+    },
+    {
+      "id": 52,
+      "label": "Cyanoacrylate Fuming",
+      "group": "PRINTS"
+    },
+    {
+      "id": 53,
+      "label": "Ninhydrin Development",
+      "group": "PRINTS"
+    },
+    {
+      "id": 54,
+      "label": "Silver Nitrate Development",
+      "group": "PRINTS"
+    },
+    {
+      "id": 55,
+      "label": "Iodine Fuming",
+      "group": "PRINTS"
+    },
+    {
+      "id": 56,
+      "label": "AFIS Database",
+      "group": "PRINTS"
+    },
+    {
+      "id": 57,
+      "label": "Fingerprint Individualization",
+      "group": "PRINTS"
+    },
+    {
+      "id": 58,
+      "label": "Hair Anatomy",
+      "group": "TRACE"
+    },
+    {
+      "id": 59,
+      "label": "Hair Cuticle Structure",
+      "group": "TRACE"
+    },
+    {
+      "id": 60,
+      "label": "Hair Cortex Structure",
+      "group": "TRACE"
+    },
+    {
+      "id": 61,
+      "label": "Hair Medulla Structure",
+      "group": "TRACE"
+    },
+    {
+      "id": 62,
+      "label": "Medullary Index Calculation",
+      "group": "TRACE"
+    },
+    {
+      "id": 63,
+      "label": "Human vs Non-Human Hair",
+      "group": "TRACE"
+    },
+    {
+      "id": 64,
+      "label": "Hair Scale Patterns",
+      "group": "TRACE"
+    },
+    {
+      "id": 65,
+      "label": "Pigment Granules in Hair",
+      "group": "TRACE"
+    },
+    {
+      "id": 66,
+      "label": "Natural Fibers",
+      "group": "TRACE"
+    },
+    {
+      "id": 67,
+      "label": "Synthetic Fibers",
+      "group": "TRACE"
+    },
+    {
+      "id": 68,
+      "label": "Fiber Microscopy",
+      "group": "TRACE"
+    },
+    {
+      "id": 69,
+      "label": "Burn Testing of Fibers",
+      "group": "TRACE"
+    },
+    {
+      "id": 70,
+      "label": "Chemical Solubility Testing",
+      "group": "TRACE"
+    },
+    {
+      "id": 71,
+      "label": "Class Evidence Concept",
+      "group": "TRACE"
+    },
+    {
+      "id": 72,
+      "label": "Glass Composition",
+      "group": "TRACE"
+    },
+    {
+      "id": 73,
+      "label": "Refractive Index",
+      "group": "TRACE"
+    },
+    {
+      "id": 74,
+      "label": "Becke Line Test",
+      "group": "TRACE"
+    },
+    {
+      "id": 75,
+      "label": "Immersion Oil Technique",
+      "group": "TRACE"
+    },
+    {
+      "id": 76,
+      "label": "Radial Fracture Lines",
+      "group": "TRACE"
+    },
+    {
+      "id": 77,
+      "label": "Concentric Fracture Lines",
+      "group": "TRACE"
+    },
+    {
+      "id": 78,
+      "label": "3R Rule for Glass",
+      "group": "TRACE"
+    },
+    {
+      "id": 79,
+      "label": "Glass Fracture Sequence",
+      "group": "TRACE"
+    },
+    {
+      "id": 80,
+      "label": "Glass Fracture Mechanics",
+      "group": "TRACE"
+    },
+    {
+      "id": 81,
+      "label": "Soil Composition Analysis",
+      "group": "TRACE"
+    },
+    {
+      "id": 82,
+      "label": "Soil pH Measurement",
+      "group": "TRACE"
+    },
+    {
+      "id": 83,
+      "label": "Particle Size Distribution",
+      "group": "TRACE"
+    },
+    {
+      "id": 84,
+      "label": "Gradient Tube Density",
+      "group": "TRACE"
+    },
+    {
+      "id": 85,
+      "label": "Sand Mineral Analysis",
+      "group": "TRACE"
+    },
+    {
+      "id": 86,
+      "label": "Blood Composition",
+      "group": "SERO"
+    },
+    {
+      "id": 87,
+      "label": "Erythrocytes",
+      "group": "SERO"
+    },
+    {
+      "id": 88,
+      "label": "Leukocytes",
+      "group": "SERO"
+    },
+    {
+      "id": 89,
+      "label": "Platelets and Plasma",
+      "group": "SERO"
+    },
+    {
+      "id": 90,
+      "label": "Presumptive Blood Tests",
+      "group": "SERO"
+    },
+    {
+      "id": 91,
+      "label": "Kastle-Meyer Color Test",
+      "group": "SERO"
+    },
+    {
+      "id": 92,
+      "label": "Luminol Test",
+      "group": "SERO"
+    },
+    {
+      "id": 93,
+      "label": "Fluorescein Test",
+      "group": "SERO"
+    },
+    {
+      "id": 94,
+      "label": "Confirmatory Blood Tests",
+      "group": "SERO"
+    },
+    {
+      "id": 95,
+      "label": "ABO Blood Typing",
+      "group": "SERO"
+    },
+    {
+      "id": 96,
+      "label": "Rh Factor",
+      "group": "SERO"
+    },
+    {
+      "id": 97,
+      "label": "Agglutination Chemistry",
+      "group": "SERO"
+    },
+    {
+      "id": 98,
+      "label": "Secretor Status",
+      "group": "SERO"
+    },
+    {
+      "id": 99,
+      "label": "Semen Detection (PSA Test)",
+      "group": "SERO"
+    },
+    {
+      "id": 100,
+      "label": "Salivary Amylase Test",
+      "group": "SERO"
+    },
+    {
+      "id": 101,
+      "label": "Urine Detection",
+      "group": "SERO"
+    },
+    {
+      "id": 102,
+      "label": "Blood Drop Physics",
+      "group": "BPA"
+    },
+    {
+      "id": 103,
+      "label": "Surface Tension of Blood",
+      "group": "BPA"
+    },
+    {
+      "id": 104,
+      "label": "Blood Viscosity",
+      "group": "BPA"
+    },
+    {
+      "id": 105,
+      "label": "Blood Cohesion",
+      "group": "BPA"
+    },
+    {
+      "id": 106,
+      "label": "Low-Velocity Impact Spatter",
+      "group": "BPA"
+    },
+    {
+      "id": 107,
+      "label": "Medium-Velocity Impact Spatter",
+      "group": "BPA"
+    },
+    {
+      "id": 108,
+      "label": "High-Velocity Impact Spatter",
+      "group": "BPA"
+    },
+    {
+      "id": 109,
+      "label": "Angle of Impact Formula",
+      "group": "BPA"
+    },
+    {
+      "id": 110,
+      "label": "Area of Convergence",
+      "group": "BPA"
+    },
+    {
+      "id": 111,
+      "label": "Area of Origin in 3D Space",
+      "group": "BPA"
+    },
+    {
+      "id": 112,
+      "label": "Stringing Technique",
+      "group": "BPA"
+    },
+    {
+      "id": 113,
+      "label": "Passive Bloodstains",
+      "group": "BPA"
+    },
+    {
+      "id": 114,
+      "label": "Transfer Bloodstains",
+      "group": "BPA"
+    },
+    {
+      "id": 115,
+      "label": "Cast-Off Bloodstains",
+      "group": "BPA"
+    },
+    {
+      "id": 116,
+      "label": "Arterial Spurting Pattern",
+      "group": "BPA"
+    },
+    {
+      "id": 117,
+      "label": "Wipe vs Swipe Stains",
+      "group": "BPA"
+    },
+    {
+      "id": 118,
+      "label": "DNA Structure Review",
+      "group": "DNA"
+    },
+    {
+      "id": 119,
+      "label": "Nuclear DNA",
+      "group": "DNA"
+    },
+    {
+      "id": 120,
+      "label": "Mitochondrial DNA",
+      "group": "DNA"
+    },
+    {
+      "id": 121,
+      "label": "Short Tandem Repeats (STRs)",
+      "group": "DNA"
+    },
+    {
+      "id": 122,
+      "label": "CODIS Loci",
+      "group": "DNA"
+    },
+    {
+      "id": 123,
+      "label": "Polymerase Chain Reaction",
+      "group": "DNA"
+    },
+    {
+      "id": 124,
+      "label": "PCR Primer Design",
+      "group": "DNA"
+    },
+    {
+      "id": 125,
+      "label": "DNA Denaturation",
+      "group": "DNA"
+    },
+    {
+      "id": 126,
+      "label": "DNA Annealing",
+      "group": "DNA"
+    },
+    {
+      "id": 127,
+      "label": "DNA Extension",
+      "group": "DNA"
+    },
+    {
+      "id": 128,
+      "label": "Capillary Electrophoresis",
+      "group": "DNA"
+    },
+    {
+      "id": 129,
+      "label": "Electropherogram Interpretation",
+      "group": "DNA"
+    },
+    {
+      "id": 130,
+      "label": "DNA Alleles",
+      "group": "DNA"
+    },
+    {
+      "id": 131,
+      "label": "Homozygous vs Heterozygous",
+      "group": "DNA"
+    },
+    {
+      "id": 132,
+      "label": "Y-STR Analysis",
+      "group": "DNA"
+    },
+    {
+      "id": 133,
+      "label": "Random Match Probability",
+      "group": "DNA"
+    },
+    {
+      "id": 134,
+      "label": "Product Rule in Statistics",
+      "group": "DNA"
+    },
+    {
+      "id": 135,
+      "label": "DNA Database Searching",
+      "group": "DNA"
+    },
+    {
+      "id": 136,
+      "label": "Pharmacokinetics (ADME)",
+      "group": "CHEM"
+    },
+    {
+      "id": 137,
+      "label": "Drug Absorption",
+      "group": "CHEM"
+    },
+    {
+      "id": 138,
+      "label": "Drug Distribution",
+      "group": "CHEM"
+    },
+    {
+      "id": 139,
+      "label": "Drug Metabolism",
+      "group": "CHEM"
+    },
+    {
+      "id": 140,
+      "label": "Drug Elimination",
+      "group": "CHEM"
+    },
+    {
+      "id": 141,
+      "label": "Controlled Substances Act",
+      "group": "CHEM"
+    },
+    {
+      "id": 142,
+      "label": "Drug Schedule Classifications",
+      "group": "CHEM"
+    },
+    {
+      "id": 143,
+      "label": "Marquis Reagent Test",
+      "group": "CHEM"
+    },
+    {
+      "id": 144,
+      "label": "Scott Reagent Test",
+      "group": "CHEM"
+    },
+    {
+      "id": 145,
+      "label": "Duquenois-Levine Test",
+      "group": "CHEM"
+    },
+    {
+      "id": 146,
+      "label": "Gas Chromatography (GC)",
+      "group": "CHEM"
+    },
+    {
+      "id": 147,
+      "label": "Mass Spectrometry (MS)",
+      "group": "CHEM"
+    },
+    {
+      "id": 148,
+      "label": "GC-MS Analysis",
+      "group": "CHEM"
+    },
+    {
+      "id": 149,
+      "label": "LC-MS/MS Analysis",
+      "group": "CHEM"
+    },
+    {
+      "id": 150,
+      "label": "Blood Alcohol Concentration",
+      "group": "CHEM"
+    },
+    {
+      "id": 151,
+      "label": "BAC Retro-Extrapolation",
+      "group": "CHEM"
+    },
+    {
+      "id": 152,
+      "label": "Cyanide Poisoning",
+      "group": "CHEM"
+    },
+    {
+      "id": 153,
+      "label": "Carbon Monoxide Poisoning",
+      "group": "CHEM"
+    },
+    {
+      "id": 154,
+      "label": "Heavy Metal Toxicology",
+      "group": "CHEM"
+    },
+    {
+      "id": 155,
+      "label": "Fire Tetrahedron",
+      "group": "FIRE"
+    },
+    {
+      "id": 156,
+      "label": "Combustion Chemistry",
+      "group": "FIRE"
+    },
+    {
+      "id": 157,
+      "label": "Oxidation Reactions",
+      "group": "FIRE"
+    },
+    {
+      "id": 158,
+      "label": "Ignition Temperature",
+      "group": "FIRE"
+    },
+    {
+      "id": 159,
+      "label": "Flash Point",
+      "group": "FIRE"
+    },
+    {
+      "id": 160,
+      "label": "Arson Investigation",
+      "group": "FIRE"
+    },
+    {
+      "id": 161,
+      "label": "Accelerant Pour Patterns",
+      "group": "FIRE"
+    },
+    {
+      "id": 162,
+      "label": "Multiple Points of Origin",
+      "group": "FIRE"
+    },
+    {
+      "id": 163,
+      "label": "V-Pattern Burn Indicators",
+      "group": "FIRE"
+    },
+    {
+      "id": 164,
+      "label": "Spalling in Arson",
+      "group": "FIRE"
+    },
+    {
+      "id": 165,
+      "label": "Headspace Analysis",
+      "group": "FIRE"
+    },
+    {
+      "id": 166,
+      "label": "SPME Technique",
+      "group": "FIRE"
+    },
+    {
+      "id": 167,
+      "label": "Low Explosives",
+      "group": "FIRE"
+    },
+    {
+      "id": 168,
+      "label": "High Explosives",
+      "group": "FIRE"
+    },
+    {
+      "id": 169,
+      "label": "Post-Blast Analysis",
+      "group": "FIRE"
+    },
+    {
+      "id": 170,
+      "label": "Human Osteology",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 171,
+      "label": "Skeletal Anatomy (206 Bones)",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 172,
+      "label": "Pelvic Morphology Analysis",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 173,
+      "label": "Subpubic Angle Measurement",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 174,
+      "label": "Greater Sciatic Notch",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 175,
+      "label": "Cranial Feature Analysis",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 176,
+      "label": "Biological Sex Estimation",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 177,
+      "label": "Epiphyseal Fusion",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 178,
+      "label": "Cranial Suture Closure",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 179,
+      "label": "Age-at-Death Estimation",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 180,
+      "label": "Long Bone Measurements",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 181,
+      "label": "Stature Regression Equations",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 182,
+      "label": "Antemortem Trauma",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 183,
+      "label": "Perimortem Trauma",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 184,
+      "label": "Postmortem Trauma",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 185,
+      "label": "Bone Trauma Differentiation",
+      "group": "ANTHRO"
+    },
+    {
+      "id": 186,
+      "label": "Stages of Decomposition",
+      "group": "ENTOM"
+    },
+    {
+      "id": 187,
+      "label": "Fresh Stage of Decomposition",
+      "group": "ENTOM"
+    },
+    {
+      "id": 188,
+      "label": "Bloat Stage of Decomposition",
+      "group": "ENTOM"
+    },
+    {
+      "id": 189,
+      "label": "Active Decay Stage",
+      "group": "ENTOM"
+    },
+    {
+      "id": 190,
+      "label": "Advanced Decay Stage",
+      "group": "ENTOM"
+    },
+    {
+      "id": 191,
+      "label": "Dry Remains Stage",
+      "group": "ENTOM"
+    },
+    {
+      "id": 192,
+      "label": "Blowfly Lifecycle",
+      "group": "ENTOM"
+    },
+    {
+      "id": 193,
+      "label": "Calliphoridae Family",
+      "group": "ENTOM"
+    },
+    {
+      "id": 194,
+      "label": "Insect Egg Stage",
+      "group": "ENTOM"
+    },
+    {
+      "id": 195,
+      "label": "Larval Instar Stages",
+      "group": "ENTOM"
+    },
+    {
+      "id": 196,
+      "label": "Blowfly Pupa Stage",
+      "group": "ENTOM"
+    },
+    {
+      "id": 197,
+      "label": "Accumulated Degree Hours",
+      "group": "ENTOM"
+    },
+    {
+      "id": 198,
+      "label": "Accumulated Degree Days",
+      "group": "ENTOM"
+    },
+    {
+      "id": 199,
+      "label": "Minimum Post-Mortem Interval",
+      "group": "ENTOM"
+    },
+    {
+      "id": 200,
+      "label": "Insect Succession Ecology",
+      "group": "ENTOM"
+    },
+    {
+      "id": 201,
+      "label": "Environmental Variables in PMI",
+      "group": "ENTOM"
+    },
+    {
+      "id": 202,
+      "label": "Necrophagous Insects",
+      "group": "ENTOM"
+    },
+    {
+      "id": 203,
+      "label": "Internal Ballistics",
+      "group": "ARMS"
+    },
+    {
+      "id": 204,
+      "label": "Rifling in Firearms",
+      "group": "ARMS"
+    },
+    {
+      "id": 205,
+      "label": "Lands and Grooves",
+      "group": "ARMS"
+    },
+    {
+      "id": 206,
+      "label": "Breech Face Markings",
+      "group": "ARMS"
+    },
+    {
+      "id": 207,
+      "label": "Firing Pin Impressions",
+      "group": "ARMS"
+    },
+    {
+      "id": 208,
+      "label": "Ejector Marks",
+      "group": "ARMS"
+    },
+    {
+      "id": 209,
+      "label": "External Ballistics",
+      "group": "ARMS"
+    },
+    {
+      "id": 210,
+      "label": "Bullet Trajectory Calculation",
+      "group": "ARMS"
+    },
+    {
+      "id": 211,
+      "label": "Terminal Ballistics",
+      "group": "ARMS"
+    },
+    {
+      "id": 212,
+      "label": "Entrance vs Exit Wounds",
+      "group": "ARMS"
+    },
+    {
+      "id": 213,
+      "label": "Wound Morphology",
+      "group": "ARMS"
+    },
+    {
+      "id": 214,
+      "label": "Ricochet Analysis",
+      "group": "ARMS"
+    },
+    {
+      "id": 215,
+      "label": "Gunshot Residue (GSR)",
+      "group": "ARMS"
+    },
+    {
+      "id": 216,
+      "label": "Modified Griess Test",
+      "group": "ARMS"
+    },
+    {
+      "id": 217,
+      "label": "Toolmark Analysis",
+      "group": "ARMS"
+    },
+    {
+      "id": 218,
+      "label": "Compression Marks",
+      "group": "ARMS"
+    },
+    {
+      "id": 219,
+      "label": "Sliding Marks",
+      "group": "ARMS"
+    },
+    {
+      "id": 220,
+      "label": "Serial Number Restoration",
+      "group": "ARMS"
+    },
+    {
+      "id": 221,
+      "label": "Acid Etching Technique",
+      "group": "ARMS"
+    },
+    {
+      "id": 222,
+      "label": "Comparison Microscope",
+      "group": "ARMS"
+    },
+    {
+      "id": 223,
+      "label": "Handwriting Analysis",
+      "group": "DOCX"
+    },
+    {
+      "id": 224,
+      "label": "Handwriting Characteristics",
+      "group": "DOCX"
+    },
+    {
+      "id": 225,
+      "label": "Line Quality in Writing",
+      "group": "DOCX"
+    },
+    {
+      "id": 226,
+      "label": "Slant and Spacing Analysis",
+      "group": "DOCX"
+    },
+    {
+      "id": 227,
+      "label": "Requested Writing Exemplars",
+      "group": "DOCX"
+    },
+    {
+      "id": 228,
+      "label": "Unrequested Writing Exemplars",
+      "group": "DOCX"
+    },
+    {
+      "id": 229,
+      "label": "Blind Forgery",
+      "group": "DOCX"
+    },
+    {
+      "id": 230,
+      "label": "Simulated Forgery",
+      "group": "DOCX"
+    },
+    {
+      "id": 231,
+      "label": "Traced Forgery",
+      "group": "DOCX"
+    },
+    {
+      "id": 232,
+      "label": "Ink Chemistry Analysis",
+      "group": "DOCX"
+    },
+    {
+      "id": 233,
+      "label": "Paper Chromatography",
+      "group": "DOCX"
+    },
+    {
+      "id": 234,
+      "label": "Thin-Layer Chromatography",
+      "group": "DOCX"
+    },
+    {
+      "id": 235,
+      "label": "Counterfeit Detection",
+      "group": "DOCX"
+    },
+    {
+      "id": 236,
+      "label": "Currency Security Features",
+      "group": "DOCX"
+    },
+    {
+      "id": 237,
+      "label": "Watermarks and Threads",
+      "group": "DOCX"
+    },
+    {
+      "id": 238,
+      "label": "Digital Forensics Overview",
+      "group": "DIGIT"
+    },
+    {
+      "id": 239,
+      "label": "Volatile vs Non-Volatile Data",
+      "group": "DIGIT"
+    },
+    {
+      "id": 240,
+      "label": "RAM Evidence Collection",
+      "group": "DIGIT"
+    },
+    {
+      "id": 241,
+      "label": "Hard Drive Architecture",
+      "group": "DIGIT"
+    },
+    {
+      "id": 242,
+      "label": "SSD Forensics",
+      "group": "DIGIT"
+    },
+    {
+      "id": 243,
+      "label": "Write-Blocker Hardware",
+      "group": "DIGIT"
+    },
+    {
+      "id": 244,
+      "label": "Forensic Imaging Process",
+      "group": "DIGIT"
+    },
+    {
+      "id": 245,
+      "label": "Bit-Stream Copy",
+      "group": "DIGIT"
+    },
+    {
+      "id": 246,
+      "label": "MD5 Hash Function",
+      "group": "DIGIT"
+    },
+    {
+      "id": 247,
+      "label": "SHA-256 Hash Function",
+      "group": "DIGIT"
+    },
+    {
+      "id": 248,
+      "label": "Hash Verification",
+      "group": "DIGIT"
+    },
+    {
+      "id": 249,
+      "label": "EXIF Metadata Recovery",
+      "group": "DIGIT"
+    },
+    {
+      "id": 250,
+      "label": "Digital Timestamp Analysis",
+      "group": "DIGIT"
+    },
+    {
+      "id": 251,
+      "label": "Geolocation from Metadata",
+      "group": "DIGIT"
+    },
+    {
+      "id": 252,
+      "label": "Network Forensics Basics",
+      "group": "DIGIT"
+    },
+    {
+      "id": 253,
+      "label": "IP Address Analysis",
+      "group": "DIGIT"
+    },
+    {
+      "id": 254,
+      "label": "Packet Sniffing",
+      "group": "DIGIT"
+    },
+    {
+      "id": 255,
+      "label": "Firewall Log Analysis",
+      "group": "DIGIT"
+    },
+    {
+      "id": 256,
+      "label": "Encryption in Digital Forensics",
+      "group": "DIGIT"
+    },
+    {
+      "id": 257,
+      "label": "Steganography",
+      "group": "DIGIT"
+    },
+    {
+      "id": 258,
+      "label": "Dark Web Evidence",
+      "group": "DIGIT"
+    },
+    {
+      "id": 259,
+      "label": "Facial Recognition Overview",
+      "group": "FACEREC",
+      "shape": "box"
+    },
+    {
+      "id": 260,
+      "label": "Biometric Identification Principles",
+      "group": "FACEREC"
+    },
+    {
+      "id": 261,
+      "label": "Face Detection Algorithms",
+      "group": "FACEREC"
+    },
+    {
+      "id": 262,
+      "label": "Facial Landmark Detection",
+      "group": "FACEREC"
+    },
+    {
+      "id": 263,
+      "label": "Eigenface Method",
+      "group": "FACEREC"
+    },
+    {
+      "id": 264,
+      "label": "Deep Learning Face Recognition",
+      "group": "FACEREC"
+    },
+    {
+      "id": 265,
+      "label": "Convolutional Neural Networks",
+      "group": "FACEREC"
+    },
+    {
+      "id": 266,
+      "label": "3D Facial Mapping",
+      "group": "FACEREC"
+    },
+    {
+      "id": 267,
+      "label": "Law Enforcement Face Databases",
+      "group": "FACEREC"
+    },
+    {
+      "id": 268,
+      "label": "NGI Facial Recognition System",
+      "group": "FACEREC"
+    },
+    {
+      "id": 269,
+      "label": "CCTV Surveillance Analysis",
+      "group": "FACEREC"
+    },
+    {
+      "id": 270,
+      "label": "Facial Superimposition",
+      "group": "FACEREC"
+    },
+    {
+      "id": 271,
+      "label": "Age Progression Modeling",
+      "group": "FACEREC"
+    },
+    {
+      "id": 272,
+      "label": "Facial Recognition Admissibility",
+      "group": "FACEREC"
+    },
+    {
+      "id": 273,
+      "label": "Algorithmic Bias in Facial Recognition",
+      "group": "FACEREC"
+    },
+    {
+      "id": 274,
+      "label": "Cell Phone Forensics Overview",
+      "group": "CELL",
+      "shape": "box"
+    },
+    {
+      "id": 275,
+      "label": "SIM Card Analysis",
+      "group": "CELL"
+    },
+    {
+      "id": 276,
+      "label": "IMEI Device Identification",
+      "group": "CELL"
+    },
+    {
+      "id": 277,
+      "label": "Cell Tower Records",
+      "group": "CELL"
+    },
+    {
+      "id": 278,
+      "label": "Call Detail Records (CDR)",
+      "group": "CELL"
+    },
+    {
+      "id": 279,
+      "label": "Tower Triangulation",
+      "group": "CELL"
+    },
+    {
+      "id": 280,
+      "label": "GPS Location Data Extraction",
+      "group": "CELL"
+    },
+    {
+      "id": 281,
+      "label": "Application Data Extraction",
+      "group": "CELL"
+    },
+    {
+      "id": 282,
+      "label": "Social Media Evidence Recovery",
+      "group": "CELL"
+    },
+    {
+      "id": 283,
+      "label": "Deleted Data Recovery on Mobile",
+      "group": "CELL"
+    },
+    {
+      "id": 284,
+      "label": "Mobile Operating System Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 285,
+      "label": "iOS Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 286,
+      "label": "Android Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 287,
+      "label": "Cellebrite UFED",
+      "group": "CELL"
+    },
+    {
+      "id": 288,
+      "label": "Cloud Data Forensics",
+      "group": "CELL"
+    },
+    {
+      "id": 289,
+      "label": "Social Media Forensics Overview",
+      "group": "SOCIAL",
+      "shape": "box"
+    },
+    {
+      "id": 290,
+      "label": "Open-Source Intelligence (OSINT)",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 291,
+      "label": "Facebook Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 292,
+      "label": "Twitter/X Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 293,
+      "label": "Instagram Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 294,
+      "label": "LinkedIn Evidence Collection",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 295,
+      "label": "Social Media Legal Process",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 296,
+      "label": "Profile Data Preservation",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 297,
+      "label": "Social Media Authentication",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 298,
+      "label": "Geolocation from Social Posts",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 299,
+      "label": "Post Timestamp Analysis",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 300,
+      "label": "Deleted Post Recovery",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 301,
+      "label": "Image Metadata in Social Media",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 302,
+      "label": "Social Network Analysis",
+      "group": "SOCIAL"
+    },
+    {
+      "id": 303,
+      "label": "Social Media Admissibility (FRE 901)",
+      "group": "SOCIAL"
+    }
+  ],
+  "edges": [
+    {
+      "from": 4,
+      "to": 1
+    },
+    {
+      "from": 4,
+      "to": 2
+    },
+    {
+      "from": 5,
+      "to": 1
+    },
+    {
+      "from": 5,
+      "to": 2
+    },
+    {
+      "from": 6,
+      "to": 1
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 4
+    },
+    {
+      "from": 8,
+      "to": 5
+    },
+    {
+      "from": 9,
+      "to": 1
+    },
+    {
+      "from": 10,
+      "to": 1
+    },
+    {
+      "from": 11,
+      "to": 9
+    },
+    {
+      "from": 12,
+      "to": 9
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 1
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 15,
+      "to": 1
+    },
+    {
+      "from": 16,
+      "to": 1
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 18,
+      "to": 17
+    },
+    {
+      "from": 19,
+      "to": 17
+    },
+    {
+      "from": 20,
+      "to": 17
+    },
+    {
+      "from": 21,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 20
+    },
+    {
+      "from": 23,
+      "to": 22
+    },
+    {
+      "from": 24,
+      "to": 23
+    },
+    {
+      "from": 25,
+      "to": 17
+    },
+    {
+      "from": 26,
+      "to": 25
+    },
+    {
+      "from": 27,
+      "to": 25
+    },
+    {
+      "from": 28,
+      "to": 25
+    },
+    {
+      "from": 29,
+      "to": 16
+    },
+    {
+      "from": 30,
+      "to": 16
+    },
+    {
+      "from": 30,
+      "to": 29
+    },
+    {
+      "from": 31,
+      "to": 30
+    },
+    {
+      "from": 32,
+      "to": 31
+    },
+    {
+      "from": 33,
+      "to": 31
+    },
+    {
+      "from": 34,
+      "to": 29
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 35,
+      "to": 3
+    },
+    {
+      "from": 36,
+      "to": 1
+    },
+    {
+      "from": 36,
+      "to": 35
+    },
+    {
+      "from": 37,
+      "to": 36
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 37
+    },
+    {
+      "from": 40,
+      "to": 37
+    },
+    {
+      "from": 41,
+      "to": 37
+    },
+    {
+      "from": 42,
+      "to": 39
+    },
+    {
+      "from": 43,
+      "to": 40
+    },
+    {
+      "from": 44,
+      "to": 41
+    },
+    {
+      "from": 45,
+      "to": 37
+    },
+    {
+      "from": 46,
+      "to": 45
+    },
+    {
+      "from": 47,
+      "to": 45
+    },
+    {
+      "from": 48,
+      "to": 37
+    },
+    {
+      "from": 48,
+      "to": 34
+    },
+    {
+      "from": 49,
+      "to": 37
+    },
+    {
+      "from": 49,
+      "to": 34
+    },
+    {
+      "from": 50,
+      "to": 37
+    },
+    {
+      "from": 50,
+      "to": 34
+    },
+    {
+      "from": 51,
+      "to": 50
+    },
+    {
+      "from": 52,
+      "to": 50
+    },
+    {
+      "from": 52,
+      "to": 51
+    },
+    {
+      "from": 53,
+      "to": 50
+    },
+    {
+      "from": 53,
+      "to": 51
+    },
+    {
+      "from": 54,
+      "to": 50
+    },
+    {
+      "from": 54,
+      "to": 51
+    },
+    {
+      "from": 55,
+      "to": 50
+    },
+    {
+      "from": 55,
+      "to": 51
+    },
+    {
+      "from": 56,
+      "to": 36
+    },
+    {
+      "from": 57,
+      "to": 45
+    },
+    {
+      "from": 57,
+      "to": 46
+    },
+    {
+      "from": 57,
+      "to": 47
+    },
+    {
+      "from": 58,
+      "to": 35
+    },
+    {
+      "from": 59,
+      "to": 58
+    },
+    {
+      "from": 60,
+      "to": 58
+    },
+    {
+      "from": 61,
+      "to": 58
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 62
+    },
+    {
+      "from": 63,
+      "to": 60
+    },
+    {
+      "from": 63,
+      "to": 59
+    },
+    {
+      "from": 64,
+      "to": 59
+    },
+    {
+      "from": 65,
+      "to": 60
+    },
+    {
+      "from": 66,
+      "to": 35
+    },
+    {
+      "from": 67,
+      "to": 35
+    },
+    {
+      "from": 68,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 67
+    },
+    {
+      "from": 69,
+      "to": 66
+    },
+    {
+      "from": 69,
+      "to": 67
+    },
+    {
+      "from": 70,
+      "to": 66
+    },
+    {
+      "from": 70,
+      "to": 67
+    },
+    {
+      "from": 71,
+      "to": 34
+    },
+    {
+      "from": 72,
+      "to": 35
+    },
+    {
+      "from": 73,
+      "to": 72
+    },
+    {
+      "from": 74,
+      "to": 73
+    },
+    {
+      "from": 75,
+      "to": 74
+    },
+    {
+      "from": 76,
+      "to": 72
+    },
+    {
+      "from": 77,
+      "to": 72
+    },
+    {
+      "from": 78,
+      "to": 76
+    },
+    {
+      "from": 78,
+      "to": 77
+    },
+    {
+      "from": 79,
+      "to": 76
+    },
+    {
+      "from": 79,
+      "to": 77
+    },
+    {
+      "from": 80,
+      "to": 79
+    },
+    {
+      "from": 80,
+      "to": 78
+    },
+    {
+      "from": 81,
+      "to": 35
+    },
+    {
+      "from": 82,
+      "to": 81
+    },
+    {
+      "from": 83,
+      "to": 81
+    },
+    {
+      "from": 84,
+      "to": 81
+    },
+    {
+      "from": 85,
+      "to": 81
+    },
+    {
+      "from": 86,
+      "to": 35
+    },
+    {
+      "from": 87,
+      "to": 86
+    },
+    {
+      "from": 88,
+      "to": 86
+    },
+    {
+      "from": 89,
+      "to": 86
+    },
+    {
+      "from": 90,
+      "to": 86
+    },
+    {
+      "from": 91,
+      "to": 90
+    },
+    {
+      "from": 92,
+      "to": 90
+    },
+    {
+      "from": 93,
+      "to": 90
+    },
+    {
+      "from": 94,
+      "to": 90
+    },
+    {
+      "from": 95,
+      "to": 86
+    },
+    {
+      "from": 96,
+      "to": 86
+    },
+    {
+      "from": 97,
+      "to": 95
+    },
+    {
+      "from": 97,
+      "to": 96
+    },
+    {
+      "from": 98,
+      "to": 95
+    },
+    {
+      "from": 99,
+      "to": 35
+    },
+    {
+      "from": 100,
+      "to": 35
+    },
+    {
+      "from": 101,
+      "to": 35
+    },
+    {
+      "from": 102,
+      "to": 86
+    },
+    {
+      "from": 103,
+      "to": 102
+    },
+    {
+      "from": 104,
+      "to": 102
+    },
+    {
+      "from": 105,
+      "to": 102
+    },
+    {
+      "from": 106,
+      "to": 103
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 105
+    },
+    {
+      "from": 107,
+      "to": 103
+    },
+    {
+      "from": 107,
+      "to": 104
+    },
+    {
+      "from": 107,
+      "to": 105
+    },
+    {
+      "from": 108,
+      "to": 103
+    },
+    {
+      "from": 108,
+      "to": 104
+    },
+    {
+      "from": 108,
+      "to": 105
+    },
+    {
+      "from": 109,
+      "to": 106
+    },
+    {
+      "from": 109,
+      "to": 107
+    },
+    {
+      "from": 109,
+      "to": 108
+    },
+    {
+      "from": 110,
+      "to": 109
+    },
+    {
+      "from": 111,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 102
+    },
+    {
+      "from": 114,
+      "to": 102
+    },
+    {
+      "from": 115,
+      "to": 107
+    },
+    {
+      "from": 116,
+      "to": 108
+    },
+    {
+      "from": 117,
+      "to": 114
+    },
+    {
+      "from": 118,
+      "to": 35
+    },
+    {
+      "from": 119,
+      "to": 118
+    },
+    {
+      "from": 120,
+      "to": 118
+    },
+    {
+      "from": 121,
+      "to": 119
+    },
+    {
+      "from": 122,
+      "to": 121
+    },
+    {
+      "from": 123,
+      "to": 118
+    },
+    {
+      "from": 124,
+      "to": 123
+    },
+    {
+      "from": 125,
+      "to": 123
+    },
+    {
+      "from": 126,
+      "to": 123
+    },
+    {
+      "from": 126,
+      "to": 124
+    },
+    {
+      "from": 127,
+      "to": 126
+    },
+    {
+      "from": 128,
+      "to": 121
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 128
+    },
+    {
+      "from": 130,
+      "to": 121
+    },
+    {
+      "from": 131,
+      "to": 130
+    },
+    {
+      "from": 132,
+      "to": 120
+    },
+    {
+      "from": 133,
+      "to": 122
+    },
+    {
+      "from": 133,
+      "to": 130
+    },
+    {
+      "from": 134,
+      "to": 133
+    },
+    {
+      "from": 135,
+      "to": 122
+    },
+    {
+      "from": 135,
+      "to": 129
+    },
+    {
+      "from": 136,
+      "to": 35
+    },
+    {
+      "from": 137,
+      "to": 136
+    },
+    {
+      "from": 138,
+      "to": 136
+    },
+    {
+      "from": 139,
+      "to": 136
+    },
+    {
+      "from": 140,
+      "to": 136
+    },
+    {
+      "from": 141,
+      "to": 1
+    },
+    {
+      "from": 142,
+      "to": 141
+    },
+    {
+      "from": 143,
+      "to": 35
+    },
+    {
+      "from": 144,
+      "to": 35
+    },
+    {
+      "from": 145,
+      "to": 35
+    },
+    {
+      "from": 146,
+      "to": 35
+    },
+    {
+      "from": 147,
+      "to": 35
+    },
+    {
+      "from": 148,
+      "to": 146
+    },
+    {
+      "from": 148,
+      "to": 147
+    },
+    {
+      "from": 149,
+      "to": 146
+    },
+    {
+      "from": 149,
+      "to": 147
+    },
+    {
+      "from": 150,
+      "to": 86
+    },
+    {
+      "from": 151,
+      "to": 150
+    },
+    {
+      "from": 151,
+      "to": 136
+    },
+    {
+      "from": 152,
+      "to": 136
+    },
+    {
+      "from": 153,
+      "to": 136
+    },
+    {
+      "from": 154,
+      "to": 136
+    },
+    {
+      "from": 155,
+      "to": 35
+    },
+    {
+      "from": 156,
+      "to": 155
+    },
+    {
+      "from": 157,
+      "to": 155
+    },
+    {
+      "from": 158,
+      "to": 155
+    },
+    {
+      "from": 158,
+      "to": 156
+    },
+    {
+      "from": 159,
+      "to": 155
+    },
+    {
+      "from": 159,
+      "to": 158
+    },
+    {
+      "from": 160,
+      "to": 30
+    },
+    {
+      "from": 160,
+      "to": 155
+    },
+    {
+      "from": 161,
+      "to": 160
+    },
+    {
+      "from": 162,
+      "to": 160
+    },
+    {
+      "from": 163,
+      "to": 160
+    },
+    {
+      "from": 164,
+      "to": 160
+    },
+    {
+      "from": 165,
+      "to": 146
+    },
+    {
+      "from": 165,
+      "to": 160
+    },
+    {
+      "from": 166,
+      "to": 165
+    },
+    {
+      "from": 167,
+      "to": 155
+    },
+    {
+      "from": 167,
+      "to": 156
+    },
+    {
+      "from": 168,
+      "to": 155
+    },
+    {
+      "from": 168,
+      "to": 156
+    },
+    {
+      "from": 169,
+      "to": 167
+    },
+    {
+      "from": 169,
+      "to": 168
+    },
+    {
+      "from": 170,
+      "to": 35
+    },
+    {
+      "from": 171,
+      "to": 170
+    },
+    {
+      "from": 172,
+      "to": 170
+    },
+    {
+      "from": 172,
+      "to": 171
+    },
+    {
+      "from": 173,
+      "to": 172
+    },
+    {
+      "from": 174,
+      "to": 172
+    },
+    {
+      "from": 175,
+      "to": 171
+    },
+    {
+      "from": 176,
+      "to": 173
+    },
+    {
+      "from": 176,
+      "to": 174
+    },
+    {
+      "from": 176,
+      "to": 175
+    },
+    {
+      "from": 177,
+      "to": 171
+    },
+    {
+      "from": 178,
+      "to": 175
+    },
+    {
+      "from": 179,
+      "to": 177
+    },
+    {
+      "from": 179,
+      "to": 178
+    },
+    {
+      "from": 180,
+      "to": 171
+    },
+    {
+      "from": 181,
+      "to": 180
+    },
+    {
+      "from": 182,
+      "to": 170
+    },
+    {
+      "from": 183,
+      "to": 170
+    },
+    {
+      "from": 183,
+      "to": 182
+    },
+    {
+      "from": 184,
+      "to": 170
+    },
+    {
+      "from": 184,
+      "to": 182
+    },
+    {
+      "from": 185,
+      "to": 182
+    },
+    {
+      "from": 185,
+      "to": 183
+    },
+    {
+      "from": 185,
+      "to": 184
+    },
+    {
+      "from": 186,
+      "to": 35
+    },
+    {
+      "from": 187,
+      "to": 186
+    },
+    {
+      "from": 188,
+      "to": 186
+    },
+    {
+      "from": 189,
+      "to": 186
+    },
+    {
+      "from": 190,
+      "to": 186
+    },
+    {
+      "from": 191,
+      "to": 186
+    },
+    {
+      "from": 192,
+      "to": 186
+    },
+    {
+      "from": 193,
+      "to": 192
+    },
+    {
+      "from": 194,
+      "to": 192
+    },
+    {
+      "from": 195,
+      "to": 194
+    },
+    {
+      "from": 196,
+      "to": 195
+    },
+    {
+      "from": 197,
+      "to": 195
+    },
+    {
+      "from": 197,
+      "to": 196
+    },
+    {
+      "from": 198,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 198
+    },
+    {
+      "from": 200,
+      "to": 186
+    },
+    {
+      "from": 200,
+      "to": 193
+    },
+    {
+      "from": 201,
+      "to": 199
+    },
+    {
+      "from": 201,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 193
+    },
+    {
+      "from": 203,
+      "to": 35
+    },
+    {
+      "from": 204,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 204
+    },
+    {
+      "from": 206,
+      "to": 203
+    },
+    {
+      "from": 207,
+      "to": 203
+    },
+    {
+      "from": 208,
+      "to": 203
+    },
+    {
+      "from": 209,
+      "to": 203
+    },
+    {
+      "from": 210,
+      "to": 209
+    },
+    {
+      "from": 211,
+      "to": 203
+    },
+    {
+      "from": 211,
+      "to": 209
+    },
+    {
+      "from": 212,
+      "to": 211
+    },
+    {
+      "from": 213,
+      "to": 211
+    },
+    {
+      "from": 213,
+      "to": 212
+    },
+    {
+      "from": 214,
+      "to": 210
+    },
+    {
+      "from": 215,
+      "to": 203
+    },
+    {
+      "from": 216,
+      "to": 215
+    },
+    {
+      "from": 217,
+      "to": 35
+    },
+    {
+      "from": 218,
+      "to": 217
+    },
+    {
+      "from": 219,
+      "to": 217
+    },
+    {
+      "from": 220,
+      "to": 217
+    },
+    {
+      "from": 221,
+      "to": 220
+    },
+    {
+      "from": 222,
+      "to": 35
+    },
+    {
+      "from": 223,
+      "to": 35
+    },
+    {
+      "from": 224,
+      "to": 223
+    },
+    {
+      "from": 225,
+      "to": 224
+    },
+    {
+      "from": 226,
+      "to": 224
+    },
+    {
+      "from": 227,
+      "to": 223
+    },
+    {
+      "from": 228,
+      "to": 223
+    },
+    {
+      "from": 229,
+      "to": 223
+    },
+    {
+      "from": 230,
+      "to": 223
+    },
+    {
+      "from": 231,
+      "to": 223
+    },
+    {
+      "from": 232,
+      "to": 35
+    },
+    {
+      "from": 233,
+      "to": 232
+    },
+    {
+      "from": 234,
+      "to": 232
+    },
+    {
+      "from": 234,
+      "to": 233
+    },
+    {
+      "from": 235,
+      "to": 35
+    },
+    {
+      "from": 236,
+      "to": 235
+    },
+    {
+      "from": 237,
+      "to": 236
+    },
+    {
+      "from": 238,
+      "to": 1
+    },
+    {
+      "from": 239,
+      "to": 238
+    },
+    {
+      "from": 240,
+      "to": 239
+    },
+    {
+      "from": 241,
+      "to": 238
+    },
+    {
+      "from": 242,
+      "to": 241
+    },
+    {
+      "from": 243,
+      "to": 238
+    },
+    {
+      "from": 244,
+      "to": 243
+    },
+    {
+      "from": 245,
+      "to": 244
+    },
+    {
+      "from": 246,
+      "to": 238
+    },
+    {
+      "from": 247,
+      "to": 246
+    },
+    {
+      "from": 248,
+      "to": 246
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 248,
+      "to": 244
+    },
+    {
+      "from": 249,
+      "to": 238
+    },
+    {
+      "from": 250,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 249
+    },
+    {
+      "from": 251,
+      "to": 250
+    },
+    {
+      "from": 252,
+      "to": 238
+    },
+    {
+      "from": 253,
+      "to": 252
+    },
+    {
+      "from": 254,
+      "to": 252
+    },
+    {
+      "from": 255,
+      "to": 252
+    },
+    {
+      "from": 255,
+      "to": 254
+    },
+    {
+      "from": 256,
+      "to": 238
+    },
+    {
+      "from": 257,
+      "to": 256
+    },
+    {
+      "from": 258,
+      "to": 238
+    },
+    {
+      "from": 258,
+      "to": 256
+    },
+    {
+      "from": 259,
+      "to": 238
+    },
+    {
+      "from": 260,
+      "to": 259
+    },
+    {
+      "from": 261,
+      "to": 260
+    },
+    {
+      "from": 262,
+      "to": 261
+    },
+    {
+      "from": 263,
+      "to": 262
+    },
+    {
+      "from": 264,
+      "to": 262
+    },
+    {
+      "from": 265,
+      "to": 264
+    },
+    {
+      "from": 266,
+      "to": 259
+    },
+    {
+      "from": 267,
+      "to": 259
+    },
+    {
+      "from": 268,
+      "to": 267
+    },
+    {
+      "from": 269,
+      "to": 259
+    },
+    {
+      "from": 270,
+      "to": 259
+    },
+    {
+      "from": 271,
+      "to": 270
+    },
+    {
+      "from": 272,
+      "to": 259
+    },
+    {
+      "from": 272,
+      "to": 8
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 274,
+      "to": 238
+    },
+    {
+      "from": 275,
+      "to": 274
+    },
+    {
+      "from": 276,
+      "to": 274
+    },
+    {
+      "from": 277,
+      "to": 274
+    },
+    {
+      "from": 278,
+      "to": 277
+    },
+    {
+      "from": 279,
+      "to": 277
+    },
+    {
+      "from": 280,
+      "to": 274
+    },
+    {
+      "from": 280,
+      "to": 251
+    },
+    {
+      "from": 281,
+      "to": 274
+    },
+    {
+      "from": 282,
+      "to": 281
+    },
+    {
+      "from": 283,
+      "to": 274
+    },
+    {
+      "from": 284,
+      "to": 274
+    },
+    {
+      "from": 285,
+      "to": 284
+    },
+    {
+      "from": 286,
+      "to": 284
+    },
+    {
+      "from": 287,
+      "to": 274
+    },
+    {
+      "from": 288,
+      "to": 274
+    },
+    {
+      "from": 289,
+      "to": 238
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 289
+    },
+    {
+      "from": 292,
+      "to": 289
+    },
+    {
+      "from": 293,
+      "to": 289
+    },
+    {
+      "from": 294,
+      "to": 289
+    },
+    {
+      "from": 295,
+      "to": 289
+    },
+    {
+      "from": 295,
+      "to": 8
+    },
+    {
+      "from": 296,
+      "to": 289
+    },
+    {
+      "from": 297,
+      "to": 289
+    },
+    {
+      "from": 298,
+      "to": 290
+    },
+    {
+      "from": 298,
+      "to": 251
+    },
+    {
+      "from": 299,
+      "to": 289
+    },
+    {
+      "from": 300,
+      "to": 289
+    },
+    {
+      "from": 301,
+      "to": 249
+    },
+    {
+      "from": 301,
+      "to": 289
+    },
+    {
+      "from": 302,
+      "to": 290
+    },
+    {
+      "from": 303,
+      "to": 297
+    },
+    {
+      "from": 303,
+      "to": 8
+    }
+  ]
+}

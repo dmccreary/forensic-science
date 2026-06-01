@@ -1,0 +1,16 @@
+{
+  "FOUND": "Foundation Concepts",
+  "CSI": "Crime Scene Investigation",
+  "PRINTS": "Fingerprint Analysis",
+  "TRACE": "Trace Evidence",
+  "SERO": "Forensic Serology",
+  "BPA": "Bloodstain Pattern Analysis",
+  "DNA": "Forensic DNA Profiling",
+  "CHEM": "Chemical Analysis & Toxicology",
+  "FIRE": "Fire, Arson & Explosives",
+  "ANTHRO": "Forensic Anthropology",
+  "ENTOM": "Forensic Entomology",
+  "ARMS": "Firearms, Ballistics & Toolmarks",
+  "DOCX": "Document Examination",
+  "DIGIT": "Digital Forensics"
+}
