@@ -38,8 +38,24 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      # Add chapter entries here as content is generated, e.g.:
-      # - 1. Introduction: chapters/01-introduction/index.md
+      - 1. Foundations & Legal Principles: chapters/01-intro-forensic-science/index.md
+      - 2. Crime Scene Investigation: chapters/02-crime-scene-investigation/index.md
+      - 3. Fingerprint Analysis: chapters/03-fingerprint-analysis/index.md
+      - 4. Hair and Fiber Analysis: chapters/04-hair-and-fiber-analysis/index.md
+      - 5. Glass, Soil & Trace Evidence: chapters/05-glass-soil-trace-evidence/index.md
+      - 6. Forensic Serology: chapters/06-forensic-serology/index.md
+      - 7. Bloodstain Pattern Analysis: chapters/07-bloodstain-pattern-analysis/index.md
+      - 8. DNA Profiling: chapters/08-forensic-dna-profiling/index.md
+      - 9. Forensic Toxicology: chapters/09-forensic-toxicology/index.md
+      - 10. Fire, Arson & Explosives: chapters/10-fire-arson-explosives/index.md
+      - 11. Forensic Anthropology: chapters/11-forensic-anthropology/index.md
+      - 12. Forensic Entomology: chapters/12-forensic-entomology/index.md
+      - 13. Firearms & Ballistics: chapters/13-firearms-and-ballistics/index.md
+      - 14. Document Examination: chapters/14-document-examination/index.md
+      - 15. Digital Forensics: chapters/15-digital-forensics/index.md
+      - 16. Facial Recognition: chapters/16-facial-recognition/index.md
+      - 17. Cell Phone Analytics: chapters/17-cell-phone-analytics/index.md
+      - 18. Social Media & OSINT: chapters/18-social-media-osint/index.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md

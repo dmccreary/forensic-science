@@ -44,6 +44,7 @@ checkered background.
 
 ## 2. Welcome Pose — `welcome.png`
 
+Please generate a new welcome pose for Trace the Raccoon.
 A modern flat vector cartoon illustration of Trace the Raccoon, a friendly
 pedagogical mascot for a forensic science textbook. Trace is a medium-gray
 raccoon with natural markings: a black mask across the eyes, white facial
@@ -66,6 +67,7 @@ checkered background.
 
 ## 3. Thinking Pose — `thinking.png`
 
+Please generate a new thinking pose for Trace the Raccoon.
 A modern flat vector cartoon illustration of Trace the Raccoon, a friendly
 pedagogical mascot for a forensic science textbook. Trace is a medium-gray
 raccoon with natural markings: a black mask across the eyes, white facial
@@ -87,6 +89,8 @@ checkered background.
 ---
 
 ## 4. Tip Pose — `tip.png`
+
+Please generate a new tip pose for Trace the Raccoon.
 
 A modern flat vector cartoon illustration of Trace the Raccoon, a friendly
 pedagogical mascot for a forensic science textbook. Trace is a medium-gray
@@ -110,6 +114,8 @@ checkered background.
 
 ## 5. Warning Pose — `warning.png`
 
+Please generate a new friendly warning pose for Trace the Raccoon.
+
 A modern flat vector cartoon illustration of Trace the Raccoon, a friendly
 pedagogical mascot for a forensic science textbook. Trace is a medium-gray
 raccoon with natural markings: a black mask across the eyes, white facial
@@ -132,6 +138,8 @@ checkered background.
 
 ## 6. Encouraging Pose — `encouraging.png`
 
+Please generate a new encouraging pose for Trace the Raccoon.
+
 A modern flat vector cartoon illustration of Trace the Raccoon, a friendly
 pedagogical mascot for a forensic science textbook. Trace is a medium-gray
 raccoon with natural markings: a black mask across the eyes, white facial
@@ -152,6 +160,8 @@ checkered background.
 ---
 
 ## 7. Celebration Pose — `celebration.png`
+
+Please generate a new celebration pose for Trace the Raccoon.
 
 A modern flat vector cartoon illustration of Trace the Raccoon, a friendly
 pedagogical mascot for a forensic science textbook. Trace is a medium-gray
