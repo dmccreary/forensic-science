@@ -1,0 +1,2405 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Volatile and non-volatile data, write-blockers, forensic imaging, hash verification, EXIF metadata, network forensics, encryption, steganography, and dark web evidence.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/chapters/15-digital-forensics/">
+      
+      
+        <link rel="prev" href="../14-document-examination/quiz/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Digital Forensics and Cybercrime Investigation - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-forensics-and-cybercrime-investigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital Forensics and Cybercrime Investigation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../01-intro-forensic-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations & Legal Principles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../02-crime-scene-investigation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Crime Scene Investigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../03-fingerprint-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Fingerprint Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../04-hair-and-fiber-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Hair and Fiber Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../05-glass-soil-trace-evidence/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Glass, Soil & Trace Evidence
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../06-forensic-serology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Forensic Serology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../07-bloodstain-pattern-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Bloodstain Pattern Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../08-forensic-dna-profiling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DNA Profiling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../09-forensic-toxicology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Forensic Toxicology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../10-fire-arson-explosives/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Fire, Arson & Explosives
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../11-forensic-anthropology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Forensic Anthropology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../12-forensic-entomology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Forensic Entomology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../13-firearms-and-ballistics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Firearms & Ballistics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../14-document-examination/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Document Examination
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_16" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    15. Digital Forensics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_16" id="__nav_4_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_16">
+            <span class="md-nav__icon md-icon"></span>
+            15. Digital Forensics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../16-facial-recognition/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Facial Recognition
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../17-cell-phone-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Cell Phone Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../18-social-media-osint/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Social Media & OSINT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../19-aviation-crash-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Aviation Crash Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-digital-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Digital Forensics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-volatility-hierarchy-order-of-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Volatility Hierarchy: Order of Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Volatility Hierarchy: Order of Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volatile-vs-non-volatile-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volatile vs. Non-Volatile Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ram-evidence-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      RAM Evidence Collection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-forensics-hardware-architecture-and-imaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk Forensics: Hardware Architecture and Imaging
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk Forensics: Hardware Architecture and Imaging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hard-drive-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Drive Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssd-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSD Forensics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-blocker-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write-Blocker Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forensic-imaging-process-and-bit-stream-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forensic Imaging Process and Bit-Stream Copy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hash-verification-the-digital-chain-of-custody" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash Verification: The Digital Chain of Custody
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hash Verification: The Digital Chain of Custody">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#md5-hash-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      MD5 Hash Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha-256-hash-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHA-256 Hash Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hash Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hash Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-forensic-imaging-and-hash-verification-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Forensic Imaging and Hash Verification Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata-the-hidden-record-in-digital-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata: The Hidden Record in Digital Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata: The Hidden Record in Digital Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exif-metadata-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXIF Metadata Recovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-timestamp-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Timestamp Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geolocation-from-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geolocation from Metadata
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Forensics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Forensics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-address-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Address Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-sniffing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packet Sniffing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-log-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Log Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption-steganography-and-the-dark-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption, Steganography, and the Dark Web
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encryption, Steganography, and the Dark Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encryption-in-digital-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption in Digital Forensics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steganography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steganography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dark-web-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dark Web Evidence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dark Web Evidence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-metadata-recovery-and-timeline-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Metadata Recovery and Timeline Builder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Review
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/chapters/15-digital-forensics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="digital-forensics-and-cybercrime-investigation">Digital Forensics and Cybercrime Investigation<a class="headerlink" href="#digital-forensics-and-cybercrime-investigation" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter introduces the principles and practices of digital evidence collection and analysis. Students learn the distinction between volatile (RAM) and non-volatile (HDD, SSD) digital storage, and why the order of evidence collection is determined by volatility. Write-blocker hardware prevents evidence contamination during forensic imaging, and bit-stream copies preserve an exact duplicate of the original media. Cryptographic hash functions (MD5 and SHA-256) verify that copies are forensically identical to originals. The chapter then covers EXIF metadata recovery, digital timestamp analysis, and geolocation extraction from image files — tools that form the foundation for Chapters 16–18. Network forensics (IP analysis, packet sniffing, firewall logs), encryption, steganography, and dark web evidence tracking round out the chapter. After completing this chapter, students will be able to verify the integrity of a forensic image using hash values and explain the evidentiary significance of EXIF metadata.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 21 concepts from the learning graph:</p>
+<ol>
+<li>Digital Forensics Overview</li>
+<li>Volatile vs Non-Volatile Data</li>
+<li>RAM Evidence Collection</li>
+<li>Hard Drive Architecture</li>
+<li>SSD Forensics</li>
+<li>Write-Blocker Hardware</li>
+<li>Forensic Imaging Process</li>
+<li>Bit-Stream Copy</li>
+<li>MD5 Hash Function</li>
+<li>SHA-256 Hash Function</li>
+<li>Hash Verification</li>
+<li>EXIF Metadata Recovery</li>
+<li>Digital Timestamp Analysis</li>
+<li>Geolocation from Metadata</li>
+<li>Network Forensics Basics</li>
+<li>IP Address Analysis</li>
+<li>Packet Sniffing</li>
+<li>Firewall Log Analysis</li>
+<li>Encryption in Digital Forensics</li>
+<li>Steganography</li>
+<li>Dark Web Evidence</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-intro-forensic-science/">Chapter 1: Foundations of Forensic Science and Legal Principles</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Every digital device is a potential witness. Smartphones remember where you were. Laptops store what you typed. Network logs record what you accessed and when. Digital forensics is the discipline of recovering, preserving, and analyzing that electronic testimony in a way that courts will accept. The rules are different from physical evidence — but they are just as strict. Follow the evidence — into the digital realm.</p>
+</div>
+<hr />
+<h2 id="what-is-digital-forensics">What Is Digital Forensics?<a class="headerlink" href="#what-is-digital-forensics" title="Permanent link">&para;</a></h2>
+<p><strong>Digital forensics</strong> is the application of scientific methods to the recovery, preservation, analysis, and presentation of digital evidence in legal proceedings. Digital evidence can exist on any device that stores, processes, or transmits data — computers, smartphones, tablets, servers, surveillance cameras, vehicle infotainment systems, smart appliances, and network infrastructure.</p>
+<p>The fundamental challenge of digital forensics is that digital evidence is uniquely fragile: it can be overwritten, deleted, encrypted, or destroyed with a single command — often without visible physical trace. The response to this fragility is a strict procedural framework that begins before a single file is examined.</p>
+<hr />
+<h2 id="the-volatility-hierarchy-order-of-collection">The Volatility Hierarchy: Order of Collection<a class="headerlink" href="#the-volatility-hierarchy-order-of-collection" title="Permanent link">&para;</a></h2>
+<p>Not all digital data is equally permanent. The most critical principle guiding digital evidence collection is the <strong>order of volatility</strong> — the rule that evidence should be collected in order from most volatile (most easily lost) to least volatile (most permanent). Collecting non-volatile data first while ignoring volatile data is a common and irreversible mistake.</p>
+<h3 id="volatile-vs-non-volatile-data">Volatile vs. Non-Volatile Data<a class="headerlink" href="#volatile-vs-non-volatile-data" title="Permanent link">&para;</a></h3>
+<p><strong>Volatile data</strong> exists only while power is applied to the device. The moment a device is powered off, volatile data is lost permanently. The primary location of volatile data is <strong>RAM (Random Access Memory)</strong> — the device's active working memory.</p>
+<p><strong>Non-volatile data</strong> persists after the device is powered off. This includes data stored on hard disk drives (HDD), solid-state drives (SSD), USB drives, optical discs, and cloud storage.</p>
+<p>The volatility hierarchy from most to least volatile:
+1. CPU registers and cache
+2. RAM contents (active processes, open files, network connections, encryption keys in use)
+3. Network connections and routing tables
+4. Running processes
+5. Disk data (files, deleted files, system logs)
+6. Remote/cloud storage</p>
+<h3 id="ram-evidence-collection">RAM Evidence Collection<a class="headerlink" href="#ram-evidence-collection" title="Permanent link">&para;</a></h3>
+<p><strong>RAM evidence collection</strong> (also called memory forensics or live acquisition) captures the contents of a device's active memory before shutdown. RAM may contain:</p>
+<ul>
+<li><strong>Encryption keys</strong> — disk encryption software holds decryption keys in RAM while the system is running; once the system is powered off, the keys are gone and encrypted drives become inaccessible</li>
+<li><strong>Active processes</strong> — what programs were running and their current state</li>
+<li><strong>Open network connections</strong> — active connections to remote servers, IP addresses being communicated with</li>
+<li><strong>Recent command history</strong> — commands typed in terminals or shells</li>
+<li><strong>Password hashes</strong> and session tokens from authenticated applications</li>
+</ul>
+<p>Tools such as Volatility Framework or DumpIt create a memory dump — a forensic copy of RAM contents — that can be analyzed offline. RAM collection requires the device to remain powered on during acquisition.</p>
+<p><strong>Critical procedure point</strong>: If a device is running and suspected of containing active malware, running encryption, or connected to remote systems, collect RAM before powering down — then image the disk.</p>
+<hr />
+<h2 id="disk-forensics-hardware-architecture-and-imaging">Disk Forensics: Hardware Architecture and Imaging<a class="headerlink" href="#disk-forensics-hardware-architecture-and-imaging" title="Permanent link">&para;</a></h2>
+<h3 id="hard-drive-architecture">Hard Drive Architecture<a class="headerlink" href="#hard-drive-architecture" title="Permanent link">&para;</a></h3>
+<p>A <strong>hard disk drive (HDD)</strong> stores data on magnetic platters that spin at high speed. Data is read and written by read/write heads that move across the platter surface. HDDs are organized into concentric <strong>tracks</strong>, subdivided into <strong>sectors</strong> (typically 512 bytes each), grouped into <strong>clusters</strong> (the minimum allocation unit for the filesystem). When a file is "deleted," the filesystem typically marks the cluster as available for reuse but does not overwrite the data — the content persists until overwritten by new data.</p>
+<h3 id="ssd-forensics">SSD Forensics<a class="headerlink" href="#ssd-forensics" title="Permanent link">&para;</a></h3>
+<p><strong>Solid-state drives (SSDs)</strong> use flash memory cells rather than magnetic platters. SSDs present unique forensic challenges compared to HDDs:</p>
+<ul>
+<li><strong>TRIM command</strong>: When a file is deleted on an SSD, the operating system may issue a TRIM command that instructs the drive to erase the flash blocks immediately — making deleted file recovery much harder or impossible</li>
+<li><strong>Wear leveling</strong>: SSDs distribute writes across all flash cells to equalize wear, meaning that recently written data may not be in the expected logical location</li>
+<li><strong>No overwrite guarantee</strong>: On HDDs, overwriting a sector is straightforward; on SSDs, the drive may write to a new physical location and leave the old data in a remapped sector</li>
+</ul>
+<p>Forensic examiners must account for TRIM and wear leveling behavior when attempting to recover deleted data from SSDs.</p>
+<h3 id="write-blocker-hardware">Write-Blocker Hardware<a class="headerlink" href="#write-blocker-hardware" title="Permanent link">&para;</a></h3>
+<p>Before connecting a suspect drive to an examination computer, a <strong>write-blocker</strong> is inserted between the drive and the forensic workstation. A write-blocker is a hardware device that allows data to flow from the drive to the computer (read operations) while physically preventing any data from flowing in the reverse direction (write operations).</p>
+<p>Write-blockers are essential because:
+- Connecting a drive directly to a computer may cause the operating system to automatically mount the drive, write access timestamps, create swap files, or record other metadata — modifying the evidence
+- Any modification to the original drive, however small, can invalidate the chain of custody and render the evidence inadmissible
+- Hardware write-blockers are preferred over software write-blockers because hardware solutions are independent of the examination operating system</p>
+<h3 id="forensic-imaging-process-and-bit-stream-copy">Forensic Imaging Process and Bit-Stream Copy<a class="headerlink" href="#forensic-imaging-process-and-bit-stream-copy" title="Permanent link">&para;</a></h3>
+<p>A <strong>forensic image</strong> is an exact, sector-by-sector copy of a storage device — including every allocated file, deleted file fragment, slack space (unused space within allocated clusters), and unallocated space. The process of creating a forensic image is called <strong>imaging</strong> or <strong>acquisition</strong>.</p>
+<p>A <strong>bit-stream copy</strong> (also called a forensic clone) duplicates every single bit on the source drive in sequence, including:
+- Active files and directories
+- Deleted files not yet overwritten
+- File system metadata (creation, modification, and access timestamps)
+- Slack space (the unused portion at the end of the last cluster allocated to a file)
+- Unallocated space (previously used space now marked as free)</p>
+<p>Tools such as <code>dd</code> (disk dump), FTK Imager, and Cellebrite UFED create bit-stream copies. The resulting image file is forensically equivalent to the original drive and can be analyzed without risk to the original evidence.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Does the Data Tell Us?</p>
+<p><img alt="Trace peering through magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+A forensic image captures more than just the active files. Slack space between the end of a file and the end of its allocated cluster may contain fragments of previously stored data. Unallocated space may contain complete files that were "deleted" but never overwritten. Skilled examiners use file carving tools that scan unallocated space for known file headers (JPEG, PDF, DOCX) to reconstruct deleted files without relying on the file system's index — which may have already had its record overwritten.</p>
+</div>
+<hr />
+<h2 id="hash-verification-the-digital-chain-of-custody">Hash Verification: The Digital Chain of Custody<a class="headerlink" href="#hash-verification-the-digital-chain-of-custody" title="Permanent link">&para;</a></h2>
+<p>The digital equivalent of a chain of custody seal is a <strong>cryptographic hash value</strong>. A hash function takes any input (a file, a disk image, a string of text) and produces a fixed-length output — a <strong>digest</strong> — that is uniquely associated with that specific input. Any change to the input, no matter how small, produces a completely different digest.</p>
+<h3 id="md5-hash-function">MD5 Hash Function<a class="headerlink" href="#md5-hash-function" title="Permanent link">&para;</a></h3>
+<p><strong>MD5 (Message Digest 5)</strong> produces a 128-bit (32 hexadecimal character) digest. Example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>MD5(&quot;forensic image of drive&quot;)  →  a3f5d9e2b1c8470f9a0d6e3b2c5a4f87
+</span></code></pre></div>
+<p>Change a single bit in the input → completely different 32-character output.</p>
+<p>MD5 is fast and widely supported; it is still used in digital forensics for integrity verification despite being computationally broken for <em>collision attacks</em> (finding two different inputs with the same MD5 hash) in cryptographic security contexts. For forensic integrity verification (confirming the image has not changed since acquisition), MD5 remains widely accepted.</p>
+<h3 id="sha-256-hash-function">SHA-256 Hash Function<a class="headerlink" href="#sha-256-hash-function" title="Permanent link">&para;</a></h3>
+<p><strong>SHA-256 (Secure Hash Algorithm 256-bit)</strong> produces a 256-bit (64 hexadecimal character) digest. SHA-256 is the current standard for new forensic work because it is cryptographically stronger than MD5 and collision-resistant under current computational capabilities.</p>
+<h3 id="hash-verification">Hash Verification<a class="headerlink" href="#hash-verification" title="Permanent link">&para;</a></h3>
+<p>The <strong>hash verification</strong> procedure is:</p>
+<ol>
+<li>Before imaging: compute the hash of the original drive</li>
+<li>Create the bit-stream copy</li>
+<li>After imaging: compute the hash of the resulting image</li>
+<li>Compare the two hash values — if they are identical, the image is a bit-for-bit perfect copy of the original</li>
+</ol>
+<p>This procedure is repeated at each transfer: when the image is stored on an evidence server, when it is provided to a defense expert, and before any analysis session begins. A matching hash at each step proves the evidence has not been altered since the original acquisition.</p>
+<h4 id="diagram-forensic-imaging-and-hash-verification-workflow">Diagram: Forensic Imaging and Hash Verification Workflow<a class="headerlink" href="#diagram-forensic-imaging-and-hash-verification-workflow" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/forensic-imaging-workflow/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>Forensic Imaging and Hash Verification Workflow Interactive Diagram</summary>
+<p>Type: workflow
+<strong>sim-id:</strong> forensic-imaging-workflow<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Explain the forensic imaging procedure and verify the integrity of a forensic image using hash comparison (Bloom Level 2 — Understand; verb: explain).</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: Explain</p>
+<p>Canvas layout:
+- Horizontal workflow with five stations: Original Drive → Write-Blocker → Forensic Workstation → Forensic Image → Hash Verification
+- Each station is a labeled icon with a detail panel that opens on click</p>
+<p>Visual elements:
+- Animated data flow arrows between stations
+- Write-blocker shown as a physical block preventing reverse data flow
+- Hash computation animation at Original Drive and at Forensic Image stations
+- Comparison panel showing MD5 and SHA-256 hashes side-by-side with green checkmark if matching</p>
+<p>Interactive controls:
+- Click each station to reveal purpose and procedure
+- "Simulate Tamper" button: modifies one bit in the image and recomputes hash — shows how the hash completely changes even for a 1-bit modification
+- Toggle: MD5 / SHA-256 display</p>
+<p>Data Visibility Requirements:
+- Show example hash values in correct format (32 hex for MD5, 64 hex for SHA-256)
+- Show the tamper simulation: one character change in image → completely different hash value
+- Show the "MATCH" / "MISMATCH" result clearly</p>
+<p>Instructional Rationale: An Understand objective (explain the imaging and hash workflow) benefits from a visual, step-by-step workflow diagram with the ability to simulate tampering — making the importance of hash verification concrete and memorable.</p>
+<p>Color scheme: Blue for data flow, gray for hardware components, green for verified match, red for mismatch/tamper.</p>
+</details>
+<hr />
+<h2 id="metadata-the-hidden-record-in-digital-files">Metadata: The Hidden Record in Digital Files<a class="headerlink" href="#metadata-the-hidden-record-in-digital-files" title="Permanent link">&para;</a></h2>
+<p>Every digital file carries more information than its visible content. <strong>Metadata</strong> is data about data — the hidden record of a file's history, origin, and creation conditions embedded within the file itself or recorded by the operating system.</p>
+<h3 id="exif-metadata-recovery">EXIF Metadata Recovery<a class="headerlink" href="#exif-metadata-recovery" title="Permanent link">&para;</a></h3>
+<p><strong>EXIF (Exchangeable Image File Format) metadata</strong> is embedded in digital photographs and video files by the camera or smartphone at the moment of capture. EXIF data typically includes:</p>
+<ul>
+<li><strong>Camera make and model</strong> — the specific device that captured the image</li>
+<li><strong>Date and time</strong> of capture (drawn from the device's internal clock)</li>
+<li><strong>GPS coordinates</strong> of the capture location (if location services were enabled)</li>
+<li><strong>Camera settings</strong> — aperture, shutter speed, ISO, focal length</li>
+<li><strong>Software version</strong> — the camera firmware or app used to capture the image</li>
+</ul>
+<p>EXIF metadata is recovered using forensic tools (ExifTool, Autopsy, FTK) that read the metadata fields embedded in the image file header. The metadata is not visible in the image itself and is not removed when photographs are shared via SMS or uploaded to many social media platforms (though some platforms strip EXIF before display).</p>
+<h3 id="digital-timestamp-analysis">Digital Timestamp Analysis<a class="headerlink" href="#digital-timestamp-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Digital timestamp analysis</strong> examines the timestamps associated with files and file system operations. A file typically has three system timestamps:</p>
+<ul>
+<li><strong>Created (birth) timestamp</strong>: when the file first appeared on this file system</li>
+<li><strong>Modified timestamp</strong>: when the file's content was last changed</li>
+<li><strong>Accessed timestamp</strong>: when the file was last opened or read</li>
+</ul>
+<p>Timestamps are valuable but require careful interpretation. Timestamps record the local system time, which depends on the device's clock accuracy and time zone settings. Incorrect clocks, time zone changes, and deliberate timestamp manipulation can all produce misleading timestamps. <strong>Timestamp analysis</strong> involves correlating file timestamps against external time sources (server logs, cell tower records, email headers with server timestamps) to establish a reliable timeline.</p>
+<h3 id="geolocation-from-metadata">Geolocation from Metadata<a class="headerlink" href="#geolocation-from-metadata" title="Permanent link">&para;</a></h3>
+<p><strong>Geolocation from metadata</strong> extracts GPS coordinates embedded in EXIF data to place a photograph at a specific physical location. GPS coordinates in EXIF data are expressed as decimal degrees (latitude and longitude) and can be plotted directly on a map to identify the location where the image was captured — or, when a suspect denies being at a location, to contradict that claim with physical evidence from the device.</p>
+<p>Even when GPS coordinates are absent from EXIF, geolocation may still be possible through <strong>cell tower triangulation</strong> (see Chapter 17) or by identifying recognizable landmarks in the image background.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Investigator Tip</p>
+<p><img alt="Trace holding magnifying glass" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+When examining EXIF metadata GPS coordinates, always check the timestamp against the GPS coordinates for internal consistency. A photo allegedly taken at a specific location should show the GPS coordinates of that location — and the timestamp should be consistent with the time zone of those coordinates. A GPS location in Tokyo with a device timestamp in Eastern Standard Time, for example, may indicate the device clock was set to the wrong time zone, or that metadata has been manually altered.</p>
+</div>
+<hr />
+<h2 id="network-forensics">Network Forensics<a class="headerlink" href="#network-forensics" title="Permanent link">&para;</a></h2>
+<p><strong>Network forensics</strong> is the analysis of network traffic and logs to reconstruct communications, identify participants, and establish timelines of network activity.</p>
+<h3 id="ip-address-analysis">IP Address Analysis<a class="headerlink" href="#ip-address-analysis" title="Permanent link">&para;</a></h3>
+<p>Every device on the internet communicates using an <strong>IP address</strong> — a numerical label that identifies the device on the network. <strong>IP address analysis</strong> in a forensic investigation traces network communications to their sources and destinations.</p>
+<p>Key distinctions:
+- <strong>Public IP address</strong>: the address visible on the internet, assigned by the Internet Service Provider (ISP); associated with a subscriber account that can be identified through a legal process
+- <strong>Private IP address</strong>: the internal address within a home or office network (typically 192.168.x.x or 10.x.x.x); not directly traceable from the internet without access to the router's NAT logs</p>
+<p><strong>Geolocation of IP addresses</strong> assigns an approximate physical location (city, ISP, or organization) to a public IP address using databases that map IP address blocks to their registered owners. IP geolocation is approximate — typically to the city level — and can be spoofed or masked by VPNs and proxies.</p>
+<h3 id="packet-sniffing">Packet Sniffing<a class="headerlink" href="#packet-sniffing" title="Permanent link">&para;</a></h3>
+<p><strong>Packet sniffing</strong> (also called network capture or traffic analysis) is the real-time or retrospective capture of network data packets as they traverse a network segment. Tools such as Wireshark capture and decode individual packets, allowing examiners to reconstruct:</p>
+<ul>
+<li>Website URLs accessed</li>
+<li>Email content (if unencrypted)</li>
+<li>File transfers</li>
+<li>VoIP call data</li>
+<li>DNS lookups (which reveal domain names even when content is encrypted)</li>
+</ul>
+<p>Packet sniffing on a shared network segment typically requires a court order when applied to communications of others. Law enforcement may execute network captures at an ISP or at a suspect's premises under appropriate legal authority.</p>
+<h3 id="firewall-log-analysis">Firewall Log Analysis<a class="headerlink" href="#firewall-log-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Firewall log analysis</strong> examines the logs generated by network firewalls and routers, which record connection attempts, blocked traffic, and allowed connections. Firewall logs typically contain: source IP address, destination IP address, port number, timestamp, and allowed/blocked decision.</p>
+<p>Firewall logs can reconstruct the history of a device's network connections even after the device itself has been wiped, because the logs are stored on the network infrastructure rather than on the suspect device. Preserved firewall logs can place a device at a specific IP address at a specific time, correlate with other time-stamped evidence, and identify command-and-control server connections associated with malware activity.</p>
+<hr />
+<h2 id="encryption-steganography-and-the-dark-web">Encryption, Steganography, and the Dark Web<a class="headerlink" href="#encryption-steganography-and-the-dark-web" title="Permanent link">&para;</a></h2>
+<p>Three concepts often encountered in digital investigations require special mention because they are specifically designed to conceal information.</p>
+<h3 id="encryption-in-digital-forensics">Encryption in Digital Forensics<a class="headerlink" href="#encryption-in-digital-forensics" title="Permanent link">&para;</a></h3>
+<p><strong>Encryption</strong> transforms data into an unreadable format using a mathematical key. Without the correct decryption key, encrypted data appears as random bits. Full-disk encryption (BitLocker on Windows, FileVault on macOS) encrypts every sector of a drive; the data is only accessible when the correct password or key is provided at boot time.</p>
+<p>For forensic examiners, an encrypted drive presents a significant obstacle:</p>
+<ul>
+<li>A <strong>forensic image</strong> can still be made of an encrypted drive — but the image contains only ciphertext</li>
+<li>If the device was <strong>running</strong> when seized, the decryption key may be in RAM — making RAM collection before shutdown critical</li>
+<li><strong>Password cracking</strong> using dictionary attacks or brute force may be feasible for short, weak passwords but is computationally infeasible for long, random passwords with current technology</li>
+<li><strong>Legal tools</strong>: courts can compel disclosure of encryption passwords in many jurisdictions; the Fifth Amendment implications are an active area of law</li>
+</ul>
+<h3 id="steganography">Steganography<a class="headerlink" href="#steganography" title="Permanent link">&para;</a></h3>
+<p><strong>Steganography</strong> (from Greek: <em>hidden writing</em>) is the technique of concealing information within other, apparently innocuous data. In digital contexts, steganographic tools embed secret data within image files, audio files, or video files by making imperceptible modifications to the file — for example, changing the least significant bits of pixel values in an image. The altered image looks identical to the original to casual inspection; only examination with the correct steganalysis tool or key reveals the hidden content.</p>
+<p>Steganography is used to conceal communications and to smuggle data out of secured environments without triggering content inspection systems that look for suspicious keywords.</p>
+<p>Forensic detection of steganography uses <strong>steganalysis</strong> — statistical analysis of digital files to detect the subtle patterns introduced by embedding operations. Files carrying hidden data show statistical anomalies in their bit patterns that can be detected even without knowing the specific steganographic method or key used.</p>
+<h3 id="dark-web-evidence">Dark Web Evidence<a class="headerlink" href="#dark-web-evidence" title="Permanent link">&para;</a></h3>
+<p>The <strong>dark web</strong> refers to internet content that exists on overlay networks — most commonly the Tor network — that require specialized software to access and that route traffic through multiple encrypted layers to conceal the IP addresses of both clients and servers. The dark web hosts marketplaces for illegal goods, communications for criminal enterprises, and infrastructure for cybercrime.</p>
+<p>Investigating dark web activity presents unique challenges:
+- Tor's onion routing conceals source IP addresses through multiple relays
+- <code>.onion</code> domains are not indexed by standard search engines and are not publicly registered
+- Transactions typically use cryptocurrency to avoid financial tracing</p>
+<p>Forensic approaches include: examining the suspect device for Tor browser installation and configuration files, reviewing browser history and cached <code>.onion</code> URLs, recovering cryptocurrency wallet software and transaction logs, and working with international law enforcement partners who may have infiltrated dark web operations or compromised Tor exit nodes.</p>
+<h4 id="diagram-metadata-recovery-and-timeline-builder">Diagram: Metadata Recovery and Timeline Builder<a class="headerlink" href="#diagram-metadata-recovery-and-timeline-builder" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/metadata-timeline-builder/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>Metadata Recovery and Timeline Builder MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> metadata-timeline-builder<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: Apply</p>
+<p>Canvas layout:
+- Left panel (~40%): Simulated file browser showing a folder of evidence photographs with file icons
+- Right panel (~60%): EXIF data readout panel + timeline visualization</p>
+<p>Visual elements:
+- Clickable file icons representing 6-8 simulated evidence photos with different timestamps and locations
+- EXIF readout showing: Camera Make/Model, Capture Date/Time, GPS Lat/Long, Device Time Zone
+- Timeline at bottom showing selected photos plotted in chronological order
+- Mini map showing GPS coordinates of selected photos as map pins</p>
+<p>Interactive controls:
+- Click any photo icon to load its EXIF data into the readout panel
+- "Add to Timeline" button places the photo on the chronological timeline
+- "Plot on Map" button shows the GPS coordinates on a simplified map grid
+- "Export Timeline" displays a formatted text report of all photos in chronological order</p>
+<p>Data Visibility Requirements:
+- Show EXIF data in human-readable format
+- Show GPS coordinates in both decimal degrees and DMS (degrees/minutes/seconds) format
+- Highlight time zone inconsistencies in red when detected
+- Show the sorted chronological timeline as photos are added</p>
+<p>Instructional Rationale: An Apply-level objective (extract and use EXIF metadata) requires hands-on practice with simulated evidence files, building a timeline that mirrors real investigative workflow.</p>
+<p>Color scheme: Dark forensic blue background, white panels, green for verified data, red for anomalies/inconsistencies.</p>
+</details>
+<hr />
+<h2 id="key-concepts-review">Key Concepts Review<a class="headerlink" href="#key-concepts-review" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the major concepts from this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volatile Data</td>
+<td>Data that disappears when power is removed; RAM is the primary source</td>
+</tr>
+<tr>
+<td>Non-Volatile Data</td>
+<td>Data that persists after power-off; stored on HDD, SSD, USB, cloud</td>
+</tr>
+<tr>
+<td>RAM Collection</td>
+<td>Memory dump acquired before shutdown; captures encryption keys, active processes</td>
+</tr>
+<tr>
+<td>Write-Blocker</td>
+<td>Hardware device that prevents any write operations to the evidence drive</td>
+</tr>
+<tr>
+<td>Bit-Stream Copy</td>
+<td>Sector-by-sector forensic image including deleted files, slack, and unallocated space</td>
+</tr>
+<tr>
+<td>MD5 Hash</td>
+<td>128-bit digest used to verify forensic image integrity</td>
+</tr>
+<tr>
+<td>SHA-256 Hash</td>
+<td>256-bit digest; current standard for new forensic acquisitions</td>
+</tr>
+<tr>
+<td>Hash Verification</td>
+<td>Comparing hash of original drive to hash of image proves bit-perfect copy</td>
+</tr>
+<tr>
+<td>EXIF Metadata</td>
+<td>Embedded image file data: camera, timestamp, GPS coordinates</td>
+</tr>
+<tr>
+<td>Digital Timestamps</td>
+<td>Created/Modified/Accessed file system timestamps; must be correlated against external sources</td>
+</tr>
+<tr>
+<td>Geolocation</td>
+<td>GPS coordinates from EXIF data place a photograph at a physical location</td>
+</tr>
+<tr>
+<td>Packet Sniffing</td>
+<td>Network traffic capture revealing connection history, protocols, and (if unencrypted) content</td>
+</tr>
+<tr>
+<td>Firewall Logs</td>
+<td>Network infrastructure records of connections; persist even after device is wiped</td>
+</tr>
+<tr>
+<td>Encryption</td>
+<td>Mathematical data protection; full-disk encryption requires key for access</td>
+</tr>
+<tr>
+<td>Steganography</td>
+<td>Hidden data embedded imperceptibly within image or audio files</td>
+</tr>
+<tr>
+<td>Dark Web</td>
+<td>Tor-based overlay network requiring specialized access; <code>.onion</code> domains</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details class="question">
+<summary>Challenge: Evidence Priority</summary>
+<p>An investigator seizes a running laptop suspected of involvement in network-based fraud. The laptop is logged in, the screen is active, and an encrypted communication application is open. The hard drive uses full-disk encryption.</p>
+<p><strong>In what order should evidence be collected, and why? What would be lost if the investigator immediately powered off the laptop?</strong></p>
+<p><strong>Answer:</strong> The correct collection order is: (1) <strong>RAM dump first</strong> — the logged-in state means the disk encryption key is in RAM; the open communication application may have session keys, received messages, and connection logs only in memory. Collect RAM immediately using a memory acquisition tool before any other action. (2) <strong>Network connection documentation</strong> — screenshot or record the active network connections (what servers is the application communicating with?). (3) <strong>Forensic image of the drive</strong> — with the encryption key recovered from RAM, the drive can be decrypted; without it, the image contains only useless ciphertext.</p>
+<p><strong>If the investigator powered off immediately:</strong> The RAM contents (including the disk encryption key and all volatile evidence) would be lost. The resulting encrypted forensic image would be inaccessible without the key, and the device would provide no useful digital evidence despite containing substantial material. This mistake is irreversible — the evidence cannot be recovered after shutdown.</p>
+</details>
+<hr />
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Digital evidence is fragile — but it is also pervasive. Every interaction with a device leaves a trace, and trained examiners know exactly where to look and in what order to look. You now understand the volatility hierarchy, the role of hash functions in preserving evidence integrity, the power of metadata in placing people and devices at specific times and locations, and the special challenges of encryption and the dark web. Chapter 16 turns to facial recognition — one of the most powerful and most controversial tools in modern law enforcement. Follow the evidence — face first.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../14-document-examination/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quiz">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "title": "CDR and Tower Triangulation Timeline MicroSim",
+  "description": "Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "cdr-tower-triangulation",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Use",
+  "completion_status": "scaffold",
+  "chapter_number": 17,
+  "chapter_title": "Cell Phone Analytics and Mobile Forensics",
+  "chapter_dir": "17-cell-phone-analytics"
+}

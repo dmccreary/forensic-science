@@ -1,0 +1,2356 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The biology of friction ridge skin, fingerprint pattern classification, minutiae analysis, latent print development techniques, and AFIS database matching.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/chapters/03-fingerprint-analysis/">
+      
+      
+        <link rel="prev" href="../02-crime-scene-investigation/references/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Fingerprint Analysis and Dactyloscopy - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fingerprint-analysis-and-dactyloscopy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fingerprint Analysis and Dactyloscopy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../01-intro-forensic-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations & Legal Principles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../02-crime-scene-investigation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Crime Scene Investigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    3. Fingerprint Analysis
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. Fingerprint Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../04-hair-and-fiber-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Hair and Fiber Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../05-glass-soil-trace-evidence/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Glass, Soil & Trace Evidence
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../06-forensic-serology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Forensic Serology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../07-bloodstain-pattern-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Bloodstain Pattern Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../08-forensic-dna-profiling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DNA Profiling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../09-forensic-toxicology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Forensic Toxicology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../10-fire-arson-explosives/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Fire, Arson & Explosives
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../11-forensic-anthropology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Forensic Anthropology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../12-forensic-entomology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Forensic Entomology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../13-firearms-and-ballistics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Firearms & Ballistics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../14-document-examination/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Document Examination
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../15-digital-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Digital Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../16-facial-recognition/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Facial Recognition
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../17-cell-phone-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Cell Phone Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../18-social-media-osint/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Social Media & OSINT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../19-aviation-crash-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Aviation Crash Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-biology-behind-the-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Biology Behind the Print
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fingerprint-pattern-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fingerprint Pattern Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fingerprint Pattern Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whorls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Whorls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-fingerprint-pattern-classification-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Fingerprint Pattern Classification Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-fingerprints-at-a-scene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Fingerprints at a Scene
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Fingerprints at a Scene">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patent-fingerprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patent Fingerprints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plastic-fingerprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plastic Fingerprints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latent-fingerprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latent Fingerprints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latent-print-development-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latent Print Development Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Latent Print Development Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cyanoacrylate-fuming-super-glue-fuming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cyanoacrylate Fuming (Super Glue Fuming)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ninhydrin-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ninhydrin Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silver-nitrate-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silver Nitrate Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iodine-fuming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iodine Fuming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iodine Fuming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-latent-print-development-technique-selector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Latent Print Development Technique Selector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minutiae-points-the-basis-of-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minutiae Points: The Basis of Identification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afis-automated-fingerprint-identification-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      AFIS: Automated Fingerprint Identification System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AFIS: Automated Fingerprint Identification System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-afis-search-and-comparison-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: AFIS Search and Comparison Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-scene-to-court-fingerprint-evidence-in-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Scene to Court: Fingerprint Evidence in Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Review
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/chapters/03-fingerprint-analysis/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="fingerprint-analysis-and-dactyloscopy">Fingerprint Analysis and Dactyloscopy<a class="headerlink" href="#fingerprint-analysis-and-dactyloscopy" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter provides a comprehensive study of dactyloscopy — the science of fingerprint identification. Students begin with the biology of friction ridge skin and dermal papillae, then learn to classify prints into the three major pattern families (loops, whorls, and arches) and their subtypes. The chapter covers minutiae analysis including ridge endings and bifurcations, distinguishes between patent, plastic, and latent fingerprints, and surveys the chemical and physical development techniques used for each substrate type. Students also explore AFIS database matching and the concept of fingerprint individualization as a form of individual evidence.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 22 concepts from the learning graph:</p>
+<ol>
+<li>Dactyloscopy</li>
+<li>Friction Ridge Skin</li>
+<li>Dermal Papillae</li>
+<li>Fingerprint Pattern: Loops</li>
+<li>Fingerprint Pattern: Whorls</li>
+<li>Fingerprint Pattern: Arches</li>
+<li>Ulnar vs Radial Loops</li>
+<li>Whorl Subtypes</li>
+<li>Tented Arch Pattern</li>
+<li>Minutiae Points</li>
+<li>Ridge Endings</li>
+<li>Bifurcations</li>
+<li>Patent Fingerprints</li>
+<li>Plastic Fingerprints</li>
+<li>Latent Fingerprints</li>
+<li>Fingerprint Substrates</li>
+<li>Cyanoacrylate Fuming</li>
+<li>Ninhydrin Development</li>
+<li>Silver Nitrate Development</li>
+<li>Iodine Fuming</li>
+<li>AFIS Database</li>
+<li>Fingerprint Individualization</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-intro-forensic-science/">Chapter 1: Foundations of Forensic Science and Legal Principles</a></li>
+<li><a href="../02-crime-scene-investigation/">Chapter 2: Crime Scene Investigation and Evidence Collection</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+No two people on Earth share the same fingerprints — not even identical twins. That biological fact is the cornerstone of one of the oldest and most widely used forms of forensic identification. This chapter is where dactyloscopy begins: from the biology that creates friction ridges all the way to the database algorithms that match them. Follow the evidence — it is literally at your fingertips.</p>
+</div>
+<hr />
+<h2 id="the-biology-behind-the-print">The Biology Behind the Print<a class="headerlink" href="#the-biology-behind-the-print" title="Permanent link">&para;</a></h2>
+<p>A <strong>fingerprint</strong> is the impression left by the friction ridge skin on the inner surface of a finger. To understand why fingerprints are useful as forensic evidence, we need to understand the biological structures that create and maintain them.</p>
+<p><strong>Friction ridge skin</strong> is a specialized type of skin found on the palmar surfaces of the hands and the plantar surfaces of the feet. Unlike the smooth skin on most of the body, friction ridge skin has raised, interlocking ridges that improve grip and tactile sensitivity. These ridges form predictable, persistent patterns established by the 17th week of fetal development and remain stable throughout a person's lifetime — changing only if the dermal layer is permanently scarred.</p>
+<p>Beneath the surface of the skin lie <strong>dermal papillae</strong> — tiny projections of the dermis (the deep skin layer) that push upward and create the visible ridges at the surface. The dermal papillae also house sweat pores, which open at the ridge surface. As the ridge sweat pores release moisture, a thin film of sweat, natural skin oils, and environmental contaminants is deposited on any surface the finger touches — creating the latent fingerprint.</p>
+<p>This combination of persistent ridge patterns and natural deposition is what makes fingerprints such powerful forensic tools: every time you touch something, you are signing it.</p>
+<hr />
+<h2 id="fingerprint-pattern-classification">Fingerprint Pattern Classification<a class="headerlink" href="#fingerprint-pattern-classification" title="Permanent link">&para;</a></h2>
+<p>The Henry Classification System, developed by Sir Edward Henry in 1901 and still foundational to dactyloscopy today, organizes all fingerprints into three major pattern families. The three major pattern families, with their approximate frequencies, are:</p>
+<ol>
+<li><strong>Loops</strong> — the most common (approximately 60–65% of all fingerprints)</li>
+<li><strong>Whorls</strong> — the second most common (approximately 30–35%)</li>
+<li><strong>Arches</strong> — the least common (approximately 5%)</li>
+</ol>
+<h3 id="loops">Loops<a class="headerlink" href="#loops" title="Permanent link">&para;</a></h3>
+<p>A <strong>loop</strong> pattern has one or more ridges that enter from one side of the print, curve around, and exit from the same side they entered — forming a loop shape. Every loop has three key features: a <strong>delta</strong> (a triangular ridge arrangement at the base of the loop), a <strong>core</strong> (the innermost point of the loop curve), and a <strong>ridge count</strong> (the number of ridges crossed by a straight line drawn from the core to the delta).</p>
+<p>Loops are further divided by the direction they open:</p>
+<ul>
+<li><strong>Ulnar loops</strong> open toward the ulna (the little-finger side of the hand). These are by far the more common subtype.</li>
+<li><strong>Radial loops</strong> open toward the radius (the thumb side of the hand). Radial loops are considerably less common and are more frequently found on index fingers.</li>
+</ul>
+<p>The distinction between ulnar and radial matters in the Henry classification system for database filing, because the opening direction affects the ridge count classification.</p>
+<h3 id="whorls">Whorls<a class="headerlink" href="#whorls" title="Permanent link">&para;</a></h3>
+<p>A <strong>whorl</strong> pattern contains at least two deltas and at least one ridge that makes a complete circuit around the central area. Whorls are subdivided into four types:</p>
+<ul>
+<li><strong>Plain whorls</strong> — ridges form a roughly circular or elliptical pattern around the center</li>
+<li><strong>Central pocket loop whorls</strong> — outer ridges resemble a loop, but an inner circular pattern is present</li>
+<li><strong>Double loop whorls</strong> — two distinct loop formations are present, each with its own delta</li>
+<li><strong>Accidental whorls</strong> — irregular patterns that do not fit any other category but have two or more deltas</li>
+</ul>
+<h3 id="arches">Arches<a class="headerlink" href="#arches" title="Permanent link">&para;</a></h3>
+<p>An <strong>arch</strong> pattern has ridges that enter from one side of the print, rise in the center, and exit on the opposite side — like a wave. Arches are divided into:</p>
+<ul>
+<li><strong>Plain arches</strong> — a smooth, gentle wave; no delta</li>
+<li><strong>Tented arches</strong> — a sharper upward spike at the center, usually accompanied by a single delta</li>
+</ul>
+<p>The <strong>tented arch pattern</strong> is important to recognize because its delta-like structure can cause misclassification as a loop by untrained examiners.</p>
+<h4 id="diagram-fingerprint-pattern-classification-explorer">Diagram: Fingerprint Pattern Classification Explorer<a class="headerlink" href="#diagram-fingerprint-pattern-classification-explorer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/fingerprint-pattern-explorer/main.html" width="100%" height="540px" scrolling="no"></iframe>
+
+<details>
+<summary>Fingerprint Pattern Classification Explorer MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> fingerprint-pattern-explorer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Identify the three fingerprint pattern families and their subtypes using defining structural features (Bloom Level 1 — Remember; verb: identify).</p>
+<p>Bloom Level: Remember (L1)
+Bloom Verb: Identify</p>
+<p>Canvas layout:
+- Left panel (~30%): pattern selection menu showing all 8 pattern types (Plain Loop Ulnar, Plain Loop Radial, Plain Whorl, Central Pocket Loop, Double Loop Whorl, Accidental Whorl, Plain Arch, Tented Arch)
+- Main display (~70%): enlarged fingerprint diagram for the selected pattern</p>
+<p>Visual elements:
+- Each pattern rendered as a schematic ridge diagram (not a photograph)
+- Key structural features annotated with clickable labels: Core (yellow), Delta (green), Ridge Flow (arrows)
+- A "Features" panel at the bottom listing the 2–3 defining characteristics of the selected pattern
+- A frequency badge showing "Common: 60%" / "Less common: 35%" / "Rare: 5%" for the three families</p>
+<p>Interactive controls:
+- Click any pattern in the left menu to load it in the main panel
+- Click annotated labels (Core, Delta, etc.) to get a pop-up definition
+- A "Quiz Me" mode presents a random pattern and asks the investigator to classify it from a dropdown; correct/wrong feedback with explanation follows</p>
+<p>Data Visibility Requirements:
+- Stage 1: Show pattern with all annotations visible
+- Stage 2 (Quiz mode): Hide annotations, show only the ridge diagram; user must classify before annotations are revealed
+- Stage 3 (Quiz feedback): Show correct classification with annotations highlighted and a one-sentence explanation of the key feature that determines the classification</p>
+<p>Default view: Ulnar Loop with all annotations visible</p>
+<p>Instructional Rationale: A Remember-level objective (identify and classify patterns) is best supported by an interactive labeling interface where learners can self-test with immediate corrective feedback.</p>
+<p>Color scheme: Ridges in dark gray on white background. Core highlighted yellow, deltas highlighted green, ridge flow arrows in blue.</p>
+</details>
+<hr />
+<h2 id="types-of-fingerprints-at-a-scene">Types of Fingerprints at a Scene<a class="headerlink" href="#types-of-fingerprints-at-a-scene" title="Permanent link">&para;</a></h2>
+<p>Not all fingerprints at a crime scene look the same. The three types — patent, plastic, and latent — differ in how they are formed and whether they are immediately visible. A key term for understanding development techniques is <strong>substrate</strong>: the surface on which the fingerprint is deposited. Substrate porosity determines which development technique is appropriate.</p>
+<h3 id="patent-fingerprints">Patent Fingerprints<a class="headerlink" href="#patent-fingerprints" title="Permanent link">&para;</a></h3>
+<p>A <strong>patent fingerprint</strong> (from the Latin <em>patens</em>, meaning "open" or "visible") is already visible to the naked eye before any processing. Patent prints form when a finger coated with a contrasting substance — blood, grease, paint, mud, ink — makes contact with a surface. The substance transfers in the pattern of the friction ridges, creating a visible impression. Patent prints are photographed immediately in place, following the documentation protocol from Chapter 2.</p>
+<h3 id="plastic-fingerprints">Plastic Fingerprints<a class="headerlink" href="#plastic-fingerprints" title="Permanent link">&para;</a></h3>
+<p>A <strong>plastic fingerprint</strong> is a three-dimensional impression left in a soft, malleable surface — wax, putty, tar, soap, wet paint, chocolate, or butter. The ridges physically depress the material, leaving a negative cast of the ridge pattern. Plastic prints are photographed with oblique (side-angle) lighting to maximize ridge-shadow contrast and are sometimes cast using silicone dental material. They are among the highest-quality prints an investigator can recover.</p>
+<h3 id="latent-fingerprints">Latent Fingerprints<a class="headerlink" href="#latent-fingerprints" title="Permanent link">&para;</a></h3>
+<p>A <strong>latent fingerprint</strong> (from the Latin <em>latens</em>, meaning "hidden") is invisible to the naked eye. It forms when the natural sweat and oil residue deposited by the friction ridges contacts a surface but leaves no visible mark. The vast majority of fingerprints recovered from crime scenes are latent prints — and recovering them requires development techniques matched to the substrate.</p>
+<hr />
+<h2 id="latent-print-development-techniques">Latent Print Development Techniques<a class="headerlink" href="#latent-print-development-techniques" title="Permanent link">&para;</a></h2>
+<p>The goal of development is to make the invisible ridge pattern visible without destroying the evidence. The choice of technique is driven by the <strong>porosity</strong> of the substrate:</p>
+<ul>
+<li><strong>Porous surfaces</strong> (paper, cardboard, untreated wood) absorb the sweat residue into the surface. Chemical techniques that react with sweat constituents (amino acids, sodium chloride, proteins) work best here.</li>
+<li><strong>Non-porous surfaces</strong> (glass, plastic, metal, glazed ceramics) do not absorb the residue; it sits on top. Physical techniques that adhere to the residue film work best.</li>
+</ul>
+<h3 id="cyanoacrylate-fuming-super-glue-fuming">Cyanoacrylate Fuming (Super Glue Fuming)<a class="headerlink" href="#cyanoacrylate-fuming-super-glue-fuming" title="Permanent link">&para;</a></h3>
+<p><strong>Cyanoacrylate fuming</strong> is the standard technique for non-porous surfaces. The item is placed in a sealed chamber, and cyanoacrylate ester (the active ingredient in super glue) is heated to create a vapor. The vapor reacts with amino acids and other components in the latent print residue, polymerizing on the ridges to form a hard, white deposit that makes the ridge pattern visible. Once fumed, the white deposit can be enhanced further with fluorescent dyes (Rhodamine 6G, Ardrox) and photographed under ultraviolet light for maximum contrast.</p>
+<h3 id="ninhydrin-development">Ninhydrin Development<a class="headerlink" href="#ninhydrin-development" title="Permanent link">&para;</a></h3>
+<p><strong>Ninhydrin</strong> is a chemical reagent that reacts with the alpha-amino acids in sweat to produce a bright purple compound called Ruhemann's purple. Ninhydrin solution is applied to porous surfaces (paper, cardboard) by spraying or dipping, then the item is gently heated to accelerate the reaction. The result is a purple-stained ridge pattern. Ninhydrin is sensitive enough to develop prints on paper items decades old.</p>
+<h3 id="silver-nitrate-development">Silver Nitrate Development<a class="headerlink" href="#silver-nitrate-development" title="Permanent link">&para;</a></h3>
+<p><strong>Silver nitrate</strong> reacts with the chloride ions in sweat (derived from sodium chloride — salt) to form silver chloride, which darkens to metallic silver on exposure to light. The item is immersed in or sprayed with a silver nitrate solution, then exposed to strong light or UV. Silver nitrate was one of the earliest latent print reagents and is still useful for porous surfaces, though it is less sensitive than ninhydrin for aged prints.</p>
+<h3 id="iodine-fuming">Iodine Fuming<a class="headerlink" href="#iodine-fuming" title="Permanent link">&para;</a></h3>
+<p><strong>Iodine fuming</strong> is a physical technique in which iodine crystals are heated to produce vapor that temporarily adsorbs onto the oils and fatty acids in latent prints, creating a yellow-brown colored pattern. The technique is reversible — the iodine slowly sublimates away — so developed prints must be photographed immediately. Because iodine fuming does not permanently alter the substrate, it can precede more destructive chemical techniques.</p>
+<p>The following table summarizes the four main development techniques and their substrate applications:</p>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Substrate Type</th>
+<th>Reacts With</th>
+<th>Result Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cyanoacrylate Fuming</td>
+<td>Non-porous (glass, plastic, metal)</td>
+<td>Amino acids, proteins</td>
+<td>White polymerized deposit</td>
+</tr>
+<tr>
+<td>Ninhydrin</td>
+<td>Porous (paper, cardboard)</td>
+<td>Alpha-amino acids in sweat</td>
+<td>Purple (Ruhemann's purple)</td>
+</tr>
+<tr>
+<td>Silver Nitrate</td>
+<td>Porous (paper)</td>
+<td>Chloride ions (salt)</td>
+<td>Darkens to silver/black</td>
+</tr>
+<tr>
+<td>Iodine Fuming</td>
+<td>Porous or non-porous (temporary)</td>
+<td>Oils and fatty acids</td>
+<td>Yellow-brown (temporary)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-latent-print-development-technique-selector">Diagram: Latent Print Development Technique Selector<a class="headerlink" href="#diagram-latent-print-development-technique-selector" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/latent-print-development/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>Latent Print Development Technique Selector MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> latent-print-development<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: Select</p>
+<p>Canvas layout:
+- Top section: evidence item display (selected from a dropdown)
+- Bottom section: four technique option buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)
+- Right panel: result panel showing what the developed print looks like after applying the chosen technique</p>
+<p>Visual elements:
+- Evidence item illustrations: drinking glass, piece of paper, cardboard box, plastic bag, wooden door frame
+- Before/after views — left shows the blank surface, right shows the developed print in the correct color for the chosen technique
+- A "substrate porosity" indicator (porous / non-porous) that appears when the evidence item is selected</p>
+<p>Interactive controls:
+- Dropdown: Select evidence item (glass, paper, cardboard, plastic bag, wood)
+- Four technique buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)
+- "Apply Technique" button triggers the before→after animation
+- If wrong technique is selected, result panel shows "No visible ridge pattern — technique not effective on this substrate" with a brief explanation</p>
+<p>Data Visibility Requirements:
+- Stage 1: Show selected evidence item with substrate porosity label
+- Stage 2: User selects a technique and clicks Apply
+- Stage 3: Show either a correct developed print (color matching the technique) or a "no result" failure with explanation</p>
+<p>Behavior:
+- Cyanoacrylate on non-porous: shows white fumed ridges
+- Ninhydrin on paper: shows purple Ruhemann's purple ridges
+- Ninhydrin on glass: shows failure message
+- Iodine on any surface: shows yellow-brown temporary result and "must photograph immediately" warning</p>
+<p>Instructional Rationale: An Apply-level objective (select technique by substrate) requires the student to actively choose and observe the consequence. Failure feedback for wrong choices teaches substrate logic better than a correct-only demonstration.</p>
+<p>Color scheme: Substrate in realistic textures (gray for glass, tan for paper). Developed prints in technique-accurate colors.</p>
+</details>
+<hr />
+<div class="admonition mascot-tip">
+<p class="admonition-title">Investigator Tip</p>
+<p><img alt="Trace holding magnifying glass" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+At a scene, always attempt non-destructive techniques first — start with photography and oblique lighting, then iodine fuming, before moving to ninhydrin or silver nitrate. Once a chemical technique has been applied, the substrate is altered. You can always apply a stronger technique later; you cannot un-apply a destructive one.</p>
+</div>
+<hr />
+<h2 id="minutiae-points-the-basis-of-identification">Minutiae Points: The Basis of Identification<a class="headerlink" href="#minutiae-points-the-basis-of-identification" title="Permanent link">&para;</a></h2>
+<p>Pattern type alone — loop, whorl, or arch — does not individualize a fingerprint. After all, billions of people have loop patterns. What makes a fingerprint unique is the specific arrangement of microscopic features within the ridge pattern, called <strong>minutiae points</strong> (from the Latin <em>minutia</em>, meaning "small detail").</p>
+<p>Minutiae are the irregularities where ridges start, end, or split. The two most forensically significant minutiae types are:</p>
+<p><strong>Ridge endings</strong> — a point where a ridge terminates. Under magnification, a ridge ending looks like a ridge that simply stops. Ridge endings are the most common minutiae type.</p>
+<p><strong>Bifurcations</strong> — a point where one ridge splits into two diverging ridges. Under magnification, a bifurcation resembles the letter Y lying on its side.</p>
+<p>Other minutiae types include ridge dots (a very short isolated ridge) and enclosures (a ridge that splits and rejoins). However, ridge endings and bifurcations make up the overwhelming majority of points used in comparison.</p>
+<p>For a fingerprint comparison to support a conclusion of <strong>individualization</strong> — the determination that a crime scene print and a known print came from the same source — a sufficient number of matching minutiae must be identified in corresponding locations and orientations. While no universal minimum point standard is legally mandated in the United States (following the abandonment of minimum point thresholds by most professional bodies post-2009), in practice examiners typically identify 10–15 or more corresponding minutiae before reaching a conclusion of identification.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Does the Data Tell Us?</p>
+<p><img alt="Trace peering through magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The 2009 National Academy of Sciences report raised significant concerns about fingerprint analysis, specifically the lack of rigorous, quantified error rate data. Unlike DNA analysis (which has published population statistics and product rule calculations), fingerprint individualization relies heavily on examiner judgment. This does not mean fingerprint evidence is unreliable — but it does mean good investigators understand the difference between "consistent with" and "proven to be." The evidence suggests; it rarely proves alone.</p>
+</div>
+<hr />
+<h2 id="afis-automated-fingerprint-identification-system">AFIS: Automated Fingerprint Identification System<a class="headerlink" href="#afis-automated-fingerprint-identification-system" title="Permanent link">&para;</a></h2>
+<p>Manual fingerprint comparison is slow and labor-intensive. Modern forensic investigations rely on the <strong>Automated Fingerprint Identification System (AFIS)</strong> — a computerized database that can search millions of stored fingerprint records against a crime scene print in minutes.</p>
+<p>AFIS systems work in two modes:</p>
+<ol>
+<li>
+<p><strong>Ten-print searches</strong> — a complete set of all ten fingers from a known person (typically collected at booking) is entered into the database. The system encodes the minutiae locations and orientations as a mathematical template and stores it linked to the individual's identity record.</p>
+</li>
+<li>
+<p><strong>Latent print searches</strong> — a crime scene print (a single finger or partial print) is scanned, and its minutiae template is compared against all stored templates. The system generates a <strong>candidate list</strong> — a ranked set of potential matches scored by the number and quality of minutiae correspondences.</p>
+</li>
+</ol>
+<p><strong>Critically, AFIS does not make identifications.</strong> The system produces a ranked candidate list; a trained latent print examiner then manually reviews the top candidates and makes the actual identification determination. The AFIS is an investigative tool, not a fingerprint judge.</p>
+<p>The FBI's national AFIS system, called <strong>Next Generation Identification (NGI)</strong>, holds hundreds of millions of fingerprint records. Many state and local systems interface with NGI, creating a tiered search capability — local first, then state, then federal.</p>
+<p><strong>Fingerprint individualization</strong> as a concept means that the friction ridge detail in a fingerprint is unique to an individual and persistent over their lifetime. This uniqueness claim rests on empirical observation — no two people have been found to have identical ridge arrangements across all ten fingers. However, this claim is difficult to prove mathematically in the way DNA random-match probability is calculated, which is one reason the forensic science community has revisited and debated fingerprint identification standards in recent decades.</p>
+<h4 id="diagram-afis-search-and-comparison-workflow">Diagram: AFIS Search and Comparison Workflow<a class="headerlink" href="#diagram-afis-search-and-comparison-workflow" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/afis-search-workflow/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>AFIS Search and Comparison Workflow Interactive Diagram</summary>
+<p>Type: workflow
+<strong>sim-id:</strong> afis-search-workflow<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom Level 2 — Understand; verb: explain).</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: Explain</p>
+<p>Purpose: Walk investigators through the AFIS search pipeline from latent print scan to candidate list to examiner review.</p>
+<p>Visual layout:
+- Horizontal step-through diagram with five stations:
+  1. Latent Print Scanned
+  2. Minutiae Extraction (mathematical encoding)
+  3. Database Search (comparison against stored templates)
+  4. Candidate List Generated (ranked results)
+  5. Human Examiner Review (final identification or exclusion)</p>
+<p>Interactive elements:
+- Click any station to reveal a detailed description panel
+- An animated "minutiae map" at Stage 2 shows a fingerprint with dots placed at ridge endings (red) and bifurcations (blue) — dots appear one by one as the extraction animates
+- At Stage 4, a simulated candidate list shows three "match" cards ranked by score (e.g., 92/100, 78/100, 61/100), each with a fingerprint thumbnail
+- At Stage 5, a banner reads "AFIS does NOT make identifications — examiner required"</p>
+<p>Data Visibility Requirements:
+- Stage 2: Show the minutiae encoding process — a scanned print image, then overlay of dots at ridge endings and bifurcations, then a simplified (x, y, angle) coordinate list
+- Stage 4: Show candidate list with realistic AFIS score numbers</p>
+<p>Hover text for each station explains the process in 2–3 sentences.</p>
+<p>Color scheme: Blue for database/technology stages, green for human review stage (reinforcing that the human makes the call).</p>
+<p>Instructional Rationale: The Understand objective (explain how AFIS works) requires the learner to trace the process with concrete data. Step-through with data visibility at each stage shows the transformation from print to template to candidate list.</p>
+</details>
+<hr />
+<h2 id="from-scene-to-court-fingerprint-evidence-in-context">From Scene to Court: Fingerprint Evidence in Context<a class="headerlink" href="#from-scene-to-court-fingerprint-evidence-in-context" title="Permanent link">&para;</a></h2>
+<p>Fingerprint evidence is classified as <strong>individual evidence</strong> — evidence that, in theory, can be attributed to a single source to the exclusion of all others. This contrasts with <strong>class evidence</strong> (like fiber type or paint color), which narrows the suspect pool but cannot exclude everyone else.</p>
+<p>Individual evidence carries significant weight in court, but forensic practitioners are careful about how they phrase their conclusions. Many examiners now use the SWGFAST conclusion scale, which allows conclusions of <em>identification</em>, <em>inconclusive</em>, or <em>exclusion</em>, rather than older absolute language of "match." In practice, fingerprint evidence is most powerful when combined with other physical evidence — trace, biological, or digital — rather than standing alone.</p>
+<hr />
+<h2 id="key-concepts-review">Key Concepts Review<a class="headerlink" href="#key-concepts-review" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the major concepts from this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dactyloscopy</td>
+<td>The scientific study and forensic use of fingerprints for identification</td>
+</tr>
+<tr>
+<td>Friction Ridge Skin</td>
+<td>Specialized skin on palmar/plantar surfaces with persistent ridge patterns</td>
+</tr>
+<tr>
+<td>Dermal Papillae</td>
+<td>Dermal projections that form ridges; their sweat pores deposit print residue</td>
+</tr>
+<tr>
+<td>Loop (Ulnar/Radial)</td>
+<td>Most common pattern; ridges enter and exit on the same side</td>
+</tr>
+<tr>
+<td>Whorl</td>
+<td>Pattern with ≥2 deltas and ≥1 complete ridge circuit; four subtypes</td>
+</tr>
+<tr>
+<td>Arch (Plain/Tented)</td>
+<td>Rarest pattern; ridges flow across the finger without looping</td>
+</tr>
+<tr>
+<td>Minutiae</td>
+<td>Ridge irregularities (endings, bifurcations) that individualize a print</td>
+</tr>
+<tr>
+<td>Latent Print</td>
+<td>Invisible print from sweat/oil residue; requires development to visualize</td>
+</tr>
+<tr>
+<td>Cyanoacrylate Fuming</td>
+<td>Non-porous surface technique; super glue vapor polymerizes on amino acids</td>
+</tr>
+<tr>
+<td>Ninhydrin</td>
+<td>Porous surface technique; reacts with amino acids to produce purple color</td>
+</tr>
+<tr>
+<td>AFIS</td>
+<td>Automated database search; produces ranked candidates for human review</td>
+</tr>
+<tr>
+<td>Fingerprint Individualization</td>
+<td>The forensic principle that friction ridge detail is unique per person</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details class="question">
+<summary>Challenge: Choose Your Technique</summary>
+<p>An investigator recovers a ransom note (plain white paper) and a glass drinking glass from a scene. She needs to develop latent prints from both.</p>
+<p><strong>Which technique would you recommend for each surface, and in what order should techniques be applied?</strong></p>
+<p><strong>Answer:</strong> For the drinking glass (non-porous): cyanoacrylate fuming is the first choice — fumes adhere to amino acids and oils on the glass surface. Enhancement with fluorescent dye under UV follows if needed. For the ransom note (paper, porous): ninhydrin is the most sensitive choice for amino acid detection and works well on aged paper. Silver nitrate could follow if ninhydrin yields insufficient results. If iodine fuming is used, it must be applied <em>first</em> (before any chemical treatment), since it is reversible and non-destructive — it can precede ninhydrin without compromising the substrate.</p>
+</details>
+<hr />
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You have just mastered one of the oldest and most powerful tools in forensic science — the fingerprint. From dermal papillae biology to AFIS database searches, you now understand <em>why</em> fingerprints are unique, <em>how</em> to develop invisible ones, and <em>what</em> examiners actually look at when comparing them. Chapter 4 takes us to the microscopic world of hair and fiber trace evidence. Follow the evidence!</p>
+</div>
+<p><a href="references/">See Annotated References</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-crime-scene-investigation/references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

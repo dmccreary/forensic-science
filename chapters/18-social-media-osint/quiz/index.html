@@ -1,0 +1,2121 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook on forensic science techniques, evidence analysis, and crime scene investigation">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/chapters/18-social-media-osint/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../references/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-social-media-analysis-and-open-source-intelligence" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-intro-forensic-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations & Legal Principles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-crime-scene-investigation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Crime Scene Investigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-fingerprint-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Fingerprint Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-hair-and-fiber-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Hair and Fiber Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-glass-soil-trace-evidence/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Glass, Soil & Trace Evidence
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-forensic-serology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Forensic Serology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-bloodstain-pattern-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Bloodstain Pattern Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-forensic-dna-profiling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DNA Profiling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-forensic-toxicology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Forensic Toxicology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-fire-arson-explosives/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Fire, Arson & Explosives
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-forensic-anthropology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Forensic Anthropology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-forensic-entomology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Forensic Entomology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-firearms-and-ballistics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Firearms & Ballistics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-document-examination/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Document Examination
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-digital-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Digital Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-facial-recognition/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Facial Recognition
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../17-cell-phone-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Cell Phone Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_19" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    18. Social Media & OSINT
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_19" id="__nav_4_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_19_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_19">
+            <span class="md-nav__icon md-icon"></span>
+            18. Social Media & OSINT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-an-investigator-wants-to-document-publicly-posted-social-media-content-as-evidence-without-notifying-the-account-holder-under-what-legal-authority-can-investigators-access-publicly-visible-social-media-posts-and-what-specific-preservation-steps-are-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. An investigator wants to document publicly posted social media content as evidence without notifying the account holder. Under what legal authority can investigators access publicly visible social media posts, and what specific preservation steps are required?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-an-investigator-identifies-a-facebook-account-potentially-linked-to-a-suspect-but-needs-to-access-the-accounts-private-direct-messages-which-legal-mechanism-is-required-to-compel-facebook-to-produce-the-content-of-those-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. An investigator identifies a Facebook account potentially linked to a suspect but needs to access the account's private direct messages. Which legal mechanism is required to compel Facebook to produce the content of those messages?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-an-investigator-discovers-that-a-suspect-deleted-all-their-facebook-posts-after-learning-they-are-being-investigated-the-investigation-began-3-weeks-ago-what-is-the-most-important-action-the-investigator-should-have-taken-at-the-earliest-stage-to-preserve-this-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. An investigator discovers that a suspect deleted all their Facebook posts after learning they are being investigated. The investigation began 3 weeks ago. What is the most important action the investigator should have taken at the earliest stage to preserve this evidence?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-a-photograph-posted-on-instagram-shows-a-suspect-celebrating-at-what-appears-to-be-a-party-there-is-no-location-tag-on-the-post-an-investigator-examining-the-background-of-the-photograph-identifies-a-distinctive-storefront-sign-a-specific-utility-pole-configuration-and-a-unique-mural-visible-through-a-window-what-technique-does-this-represent" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. A photograph posted on Instagram shows a suspect celebrating at what appears to be a party. There is no location tag on the post. An investigator examining the background of the photograph identifies a distinctive storefront sign, a specific utility pole configuration, and a unique mural visible through a window. What technique does this represent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-a-social-media-post-is-submitted-as-evidence-with-a-displayed-timestamp-of-june-1-2026-at-845-pm-the-photograph-embedded-in-the-post-has-exif-metadata-showing-a-capture-timestamp-of-may-28-2026-at-320-pm-why-are-these-two-timestamps-forensically-distinct-and-which-is-more-relevant-to-establishing-alibi-evidence-for-an-offense-that-occurred-on-may-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. A social media post is submitted as evidence with a displayed timestamp of "June 1, 2026 at 8:45 PM." The photograph embedded in the post has EXIF metadata showing a capture timestamp of "May 28, 2026 at 3:20 PM." Why are these two timestamps forensically distinct, and which is more relevant to establishing alibi evidence for an offense that occurred on May 28?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-suspect-claims-they-deleted-incriminating-tweets-six-months-ago-an-investigator-searches-web-archives-and-finds-a-cached-version-of-the-suspects-twitter-profile-including-the-deleted-posts-what-is-the-evidentiary-significance-of-this-archived-content-and-what-authentication-challenge-does-it-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A suspect claims they deleted incriminating tweets six months ago. An investigator searches web archives and finds a cached version of the suspect's Twitter profile including the deleted posts. What is the evidentiary significance of this archived content, and what authentication challenge does it present?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-investigators-conduct-social-network-analysis-on-a-criminal-organizations-communication-patterns-and-identify-a-person-with-high-betweenness-centrality-who-has-relatively-few-direct-connections-what-does-high-betweenness-centrality-with-few-direct-connections-suggest-about-this-persons-role-in-the-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Investigators conduct social network analysis on a criminal organization's communication patterns and identify a person with high betweenness centrality who has relatively few direct connections. What does high betweenness centrality with few direct connections suggest about this person's role in the network?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-prosecutor-presents-a-facebook-post-as-evidence-showing-the-defendant-threatening-the-victim-the-defense-objects-under-fre-901-arguing-there-is-no-proof-the-defendant-personally-authored-the-post-the-post-displays-the-defendants-name-and-photograph-why-is-the-displayed-name-and-photo-alone-insufficient-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A prosecutor presents a Facebook post as evidence showing the defendant threatening the victim. The defense objects under FRE 901, arguing there is no proof the defendant personally authored the post. The post displays the defendant's name and photograph. Why is the displayed name and photo alone insufficient authentication?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-an-investigator-captures-social-media-evidence-using-a-professional-preservation-tool-that-records-the-html-source-embedded-images-url-and-capture-timestamp-in-utc-then-computes-a-sha-256-hash-of-the-entire-saved-package-what-specific-evidentiary-purpose-does-the-hash-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. An investigator captures social media evidence using a professional preservation tool that records the HTML source, embedded images, URL, and capture timestamp in UTC, then computes a SHA-256 hash of the entire saved package. What specific evidentiary purpose does the hash serve?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-an-investigator-uses-maltego-a-commercial-osint-aggregation-tool-to-map-a-suspects-online-presence-across-multiple-platforms-and-databases-the-tool-returns-a-connection-between-the-suspects-known-email-address-and-a-forum-account-with-an-unusual-screen-name-what-fundamental-verification-step-must-the-investigator-take-before-treating-this-connection-as-investigatively-reliable" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. An investigator uses Maltego, a commercial OSINT aggregation tool, to map a suspect's online presence across multiple platforms and databases. The tool returns a connection between the suspect's known email address and a forum account with an unusual screen name. What fundamental verification step must the investigator take before treating this connection as investigatively reliable?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../19-aviation-crash-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Aviation Crash Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-an-investigator-wants-to-document-publicly-posted-social-media-content-as-evidence-without-notifying-the-account-holder-under-what-legal-authority-can-investigators-access-publicly-visible-social-media-posts-and-what-specific-preservation-steps-are-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. An investigator wants to document publicly posted social media content as evidence without notifying the account holder. Under what legal authority can investigators access publicly visible social media posts, and what specific preservation steps are required?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-an-investigator-identifies-a-facebook-account-potentially-linked-to-a-suspect-but-needs-to-access-the-accounts-private-direct-messages-which-legal-mechanism-is-required-to-compel-facebook-to-produce-the-content-of-those-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. An investigator identifies a Facebook account potentially linked to a suspect but needs to access the account's private direct messages. Which legal mechanism is required to compel Facebook to produce the content of those messages?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-an-investigator-discovers-that-a-suspect-deleted-all-their-facebook-posts-after-learning-they-are-being-investigated-the-investigation-began-3-weeks-ago-what-is-the-most-important-action-the-investigator-should-have-taken-at-the-earliest-stage-to-preserve-this-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. An investigator discovers that a suspect deleted all their Facebook posts after learning they are being investigated. The investigation began 3 weeks ago. What is the most important action the investigator should have taken at the earliest stage to preserve this evidence?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-a-photograph-posted-on-instagram-shows-a-suspect-celebrating-at-what-appears-to-be-a-party-there-is-no-location-tag-on-the-post-an-investigator-examining-the-background-of-the-photograph-identifies-a-distinctive-storefront-sign-a-specific-utility-pole-configuration-and-a-unique-mural-visible-through-a-window-what-technique-does-this-represent" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. A photograph posted on Instagram shows a suspect celebrating at what appears to be a party. There is no location tag on the post. An investigator examining the background of the photograph identifies a distinctive storefront sign, a specific utility pole configuration, and a unique mural visible through a window. What technique does this represent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-a-social-media-post-is-submitted-as-evidence-with-a-displayed-timestamp-of-june-1-2026-at-845-pm-the-photograph-embedded-in-the-post-has-exif-metadata-showing-a-capture-timestamp-of-may-28-2026-at-320-pm-why-are-these-two-timestamps-forensically-distinct-and-which-is-more-relevant-to-establishing-alibi-evidence-for-an-offense-that-occurred-on-may-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. A social media post is submitted as evidence with a displayed timestamp of "June 1, 2026 at 8:45 PM." The photograph embedded in the post has EXIF metadata showing a capture timestamp of "May 28, 2026 at 3:20 PM." Why are these two timestamps forensically distinct, and which is more relevant to establishing alibi evidence for an offense that occurred on May 28?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-suspect-claims-they-deleted-incriminating-tweets-six-months-ago-an-investigator-searches-web-archives-and-finds-a-cached-version-of-the-suspects-twitter-profile-including-the-deleted-posts-what-is-the-evidentiary-significance-of-this-archived-content-and-what-authentication-challenge-does-it-present" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A suspect claims they deleted incriminating tweets six months ago. An investigator searches web archives and finds a cached version of the suspect's Twitter profile including the deleted posts. What is the evidentiary significance of this archived content, and what authentication challenge does it present?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-investigators-conduct-social-network-analysis-on-a-criminal-organizations-communication-patterns-and-identify-a-person-with-high-betweenness-centrality-who-has-relatively-few-direct-connections-what-does-high-betweenness-centrality-with-few-direct-connections-suggest-about-this-persons-role-in-the-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Investigators conduct social network analysis on a criminal organization's communication patterns and identify a person with high betweenness centrality who has relatively few direct connections. What does high betweenness centrality with few direct connections suggest about this person's role in the network?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-a-prosecutor-presents-a-facebook-post-as-evidence-showing-the-defendant-threatening-the-victim-the-defense-objects-under-fre-901-arguing-there-is-no-proof-the-defendant-personally-authored-the-post-the-post-displays-the-defendants-name-and-photograph-why-is-the-displayed-name-and-photo-alone-insufficient-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. A prosecutor presents a Facebook post as evidence showing the defendant threatening the victim. The defense objects under FRE 901, arguing there is no proof the defendant personally authored the post. The post displays the defendant's name and photograph. Why is the displayed name and photo alone insufficient authentication?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-an-investigator-captures-social-media-evidence-using-a-professional-preservation-tool-that-records-the-html-source-embedded-images-url-and-capture-timestamp-in-utc-then-computes-a-sha-256-hash-of-the-entire-saved-package-what-specific-evidentiary-purpose-does-the-hash-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. An investigator captures social media evidence using a professional preservation tool that records the HTML source, embedded images, URL, and capture timestamp in UTC, then computes a SHA-256 hash of the entire saved package. What specific evidentiary purpose does the hash serve?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-an-investigator-uses-maltego-a-commercial-osint-aggregation-tool-to-map-a-suspects-online-presence-across-multiple-platforms-and-databases-the-tool-returns-a-connection-between-the-suspects-known-email-address-and-a-forum-account-with-an-unusual-screen-name-what-fundamental-verification-step-must-the-investigator-take-before-treating-this-connection-as-investigatively-reliable" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. An investigator uses Maltego, a commercial OSINT aggregation tool, to map a suspect's online presence across multiple platforms and databases. The tool returns a connection between the suspect's known email address and a forum account with an unusual screen name. What fundamental verification step must the investigator take before treating this connection as investigatively reliable?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/chapters/18-social-media-osint/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-social-media-analysis-and-open-source-intelligence">Quiz: Social Media Analysis and Open-Source Intelligence<a class="headerlink" href="#quiz-social-media-analysis-and-open-source-intelligence" title="Permanent link">&para;</a></h1>
+<p>Test your understanding of OSINT methods, platform-specific evidence collection, legal process requirements, geolocation from posts, deleted post recovery, social network analysis, and FRE 901 authentication with these questions.</p>
+<hr />
+<h4 id="1-an-investigator-wants-to-document-publicly-posted-social-media-content-as-evidence-without-notifying-the-account-holder-under-what-legal-authority-can-investigators-access-publicly-visible-social-media-posts-and-what-specific-preservation-steps-are-required">1. An investigator wants to document publicly posted social media content as evidence without notifying the account holder. Under what legal authority can investigators access publicly visible social media posts, and what specific preservation steps are required?<a class="headerlink" href="#1-an-investigator-wants-to-document-publicly-posted-social-media-content-as-evidence-without-notifying-the-account-holder-under-what-legal-authority-can-investigators-access-publicly-visible-social-media-posts-and-what-specific-preservation-steps-are-required" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Investigators require a court order to access any social media content, even public posts, because viewing someone's profile constitutes a search under the Fourth Amendment</li>
+<li>Publicly visible posts are accessible to any internet user without legal process, and investigators may access and document them — but the capture must use full-page documentation with metadata, URL, capture timestamp, and hash verification rather than a screenshot alone</li>
+<li>Investigators can access public posts without legal process, and a screenshot is legally sufficient authentication for court because public posts have no privacy expectation</li>
+<li>Public social media posts can only be accessed after the account holder is notified, because the Electronic Communications Privacy Act requires prior notice for any government access to electronic communications</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Publicly visible social media content — posts, photographs, and pages accessible to any unauthenticated internet user — does not require legal process to access. It is treated similarly to a public statement: investigators may view and document it. However, a screenshot alone is generally insufficient for court because it can be edited or fabricated. Proper preservation requires full-page capture tools that save the HTML source, embedded images, timestamps, and profile metadata, along with hash verification of the saved files, the capture URL, the UTC date and time of capture, and the investigator's identity. This documentation supports authentication under FRE 901.</p>
+<p><strong>Concept Tested:</strong> Open-Source Intelligence (OSINT)</p>
+</details>
+<hr />
+<h4 id="2-an-investigator-identifies-a-facebook-account-potentially-linked-to-a-suspect-but-needs-to-access-the-accounts-private-direct-messages-which-legal-mechanism-is-required-to-compel-facebook-to-produce-the-content-of-those-messages">2. An investigator identifies a Facebook account potentially linked to a suspect but needs to access the account's private direct messages. Which legal mechanism is required to compel Facebook to produce the content of those messages?<a class="headerlink" href="#2-an-investigator-identifies-a-facebook-account-potentially-linked-to-a-suspect-but-needs-to-access-the-accounts-private-direct-messages-which-legal-mechanism-is-required-to-compel-facebook-to-produce-the-content-of-those-messages" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>A preservation letter — preservation letters compel platforms to produce all account data including message content within 30 days</li>
+<li>A subpoena — subpoenas compel production of all records including private message content from social media platforms</li>
+<li>A search warrant based on probable cause — private message content is protected by the Fourth Amendment and the Stored Communications Act and requires a warrant to compel production from the platform</li>
+<li>A court order under 18 U.S.C. § 2703(d) — a D order compels message content from platforms when investigators show that records are relevant to the investigation</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Under the Fourth Amendment and the Stored Communications Act (SCA), the content of private electronic communications — direct messages, private posts, and similar stored content — is protected from compelled government access without a warrant supported by probable cause. A subpoena can compel non-content records (subscriber information, IP logs, account creation data). A § 2703(d) court order can compel non-content transactional records with a specific articulable facts showing. Only a search warrant supported by probable cause can compel the platform to produce the actual content of private messages. This tiered framework reflects the higher privacy expectation in private communications versus non-content metadata.</p>
+<p><strong>Concept Tested:</strong> Social Media Legal Process</p>
+</details>
+<hr />
+<h4 id="3-an-investigator-discovers-that-a-suspect-deleted-all-their-facebook-posts-after-learning-they-are-being-investigated-the-investigation-began-3-weeks-ago-what-is-the-most-important-action-the-investigator-should-have-taken-at-the-earliest-stage-to-preserve-this-evidence">3. An investigator discovers that a suspect deleted all their Facebook posts after learning they are being investigated. The investigation began 3 weeks ago. What is the most important action the investigator should have taken at the earliest stage to preserve this evidence?<a class="headerlink" href="#3-an-investigator-discovers-that-a-suspect-deleted-all-their-facebook-posts-after-learning-they-are-being-investigated-the-investigation-began-3-weeks-ago-what-is-the-most-important-action-the-investigator-should-have-taken-at-the-earliest-stage-to-preserve-this-evidence" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Immediately obtained a search warrant to download a complete copy of the account before the suspect could delete anything</li>
+<li>Sent a preservation letter to Facebook as soon as the account was identified, requesting that the platform freeze and preserve all account data pending formal legal process</li>
+<li>Asked a colleague to "friend" the suspect account to copy all posts before they were deleted</li>
+<li>Reported the suspect's account for terms-of-service violations so the platform would suspend it, preserving its content in suspension status</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A preservation letter (under 18 U.S.C. § 2703(f)) is an administrative request — not requiring court approval — that directs a platform to immediately freeze and preserve specified account data for 90 days (renewable). Platforms are obligated to honor these requests. The preservation letter is the critical first step because it can be sent immediately when an account is identified, long before the probable cause showing needed for a warrant is complete. Once content is deleted and the platform's retention window expires, it is gone permanently. The most common investigative error in social media cases is waiting too long to send the preservation letter.</p>
+<p><strong>Concept Tested:</strong> Profile Data Preservation</p>
+</details>
+<hr />
+<h4 id="4-a-photograph-posted-on-instagram-shows-a-suspect-celebrating-at-what-appears-to-be-a-party-there-is-no-location-tag-on-the-post-an-investigator-examining-the-background-of-the-photograph-identifies-a-distinctive-storefront-sign-a-specific-utility-pole-configuration-and-a-unique-mural-visible-through-a-window-what-technique-does-this-represent">4. A photograph posted on Instagram shows a suspect celebrating at what appears to be a party. There is no location tag on the post. An investigator examining the background of the photograph identifies a distinctive storefront sign, a specific utility pole configuration, and a unique mural visible through a window. What technique does this represent?<a class="headerlink" href="#4-a-photograph-posted-on-instagram-shows-a-suspect-celebrating-at-what-appears-to-be-a-party-there-is-no-location-tag-on-the-post-an-investigator-examining-the-background-of-the-photograph-identifies-a-distinctive-storefront-sign-a-specific-utility-pole-configuration-and-a-unique-mural-visible-through-a-window-what-technique-does-this-represent" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Explicit geolocation — the storefront sign is considered a formal location tag equivalent to a GPS coordinate</li>
+<li>Implicit geolocation — identifying background environmental details and matching them to publicly available street-level imagery to determine a location without any embedded geographic metadata</li>
+<li>EXIF metadata recovery — the storefront and mural details are encoded in the EXIF data of the uploaded image</li>
+<li>Social network analysis — the investigator is using connections between people visible in the photo to triangulate the location</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Implicit geolocation (sometimes called "geolocating by context") uses visible environmental details — street signs, storefronts, architectural features, utility infrastructure, vegetation, landmarks visible in backgrounds — and matches them against street-level imagery (Google Street View, Bing Maps) or satellite imagery to identify the location where a photograph was taken. This technique has successfully located photographers to within a single city block from publicly posted photos with no explicit location tags. It requires investigative skill and open-source research rather than metadata extraction, but the result — a specific identifiable location — can be as precise as GPS data.</p>
+<p><strong>Concept Tested:</strong> Geolocation from Social Posts</p>
+</details>
+<hr />
+<h4 id="5-a-social-media-post-is-submitted-as-evidence-with-a-displayed-timestamp-of-june-1-2026-at-845-pm-the-photograph-embedded-in-the-post-has-exif-metadata-showing-a-capture-timestamp-of-may-28-2026-at-320-pm-why-are-these-two-timestamps-forensically-distinct-and-which-is-more-relevant-to-establishing-alibi-evidence-for-an-offense-that-occurred-on-may-28">5. A social media post is submitted as evidence with a displayed timestamp of "June 1, 2026 at 8:45 PM." The photograph embedded in the post has EXIF metadata showing a capture timestamp of "May 28, 2026 at 3:20 PM." Why are these two timestamps forensically distinct, and which is more relevant to establishing alibi evidence for an offense that occurred on May 28?<a class="headerlink" href="#5-a-social-media-post-is-submitted-as-evidence-with-a-displayed-timestamp-of-june-1-2026-at-845-pm-the-photograph-embedded-in-the-post-has-exif-metadata-showing-a-capture-timestamp-of-may-28-2026-at-320-pm-why-are-these-two-timestamps-forensically-distinct-and-which-is-more-relevant-to-establishing-alibi-evidence-for-an-offense-that-occurred-on-may-28" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The two timestamps are identical in evidentiary value; courts treat the display timestamp as authoritative because it is the one visible to the public</li>
+<li>The display timestamp shows when the post was uploaded to the platform; the EXIF capture timestamp shows when the photograph was physically taken by the camera — the EXIF timestamp is more relevant to establishing location on May 28 because it records the device's position at the moment of capture, independent of when the photo was later posted</li>
+<li>The EXIF timestamp is less reliable because it reflects the camera's internal clock, which users routinely set incorrectly</li>
+<li>The two timestamps should be averaged to produce the most accurate estimate of when the photo was taken</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Post display timestamps record when content was uploaded to the platform — a photograph taken days or months earlier can be uploaded and posted at any time, so the post timestamp does not establish where the photographer was when the photo was taken. The EXIF capture timestamp records the date and time from the camera's internal clock at the moment of capture — independent of upload time. For an offense that occurred on May 28, the EXIF timestamp placing the device (and by inference its user) at a specific GPS-tagged location at 3:20 PM on May 28 is direct location evidence for that date, regardless of when the photo was posted.</p>
+<p><strong>Concept Tested:</strong> Post Timestamp Analysis</p>
+</details>
+<hr />
+<h4 id="6-a-suspect-claims-they-deleted-incriminating-tweets-six-months-ago-an-investigator-searches-web-archives-and-finds-a-cached-version-of-the-suspects-twitter-profile-including-the-deleted-posts-what-is-the-evidentiary-significance-of-this-archived-content-and-what-authentication-challenge-does-it-present">6. A suspect claims they deleted incriminating tweets six months ago. An investigator searches web archives and finds a cached version of the suspect's Twitter profile including the deleted posts. What is the evidentiary significance of this archived content, and what authentication challenge does it present?<a class="headerlink" href="#6-a-suspect-claims-they-deleted-incriminating-tweets-six-months-ago-an-investigator-searches-web-archives-and-finds-a-cached-version-of-the-suspects-twitter-profile-including-the-deleted-posts-what-is-the-evidentiary-significance-of-this-archived-content-and-what-authentication-challenge-does-it-present" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Archived web content has no evidentiary value because web archives are maintained by private companies, not government agencies, and cannot be authenticated as official records</li>
+<li>Archived copies of deleted posts demonstrate that the content existed and was publicly accessible before deletion — but must be authenticated by showing the archive is an accurate reproduction of the original post, typically by obtaining archive metadata or corroborating with platform records</li>
+<li>Archived web content is automatically authenticated under FRE 901 because web archives use cryptographic hashing to verify the integrity of all stored pages</li>
+<li>Deleted post recovery is prohibited by the Computer Fraud and Abuse Act, which makes it illegal to access archived copies of content that the original author has chosen to delete</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Web archives like the Internet Archive's Wayback Machine crawl and save snapshots of publicly accessible web pages at various points in time — including social media profiles before posts were deleted. Archived copies can demonstrate that specific content was posted and publicly visible before deletion. The authentication challenge is establishing that the archived page accurately reflects what was originally posted: investigators should document the archive URL, the crawl date, and the archive's metadata, and when possible, corroborate the archived content against any platform-produced records, reposts by other users, or other independent sources. Archive pages showing incomplete or malformed content should be treated with appropriate caution.</p>
+<p><strong>Concept Tested:</strong> Deleted Post Recovery</p>
+</details>
+<hr />
+<h4 id="7-investigators-conduct-social-network-analysis-on-a-criminal-organizations-communication-patterns-and-identify-a-person-with-high-betweenness-centrality-who-has-relatively-few-direct-connections-what-does-high-betweenness-centrality-with-few-direct-connections-suggest-about-this-persons-role-in-the-network">7. Investigators conduct social network analysis on a criminal organization's communication patterns and identify a person with high betweenness centrality who has relatively few direct connections. What does high betweenness centrality with few direct connections suggest about this person's role in the network?<a class="headerlink" href="#7-investigators-conduct-social-network-analysis-on-a-criminal-organizations-communication-patterns-and-identify-a-person-with-high-betweenness-centrality-who-has-relatively-few-direct-connections-what-does-high-betweenness-centrality-with-few-direct-connections-suggest-about-this-persons-role-in-the-network" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>High betweenness with few connections means this person is peripheral to the organization and likely uninvolved in its core activities</li>
+<li>High betweenness with few direct connections identifies a broker — someone who sits on the communication paths between otherwise disconnected clusters, playing a critical coordination role even without many personal connections</li>
+<li>High betweenness with few connections means this person is the leader of the organization, as leaders always communicate through intermediaries to maintain operational security</li>
+<li>This combination indicates a technical error in the analysis; betweenness centrality always increases with degree centrality, so the two metrics cannot diverge significantly</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Betweenness centrality measures how often a node appears on the shortest path between other pairs of nodes — it captures the role of information or communication broker. A person with high betweenness but relatively few direct connections occupies a structural bridge position: they connect otherwise separate clusters or cells that would have difficulty communicating without passing through them. In criminal network analysis, high-betweenness brokers are forensically significant because disrupting or flipping them can break communication between otherwise connected groups. They are distinct from high-degree hubs (who have many connections) and may not be identified through simple connection count analysis.</p>
+<p><strong>Concept Tested:</strong> Social Network Analysis</p>
+</details>
+<hr />
+<h4 id="8-a-prosecutor-presents-a-facebook-post-as-evidence-showing-the-defendant-threatening-the-victim-the-defense-objects-under-fre-901-arguing-there-is-no-proof-the-defendant-personally-authored-the-post-the-post-displays-the-defendants-name-and-photograph-why-is-the-displayed-name-and-photo-alone-insufficient-authentication">8. A prosecutor presents a Facebook post as evidence showing the defendant threatening the victim. The defense objects under FRE 901, arguing there is no proof the defendant personally authored the post. The post displays the defendant's name and photograph. Why is the displayed name and photo alone insufficient authentication?<a class="headerlink" href="#8-a-prosecutor-presents-a-facebook-post-as-evidence-showing-the-defendant-threatening-the-victim-the-defense-objects-under-fre-901-arguing-there-is-no-proof-the-defendant-personally-authored-the-post-the-post-displays-the-defendants-name-and-photograph-why-is-the-displayed-name-and-photo-alone-insufficient-authentication" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Displayed name and photo are sufficient authentication under FRE 901 because impersonating another person on social media is a federal crime, making it reasonable to assume accounts accurately reflect their stated owners</li>
+<li>Anyone can create a social media account using another person's name and photo — the displayed identity establishes nothing about who actually created and operated the account, which is the relevant question for authentication</li>
+<li>FRE 901 does not apply to social media evidence because it was enacted before social media existed and has not been updated to cover digital communications</li>
+<li>Displayed name and photo are sufficient if the post is from a verified account with a blue checkmark, which platforms guarantee belongs to the claimed identity</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Creating a social media account in another person's name and photograph is trivially easy and requires no special technical skill. The identity displayed on a profile says nothing about who controls the account and who wrote its posts. Under FRE 901, the proponent must produce evidence sufficient to support a finding that the evidence is what they claim — here, that this defendant wrote these posts. Courts have required authentication beyond the display identity: IP address records showing the account was accessed from the defendant's device or address, device forensics showing the account credentials stored on the defendant's phone, or content that only the defendant could have known.</p>
+<p><strong>Concept Tested:</strong> Social Media Authentication</p>
+</details>
+<hr />
+<h4 id="9-an-investigator-captures-social-media-evidence-using-a-professional-preservation-tool-that-records-the-html-source-embedded-images-url-and-capture-timestamp-in-utc-then-computes-a-sha-256-hash-of-the-entire-saved-package-what-specific-evidentiary-purpose-does-the-hash-serve">9. An investigator captures social media evidence using a professional preservation tool that records the HTML source, embedded images, URL, and capture timestamp in UTC, then computes a SHA-256 hash of the entire saved package. What specific evidentiary purpose does the hash serve?<a class="headerlink" href="#9-an-investigator-captures-social-media-evidence-using-a-professional-preservation-tool-that-records-the-html-source-embedded-images-url-and-capture-timestamp-in-utc-then-computes-a-sha-256-hash-of-the-entire-saved-package-what-specific-evidentiary-purpose-does-the-hash-serve" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>The hash proves that the original post was written by the account holder rather than a third party</li>
+<li>The hash creates a mathematical fingerprint of the preserved content at the moment of capture, allowing verification at any later time that the preserved evidence has not been altered since collection</li>
+<li>The hash converts the social media content into a format admissible under the Federal Rules of Evidence</li>
+<li>The hash is submitted to the social media platform as the authorization code confirming the investigator had legal authority to capture the page</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Computing a cryptographic hash of the preserved evidence package at the time of collection creates a fixed mathematical fingerprint of that specific content at that specific moment. If the evidence is later challenged as having been altered — by the investigator, during storage, or in transit — the hash computed at collection can be recomputed from the current evidence package. A matching hash proves that not a single bit has changed since collection. A non-matching hash reveals that the content has been modified. This is the same principle used in forensic hard drive imaging: hash verification establishes the integrity of the preservation without relying on trust alone.</p>
+<p><strong>Concept Tested:</strong> Profile Data Preservation</p>
+</details>
+<hr />
+<h4 id="10-an-investigator-uses-maltego-a-commercial-osint-aggregation-tool-to-map-a-suspects-online-presence-across-multiple-platforms-and-databases-the-tool-returns-a-connection-between-the-suspects-known-email-address-and-a-forum-account-with-an-unusual-screen-name-what-fundamental-verification-step-must-the-investigator-take-before-treating-this-connection-as-investigatively-reliable">10. An investigator uses Maltego, a commercial OSINT aggregation tool, to map a suspect's online presence across multiple platforms and databases. The tool returns a connection between the suspect's known email address and a forum account with an unusual screen name. What fundamental verification step must the investigator take before treating this connection as investigatively reliable?<a class="headerlink" href="#10-an-investigator-uses-maltego-a-commercial-osint-aggregation-tool-to-map-a-suspects-online-presence-across-multiple-platforms-and-databases-the-tool-returns-a-connection-between-the-suspects-known-email-address-and-a-forum-account-with-an-unusual-screen-name-what-fundamental-verification-step-must-the-investigator-take-before-treating-this-connection-as-investigatively-reliable" title="Permanent link">&para;</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>No verification is needed because Maltego is a licensed law enforcement tool whose outputs are automatically admissible as authenticated machine records under FRE 803(6)</li>
+<li>The connection must be independently corroborated — OSINT findings from automated tools may be inaccurate, out of date, or based on coincidental shared data; investigators must verify against at least one independent source before relying on the connection</li>
+<li>The investigator must wait for the platform to confirm the connection through official legal process before taking any investigative action based on the Maltego output</li>
+<li>Maltego connections require the suspect's consent before they can be used in an investigation because the tool aggregates personal data protected under federal privacy law</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. OSINT tools aggregate publicly available information from many sources, but automated connections may be based on coincidental shared data (a common email format, a shared username that belongs to different people, or outdated cached records). Before an OSINT-derived connection is relied upon for investigative decisions, it must be independently verified against at least one additional source — corroborating evidence from the platform itself through legal process, confirmation from a second OSINT tool using different data sources, or investigative corroboration such as content analysis demonstrating the same person operates both accounts. Acting on unverified OSINT connections risks directing investigative resources at innocent people.</p>
+<p><strong>Concept Tested:</strong> Open-Source Intelligence (OSINT)</p>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

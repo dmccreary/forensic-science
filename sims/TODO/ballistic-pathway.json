@@ -1,0 +1,14 @@
+{
+  "sim_id": "ballistic-pathway",
+  "diagram_name": "Firearms Ballistic Pathway Interactive Diagram",
+  "chapter_number": 13,
+  "chapter_title": "Firearms, Ballistics, and Toolmark Examination",
+  "chapter_dir": "13-firearms-and-ballistics",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "Identify",
+  "learning_objective": "Identify the three ballistic phases and the key evidence produced at each stage (Bloom Level 1 — Remember; verb: identify).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** ballistic-pathway<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Identify the three ballistic phases and the key evidence produced at each stage (Bloom Level 1 — Remember; verb: identify).\n\nBloom Level: Remember (L1)\nBloom Verb: Identify\n\nPurpose: Visualize the complete ballistic pathway from trigger pull to wound, with interactive identification of evidence at each stage.\n\nLayout:\n- Horizontal diagram showing three labeled sections: Internal (inside firearm), External (flight), Terminal (impact)\n- Illustrated cross-section of the firearm barrel, a simplified bullet flight arc, and a target at the end\n- Evidence items labeled at each stage: rifling marks, breech face impression, GSR emission, trajectory angle, wound characteristics\n\nInteractive controls:\n- Click any labeled evidence item to open a detail panel: what it is, when it is produced, and how it is collected and analyzed\n- Hover over the barrel cross-section to see animated rifling striations forming on the bullet\n- Click the \"Entry wound\" and \"Exit wound\" regions to see comparison descriptions\n\nData Visibility Requirements:\n- Show specific class characteristics (number of lands and grooves, twist direction) that can be determined from the bullet\n- Show GSR emission direction from the firearm during discharge\n- Show wound morphology differences between entry and exit\n\nInstructional Rationale: A Remember objective (identify evidence at each ballistic stage) is best served by an annotated diagram where each evidence item is labeled and clickable for definition and collection procedure.\n\nColor scheme: Gun metal gray for firearm, red for trajectory line, blue for evidence labels, tan for wound area."
+}

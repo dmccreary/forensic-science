@@ -1,0 +1,2289 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SIM cards, IMEI, CDR records, cell tower triangulation, GPS extraction, app data, deleted data recovery, iOS/Android forensics, Cellebrite UFED, and cloud data.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/chapters/17-cell-phone-analytics/">
+      
+      
+        <link rel="prev" href="../16-facial-recognition/references/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Cell Phone Analytics and Mobile Forensics - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cell-phone-analytics-and-mobile-forensics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cell Phone Analytics and Mobile Forensics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../01-intro-forensic-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations & Legal Principles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../02-crime-scene-investigation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Crime Scene Investigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../03-fingerprint-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Fingerprint Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../04-hair-and-fiber-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Hair and Fiber Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../05-glass-soil-trace-evidence/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Glass, Soil & Trace Evidence
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../06-forensic-serology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Forensic Serology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../07-bloodstain-pattern-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Bloodstain Pattern Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../08-forensic-dna-profiling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DNA Profiling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../09-forensic-toxicology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Forensic Toxicology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../10-fire-arson-explosives/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Fire, Arson & Explosives
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../11-forensic-anthropology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Forensic Anthropology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../12-forensic-entomology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Forensic Entomology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../13-firearms-and-ballistics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Firearms & Ballistics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../14-document-examination/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Document Examination
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../15-digital-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Digital Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../16-facial-recognition/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Facial Recognition
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_18" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    17. Cell Phone Analytics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_18" id="__nav_4_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_18">
+            <span class="md-nav__icon md-icon"></span>
+            17. Cell Phone Analytics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../18-social-media-osint/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Social Media & OSINT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../19-aviation-crash-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Aviation Crash Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-why-mobile-evidence-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview: Why Mobile Evidence Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-and-subscriber-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device and Subscriber Identification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device and Subscriber Identification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sim-card-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIM Card Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imei-device-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMEI Device Identification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carrier-records-the-networks-account-of-device-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carrier Records: The Network's Account of Device Activity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carrier Records: The Network's Account of Device Activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#call-detail-records-cdr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Call Detail Records (CDR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-tower-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell Tower Records
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#location-determination-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location Determination Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Location Determination Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tower-triangulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tower Triangulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gps-location-data-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPS Location Data Extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-forensics-acquisition-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device Forensics: Acquisition and Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device Forensics: Acquisition and Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-data-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Data Extraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-media-evidence-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Media Evidence Recovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleted-data-recovery-on-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleted Data Recovery on Mobile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-operating-system-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Operating System Forensics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Operating System Forensics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ios-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      iOS Forensics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Android Forensics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cellebrite-ufed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cellebrite UFED
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cellebrite UFED">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cdr-and-tower-triangulation-timeline-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: CDR and Tower Triangulation Timeline MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-data-forensics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Data Forensics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Review
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/chapters/17-cell-phone-analytics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="cell-phone-analytics-and-mobile-forensics">Cell Phone Analytics and Mobile Forensics<a class="headerlink" href="#cell-phone-analytics-and-mobile-forensics" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the forensic examination of mobile devices and the carrier records associated with them. Students learn how SIM cards and IMEI numbers identify a device and subscriber, then study how Call Detail Records (CDRs) and cell tower logs document device activity across time and geography. Tower triangulation methods for estimating a device's geographic location are developed mathematically, and GPS coordinate extraction from the device itself is contrasted with carrier-derived location data. Application data extraction, social media evidence recovery, and deleted data recovery on mobile devices extend the analytical scope. The chapter covers mobile OS forensics for both iOS and Android platforms, the Cellebrite UFED acquisition toolchain, and the legal process required for cloud data extraction. After completing this chapter, students will be able to use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>Cell Phone Forensics Overview</li>
+<li>SIM Card Analysis</li>
+<li>IMEI Device Identification</li>
+<li>Cell Tower Records</li>
+<li>Call Detail Records (CDR)</li>
+<li>Tower Triangulation</li>
+<li>GPS Location Data Extraction</li>
+<li>Application Data Extraction</li>
+<li>Social Media Evidence Recovery</li>
+<li>Deleted Data Recovery on Mobile</li>
+<li>Mobile Operating System Forensics</li>
+<li>iOS Forensics</li>
+<li>Android Forensics</li>
+<li>Cellebrite UFED</li>
+<li>Cloud Data Forensics</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../15-digital-forensics/">Chapter 15: Digital Forensics and Cybercrime Investigation</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Most people carry a detailed record of their movements, communications, and daily activities in their pocket at all times. A smartphone logs every call, every text, every GPS fix, every app login, and — through the carrier network — every cell tower the device connected to. Mobile forensics is the discipline of recovering and interpreting that record. The evidence is there; the challenge is getting it lawfully, preserving it correctly, and understanding what it means. Follow the evidence — right to the signal.</p>
+</div>
+<hr />
+<h2 id="overview-why-mobile-evidence-matters">Overview: Why Mobile Evidence Matters<a class="headerlink" href="#overview-why-mobile-evidence-matters" title="Permanent link">&para;</a></h2>
+<p>Cell phones are among the most evidence-rich devices an investigator can seize. A single smartphone may contain:</p>
+<ul>
+<li><strong>Communications</strong>: call logs, text messages (SMS/MMS), encrypted messaging app conversations, email</li>
+<li><strong>Location history</strong>: GPS logs, cell tower connection records, Wi-Fi connection history, photo geotags</li>
+<li><strong>Activity records</strong>: application usage logs, web browsing history, search history, calendar entries</li>
+<li><strong>Financial records</strong>: mobile payment history, banking app transaction logs</li>
+<li><strong>Identification data</strong>: subscriber identity, device identity, contact lists, social media accounts</li>
+</ul>
+<p>Each category has distinct technical methods for extraction and distinct legal frameworks governing access. This chapter covers both the technical methods and the legal structures they operate within.</p>
+<hr />
+<h2 id="device-and-subscriber-identification">Device and Subscriber Identification<a class="headerlink" href="#device-and-subscriber-identification" title="Permanent link">&para;</a></h2>
+<p>Before analyzing the content of a mobile device, forensic examiners establish its identity — who owned it and what network it was registered to.</p>
+<h3 id="sim-card-analysis">SIM Card Analysis<a class="headerlink" href="#sim-card-analysis" title="Permanent link">&para;</a></h3>
+<p>A <strong>SIM card (Subscriber Identity Module)</strong> is a small integrated circuit inserted into a mobile device that identifies the subscriber to the cellular network. The SIM card stores:</p>
+<ul>
+<li><strong>ICCID (Integrated Circuit Card Identifier)</strong>: a unique serial number identifying the physical SIM card</li>
+<li><strong>IMSI (International Mobile Subscriber Identity)</strong>: a unique number identifying the subscriber account on the carrier network — up to 15 digits, formatted as mobile country code + mobile network code + mobile subscriber identification number</li>
+<li><strong>Authentication keys</strong>: used by the network to verify the SIM's identity when connecting</li>
+<li><strong>Contacts and SMS messages</strong> (on older SIM cards; modern devices store most data on device memory)</li>
+<li><strong>Last dialed numbers</strong> and network connection history (depending on carrier and SIM generation)</li>
+</ul>
+<p>Forensic SIM card examination typically uses a <strong>SIM card reader</strong> to extract the ICCID and IMSI without modifying the card. The IMSI is then used to request subscriber records from the carrier through legal process.</p>
+<h3 id="imei-device-identification">IMEI Device Identification<a class="headerlink" href="#imei-device-identification" title="Permanent link">&para;</a></h3>
+<p>The <strong>IMEI (International Mobile Equipment Identity)</strong> is a unique 15-digit number that identifies the physical mobile device hardware — independent of the SIM card. An IMEI is assigned to every GSM, WCDMA, and LTE device at the factory and is burned into the device's hardware.</p>
+<p>Forensic significance of IMEI:
+- Establishes device identity independent of the subscriber (a phone can have a different SIM each time it is turned on, but its IMEI remains constant)
+- Can be queried against carrier records to identify all subscriber accounts that have used the device — even when SIM cards were changed
+- IMEI records are subpoenaable from carriers and can establish when, where, and on what network a specific device was active
+- Law enforcement can also request that carriers <strong>block</strong> a stolen device's IMEI from connecting to domestic networks</p>
+<p>The IMEI is accessible from the device (dial *#06# on most phones), visible on the device's packaging, and recoverable from the device during forensic examination.</p>
+<hr />
+<h2 id="carrier-records-the-networks-account-of-device-activity">Carrier Records: The Network's Account of Device Activity<a class="headerlink" href="#carrier-records-the-networks-account-of-device-activity" title="Permanent link">&para;</a></h2>
+<p>Even without access to the physical device, carrier records can provide substantial evidence about a device's activity and location.</p>
+<h3 id="call-detail-records-cdr">Call Detail Records (CDR)<a class="headerlink" href="#call-detail-records-cdr" title="Permanent link">&para;</a></h3>
+<p><strong>Call Detail Records (CDRs)</strong> are log files maintained by the cellular carrier for every call, SMS message, and data session associated with a subscriber account. CDRs typically contain:</p>
+<ul>
+<li><strong>Timestamp</strong> of call/message initiation and termination</li>
+<li><strong>Duration</strong> of voice calls</li>
+<li><strong>Originating and terminating phone numbers</strong> (parties to the communication)</li>
+<li><strong>Cell tower identification</strong> (the tower that handled the communication — see below)</li>
+<li><strong>Direction</strong> of the communication (outgoing/incoming)</li>
+<li><strong>Data volume</strong> (for data sessions)</li>
+</ul>
+<p>CDRs are typically retained by carriers for 18 months to several years depending on carrier policy and applicable law. They are obtained through <strong>legal process</strong> — typically a subpoena for historical records, or a court order for prospective (real-time) records.</p>
+<p>CDRs are among the most powerful location evidence available: they place a specific device at a specific cell tower at the time of each call or message, creating a geographic timeline of the device's activity.</p>
+<h3 id="cell-tower-records">Cell Tower Records<a class="headerlink" href="#cell-tower-records" title="Permanent link">&para;</a></h3>
+<p><strong>Cell tower records</strong> document which towers a device connected to at what times. Each cellular base station serves a geographic area (the <strong>cell</strong>) using multiple directional antennas (<strong>sectors</strong>) — typically three sectors per tower, each covering approximately 120 degrees. When a device connects to a tower, the carrier records the tower ID and sector.</p>
+<p>The geographic area covered by a single cell tower sector varies enormously:
+- <strong>Urban areas</strong>: small cells may cover a single city block (100–500 meters radius)
+- <strong>Suburban areas</strong>: macro cells may cover 1–3 km radius
+- <strong>Rural areas</strong>: towers may cover 10–30+ km radius</p>
+<p>Cell tower records can place a device within the coverage area of the serving cell tower at the time of connection — but that area may be very large in rural settings, providing only approximate location evidence.</p>
+<hr />
+<h2 id="location-determination-methods">Location Determination Methods<a class="headerlink" href="#location-determination-methods" title="Permanent link">&para;</a></h2>
+<h3 id="tower-triangulation">Tower Triangulation<a class="headerlink" href="#tower-triangulation" title="Permanent link">&para;</a></h3>
+<p><strong>Tower triangulation</strong> is a method for estimating a device's geographic location using signal timing or strength measurements from multiple cell towers simultaneously. When a device is connected to the network, the carrier can measure either:</p>
+<ul>
+<li><strong>Time difference of arrival (TDOA)</strong>: the difference in time for the device's signal to reach multiple towers — precise timing allows distance calculation from each tower, and the intersection of these distance circles gives a location estimate</li>
+<li><strong>Signal strength (RSSI)</strong>: the received signal strength at multiple towers — weaker signals indicate greater distance, again allowing distance-based location estimation</li>
+</ul>
+<p>With measurements from three towers, the device's location can be estimated by <strong>trilateration</strong> (finding the point that satisfies three distance constraints simultaneously). With two towers, the estimate is ambiguous (two intersection points). With one tower (the CDR case), only the general coverage area is known.</p>
+<p>The accuracy of tower triangulation ranges from tens of meters (dense urban areas with many towers) to several kilometers (rural areas with sparse tower coverage).</p>
+<h3 id="gps-location-data-extraction">GPS Location Data Extraction<a class="headerlink" href="#gps-location-data-extraction" title="Permanent link">&para;</a></h3>
+<p><strong>GPS location data extraction</strong> recovers precise geographic coordinates directly from the device rather than from carrier records. Modern smartphones receive signals from the Global Positioning System (GPS) constellation of satellites, computing their location to within approximately 3–5 meters horizontally under ideal conditions.</p>
+<p>GPS location data on a device may be found in:
+- <strong>Photo EXIF metadata</strong> (covered in Chapter 15) — GPS coordinates embedded in photos at time of capture
+- <strong>Application location logs</strong> — navigation apps, fitness apps, weather apps, and many other applications cache location histories in local databases
+- <strong>System location logs</strong> — iOS and Android both maintain internal location caches that record GPS fixes over time
+- <strong>Cached maps</strong> — tile downloads for specific geographic areas may reveal locations the device was used near</p>
+<p>GPS extraction requires forensic access to the device's storage and is performed during device acquisition.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Investigator Tip</p>
+<p><img alt="Trace holding magnifying glass" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Cell tower records and GPS records are complementary evidence sources with different strengths. Cell tower CDRs are available from the carrier even when the device cannot be seized — but provide only approximate location based on tower coverage area. GPS data from the device provides highly precise location but requires physical access to the device and may not be present if the user disabled location services. Always pursue both sources. When they agree, the location evidence is compelling. When they disagree, investigate the discrepancy — it may indicate device tampering or location spoofing.</p>
+</div>
+<hr />
+<h2 id="device-forensics-acquisition-and-analysis">Device Forensics: Acquisition and Analysis<a class="headerlink" href="#device-forensics-acquisition-and-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="application-data-extraction">Application Data Extraction<a class="headerlink" href="#application-data-extraction" title="Permanent link">&para;</a></h3>
+<p><strong>Application data extraction</strong> recovers the stored data from individual applications on the device — messages, contact histories, transaction logs, location caches, and user preferences. Modern messaging applications (Signal, WhatsApp, Telegram, iMessage) store conversation histories in local databases (typically SQLite format) on the device. These databases may persist even after conversations are manually deleted by the user, because deletion in the app may only mark records as deleted in the database rather than physically removing them.</p>
+<p>Application data is stored in app-specific sandboxed directories on both iOS and Android devices. Extracting app data requires either:
+- A <strong>full filesystem extraction</strong> (acquisition of the entire device storage, including app sandboxes)
+- A <strong>logical acquisition</strong> (a file-level copy using the device's built-in backup functionality, which may not access all app data)</p>
+<p>Full filesystem extraction provides the most complete app data but typically requires more invasive methods (jailbreaking on iOS, rooting on Android, or chip-off extraction in some cases).</p>
+<h3 id="social-media-evidence-recovery">Social Media Evidence Recovery<a class="headerlink" href="#social-media-evidence-recovery" title="Permanent link">&para;</a></h3>
+<p><strong>Social media evidence recovery</strong> includes both on-device app data (cached posts, messages, images stored in social media app directories) and cloud-stored data accessible through legal process to the platform provider. Social media evidence is covered in depth in Chapter 18; the device-side component includes recovering cached content from the device's local storage — content that may not be available through legal process to the provider if the user deleted it remotely.</p>
+<h3 id="deleted-data-recovery-on-mobile">Deleted Data Recovery on Mobile<a class="headerlink" href="#deleted-data-recovery-on-mobile" title="Permanent link">&para;</a></h3>
+<p><strong>Deleted data recovery on mobile</strong> attempts to recover data that the user or the operating system has marked as deleted but not yet physically overwritten. On smartphones, deleted data recovery faces similar challenges to SSD forensics (Chapter 15):</p>
+<ul>
+<li>Both iOS and Android use flash memory, which is managed by the storage controller and subject to wear leveling and TRIM-like operations</li>
+<li>App-level deletion may leave database records accessible via forensic SQLite parsing</li>
+<li>File system unallocated space may contain fragments of overwritten data</li>
+<li>Cloud-synchronized data may be recoverable from cloud backups even if the local copy was deleted</li>
+</ul>
+<p>Recovery success rate depends heavily on how much write activity has occurred on the device since deletion and whether the storage controller has erased the relevant flash blocks.</p>
+<hr />
+<h2 id="mobile-operating-system-forensics">Mobile Operating System Forensics<a class="headerlink" href="#mobile-operating-system-forensics" title="Permanent link">&para;</a></h2>
+<p>iOS and Android present different forensic challenges because of their fundamentally different security architectures.</p>
+<h3 id="ios-forensics">iOS Forensics<a class="headerlink" href="#ios-forensics" title="Permanent link">&para;</a></h3>
+<p><strong>iOS forensics</strong> is complicated by Apple's strong encryption and security model. Key features:</p>
+<ul>
+<li><strong>Full-device encryption</strong> using hardware-bound keys tied to both the device hardware and the passcode — without the passcode, even Apple cannot decrypt the device</li>
+<li><strong>Secure Enclave</strong>: a dedicated hardware security module that handles encryption key management independently of the main processor, making brute-force passcode attacks extremely slow</li>
+<li><strong>Limited filesystem access</strong>: iOS enforces strict app sandboxing; standard USB connections provide only backup-level access, not full filesystem access</li>
+</ul>
+<p>For iOS, forensic acquisition methods include:
+- <strong>iTunes/Finder backup extraction</strong>: logical acquisition using Apple's backup format (accessible without passcode on older iOS versions; requires passcode on newer versions)
+- <strong>Advanced logical extraction</strong>: using exploit-based tools that access more data than standard backup
+- <strong>Chip-off or JTAG</strong>: physical extraction of flash memory chips (destructive; used as last resort)</p>
+<p>The passcode is the critical bottleneck. Without it, modern iOS devices with current firmware are effectively inaccessible to all known forensic methods.</p>
+<h3 id="android-forensics">Android Forensics<a class="headerlink" href="#android-forensics" title="Permanent link">&para;</a></h3>
+<p><strong>Android forensics</strong> presents a different landscape because Android is deployed across hundreds of device models with varying security implementations. Key features:</p>
+<ul>
+<li><strong>Full Disk Encryption (FDE)</strong> or <strong>File-Based Encryption (FBE)</strong> — present on most modern Android devices but implementation strength varies by manufacturer</li>
+<li><strong>ADB (Android Debug Bridge)</strong>: a developer protocol that, when enabled, provides file system access — disabled by default on consumer devices</li>
+<li><strong>Wide variation</strong>: manufacturer custom firmware, varying bootloader lock states, and different security levels across devices mean forensic capabilities vary significantly by model</li>
+</ul>
+<p>Android acquisition methods include:
+- <strong>ADB backup extraction</strong>: logical acquisition using Android's built-in backup protocol
+- <strong>Bootloader exploit-based extraction</strong>: on vulnerable device models, full filesystem dumps
+- <strong>Cloud backup extraction</strong>: Google Backup data recoverable through legal process
+- <strong>Chip-off or JTAG</strong>: physical extraction for locked devices with no software path</p>
+<h3 id="cellebrite-ufed">Cellebrite UFED<a class="headerlink" href="#cellebrite-ufed" title="Permanent link">&para;</a></h3>
+<p>The <strong>Cellebrite UFED (Universal Forensic Extraction Device)</strong> is the industry-standard commercial mobile forensic acquisition platform, widely used by law enforcement worldwide. UFED supports thousands of device models and carrier configurations and can perform:</p>
+<ul>
+<li><strong>Logical extraction</strong>: file-level copy using device protocols</li>
+<li><strong>File system extraction</strong>: full app data and system files access (where achievable)</li>
+<li><strong>Physical extraction</strong>: raw flash memory dump on supported devices</li>
+<li><strong>SIM card extraction</strong>: direct SIM card data reading</li>
+<li><strong>Cloud extraction</strong>: legal cloud data requests via built-in carrier and cloud service integration</li>
+</ul>
+<p>Cellebrite regularly updates its support database to handle new device models and new iOS/Android versions. UFED outputs are produced in <strong>UFDR (Cellebrite Physical Analyzer)</strong> format and can be exported as standardized reports for court presentation.</p>
+<h4 id="diagram-cdr-and-tower-triangulation-timeline-microsim">Diagram: CDR and Tower Triangulation Timeline MicroSim<a class="headerlink" href="#diagram-cdr-and-tower-triangulation-timeline-microsim" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/cdr-tower-triangulation/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>CDR and Tower Triangulation Timeline MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> cdr-tower-triangulation<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: Use</p>
+<p>Canvas layout:
+- Left panel (~50%): Simplified map grid showing cell tower locations and their coverage circles
+- Right panel (~50%): CDR table showing call timestamps and tower IDs</p>
+<p>Visual elements:
+- Map with 6–8 cell towers shown as icons, each with a labeled coverage circle
+- CDR table: rows showing timestamp, call type (outgoing/incoming), duration, tower ID
+- Timeline bar at the bottom showing device movement as a colored path connecting towers chronologically
+- Animated "device" icon that moves between towers as the timeline is played</p>
+<p>Interactive controls:
+- Click any CDR row to highlight the corresponding tower on the map
+- "Play Timeline" button — animates the device movement across the map based on CDR records
+- "Show Triangulation" button — displays triangulation calculation for a specific time window with 3-tower measurements shown
+- Slider: "Playback speed"</p>
+<p>Data Visibility Requirements:
+- Show the geographic coverage area (circle radius) for each tower — radius varies by tower type
+- Show the trilateration math: three circles, their intersection, the estimated location point
+- Show the resulting location estimate with uncertainty radius
+- Export a formatted text timeline of tower contacts</p>
+<p>Instructional Rationale: An Apply-level objective (use CDR to reconstruct geographic movement) requires hands-on work with simulated CDR data, placing a device's movements in geographic and temporal context.</p>
+<p>Color scheme: Map in light gray, towers in blue, coverage circles in semi-transparent blue, device path in orange, selected tower in green.</p>
+</details>
+<hr />
+<h2 id="cloud-data-forensics">Cloud Data Forensics<a class="headerlink" href="#cloud-data-forensics" title="Permanent link">&para;</a></h2>
+<p><strong>Cloud data forensics</strong> is the recovery of digital evidence from remote cloud storage and services — the components of a user's digital activity that are synchronized or stored with a third-party cloud provider rather than held only on the device.</p>
+<p>Most modern smartphones automatically sync data to cloud services:
+- <strong>Apple iCloud</strong>: device backup, iCloud Drive files, iCloud Photos, iMessages (via Message in iCloud), Health data, location history (Significant Locations)
+- <strong>Google Account / Google One</strong>: Android device backup, Google Drive, Google Photos, Gmail, Google Maps Timeline (detailed location history)
+- <strong>Microsoft OneDrive</strong>: file synchronization for Windows and Office applications
+- <strong>Platform-specific services</strong>: Facebook, Instagram, Twitter/X, WhatsApp, Signal, and others maintain user data in their cloud infrastructure</p>
+<p>Cloud data is obtained through <strong>legal process</strong> directed at the cloud provider — the form of process required (subpoena, court order, search warrant under 18 U.S.C. § 2703) depends on the type of data requested and its age. The Electronic Communications Privacy Act (ECPA) and the Stored Communications Act (SCA) govern U.S. domestic legal process for cloud data; international requests operate under Mutual Legal Assistance Treaties (MLATs) or under the CLOUD Act (2018).</p>
+<p>Cloud backups are particularly valuable because they may capture device state at a point in time before evidence was deleted from the device — providing a historical snapshot that the physical device no longer contains.</p>
+<hr />
+<h2 id="key-concepts-review">Key Concepts Review<a class="headerlink" href="#key-concepts-review" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the major concepts from this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIM Card</td>
+<td>Subscriber Identity Module; stores IMSI and authenticates subscriber to network</td>
+</tr>
+<tr>
+<td>IMEI</td>
+<td>15-digit hardware device identifier; constant regardless of SIM card changes</td>
+</tr>
+<tr>
+<td>CDR</td>
+<td>Call Detail Record; carrier log of calls, messages, data sessions with timestamps and tower IDs</td>
+</tr>
+<tr>
+<td>Cell Tower Records</td>
+<td>Log of which tower a device connected to; places device within tower coverage area</td>
+</tr>
+<tr>
+<td>Tower Triangulation</td>
+<td>Estimating device location using timing/strength from multiple simultaneous tower measurements</td>
+</tr>
+<tr>
+<td>GPS Extraction</td>
+<td>Precise coordinates from device GPS log, EXIF metadata, app location caches</td>
+</tr>
+<tr>
+<td>App Data Extraction</td>
+<td>Recovery of SQLite databases and cached content from individual app sandboxes</td>
+</tr>
+<tr>
+<td>Deleted Data Recovery</td>
+<td>Recovery of data marked deleted but not yet overwritten; limited by flash TRIM operations</td>
+</tr>
+<tr>
+<td>iOS Forensics</td>
+<td>Strong encryption; Secure Enclave; passcode essential; limited access without it</td>
+</tr>
+<tr>
+<td>Android Forensics</td>
+<td>Varies by manufacturer; more diverse acquisition paths; ADB, bootloader exploits</td>
+</tr>
+<tr>
+<td>Cellebrite UFED</td>
+<td>Industry-standard mobile acquisition platform supporting thousands of device models</td>
+</tr>
+<tr>
+<td>Cloud Data Forensics</td>
+<td>Legal process (subpoena/warrant) to cloud providers; may recover data deleted from device</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details class="question">
+<summary>Challenge: Timeline Reconstruction</summary>
+<p>An investigator has CDR records showing that a suspect's phone connected to three cell towers over a 4-hour period on the night of an offense. Tower A (urban, 300m radius) at 9:15 PM, Tower B (urban, 400m radius) at 10:43 PM, and Tower C (suburban, 2km radius) at 11:52 PM. No calls were made — the tower contacts were generated by the phone's background data activity.</p>
+<p><strong>What does this evidence establish? What are its limitations? What additional evidence sources should be requested?</strong></p>
+<p><strong>Answer:</strong> The CDR establishes that the device (and by inference, the person carrying it) was within the coverage area of Tower A at 9:15 PM, Tower B at 10:43 PM, and Tower C at 11:52 PM — providing three approximate location points over the 4-hour window. In an urban environment with 300–400m tower coverage, this places the device within a relatively small geographic area at each time point.</p>
+<p><strong>Limitations</strong>: (1) The phone was not necessarily in the hands of the suspect — it could have been left in a location, given to another person, or left in a vehicle. (2) Tower coverage areas are approximate — actual coverage depends on terrain, building density, and network load, requiring expert testimony about the specific tower's service area. (3) Background data connections are initiated by the phone automatically and do not prove the suspect was actively using the device. (4) The suburban Tower C provides only 2km location resolution — far less precise than the urban towers.</p>
+<p><strong>Additional evidence</strong>: GPS location data from the device itself (precise coordinates with timestamps); Wi-Fi connection logs (nearby access points refine location even without GPS); EXIF data from any photos taken that evening; video surveillance from locations within the identified coverage areas.</p>
+</details>
+<hr />
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+A cell phone is a witness that never sleeps and never forgets — as long as the investigator knows how to read it. CDR records place devices in space and time. GPS logs place them precisely. App data reveals what was communicated and purchased. And cloud backups survive even after the device is wiped. Chapter 18 extends the investigation to the social media and open-source intelligence that leaves a public digital trail alongside the private device record. Follow the evidence — wherever it was posted.</p>
+</div>
+<p><a href="references/">See Annotated References</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../16-facial-recognition/references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

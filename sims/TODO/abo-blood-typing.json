@@ -1,0 +1,14 @@
+{
+  "sim_id": "abo-blood-typing",
+  "diagram_name": "ABO Blood Typing Interactive Simulator",
+  "chapter_number": 6,
+  "chapter_title": "Forensic Serology and Biological Fluid Analysis",
+  "chapter_dir": "06-forensic-serology",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Interpret",
+  "learning_objective": "Explain the ABO blood typing procedure and interpret agglutination results to determine blood type (Bloom Level 2 — Understand; verb: interpret).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** abo-blood-typing<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain the ABO blood typing procedure and interpret agglutination results to determine blood type (Bloom Level 2 — Understand; verb: interpret).\n\nBloom Level: Understand (L2)\nBloom Verb: Interpret\n\nCanvas layout:\n- Main view (~65%): two test wells side by side (one labeled Anti-A, one labeled Anti-B)\n- Control panel (~35%): blood type selection (hidden initially), reaction results, explanation panel\n\nVisual elements:\n- Two circular test wells on a slide background\n- Animated agglutination: when a reaction occurs, small circles (RBCs) cluster together into visible clumps\n- When no reaction occurs, the circles remain evenly dispersed\n- A color indicator: agglutination (positive) shown as dark red clumped mass; no agglutination (negative) as smooth reddish tint\n\nInteractive controls:\n- A \"Select Blood Sample\" dropdown with four mystery samples (each corresponds to a blood type)\n- \"Add Anti-A\" and \"Add Anti-B\" buttons that trigger the well animations\n- A \"Determine Blood Type\" button that reveals the correct answer after the student makes their prediction\n- Rh factor add-on: a third well with Anti-D reagent can be shown/hidden\n\nData Visibility Requirements:\n- Stage 1: Show two empty wells\n- Stage 2: Student adds reagents; animation shows agglutination or smooth suspension\n- Stage 3: Student predicts blood type; \"Reveal\" button shows correct type with explanation\n\nBehavior:\n- Type A: Anti-A well agglutinates; Anti-B well stays clear\n- Type B: Anti-B agglutinates; Anti-A clear\n- Type AB: Both wells agglutinate\n- Type O: Neither well agglutinates\n\nInstructional Rationale: The Understand objective (interpret agglutination results) requires the learner to observe the reaction and connect visual output to underlying chemistry — best achieved by animated simulation rather than text description.\n\nColor scheme: Dark red for agglutination, light reddish tint for clear suspension, white slide background."
+}

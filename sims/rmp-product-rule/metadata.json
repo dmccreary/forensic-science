@@ -1,0 +1,21 @@
+{
+  "title": "Random Match Probability Product Rule Calculator",
+  "description": "Calculate random match probability using the product rule across multiple STR loci (Bloom Level 3 — Apply; verb: calculate).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "rmp-product-rule",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate",
+  "completion_status": "scaffold",
+  "chapter_number": 8,
+  "chapter_title": "Forensic DNA Profiling",
+  "chapter_dir": "08-forensic-dna-profiling"
+}

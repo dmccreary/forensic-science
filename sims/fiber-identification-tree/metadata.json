@@ -1,0 +1,21 @@
+{
+  "title": "Fiber Identification Decision Tree",
+  "description": "Apply a multi-step identification protocol (microscopy → burn test → solubility test) to classify an unknown fiber (Bloom Level 3 — Apply; verb: apply).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "fiber-identification-tree",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Apply",
+  "completion_status": "scaffold",
+  "chapter_number": 4,
+  "chapter_title": "Hair, Fiber, and Trace Evidence Analysis",
+  "chapter_dir": "04-hair-and-fiber-analysis"
+}

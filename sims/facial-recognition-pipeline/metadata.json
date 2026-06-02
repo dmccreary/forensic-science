@@ -1,0 +1,21 @@
+{
+  "title": "Facial Recognition Pipeline Interactive Diagram",
+  "description": "Identify the stages of the facial recognition pipeline and the source of error at each stage (Bloom Level 1 — Remember; verb: identify).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "facial-recognition-pipeline",
+  "library": "p5.js",
+  "bloomLevel": "Remember (L1)",
+  "bloomVerb": "Identify",
+  "completion_status": "scaffold",
+  "chapter_number": 16,
+  "chapter_title": "Facial Recognition Technologies and Biometric Identification",
+  "chapter_dir": "16-facial-recognition"
+}

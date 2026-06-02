@@ -1,0 +1,14 @@
+{
+  "sim_id": "search-pattern-selector",
+  "diagram_name": "Evidence Search Pattern Selector",
+  "chapter_number": 2,
+  "chapter_title": "Crime Scene Investigation and Evidence Collection",
+  "chapter_dir": "02-crime-scene-investigation",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Select",
+  "learning_objective": "Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** search-pattern-selector<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).\n\nBloom Level: Apply (L3)\nBloom Verb: Select\n\nCanvas layout:\n- Scene display area (left ~70%): overhead grid representing the scene\n- Control panel (right ~30%): pattern selection, scene parameters, animated searcher dots\n\nVisual elements:\n- A grid representing a top-down scene view (outdoor field, interior room)\n- Animated dots representing searchers moving through the scene using the selected pattern\n- Color-coded cells: unsearched (light gray), currently being searched (yellow), searched (green)\n- A summary panel showing the pattern's best-use conditions\n\nInteractive controls:\n- Dropdown: Select pattern (Grid, Spiral Inward, Spiral Outward, Zone)\n- Slider: Number of searchers (1–6)\n- Dropdown: Scene type (indoor room, outdoor field, large outdoor area)\n- Button: \"Start Search\" / \"Pause\" / \"Reset\"\n- Animation speed slider\n\nDefault parameters:\n- Pattern: Grid\n- Searchers: 2\n- Scene: outdoor field (20×20 grid)\n\nBehavior:\n- \"Start Search\" animates searcher dots moving through the selected pattern\n- At completion, a summary shows total cells searched, animation steps elapsed, and a pattern efficiency rating\n- If the user selects more searchers than the pattern supports efficiently, a warning tooltip appears\n- Clicking a grid cell reveals the type of evidence that might be found there (randomly assigned from a list: fiber, footwear impression, latent print, etc.)\n\nInstructional Rationale: An Apply-level objective (select and use a search pattern) requires the learner to experiment with the variables that govern pattern selection — scene size, team size, pattern type — and observe the consequences. Animation with coverage feedback makes the trade-offs visible rather than abstract.\n\nColor scheme: Gray unsearched, yellow active, green cleared. If \"contamination mode\" is toggled on, cells a searcher skips appear red."
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDR and Tower Triangulation Timeline MicroSim</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>CDR and Tower Triangulation Timeline MicroSim</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> cdr-tower-triangulation</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> Apply (L3)</p>
+            <p><strong>Learning Objective:</strong> Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: microsim
+    **sim-id:** cdr-tower-triangulation<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    Learning Objective: Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).
+    
+    Bloom Level: Apply (L3)
+    Bloom Verb: Use
+    
+    Canvas layout:
+    - Left panel (~50%): Simplified map grid showing cell tower locations and their coverage circles
+    - Right panel (~50%): CDR table showing call timestamps and tower IDs
+    
+    Visual elements:
+    - Map with 6–8 cell towers shown as icons, each with a labeled coverage circle
+    - CDR table: rows showing timestamp, call type (outgoing/incoming), duration, tower ID
+    - Timeline bar at the bottom showing device movement as a colored path connecting towers chronologically
+    - Animated "device" icon that moves between towers as the timeline is played
+    
+    Interactive controls:
+    - Click any CDR row to highlight the corresponding tower on the map
+    - "Play Timeline" button — animates the device movement across the map based on CDR records
+    - "Show Triangulation" button — displays triangulation calculation for a specific time window with 3-tower measurements shown
+    - Slider: "Playback speed"
+    
+    Data Visibility Requirements:
+    - Show the geographic coverage area (circle radius) for each tower — radius varies by tower type
+    - Show the trilateration math: three circles, their intersection, the estimated location point
+    - Show the resulting location estimate with uncertainty radius
+    - Export a formatted text timeline of tower contacts
+    
+    Instructional Rationale: An Apply-level objective (use CDR to reconstruct geographic movement) requires hands-on work with simulated CDR data, placing a device's movements in geographic and temporal context.
+    
+    Color scheme: Map in light gray, towers in blue, coverage circles in semi-transparent blue, device path in orange, selected tower in green.
+    -->
+</body>
+</html>

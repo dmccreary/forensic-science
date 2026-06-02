@@ -1,0 +1,14 @@
+{
+  "sim_id": "tlc-ink-separation",
+  "diagram_name": "TLC Ink Separation Interactive Diagram",
+  "chapter_number": 14,
+  "chapter_title": "Document Examination and Forgery Detection",
+  "chapter_dir": "14-document-examination",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain",
+  "learning_objective": "Explain how TLC separates ink dye components for comparison, and interpret a TLC result as matching or non-matching (Bloom Level 2 — Understand; verb: explain).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** tlc-ink-separation<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain how TLC separates ink dye components for comparison, and interpret a TLC result as matching or non-matching (Bloom Level 2 — Understand; verb: explain).\n\nBloom Level: Understand (L2)\nBloom Verb: Explain\n\nCanvas layout:\n- Left panel (~40%): TLC plate visualization showing spotted inks, solvent front, and separated spots\n- Right panel (~60%): Controls and result interpretation\n\nVisual elements:\n- Animated TLC plate showing solvent front rising from bottom to top\n- Dye component spots appearing and migrating as the solvent front rises\n- Multiple lanes: Questioned sample, Known Reference 1, Known Reference 2, Known Reference 3\n- Rf value labels appear next to each spot when analysis is complete\n- Toggle: White Light / UV Light mode (UV reveals additional fluorescent spots)\n\nInteractive controls:\n- Dropdown: Select questioned ink type (ballpoint, rollerball, gel pen, fountain pen)\n- Dropdown: Select reference inks for comparison lanes\n- Button: \"Run Chromatography\" — animates solvent front rise and spot migration\n- Button: \"Toggle UV\" — switches visualization to UV fluorescence mode\n- Button: \"Calculate Rf\" — overlays Rf value calculations\n\nData Visibility Requirements:\n- Show solvent front distance and component distances used to calculate Rf\n- Show color-coded match indicators: green checkmark when questioned Rf matches a reference; red X when it does not\n- Show a \"Match Determination\" panel: \"Questioned ink matches Reference 2 formulation (3/3 components matched)\"\n\nInstructional Rationale: An Understand objective (explain TLC separation and interpret results) benefits from an animated, interactive chromatography simulation where students can run the separation and read the Rf comparisons themselves.\n\nColor scheme: White TLC plate background, colored dye spots, blue solvent front, green/red match indicators."
+}

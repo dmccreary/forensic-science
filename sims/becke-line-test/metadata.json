@@ -1,0 +1,21 @@
+{
+  "title": "Becke Line Test Simulator",
+  "description": "Describe the Becke line test procedure and interpret the direction of line movement to determine whether the glass or oil has the higher refractive index (Bloom Level 2 — Understand; verb: interpret).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "becke-line-test",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Interpret",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "Glass, Soil, and Physical Trace Evidence",
+  "chapter_dir": "05-glass-soil-trace-evidence"
+}

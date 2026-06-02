@@ -1,0 +1,14 @@
+{
+  "sim_id": "headspace-spme-workflow",
+  "diagram_name": "Headspace SPME Collection to GC-MS Workflow",
+  "chapter_number": 10,
+  "chapter_title": "Fire Investigation, Arson, and Explosives",
+  "chapter_dir": "10-fire-arson-explosives",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain",
+  "learning_objective": "Explain how headspace SPME recovers volatile accelerant residues from arson debris and connects to GC-MS identification (Bloom Level 2 — Understand; verb: explain).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: workflow\n**sim-id:** headspace-spme-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain how headspace SPME recovers volatile accelerant residues from arson debris and connects to GC-MS identification (Bloom Level 2 — Understand; verb: explain).\n\nBloom Level: Understand (L2)\nBloom Verb: Explain\n\nPurpose: Walk investigators through the arson debris collection → sealed container → SPME extraction → GC-MS identification pipeline.\n\nVisual layout:\n- Horizontal workflow with five stations:\n  1. Fire scene debris collection → sealed airtight can\n  2. Debris in sealed can (headspace vapors accumulating)\n  3. SPME fiber inserted into headspace\n  4. SPME fiber injected into GC-MS instrument\n  5. GC-MS chromatogram showing accelerant peaks\n\nInteractive elements:\n- Click each station to open a detail panel with description and why each step is necessary\n- An animated \"vapor molecules\" simulation in Station 2 shows molecules moving from the debris into the headspace above\n- Station 5 shows an interactive chromatogram: clicking each peak reveals the compound name and its role in identifying the accelerant type (gasoline, lighter fluid, kerosene)\n\nData Visibility Requirements:\n- Station 2: show vapor concentration building in headspace over time (accumulation animation)\n- Station 5: show a realistic chromatogram with labeled peaks (C6–C12 hydrocarbons for gasoline); clicking a peak reveals its identity and retention time\n- Show the \"reference accelerant match\" panel comparing the questioned sample pattern to a gasoline standard\n\nColor scheme: Orange and red for fire/heat elements, blue for analytical equipment, green for confirmed identification.\n\nInstructional Rationale: An Understand objective (explain the SPME-to-GC-MS workflow) requires a step-through diagram where each stage is visually distinct and clickable — so learners can connect the physical procedure to the analytical output."
+}

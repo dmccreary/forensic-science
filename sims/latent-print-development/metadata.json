@@ -1,0 +1,21 @@
+{
+  "title": "Latent Print Development Technique Selector",
+  "description": "Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "latent-print-development",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Select",
+  "completion_status": "scaffold",
+  "chapter_number": 3,
+  "chapter_title": "Fingerprint Analysis and Dactyloscopy",
+  "chapter_dir": "03-fingerprint-analysis"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "evidence-packaging-guide",
+  "diagram_name": "Evidence Packaging Decision Guide",
+  "chapter_number": 2,
+  "chapter_title": "Crime Scene Investigation and Evidence Collection",
+  "chapter_dir": "02-crime-scene-investigation",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Select",
+  "learning_objective": "Select the correct packaging material for a given evidence type (Bloom Level 3 — Apply; verb: select).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** evidence-packaging-guide<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Select the correct packaging material for a given evidence type (Bloom Level 3 — Apply; verb: select).\n\nBloom Level: Apply (L3)\nBloom Verb: Select\n\nPurpose: Walk investigators through a decision interface for evidence packaging selection.\n\nLayout:\n- Left column: clickable list of evidence categories (biological wet, biological dry, trace/dry, sharp, firearm, digital, biohazard, impression)\n- Right panel: when a category is selected, the panel shows: (1) correct packaging image/icon, (2) reason in one sentence, (3) common mistake to avoid\n\nVisual elements:\n- Illustrated icons for each packaging material (paper bag, biohazard container, rigid box, faraday bag, druggist fold sequence)\n- Color-coded by evidence module: red = biological, orange = biohazard, blue = trace, gray = digital\n- A \"Druggist Fold Tutorial\" button that launches a 4-step animated fold sequence\n\nInteractive controls:\n- Click on an evidence category to load the right-panel explanation\n- \"Druggist Fold Tutorial\" shows the four fold steps with a \"Next Step\" button\n- Hover over any packaging icon to see its name and a one-line description\n\nData Visibility Requirements:\n- When user selects \"Wet Biological\": show paper bag, display \"Wet blood in plastic → mold in 24h → DNA destroyed\"\n- When user selects \"Trace Dry\": show druggist fold steps with actual fold angles\n- For each selection, show a \"Courtroom Risk\" line summarizing the consequence of using wrong packaging\n\nInstructional Rationale: An Apply-level objective (select packaging) is best served by a decision interface where the learner actively chooses and receives immediate, specific feedback — including the consequence of a wrong choice.\n\nColor scheme: Each evidence category has a distinct accent color; background is neutral white with subtle gray panels."
+}

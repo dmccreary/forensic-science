@@ -1,0 +1,14 @@
+{
+  "sim_id": "latent-print-development",
+  "diagram_name": "Latent Print Development Technique Selector",
+  "chapter_number": 3,
+  "chapter_title": "Fingerprint Analysis and Dactyloscopy",
+  "chapter_dir": "03-fingerprint-analysis",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Select",
+  "learning_objective": "Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** latent-print-development<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).\n\nBloom Level: Apply (L3)\nBloom Verb: Select\n\nCanvas layout:\n- Top section: evidence item display (selected from a dropdown)\n- Bottom section: four technique option buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)\n- Right panel: result panel showing what the developed print looks like after applying the chosen technique\n\nVisual elements:\n- Evidence item illustrations: drinking glass, piece of paper, cardboard box, plastic bag, wooden door frame\n- Before/after views — left shows the blank surface, right shows the developed print in the correct color for the chosen technique\n- A \"substrate porosity\" indicator (porous / non-porous) that appears when the evidence item is selected\n\nInteractive controls:\n- Dropdown: Select evidence item (glass, paper, cardboard, plastic bag, wood)\n- Four technique buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)\n- \"Apply Technique\" button triggers the before→after animation\n- If wrong technique is selected, result panel shows \"No visible ridge pattern — technique not effective on this substrate\" with a brief explanation\n\nData Visibility Requirements:\n- Stage 1: Show selected evidence item with substrate porosity label\n- Stage 2: User selects a technique and clicks Apply\n- Stage 3: Show either a correct developed print (color matching the technique) or a \"no result\" failure with explanation\n\nBehavior:\n- Cyanoacrylate on non-porous: shows white fumed ridges\n- Ninhydrin on paper: shows purple Ruhemann's purple ridges\n- Ninhydrin on glass: shows failure message\n- Iodine on any surface: shows yellow-brown temporary result and \"must photograph immediately\" warning\n\nInstructional Rationale: An Apply-level objective (select technique by substrate) requires the student to actively choose and observe the consequence. Failure feedback for wrong choices teaches substrate logic better than a correct-only demonstration.\n\nColor scheme: Substrate in realistic textures (gray for glass, tan for paper). Developed prints in technique-accurate colors."
+}

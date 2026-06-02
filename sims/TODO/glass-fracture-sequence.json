@@ -1,0 +1,14 @@
+{
+  "sim_id": "glass-fracture-sequence",
+  "diagram_name": "Glass Fracture Sequence Analyzer",
+  "chapter_number": 5,
+  "chapter_title": "Glass, Soil, and Physical Trace Evidence",
+  "chapter_dir": "05-glass-soil-trace-evidence",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Apply",
+  "learning_objective": "Apply the 3R Rule to determine impact direction and sequence from a glass fracture pattern (Bloom Level 3 — Apply; verb: apply).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** glass-fracture-sequence<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Apply the 3R Rule to determine impact direction and sequence from a glass fracture pattern (Bloom Level 3 — Apply; verb: apply).\n\nBloom Level: Apply (L3)\nBloom Verb: Apply\n\nCanvas layout:\n- Main view (~70%): rectangular glass panel showing fracture pattern\n- Control panel (~30%): impact simulation controls and analysis tools\n\nVisual elements:\n- Glass panel rendered as a light blue-gray rectangle\n- Radial fracture lines in dark gray, radiating from impact point(s)\n- Concentric fracture lines in medium gray, forming rings\n- Impact point(s) marked with a small circle\n- On termination events (second fracture meeting first), a small red \"T\" mark shows where the second fracture stopped\n\nInteractive controls:\n- Click anywhere on the glass to add an impact point (up to 3 impacts)\n- The simulation draws realistic radial and concentric fracture patterns for each impact\n- A \"Which came first?\" quiz button: hides the impact sequence numbers and asks students to click the impacts in the order they believe they occurred\n- Correct/wrong feedback with explanation citing the 3R Rule\n\nData Visibility Requirements:\n- Stage 1: Show a pre-built two-impact fracture pattern with the sequence hidden\n- Stage 2: Student clicks to identify which impact point is #1 (first), then #2 (second)\n- Stage 3: Reveal correct sequence; highlight the termination points where fracture lines from impact #2 stop at fracture lines from impact #1\n\nInstructional Rationale: An Apply-level objective (apply the 3R Rule) requires the student to use the rule to reach a conclusion, not just recall it. The sequence quiz format forces active analysis.\n\nColor scheme: Light blue-gray glass; dark gray radial lines; medium gray concentric lines; red termination marks; green for correct answer highlights."
+}

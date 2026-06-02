@@ -1,0 +1,46 @@
+{
+  "title": "Daubert vs. Frye Admissibility Decision Workflow",
+  "description": "Daubert vs. Frye Admissibility Decision Workflow",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "Forensic Law",
+    "Evidence Admissibility"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "daubert-frye-decision-workflow",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) — compare and contrast how the Frye and Daubert standards evaluate the same scientific evidence.",
+  "bloomVerb": "Compare",
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Forensic Science and Legal Principles",
+  "chapter_dir": "01-intro-forensic-science",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Evidence Admissibility: Frye and Daubert Standards",
+    "learningObjectives": [
+      "Compare and contrast how Frye and Daubert evaluate the same scientific evidence.",
+      "Attribute differences in outcome to the structure of each standard."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "20-25 minutes",
+    "prerequisites": "Basic understanding of courtroom roles and scientific reliability"
+  },
+  "pedagogical": {
+    "interactionPattern": "Side-by-side step-through of two decision trees with synchronized scenario, hover definitions, and outcome comparison",
+    "assessment": "Students complete a Technique/Frye outcome/Daubert outcome table and argue admissibility",
+    "modelType": "Comparative decision-tree walkthrough",
+    "controls": [
+      "scenario dropdown",
+      "Next Step button",
+      "Reset button",
+      "hover tooltips"
+    ]
+  }
+}

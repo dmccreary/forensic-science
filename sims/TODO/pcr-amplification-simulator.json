@@ -1,0 +1,14 @@
+{
+  "sim_id": "pcr-amplification-simulator",
+  "diagram_name": "PCR Amplification Step-Through Simulator",
+  "chapter_number": 8,
+  "chapter_title": "Forensic DNA Profiling",
+  "chapter_dir": "08-forensic-dna-profiling",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain",
+  "learning_objective": "Explain the three steps of PCR (denaturation, annealing, extension) by tracing what happens to the DNA at each stage (Bloom Level 2 — Understand; verb: explain).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** pcr-amplification-simulator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain the three steps of PCR (denaturation, annealing, extension) by tracing what happens to the DNA at each stage (Bloom Level 2 — Understand; verb: explain).\n\nBloom Level: Understand (L2)\nBloom Verb: Explain\n\nCanvas layout:\n- Main view (~65%): molecular-level animation of the DNA strands\n- Side panel (~35%): temperature display, step label, step description, cycle counter\n\nVisual elements:\n- Two complementary DNA strands shown as colored lines (one strand red, one blue) with base pairs as short horizontal bridges\n- Primers shown as shorter yellow/green segments\n- New DNA synthesis shown as a growing strand in a lighter color\n- Temperature gauge on the side panel\n- A \"copies so far\" counter\n\nInteractive controls:\n- \"Next Step\" button advances through: Denature (94°C) → Anneal (60°C) → Extend (72°C)\n- \"Run Cycle\" button runs all three steps automatically with a 1-second pause between\n- \"Run 5 Cycles\" shows the exponential growth of copy count\n- Clicking on any DNA component (strand, primer, new strand) reveals a pop-up definition\n\nData Visibility Requirements:\n- Denaturation step: show the hydrogen bond bridges disappearing one by one; temperature rises to 94°C; strands drift apart\n- Annealing step: show primers searching and binding to complementary positions; temperature drops to 60°C\n- Extension step: show new nucleotides being added one by one from the primer end; temperature rises to 72°C\n- After each complete cycle: show copy count double\n\nInstructional Rationale: An Understand objective (explain PCR steps) requires the learner to see the molecular transformation at each step with concrete data (temperature, copy count). Animation with Next-Step control supports prediction before each stage is revealed.\n\nColor scheme: Red and blue for template strands, yellow for primers, light purple for new strand synthesis, gray for enzyme."
+}

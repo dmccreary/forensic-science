@@ -1,0 +1,14 @@
+{
+  "sim_id": "adme-pathway",
+  "diagram_name": "ADME Pathway Interactive Flow Diagram",
+  "chapter_number": 9,
+  "chapter_title": "Forensic Toxicology and Chemical Analysis",
+  "chapter_dir": "09-forensic-toxicology",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain",
+  "learning_objective": "Explain the ADME pharmacokinetic pathway and describe what happens to a drug at each stage (Bloom Level 2 — Understand; verb: explain).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** adme-pathway<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain the ADME pharmacokinetic pathway and describe what happens to a drug at each stage (Bloom Level 2 — Understand; verb: explain).\n\nBloom Level: Understand (L2)\nBloom Verb: Explain\n\nPurpose: Visualize the journey of a drug through the body's four pharmacokinetic phases.\n\nLayout:\n- A simplified body outline with four labeled regions: GI tract (Absorption), Bloodstream/Tissues (Distribution), Liver (Metabolism), Kidneys/Lungs (Elimination)\n- Animated colored dots (representing drug molecules) travel along the pathway\n\nInteractive elements:\n- Click each body region to open a panel describing that ADME phase, what organs are involved, and how long each phase typically takes\n- A \"Drug Type\" dropdown lets students select oral vs. IV vs. inhaled; the animation speed changes to reflect onset time differences\n- A timeline at the bottom shows how blood concentration changes over time (peak, then decline) as the drug moves through ADME phases\n\nData Visibility Requirements:\n- Show actual drug concentration values at each stage\n- Show a blood-concentration-over-time curve updating as ADME phases proceed\n- Display the detection window for urine vs. blood vs. hair at any given time point\n\nInstructional Rationale: A step-through animated ADME diagram connects abstract pharmacokinetic concepts to a concrete visual model of what happens inside the body after drug administration.\n\nColor scheme: Body silhouette in gray outline; drug molecules as orange dots; liver in brown; kidneys in purple; blood vessels in red."
+}

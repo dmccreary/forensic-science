@@ -1,0 +1,46 @@
+{
+  "title": "Locard Exchange Principle Visualizer",
+  "description": "Apply (Bloom L3) the Locard Exchange Principle to predict and verify what trace evidence is produced and transferred when two objects make physical contact.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "Trace Evidence",
+    "Locard Exchange Principle"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "locard-exchange-visualizer",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3) — predict and verify what trace evidence transfers when two objects make physical contact.",
+  "bloomVerb": "Apply",
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Forensic Science and Legal Principles",
+  "chapter_dir": "01-intro-forensic-science",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Trace Evidence and the Locard Exchange Principle",
+    "learningObjectives": [
+      "Apply the Locard Exchange Principle to predict two-way trace transfer.",
+      "Connect specific trace types to the laboratory methods that identify them."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Concept of trace evidence; basic idea of physical contact"
+  },
+  "pedagogical": {
+    "interactionPattern": "Predict-Test-Observe: scenario selection, prediction prompt, contact animation, evidence inventory",
+    "assessment": "Students predict transfer before each contact, then verify against the evidence inventory",
+    "modelType": "Agent/event-based contact simulation",
+    "controls": [
+      "scenario dropdown",
+      "Make Contact button",
+      "Reset Scene button",
+      "Show trace labels checkbox"
+    ]
+  }
+}

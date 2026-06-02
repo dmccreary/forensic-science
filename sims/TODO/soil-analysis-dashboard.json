@@ -1,0 +1,14 @@
+{
+  "sim_id": "soil-analysis-dashboard",
+  "diagram_name": "Soil Analysis Comparison Dashboard",
+  "chapter_number": 5,
+  "chapter_title": "Glass, Soil, and Physical Trace Evidence",
+  "chapter_dir": "05-glass-soil-trace-evidence",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Compare",
+  "learning_objective": "Analyze multiple soil properties together to compare a questioned soil sample to reference samples from known locations (Bloom Level 4 — Analyze; verb: compare).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** soil-analysis-dashboard<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Analyze multiple soil properties together to compare a questioned soil sample to reference samples from known locations (Bloom Level 4 — Analyze; verb: compare).\n\nBloom Level: Analyze (L4)\nBloom Verb: Compare\n\nPurpose: Allow investigators to compare a questioned soil sample against three reference samples using four analysis criteria simultaneously.\n\nLayout:\n- A four-panel comparison dashboard:\n  1. Soil color swatches (Munsell color notation)\n  2. Particle size distribution bar chart (gravel/sand/silt/clay %)\n  3. pH bar (0–14 scale with visual acid/neutral/base gradient)\n  4. Gradient tube visualization (band pattern shown as colored stripes at specific heights)\n- Three reference samples (A, B, C) are shown as columns; the questioned sample is shown alongside\n\nInteractive controls:\n- Click any reference sample column to highlight it and see a side-by-side comparison with the questioned sample\n- A \"Match Score\" button calculates a similarity score based on pH difference, particle size overlap, and color distance\n- Hover over any panel to see a tooltip explaining the forensic significance of that comparison criterion\n- A \"New Case\" button loads a different set of reference and questioned samples\n\nData Visibility Requirements:\n- Show specific numeric values for pH and particle size percentages\n- The gradient tube shows 4–6 colored bands at specific heights; matching bands align horizontally when two samples are compared\n- When user clicks a reference column, highlight matching and non-matching bands in green/red respectively\n\nDefault scenario: Questioned soil from suspect's boots compared against Reference A (distant location, different geology), Reference B (nearby location, similar geology), Reference C (exact collection location)\n\nInstructional Rationale: An Analyze-level objective (compare multiple samples across multiple criteria) requires a dashboard where the learner can view and interact with all the data simultaneously, then synthesize a conclusion.\n\nColor scheme: Earthy tones (browns, tans, grays) for soil samples; blue for pH scale; distinct colors for gradient bands."
+}

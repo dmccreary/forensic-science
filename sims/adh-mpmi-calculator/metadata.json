@@ -1,0 +1,21 @@
+{
+  "title": "ADH and mPMI Calculator MicroSim",
+  "description": "Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "adh-mpmi-calculator",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate",
+  "completion_status": "scaffold",
+  "chapter_number": 12,
+  "chapter_title": "Forensic Entomology and Decomposition Analysis",
+  "chapter_dir": "12-forensic-entomology"
+}

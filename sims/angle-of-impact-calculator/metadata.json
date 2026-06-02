@@ -1,0 +1,21 @@
+{
+  "title": "Angle of Impact Calculator",
+  "description": "Calculate the angle of impact of a bloodstain from width-to-length measurements (Bloom Level 3 — Apply; verb: calculate).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "angle-of-impact-calculator",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate",
+  "completion_status": "scaffold",
+  "chapter_number": 7,
+  "chapter_title": "Bloodstain Pattern Analysis",
+  "chapter_dir": "07-bloodstain-pattern-analysis"
+}

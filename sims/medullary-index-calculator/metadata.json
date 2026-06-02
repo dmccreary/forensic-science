@@ -1,0 +1,21 @@
+{
+  "title": "Medullary Index Calculator",
+  "description": "Calculate the medullary index of a hair sample and interpret the result as human or non-human (Bloom Level 3 — Apply; verb: calculate).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "medullary-index-calculator",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate",
+  "completion_status": "scaffold",
+  "chapter_number": 4,
+  "chapter_title": "Hair, Fiber, and Trace Evidence Analysis",
+  "chapter_dir": "04-hair-and-fiber-analysis"
+}

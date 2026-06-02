@@ -1,0 +1,21 @@
+{
+  "title": "PCR Amplification Step-Through Simulator",
+  "description": "Explain the three steps of PCR (denaturation, annealing, extension) by tracing what happens to the DNA at each stage (Bloom Level 2 — Understand; verb: explain).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "pcr-amplification-simulator",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Explain",
+  "completion_status": "scaffold",
+  "chapter_number": 8,
+  "chapter_title": "Forensic DNA Profiling",
+  "chapter_dir": "08-forensic-dna-profiling"
+}

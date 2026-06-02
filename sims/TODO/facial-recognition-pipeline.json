@@ -1,0 +1,14 @@
+{
+  "sim_id": "facial-recognition-pipeline",
+  "diagram_name": "Facial Recognition Pipeline Interactive Diagram",
+  "chapter_number": 16,
+  "chapter_title": "Facial Recognition Technologies and Biometric Identification",
+  "chapter_dir": "16-facial-recognition",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "Identify",
+  "learning_objective": "Identify the stages of the facial recognition pipeline and the source of error at each stage (Bloom Level 1 — Remember; verb: identify).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** facial-recognition-pipeline<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Identify the stages of the facial recognition pipeline and the source of error at each stage (Bloom Level 1 — Remember; verb: identify).\n\nBloom Level: Remember (L1)\nBloom Verb: Identify\n\nCanvas layout:\n- Horizontal pipeline showing five stages: Input Image → Face Detection → Landmark Extraction → Feature Vector Generation → Database Comparison\n- Each stage is a labeled box with an icon\n- Below each stage: an error source label\n\nVisual elements:\n- Animated example probe image flowing through each pipeline stage\n- Stage 1 (Input): Shows a CCTV still frame — low res, oblique angle\n- Stage 2 (Detection): Bounding box drawn around the detected face\n- Stage 3 (Landmarks): 68 landmark dots overlaid on the face\n- Stage 4 (Vector): Abstract numerical vector representation\n- Stage 5 (Comparison): Gallery grid with distance scores, ranked matches\n\nInteractive controls:\n- Click each stage to open a detail panel explaining: what the stage does, what can go wrong, and how error rate is affected\n- \"Change Image Quality\" button degrades the probe image (lower resolution, add noise) and shows how detection confidence drops\n- Toggle: \"Classical (Eigenface)\" vs \"Deep Learning (CNN)\" — switches algorithm type\n\nData Visibility Requirements:\n- Show similarity scores for top 5 gallery matches in Stage 5\n- Show threshold line: matches above/below threshold\n- Show error rate by demographic panel: \"Error rate for this system: Light-skin male 0.8%, Dark-skin female 7.3%\"\n\nInstructional Rationale: A Remember-level objective (identify pipeline stages and error sources) is best served by an annotated, interactive diagram where each stage is clickable and error sources are explicitly labeled.\n\nColor scheme: Dark background, blue stage boxes, orange error labels, green confidence bars, red threshold line."
+}

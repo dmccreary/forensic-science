@@ -1,0 +1,2222 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Biometric identification, face detection, landmark extraction, eigenface method, CNNs, law enforcement databases, CCTV analysis, admissibility, and algorithmic bias.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/chapters/16-facial-recognition/">
+      
+      
+        <link rel="prev" href="../15-digital-forensics/quiz/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Facial Recognition Technologies and Biometric Identification - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#facial-recognition-technologies-and-biometric-identification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Facial Recognition Technologies and Biometric Identification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../01-intro-forensic-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations & Legal Principles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../02-crime-scene-investigation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Crime Scene Investigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../03-fingerprint-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Fingerprint Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../04-hair-and-fiber-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Hair and Fiber Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../05-glass-soil-trace-evidence/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Glass, Soil & Trace Evidence
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../06-forensic-serology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Forensic Serology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../07-bloodstain-pattern-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Bloodstain Pattern Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../08-forensic-dna-profiling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DNA Profiling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../09-forensic-toxicology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Forensic Toxicology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../10-fire-arson-explosives/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Fire, Arson & Explosives
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../11-forensic-anthropology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Forensic Anthropology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../12-forensic-entomology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Forensic Entomology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../13-firearms-and-ballistics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Firearms & Ballistics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../14-document-examination/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Document Examination
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../15-digital-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Digital Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_17" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    16. Facial Recognition
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_17" id="__nav_4_17_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_17_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_17">
+            <span class="md-nav__icon md-icon"></span>
+            16. Facial Recognition
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../17-cell-phone-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Cell Phone Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../18-social-media-osint/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Social Media & OSINT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../19-aviation-crash-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Aviation Crash Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biometric-identification-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biometric Identification Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-facial-recognition-works-the-technical-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Facial Recognition Works: The Technical Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Facial Recognition Works: The Technical Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#face-detection-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Face Detection Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facial-landmark-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facial Landmark Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-eigenface-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Eigenface Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-learning-face-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Learning Face Recognition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-facial-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Facial Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#law-enforcement-databases-and-operational-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Law Enforcement Databases and Operational Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Law Enforcement Databases and Operational Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#law-enforcement-face-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Law Enforcement Face Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ngi-facial-recognition-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The NGI Facial Recognition System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cctv-surveillance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      CCTV Surveillance Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facial-superimposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facial Superimposition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age-progression-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age Progression Modeling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-standards-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legal Standards and Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legal Standards and Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facial-recognition-admissibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Facial Recognition Admissibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-bias-in-facial-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Bias in Facial Recognition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithmic Bias in Facial Recognition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-facial-recognition-pipeline-interactive-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Facial Recognition Pipeline Interactive Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Review
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/chapters/16-facial-recognition/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="facial-recognition-technologies-and-biometric-identification">Facial Recognition Technologies and Biometric Identification<a class="headerlink" href="#facial-recognition-technologies-and-biometric-identification" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter examines how facial recognition technology works, how it is used in law enforcement, and how its evidence is evaluated in court. Students begin with biometric identification principles and the pipeline that converts a face image into a matchable feature vector: face detection algorithms, facial landmark extraction, and the eigenface method. Deep learning approaches using convolutional neural networks (CNNs) represent the current state of the art. Law enforcement databases — including the FBI's NGI system — are surveyed alongside practical applications including CCTV surveillance analysis, facial superimposition, and age progression modeling. The chapter concludes with the legal analysis of facial recognition evidence: Daubert admissibility standards, documented false-positive rates, and algorithmic bias disparities across demographic groups. After completing this chapter, students will be able to evaluate whether a facial recognition identification meets the Daubert standard and articulate the sources of error that affect evidentiary weight.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>Facial Recognition Overview</li>
+<li>Biometric Identification Principles</li>
+<li>Face Detection Algorithms</li>
+<li>Facial Landmark Detection</li>
+<li>Eigenface Method</li>
+<li>Deep Learning Face Recognition</li>
+<li>Convolutional Neural Networks</li>
+<li>3D Facial Mapping</li>
+<li>Law Enforcement Face Databases</li>
+<li>NGI Facial Recognition System</li>
+<li>CCTV Surveillance Analysis</li>
+<li>Facial Superimposition</li>
+<li>Age Progression Modeling</li>
+<li>Facial Recognition Admissibility</li>
+<li>Algorithmic Bias in Facial Recognition</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../15-digital-forensics/">Chapter 15: Digital Forensics and Cybercrime Investigation</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+A face is not a fingerprint. Fingerprints are invariant — they do not change with age, lighting, or emotion. Faces change with every expression, every decade of life, and every camera angle. Facial recognition technology attempts to compare something that is inherently variable against a database of known images — and the resulting false-positive and false-negative rates carry profound consequences when the evidence is used in a criminal prosecution. Understanding how the technology works is inseparable from understanding when to trust it — and when to question it. Follow the evidence — and the math behind the match.</p>
+</div>
+<hr />
+<h2 id="biometric-identification-principles">Biometric Identification Principles<a class="headerlink" href="#biometric-identification-principles" title="Permanent link">&para;</a></h2>
+<p><strong>Biometric identification</strong> is the use of measurable biological or behavioral characteristics to identify individuals. A biometric identifier must meet three criteria to be forensically useful:</p>
+<ol>
+<li><strong>Universality</strong> — the characteristic must be present in all individuals</li>
+<li><strong>Distinctiveness</strong> — the characteristic must vary sufficiently between individuals to support differentiation</li>
+<li><strong>Permanence</strong> — the characteristic must be stable enough over time to enable comparison between a questioned sample and an enrolled reference</li>
+</ol>
+<p>Fingerprints, iris patterns, and DNA are considered high-quality biometrics because they score well on all three criteria. <strong>Facial appearance</strong> is universal and distinctive, but its permanence is lower than fingerprints or DNA — it changes with age, weight change, injury, surgical alteration, and momentary expression. This permanence limitation is the root of many facial recognition errors.</p>
+<p><strong>Biometric identification systems</strong> compare a <strong>probe</strong> (a questioned image or biometric sample) against an <strong>enrolled gallery</strong> (a database of reference images). The output is either a ranked list of candidate matches with similarity scores (a <em>one-to-many</em> search used to identify an unknown person) or a single yes/no decision (a <em>one-to-one</em> verification comparing a probe to a claimed identity).</p>
+<hr />
+<h2 id="how-facial-recognition-works-the-technical-pipeline">How Facial Recognition Works: The Technical Pipeline<a class="headerlink" href="#how-facial-recognition-works-the-technical-pipeline" title="Permanent link">&para;</a></h2>
+<p>Modern facial recognition proceeds through several distinct computational stages. Understanding each stage helps evaluate the sources of error that can accumulate through the pipeline.</p>
+<h3 id="face-detection-algorithms">Face Detection Algorithms<a class="headerlink" href="#face-detection-algorithms" title="Permanent link">&para;</a></h3>
+<p>Before a face can be recognized, it must first be found in the image. <strong>Face detection algorithms</strong> locate and extract facial regions from an image or video frame. The challenge is that faces appear at different scales, orientations, and lighting conditions — and the algorithm must distinguish faces from other objects.</p>
+<p>Classical face detection relied on <strong>Viola-Jones cascaded classifiers</strong> — a fast algorithm that scans an image at multiple scales using a series of simple feature tests, rejecting non-face regions at each stage and passing candidates to increasingly stringent filters. Viola-Jones was highly influential from the early 2000s and is still used in real-time camera hardware.</p>
+<p>Modern systems use deep learning approaches (discussed below) for detection as well as recognition, achieving substantially higher accuracy in challenging conditions (partial occlusion, extreme angles, low light).</p>
+<p><strong>Detection errors</strong> include:
+- <strong>False positive</strong>: a non-face region is detected as a face (leads to meaningless subsequent matching)
+- <strong>False negative</strong>: a real face is missed (the person's identity is never considered)</p>
+<h3 id="facial-landmark-detection">Facial Landmark Detection<a class="headerlink" href="#facial-landmark-detection" title="Permanent link">&para;</a></h3>
+<p>Once a face is detected, <strong>facial landmark detection</strong> (also called keypoint detection) locates specific anatomical reference points on the face — typically 68 to 468 points depending on the model — including the corners of the eyes, tip of the nose, corners of the mouth, chin point, and brow ridge locations.</p>
+<p>Landmark detection serves two purposes: <strong>alignment</strong> (normalizing the face to a standard pose and scale by aligning landmarks to a template, reducing variation caused by head tilt, distance from camera, and facial expression) and <strong>feature extraction</strong> (the landmark coordinates become input features for subsequent matching algorithms).</p>
+<h3 id="the-eigenface-method">The Eigenface Method<a class="headerlink" href="#the-eigenface-method" title="Permanent link">&para;</a></h3>
+<p>The <strong>eigenface method</strong> is a classical approach to face recognition developed in the 1990s that illustrates the core mathematical principle behind all face recognition: faces exist in a high-dimensional space (a 100×100 pixel image has 10,000 dimensions), but actual human faces occupy only a small low-dimensional subspace of that space.</p>
+<p><strong>Principal Component Analysis (PCA)</strong> applied to a training set of face images identifies the directions of greatest variation — the <strong>principal components</strong>, called <strong>eigenfaces</strong> (because they are eigenvectors of the face covariance matrix). Each eigenface looks like a ghostly composite face that captures a particular mode of variation (e.g., the contrast between male and female faces, between light and dark faces, between narrow and wide faces).</p>
+<p>Any face image can then be represented as a <strong>weighted combination of eigenfaces</strong> — a compact numerical vector. To match a probe face to a gallery, the system computes the probe's eigenface vector and compares it to gallery vectors using Euclidean distance: smaller distance = more similar faces.</p>
+<p>The eigenface method is no longer state of the art — but understanding it reveals the central concept in all subsequent methods: <strong>convert a face image into a numerical vector; compare vectors</strong>.</p>
+<h3 id="deep-learning-face-recognition">Deep Learning Face Recognition<a class="headerlink" href="#deep-learning-face-recognition" title="Permanent link">&para;</a></h3>
+<p><strong>Deep learning face recognition</strong> uses <strong>Convolutional Neural Networks (CNNs)</strong> — multi-layer neural networks specialized for processing grid-structured data like images — to learn face representations far more powerful than eigenfaces.</p>
+<p><strong>Convolutional Neural Networks (CNNs)</strong> process images through successive layers:</p>
+<ul>
+<li><strong>Convolutional layers</strong> apply learned filters to the image, detecting features such as edges, textures, and shapes at increasing levels of abstraction</li>
+<li><strong>Pooling layers</strong> reduce spatial resolution while preserving learned features, making the representation robust to small shifts and distortions</li>
+<li><strong>Fully connected layers</strong> combine learned features into a high-dimensional face embedding vector</li>
+</ul>
+<p>Modern face recognition CNNs (such as FaceNet, ArcFace, or DeepFace) are trained on millions of labeled face images. The training process optimizes the CNN weights so that images of the <strong>same person</strong> produce embedding vectors that are <strong>close together</strong> in the vector space, while images of <strong>different people</strong> produce vectors that are <strong>far apart</strong>.</p>
+<p>After training, recognition is performed by:
+1. Pass the probe image through the CNN → produce a 128- or 512-dimensional embedding vector
+2. Compare the probe vector to gallery vectors using cosine similarity or Euclidean distance
+3. If the distance falls below a threshold, declare a match</p>
+<p>The performance of current top-tier CNN-based systems on benchmark datasets (such as LFW — Labeled Faces in the Wild) exceeds 99% accuracy. However, benchmark accuracy does not equal operational accuracy in law enforcement contexts, where probe images may be low-resolution CCTV frames, the subject may have changed appearance, and the gallery may contain millions of entries.</p>
+<h3 id="3d-facial-mapping">3D Facial Mapping<a class="headerlink" href="#3d-facial-mapping" title="Permanent link">&para;</a></h3>
+<p><strong>3D facial mapping</strong> captures the three-dimensional geometry of a face using structured light, stereo cameras, or LiDAR sensors. A 3D face model is more robust to pose variation than 2D images because the geometry can be computationally re-posed to any angle for comparison. 3D mapping is used in high-security access control and has been proposed for operational forensic use, but CCTV evidence is virtually always 2D, limiting 3D mapping's current forensic applicability.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Does the Data Tell Us?</p>
+<p><img alt="Trace peering through magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+A facial recognition system does not return "yes, this is the person." It returns a similarity score — a number indicating how close together two face vectors are. The system's operator must set a <strong>threshold</strong>: above this similarity score, declare a match; below it, declare no match. Raising the threshold reduces false positives (incorrect matches) but increases false negatives (missed matches). Lowering the threshold has the opposite effect. The choice of threshold is a human decision with human consequences — and it must be documented and disclosed in any forensic application of the technology.</p>
+</div>
+<hr />
+<h2 id="law-enforcement-databases-and-operational-systems">Law Enforcement Databases and Operational Systems<a class="headerlink" href="#law-enforcement-databases-and-operational-systems" title="Permanent link">&para;</a></h2>
+<h3 id="law-enforcement-face-databases">Law Enforcement Face Databases<a class="headerlink" href="#law-enforcement-face-databases" title="Permanent link">&para;</a></h3>
+<p><strong>Law enforcement face databases</strong> are repositories of reference face images used in biometric identification searches. In the United States, major sources include:</p>
+<ul>
+<li><strong>Driver's license and state ID databases</strong> maintained by Departments of Motor Vehicles — the most comprehensive facial image repository, covering the majority of the adult population</li>
+<li><strong>Arrest booking photographs</strong> (mugshot databases) maintained by local and state law enforcement agencies</li>
+<li><strong>Passport and visa photograph databases</strong> maintained by the Department of State</li>
+<li><strong>Sex offender registries</strong> with mandatory photograph requirements</li>
+</ul>
+<p>Access to these databases for facial recognition searches is governed by state and federal law; requirements vary significantly by jurisdiction.</p>
+<h3 id="the-ngi-facial-recognition-system">The NGI Facial Recognition System<a class="headerlink" href="#the-ngi-facial-recognition-system" title="Permanent link">&para;</a></h3>
+<p>The <strong>Next Generation Identification (NGI)</strong> system is the FBI's biometric identification platform, operated by the Criminal Justice Information Services (CJIS) Division. NGI includes fingerprint databases, iris records, and <strong>the Repository for Individuals of Special Concern (RISC)</strong>, which includes facial recognition capability.</p>
+<p>The NGI facial search system accepts a probe photograph and searches against enrolled images from participating state repositories, federal mugshot databases, and other contributing sources. Importantly, <strong>NGI facial recognition searches return candidate matches for human review — not automated identifications</strong>. An NGI facial recognition "hit" is the beginning of an investigation, not the end of one: a trained examiner must review the candidate match and a separate, independent investigation must link the candidate to the offense before an arrest.</p>
+<hr />
+<h2 id="practical-applications">Practical Applications<a class="headerlink" href="#practical-applications" title="Permanent link">&para;</a></h2>
+<h3 id="cctv-surveillance-analysis">CCTV Surveillance Analysis<a class="headerlink" href="#cctv-surveillance-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>CCTV surveillance analysis</strong> involves extracting frames or video clips from closed-circuit television cameras and analyzing them for identification or behavioral evidence. CCTV footage presents significant challenges for facial recognition:</p>
+<ul>
+<li><strong>Low resolution</strong>: many CCTV cameras capture at resolution insufficient to render facial details clearly; a face may occupy only 20×20 pixels in a wide-angle recording</li>
+<li><strong>Poor lighting</strong>: overhead lighting, backlighting, and insufficient illumination introduce significant variation</li>
+<li><strong>Oblique angles</strong>: CCTV cameras are typically positioned at ceiling height, capturing faces at downward angles not well represented in frontal-pose gallery images</li>
+<li><strong>Compression artifacts</strong>: video compression algorithms (H.264, H.265) introduce blocking artifacts that degrade facial details</li>
+</ul>
+<p>Super-resolution algorithms can partially enhance low-resolution CCTV images, and pose correction algorithms can adjust for angle — but introduced artifacts from these processing steps must be disclosed and can affect the reliability of subsequent matching.</p>
+<h3 id="facial-superimposition">Facial Superimposition<a class="headerlink" href="#facial-superimposition" title="Permanent link">&para;</a></h3>
+<p><strong>Facial superimposition</strong> is a comparison technique used when traditional facial recognition cannot be applied — particularly for human remains. In facial superimposition, a photograph of a known individual is compared to a skull (or photograph of a skull) by overlaying the two images and examining whether anatomical landmarks align.</p>
+<p>Facial superimposition provides only an <strong>exclusion or possible inclusion</strong> conclusion — it can rule out an identity if key landmarks do not align, but alignment alone does not confirm identity. The technique requires the photograph to be of known provenance and the skull to be intact; results are expressed as opinions rather than statistical probabilities.</p>
+<h3 id="age-progression-modeling">Age Progression Modeling<a class="headerlink" href="#age-progression-modeling" title="Permanent link">&para;</a></h3>
+<p><strong>Age progression modeling</strong> predicts how a face will appear at a future age — used primarily for missing persons investigations where a childhood photograph must be aged to help locate an adult. Age progression algorithms model the systematic changes in facial geometry and appearance that accompany aging (deepening of facial folds, changes in fat distribution, thinning of lips, graying of hair) and apply them to a baseline image.</p>
+<p>Age progression results are necessarily approximate — individual aging trajectories vary significantly — and age-progressed images are investigative tools for generating leads rather than definitive identification aids.</p>
+<hr />
+<h2 id="legal-standards-and-limitations">Legal Standards and Limitations<a class="headerlink" href="#legal-standards-and-limitations" title="Permanent link">&para;</a></h2>
+<h3 id="facial-recognition-admissibility">Facial Recognition Admissibility<a class="headerlink" href="#facial-recognition-admissibility" title="Permanent link">&para;</a></h3>
+<p>For facial recognition evidence to be admitted in court, it must meet the <strong>Daubert standard</strong> — the framework established in <em>Daubert v. Merrell Dow Pharmaceuticals</em> (1993) and adopted by federal courts and most state courts for evaluating scientific evidence. Under Daubert, the proponent of expert testimony must demonstrate:</p>
+<ol>
+<li><strong>Testing</strong>: the technique can be and has been tested</li>
+<li><strong>Peer review</strong>: the technique has been subjected to peer review and publication</li>
+<li><strong>Error rates</strong>: known or potential error rates exist and are acceptable</li>
+<li><strong>General acceptance</strong>: the technique is generally accepted in the relevant scientific community</li>
+</ol>
+<p><strong>Facial recognition admissibility</strong> challenges focus most heavily on criteria 3 and 4. Current facial recognition systems have documented false-positive and false-negative rates that vary widely depending on image quality, demographic factors, and the specific system used. Several courts have required detailed disclosure of the specific system's validation data, error rates, and the training and qualifications of the human examiner who reviewed the candidate match.</p>
+<h3 id="algorithmic-bias-in-facial-recognition">Algorithmic Bias in Facial Recognition<a class="headerlink" href="#algorithmic-bias-in-facial-recognition" title="Permanent link">&para;</a></h3>
+<p><strong>Algorithmic bias in facial recognition</strong> is the documented disparity in accuracy across demographic groups — a consequence of unequal representation in the training data and differences in how lighting and camera technologies historically captured different skin tones.</p>
+<p>Multiple independent studies, including a landmark 2019 study by the National Institute of Standards and Technology (NIST) evaluating 189 facial recognition algorithms, found that most algorithms had significantly higher <strong>false-positive rates</strong> (incorrectly matching two different people) for women, darker-skinned individuals, and older adults compared to lighter-skinned adult males — in some cases by a factor of 10 to 100.</p>
+<p>The forensic implication is direct: a facial recognition identification with a known false-positive rate of 1 in 100 in a majority-male population has a different evidentiary weight than a match for a population where the false-positive rate is 1 in 10. The examiner and the court must be informed of the system's documented performance characteristics for the demographic profile of the subject, not just average performance statistics.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Common Mistake</p>
+<p><img alt="Trace looking alarmed" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+Facial recognition is a lead-generation tool, not an identification tool. No current facial recognition system should be used as the sole basis for an arrest or prosecution. The history of exonerations from wrongful arrests based on facial recognition errors — including multiple documented cases involving Black men who were misidentified by high-error-rate systems — is a direct consequence of treating a probabilistic similarity score as if it were a positive identification. The technology is powerful and useful when applied correctly as part of a broader investigation; it is dangerous when it replaces one.</p>
+</div>
+<h4 id="diagram-facial-recognition-pipeline-interactive-diagram">Diagram: Facial Recognition Pipeline Interactive Diagram<a class="headerlink" href="#diagram-facial-recognition-pipeline-interactive-diagram" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/facial-recognition-pipeline/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>Facial Recognition Pipeline Interactive Diagram</summary>
+<p>Type: infographic
+<strong>sim-id:</strong> facial-recognition-pipeline<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Identify the stages of the facial recognition pipeline and the source of error at each stage (Bloom Level 1 — Remember; verb: identify).</p>
+<p>Bloom Level: Remember (L1)
+Bloom Verb: Identify</p>
+<p>Canvas layout:
+- Horizontal pipeline showing five stages: Input Image → Face Detection → Landmark Extraction → Feature Vector Generation → Database Comparison
+- Each stage is a labeled box with an icon
+- Below each stage: an error source label</p>
+<p>Visual elements:
+- Animated example probe image flowing through each pipeline stage
+- Stage 1 (Input): Shows a CCTV still frame — low res, oblique angle
+- Stage 2 (Detection): Bounding box drawn around the detected face
+- Stage 3 (Landmarks): 68 landmark dots overlaid on the face
+- Stage 4 (Vector): Abstract numerical vector representation
+- Stage 5 (Comparison): Gallery grid with distance scores, ranked matches</p>
+<p>Interactive controls:
+- Click each stage to open a detail panel explaining: what the stage does, what can go wrong, and how error rate is affected
+- "Change Image Quality" button degrades the probe image (lower resolution, add noise) and shows how detection confidence drops
+- Toggle: "Classical (Eigenface)" vs "Deep Learning (CNN)" — switches algorithm type</p>
+<p>Data Visibility Requirements:
+- Show similarity scores for top 5 gallery matches in Stage 5
+- Show threshold line: matches above/below threshold
+- Show error rate by demographic panel: "Error rate for this system: Light-skin male 0.8%, Dark-skin female 7.3%"</p>
+<p>Instructional Rationale: A Remember-level objective (identify pipeline stages and error sources) is best served by an annotated, interactive diagram where each stage is clickable and error sources are explicitly labeled.</p>
+<p>Color scheme: Dark background, blue stage boxes, orange error labels, green confidence bars, red threshold line.</p>
+</details>
+<hr />
+<h2 id="key-concepts-review">Key Concepts Review<a class="headerlink" href="#key-concepts-review" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the major concepts from this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Biometric Identification</td>
+<td>Using measurable biological characteristics to identify individuals</td>
+</tr>
+<tr>
+<td>Face Detection</td>
+<td>Locating face regions in an image; errors include false positives and false negatives</td>
+</tr>
+<tr>
+<td>Facial Landmark Detection</td>
+<td>Locating anatomical keypoints (eyes, nose, mouth) for alignment and feature extraction</td>
+</tr>
+<tr>
+<td>Eigenface Method</td>
+<td>PCA-based face representation; face = weighted sum of eigenfaces</td>
+</tr>
+<tr>
+<td>CNN Face Recognition</td>
+<td>Deep learning approach; converts face to embedding vector; trained for maximum inter-person separation</td>
+</tr>
+<tr>
+<td>3D Facial Mapping</td>
+<td>Captures face geometry using depth sensors; robust to pose variation</td>
+</tr>
+<tr>
+<td>NGI System</td>
+<td>FBI's biometric identification platform; facial searches return candidates for human review</td>
+</tr>
+<tr>
+<td>CCTV Analysis</td>
+<td>Forensic examination of surveillance video; limited by resolution, angle, and lighting</td>
+</tr>
+<tr>
+<td>Facial Superimposition</td>
+<td>Skull-to-photograph overlay comparison; produces exclusion or possible inclusion opinion</td>
+</tr>
+<tr>
+<td>Age Progression</td>
+<td>Predictive aging of face for missing persons — investigative tool, not identification</td>
+</tr>
+<tr>
+<td>Daubert Standard</td>
+<td>Four-part test for expert evidence admissibility: testing, peer review, error rates, acceptance</td>
+</tr>
+<tr>
+<td>Algorithmic Bias</td>
+<td>Documented higher false-positive rates for women, darker skin, older adults — must be disclosed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details class="question">
+<summary>Challenge: Evaluating a Facial Recognition Hit</summary>
+<p>Law enforcement submits a CCTV frame showing a suspect's face to an NGI facial recognition search. The system returns a ranked list of five candidate matches, with the top candidate having a similarity score of 0.87 out of 1.0. The system's documented false-positive rate is 2.1% for the demographic profile of the probe image.</p>
+<p><strong>Can the officer arrest the top candidate based solely on this result? What additional steps are required before an identification can be used as probable cause?</strong></p>
+<p><strong>Answer:</strong> No — the officer cannot arrest based solely on this result. An NGI facial recognition candidate match is not an identification; it is a lead. With a 2.1% false-positive rate, roughly 1 in 48 people searched in this demographic would incorrectly match at this similarity level — a meaningful probability of error for a single-source identification.</p>
+<p>Required additional steps: (1) A <strong>trained human examiner</strong> must independently review the candidate match and the CCTV probe image — this is mandatory under FBI policy, and the examiner's qualifications and methodology must be documented. (2) <strong>Corroborating evidence</strong> linking the candidate to the specific offense must be developed through traditional investigation — witness identification, cell phone records, financial records, or other means independent of facial recognition. (3) The candidate's identity must be independently <strong>confirmed</strong> through other means before reliance on the match. Only when facial recognition is corroborated by independent evidence does it meet the threshold for probable cause.</p>
+</details>
+<hr />
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Facial recognition is one of the most powerful investigative tools of our time — and one that demands the most careful scrutiny before it reaches a courtroom. You now understand the pipeline from pixel to probability, the databases behind the systems, and the documented bias that must be disclosed to ensure fair application. Chapter 17 brings the investigation into the mobile world — the forensic analysis of cell phones, SIM cards, and the tower records that track every call. Follow the evidence — and the signal.</p>
+</div>
+<p><a href="references/">See Annotated References</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../15-digital-forensics/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quiz">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "sim_id": "medullary-index-calculator",
+  "diagram_name": "Medullary Index Calculator",
+  "chapter_number": 4,
+  "chapter_title": "Hair, Fiber, and Trace Evidence Analysis",
+  "chapter_dir": "04-hair-and-fiber-analysis",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate",
+  "learning_objective": "Calculate the medullary index of a hair sample and interpret the result as human or non-human (Bloom Level 3 — Apply; verb: calculate).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** medullary-index-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Calculate the medullary index of a hair sample and interpret the result as human or non-human (Bloom Level 3 — Apply; verb: calculate).\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate\n\nCanvas layout:\n- Left panel (~60%): cross-sectional view of a hair shaft rendered as two concentric circles (outer = shaft, inner = medulla)\n- Right panel (~40%): measurement inputs, formula display, and result readout\n\nVisual elements:\n- A circular cross-section of the hair showing the medulla (darker center) and cortex (lighter outer ring)\n- Two measurement arrows: one spanning the full shaft diameter, one spanning the medulla diameter\n- The formula displayed: MI = Medulla Diameter / Hair Shaft Diameter\n- A color-coded result: green if MI ≤ 0.33 (Human), orange if 0.33–0.50 (Ambiguous), red if ≥ 0.50 (Non-human likely)\n- A concentric diagram comparison showing typical human vs. dog vs. cat vs. rodent medulla proportions\n\nInteractive controls:\n- Sliders for medulla diameter (1–80 µm) and shaft diameter (30–120 µm)\n- The cross-section diagram updates in real time as sliders change\n- A \"New Sample\" button generates a random hair sample with preset measurements for the student to calculate manually before the MI is revealed\n\nData Visibility Requirements:\n- Stage 1: Show sliders at default positions with formula visible\n- Stage 2: As student adjusts sliders, live-update the cross-section proportions and the calculated MI value\n- Stage 3: When MI is calculated, display the interpretation (Human / Ambiguous / Non-human) with a one-sentence explanation\n\nDefault parameters:\n- Medulla diameter: 18 µm\n- Shaft diameter: 90 µm (MI = 0.20, Human)\n\nInstructional Rationale: An Apply-level objective (calculate and interpret MI) requires the learner to perform the calculation themselves. A visual cross-section that updates in real time connects the formula to the physical structure being measured.\n\nColor scheme: Cortex in tan/gold; medulla in dark brown; background white. Result badge green/orange/red."
+}

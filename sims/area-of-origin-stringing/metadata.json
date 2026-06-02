@@ -1,0 +1,21 @@
+{
+  "title": "Area of Origin Stringing Simulator",
+  "description": "Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "area-of-origin-stringing",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Apply",
+  "completion_status": "scaffold",
+  "chapter_number": 7,
+  "chapter_title": "Bloodstain Pattern Analysis",
+  "chapter_dir": "07-bloodstain-pattern-analysis"
+}

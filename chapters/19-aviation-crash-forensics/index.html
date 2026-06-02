@@ -1,0 +1,2423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ICAO Annex 13 and the NTSB go-team system, debris field analysis, wreckage reconstruction, flight recorders, metallurgical failure analysis, in-flight fire and explosion patterns, human factors, aviation pathology, and probable-cause determination.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/chapters/19-aviation-crash-forensics/">
+      
+      
+        <link rel="prev" href="../18-social-media-osint/references/">
+      
+      
+        <link rel="next" href="quiz/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Aviation Crash Forensics and Aircraft Accident Investigation - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aviation-crash-forensics-and-aircraft-accident-investigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aviation Crash Forensics and Aircraft Accident Investigation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../01-intro-forensic-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations & Legal Principles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../02-crime-scene-investigation/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Crime Scene Investigation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../03-fingerprint-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Fingerprint Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../04-hair-and-fiber-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Hair and Fiber Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../05-glass-soil-trace-evidence/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Glass, Soil & Trace Evidence
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../06-forensic-serology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Forensic Serology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../07-bloodstain-pattern-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Bloodstain Pattern Analysis
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../08-forensic-dna-profiling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DNA Profiling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../09-forensic-toxicology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Forensic Toxicology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../10-fire-arson-explosives/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Fire, Arson & Explosives
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../11-forensic-anthropology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Forensic Anthropology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../12-forensic-entomology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Forensic Entomology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../13-firearms-and-ballistics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Firearms & Ballistics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../14-document-examination/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Document Examination
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../15-digital-forensics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Digital Forensics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../16-facial-recognition/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Facial Recognition
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../17-cell-phone-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Cell Phone Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../18-social-media-osint/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Social Media & OSINT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_20" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    19. Aviation Crash Forensics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_20" id="__nav_4_20_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_20_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_20">
+            <span class="md-nav__icon md-icon"></span>
+            19. Aviation Crash Forensics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-a-crash-a-forensic-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Crash a Forensic Problem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Makes a Crash a Forensic Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accident-or-incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accident or Incident?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-framework-annex-13-the-ntsb-and-the-go-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Framework: Annex 13, the NTSB, and the Go-Team
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Framework: Annex 13, the NTSB, and the Go-Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-go-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Go-Team
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-party-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Party System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-the-wreckage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading the Wreckage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading the Wreckage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-debris-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Debris Field
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Debris Field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-debris-field-pattern-explorer-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Debris Field Pattern Explorer MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wreckage-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wreckage Reconstruction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-recorders-flight-data-and-cockpit-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Recorders: Flight Data and Cockpit Voice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Recorders: Flight Data and Cockpit Voice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surviving-the-crash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Surviving the Crash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuilding-the-flight-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding the Flight Path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-metal-fails-metallurgical-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Metal Fails: Metallurgical Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fire-explosion-and-the-human-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fire, Explosion, and the Human Story
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fire, Explosion, and the Human Story">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#putting-it-together-the-probable-cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It Together: The Probable Cause
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It Together: The Probable Cause">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-ntsb-investigation-workflow-clickable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: NTSB Investigation Workflow (Clickable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-landmark-crash-investigations-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Landmark Crash Investigations Timeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Review
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/chapters/19-aviation-crash-forensics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="aviation-crash-forensics-and-aircraft-accident-investigation">Aviation Crash Forensics and Aircraft Accident Investigation<a class="headerlink" href="#aviation-crash-forensics-and-aircraft-accident-investigation" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter examines how forensic science is applied to one of the most complex investigations in the field: determining why an aircraft crashed. Students first learn the legal and organizational framework — the international standard <strong>ICAO Annex 13</strong>, the role of the U.S. <strong>National Transportation Safety Board (NTSB)</strong>, the rapid-response <strong>go-team</strong>, and the <strong>party system</strong> that brings manufacturers and operators into the investigation under government control. The chapter then follows the physical evidence: reading a <strong>debris field</strong> to tell an in-flight breakup from an intact ground impact, <strong>reconstructing wreckage</strong> on a hangar floor, and recovering the <strong>flight data recorder (FDR)</strong> and <strong>cockpit voice recorder (CVR)</strong> from their crash-survivable housings. Students learn how <strong>metallurgical failure analysis</strong> distinguishes a slow <strong>fatigue fracture</strong> from a sudden <strong>overload fracture</strong>, how soot and metal-deformation patterns reveal an <strong>in-flight fire or explosion</strong>, and how <strong>radar and ADS-B</strong> data rebuild the flight path. The chapter closes with the human side of the investigation — <strong>human factors analysis</strong>, <strong>aviation pathology</strong>, <strong>crash survivability</strong>, and the <strong>probable-cause determination</strong> that turns evidence into safety recommendations. Throughout, the chapter stresses the defining feature of accident investigation: its goal is to <strong>prevent the next crash</strong>, not to assign blame.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter, investigators will be able to:</p>
+<ol>
+<li><strong>Describe</strong> the legal and organizational framework of aircraft accident investigation (ICAO Annex 13, the NTSB, the go-team, and the party system) and explain how its prevention-focused purpose differs from a criminal investigation.</li>
+<li><strong>Interpret</strong> a debris field to distinguish an in-flight breakup from an intact ground impact, and explain the purpose of physical wreckage reconstruction.</li>
+<li><strong>Explain</strong> how flight data recorders, cockpit voice recorders, and radar/ADS-B data are recovered and used to reconstruct the final minutes of a flight.</li>
+<li><strong>Apply</strong> metallurgical failure analysis to differentiate a fatigue fracture from an overload fracture and to identify in-flight fire or explosion signatures.</li>
+<li><strong>Evaluate</strong> human-factors, pathology, and survivability evidence to support a probable-cause determination and the safety recommendations that follow from it.</li>
+</ol>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 20 concepts:</p>
+<ol>
+<li>Aircraft Accident Investigation</li>
+<li>Accident vs. Incident Classification</li>
+<li>ICAO Annex 13</li>
+<li>National Transportation Safety Board (NTSB)</li>
+<li>Go-Team and Investigator-in-Charge</li>
+<li>Party System of Investigation</li>
+<li>Debris Field Analysis</li>
+<li>In-Flight Breakup vs. Intact Impact</li>
+<li>Wreckage Reconstruction</li>
+<li>Flight Data Recorder (FDR)</li>
+<li>Cockpit Voice Recorder (CVR)</li>
+<li>Crash-Survivable Memory Unit</li>
+<li>Underwater Locator Beacon</li>
+<li>Radar and ADS-B Flight Path Reconstruction</li>
+<li>Metallurgical Failure Analysis</li>
+<li>Fatigue versus Overload Fracture</li>
+<li>In-Flight Fire and Explosion Patterns</li>
+<li>Human Factors Analysis</li>
+<li>Aviation Pathology and Victim Identification</li>
+<li>Probable Cause and Crash Survivability</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../02-crime-scene-investigation/">Chapter 2: Crime Scene Investigation and Evidence Collection</a> — documentation, search patterns, and chain of custody all apply to a crash site, which is simply a very large and hazardous scene.</li>
+<li><a href="../10-fire-arson-explosives/">Chapter 10: Fire Investigation, Arson, and Explosives</a> — combustion chemistry and explosive residue analysis are central to telling an in-flight fire from a post-impact ground fire.</li>
+<li><a href="../11-forensic-anthropology/">Chapter 11: Forensic Anthropology and Skeletal Biology</a> — and Chapters 8 and 9 — support victim identification, injury analysis, and crew toxicology.</li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+A crashed aircraft is a forensic puzzle scattered across a hillside, a runway, or the floor of an ocean. Nobody walks up and confesses, and the most important witnesses — the crew — often did not survive. Yet investigators can still reconstruct the final seconds of a flight from twisted metal, a charred memory chip, and a graph of airspeed. This is forensic science at its largest scale, and its goal is unusual: not to punish anyone, but to make sure the same thing never happens again. Follow the evidence — all the way to the black box.</p>
+</div>
+<hr />
+<h2 id="what-makes-a-crash-a-forensic-problem">What Makes a Crash a Forensic Problem<a class="headerlink" href="#what-makes-a-crash-a-forensic-problem" title="Permanent link">&para;</a></h2>
+<p>A modern airliner is a machine with millions of parts, flown by trained crews, inside a tightly regulated system. When one crashes, the question "what happened?" almost never has a single, obvious answer. <strong>Aircraft accident investigation</strong> is the systematic, science-based process of reconstructing an aviation accident to determine its cause and prevent recurrence. It draws on nearly every discipline in this book — trace evidence, fire and explosives chemistry, pathology, toxicology, and digital forensics — and adds engineering disciplines such as metallurgy, aerodynamics, and human factors.</p>
+<p>It is important to separate two ideas that television tends to blur. <strong>Forensic science</strong> is the application of scientific methods to questions of public interest; <strong>investigative procedure</strong> is the organizational work of running the inquiry. Aviation investigation keeps these especially distinct, because the entire enterprise is built around a single principle: the purpose is <strong>prevention, not blame</strong>. An accident investigator who discovers pilot error does not arrest the pilot — they write a recommendation so that training, procedures, or cockpit design change for everyone.</p>
+<p>That prevention-first goal also explains a sharp boundary. The moment evidence suggests a <strong>deliberate</strong> act — sabotage, a bomb, or a hijacking — the investigation becomes a criminal matter and a law-enforcement agency (in the United States, the FBI) takes the lead, applying everything you learned about chain of custody and admissibility in earlier chapters. Most investigations, however, are about accidents, and they are governed by safety law, not criminal law.</p>
+<h3 id="accident-or-incident">Accident or Incident?<a class="headerlink" href="#accident-or-incident" title="Permanent link">&para;</a></h3>
+<p>Before an investigation can begin, the event must be classified. International standards draw a clear line between an <strong>accident</strong> and an <strong>incident</strong>, because the classification determines who must be notified and how intensive the response will be.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Accident</th>
+<th>Incident</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Injury</td>
+<td>A person is killed or seriously injured</td>
+<td>No serious injuries</td>
+</tr>
+<tr>
+<td>Aircraft damage</td>
+<td>Substantial structural damage, or aircraft destroyed</td>
+<td>Little or no damage</td>
+</tr>
+<tr>
+<td>Aircraft status</td>
+<td>May be missing or inaccessible</td>
+<td>Aircraft intact and usable</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Runway overrun with fatalities</td>
+<td>A near-miss between two aircraft</td>
+</tr>
+<tr>
+<td>Reporting</td>
+<td>Mandatory, immediate, full investigation</td>
+<td>Reported and reviewed; may or may not be investigated in depth</td>
+</tr>
+</tbody>
+</table>
+<p>The distinction matters because incidents — the near-misses and minor events — are studied just as carefully in aggregate. A pattern of similar incidents is often the early warning that prevents a future accident, which is why aviation safety culture treats reporting as a duty rather than an admission of fault.</p>
+<hr />
+<h2 id="the-framework-annex-13-the-ntsb-and-the-go-team">The Framework: Annex 13, the NTSB, and the Go-Team<a class="headerlink" href="#the-framework-annex-13-the-ntsb-and-the-go-team" title="Permanent link">&para;</a></h2>
+<p>Aviation is international by nature — an aircraft built in one country, owned in a second, and crashed in a third is routine. To keep investigations consistent across borders, the International Civil Aviation Organization publishes <strong>ICAO Annex 13</strong>, the global standard titled <em>Aircraft Accident and Incident Investigation</em>. Annex 13 establishes which country leads an investigation (normally the <strong>State of Occurrence</strong>, where the crash happened), guarantees participation rights to the states of the operator, manufacturer, and registry, and — critically — states that the <strong>sole objective</strong> of an investigation is the prevention of future accidents, explicitly <em>not</em> the apportioning of blame or liability.</p>
+<p>Within the United States, that standard is carried out by the <strong>National Transportation Safety Board (NTSB)</strong>, an independent federal agency. "Independent" is the key word: the NTSB does not report to the Federal Aviation Administration (FAA) — the agency that regulates aviation — so it can investigate the regulator itself without a conflict of interest. The NTSB determines the <strong>probable cause</strong> of each accident and issues safety recommendations, but it has no power to punish, fine, or regulate. Its only weapon is a well-supported recommendation.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Key Concept: The Machine Keeps Its Own Record</p>
+<p><img alt="Trace thinking with magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Here is what makes aviation forensics unique among everything in this book: the "victim" is also the best witness. An aircraft continuously records what it was doing — its speed, its altitude, the crew's words, the position of every control. When investigators recover that record, the machine effectively testifies about its own final minutes. Our job is to make it speak accurately, without putting words in its mouth.</p>
+</div>
+<h3 id="the-go-team">The Go-Team<a class="headerlink" href="#the-go-team" title="Permanent link">&para;</a></h3>
+<p>When a major accident occurs, the NTSB launches a <strong>go-team</strong> — a group of specialists kept on standby to deploy within hours, anywhere in the country (or the world, when invited under Annex 13). The team is led by an <strong>Investigator-in-Charge (IIC)</strong>, who has authority over the entire on-scene investigation. The IIC organizes the work into specialist groups, each responsible for one slice of the evidence.</p>
+<p>A typical go-team includes specialist groups for:</p>
+<ul>
+<li><strong>Operations</strong> — the flight crew's actions, the flight plan, and the history of the flight.</li>
+<li><strong>Structures</strong> — the airframe, wreckage distribution, and reconstruction.</li>
+<li><strong>Powerplants</strong> — the engines and propellers.</li>
+<li><strong>Systems</strong> — hydraulics, electrical systems, flight controls, and instruments.</li>
+<li><strong>Air Traffic Control</strong> — communications and radar data.</li>
+<li><strong>Weather</strong> — meteorological conditions along the route.</li>
+<li><strong>Human Performance</strong> — crew fatigue, training, medical history, and decision-making.</li>
+<li><strong>Survival Factors</strong> — the cabin, evacuation, injuries, and emergency response.</li>
+</ul>
+<h3 id="the-party-system">The Party System<a class="headerlink" href="#the-party-system" title="Permanent link">&para;</a></h3>
+<p>The NTSB cannot possibly hold deep expertise in every aircraft type ever built, so it uses the <strong>party system</strong>: it formally invites the organizations with the most technical knowledge — the aircraft manufacturer, the engine maker, the airline, and relevant unions — to participate as <strong>parties</strong> to the investigation. Those parties supply engineers and data, but they work <em>under NTSB control and direction</em>, and lawyers and insurers are explicitly excluded. This arrangement gives investigators access to proprietary engineering knowledge while keeping the people with a financial stake in the outcome from steering the result.</p>
+<hr />
+<h2 id="reading-the-wreckage">Reading the Wreckage<a class="headerlink" href="#reading-the-wreckage" title="Permanent link">&para;</a></h2>
+<p>The crash site is the first and largest body of physical evidence. Before anything is moved, the entire scene is documented — photographed, mapped, and surveyed — exactly as you learned for any crime scene in Chapter 2, but spread across an area that can span many kilometers. The pattern of that wreckage is itself a major clue.</p>
+<h3 id="the-debris-field">The Debris Field<a class="headerlink" href="#the-debris-field" title="Permanent link">&para;</a></h3>
+<p>A <strong>debris field</strong> is the area over which aircraft wreckage is distributed. Its shape, size, and the way pieces are sorted across it tell investigators a great deal before a single component is examined in a lab. The central question a debris field answers is whether the aircraft was <strong>intact when it hit the ground</strong> or <strong>broke apart in the air</strong>.</p>
+<p>To read a debris field, investigators distinguish two broad patterns:</p>
+<ul>
+<li><strong>Intact (in-one-piece) impact</strong> produces a <strong>concentrated</strong> debris field. The aircraft struck the ground as a single body, so wreckage, ground scars, and the heaviest components cluster in a relatively small area along the flight path.</li>
+<li><strong>In-flight breakup</strong> produces an <strong>elongated, scattered</strong> field. When a structure fails in flight, light pieces (interior panels, paper, insulation) flutter down and land far "upwind" along the track, while dense pieces (engines, landing gear) carry forward and fall farther along. The longer and more sorted the field, the higher the altitude at which the breakup likely began.</li>
+</ul>
+<p>The principle behind the scatter is straightforward physics: heavier, denser objects retain more momentum and travel farther before landing, while light objects are quickly slowed by air resistance and drift down near where they separated. Mapping the location of each piece by weight and type therefore reverse-engineers the sequence and altitude of the breakup. The following MicroSim lets you experiment with that relationship directly.</p>
+<h4 id="diagram-debris-field-pattern-explorer-microsim">Diagram: Debris Field Pattern Explorer MicroSim<a class="headerlink" href="#diagram-debris-field-pattern-explorer-microsim" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/debris-field-pattern-explorer/main.html" width="100%" height="602px" scrolling="no"></iframe>
+
+<details>
+<summary>Debris Field Pattern Explorer MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> debris-field-pattern-explorer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Interpret a debris field to distinguish an in-flight breakup from an intact ground impact (Bloom Level 3 — Apply; verb: interpret).</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: Interpret</p>
+<p>Canvas layout:
+- Top view (~70% of canvas height): a top-down map showing the aircraft flight track as a dashed line crossing the canvas left to right, with a ground-scar/impact marker. Wreckage pieces are plotted as labeled dots scattered along the track.
+- Bottom panel (~30%): a readout showing the computed debris-field length, the inferred breakup altitude, and a plain-language verdict ("Pattern consistent with: intact impact / low-altitude breakup / high-altitude breakup").</p>
+<p>Visual elements:
+- Wreckage pieces color-coded and sized by density class: heavy (engines, landing gear) in dark blue, medium (wing/fuselage sections) in teal, light (interior panels, insulation, paper) in light gray.
+- A wind-direction arrow.
+- A scale bar in kilometers.</p>
+<p>Interactive controls:
+- Slider: Breakup altitude (0 m = intact ground impact, up to 12,000 m). At 0 the pieces collapse into a tight cluster; as altitude increases the field stretches and sorts by density.
+- Slider: Wind speed and a direction selector (to show how wind skews the light-debris scatter).
+- Slider: Aircraft speed at breakup.
+- Checkbox: "Show density sorting" highlights how light pieces fall short and heavy pieces carry forward.
+- Button: Reset to defaults.</p>
+<p>Data Visibility Requirements:
+- Display the debris-field length in km as the sliders change.
+- Display the density sorting (light pieces upwind/short, heavy pieces downwind/long).
+- Display the inferred verdict text that updates live.</p>
+<p>Instructional Rationale: An Apply-level objective requires the learner to manipulate altitude, wind, and speed and observe how each changes the debris pattern, building intuition for reading a real field.</p>
+<p>Responsive design: The sketch must call updateCanvasSize() first in setup() and respond to window resize events so the map rescales to the container width.</p>
+<p>Color scheme: Dark blue for heavy debris, teal for medium, light gray for light debris; orange for the flight track; red for the impact/ground-scar marker.</p>
+</details>
+<h3 id="wreckage-reconstruction">Wreckage Reconstruction<a class="headerlink" href="#wreckage-reconstruction" title="Permanent link">&para;</a></h3>
+<p>When the cause of a breakup is unclear — or when sabotage is suspected — investigators may physically rebuild the aircraft. <strong>Wreckage reconstruction</strong> is the painstaking reassembly of recovered pieces onto a frame or a marked hangar floor, restoring the aircraft's shape so that the <em>origin</em> and <em>sequence</em> of a failure become visible. Reconstruction reveals which structure failed first, whether a fracture started from the inside or the outside, and where a fire or explosion began.</p>
+<p>Two landmark cases show its power. After <strong>Pan Am Flight 103</strong> broke up over Lockerbie, Scotland, in 1988, investigators reassembled the forward fuselage and found a small region of metal bent and pitted in a way that pointed outward — the unmistakable signature of an explosion <em>inside</em> the aircraft, which redirected the inquiry toward a bomb. After <strong>TWA Flight 800</strong> exploded off New York in 1996, the NTSB recovered wreckage from the seabed and rebuilt a large section of the aircraft in a hangar, an effort that took months and ultimately supported a center-fuel-tank explosion as the cause rather than the missile or bomb theories that circulated early on.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Resist the First Theory</p>
+<p><img alt="Trace pointing out a caution" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+Early in a high-profile crash, everyone wants an answer <em>now</em>, and the loudest theory is often wrong. TWA 800 was blamed on a missile for months; the reconstructed wreckage said otherwise. Disciplined investigators hold every hypothesis open until the physical evidence rules it out. "The evidence suggests" is a far stronger phrase than "this proves" — even when the cameras are rolling.</p>
+</div>
+<hr />
+<h2 id="the-recorders-flight-data-and-cockpit-voice">The Recorders: Flight Data and Cockpit Voice<a class="headerlink" href="#the-recorders-flight-data-and-cockpit-voice" title="Permanent link">&para;</a></h2>
+<p>Two devices, popularly called the <strong>black box</strong> (though they are painted bright orange so they can be found), capture the most direct record of a flight's final minutes. Recovering and reading them is often the single most decisive step in an investigation.</p>
+<p>The <strong>flight data recorder (FDR)</strong> logs the aircraft's measurable parameters over time. Early units recorded only a handful of values; modern recorders capture hundreds to thousands of parameters — altitude, airspeed, heading, vertical acceleration, control-surface positions, engine settings, autopilot mode, and more — typically for the most recent 25 hours of operation. The <strong>cockpit voice recorder (CVR)</strong> captures audio from the flight deck: crew conversation, radio calls, switch clicks, and ambient sounds such as alarms or the airflow of a depressurization. Modern CVRs retain the last two hours of audio across multiple channels.</p>
+<p>Before comparing them, it helps to see what each one is for. The FDR tells investigators <em>what the aircraft did</em>; the CVR tells them <em>what the crew experienced and decided</em>. Used together, they let investigators correlate an event (say, an engine surge on the FDR) with the crew's awareness and response (their words on the CVR) to the same second.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Flight Data Recorder (FDR)</th>
+<th>Cockpit Voice Recorder (CVR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Records</td>
+<td>Flight parameters (altitude, speed, control inputs, engine data)</td>
+<td>Cockpit audio (crew voices, radio, alarms, ambient sound)</td>
+</tr>
+<tr>
+<td>Answers</td>
+<td><em>What did the aircraft do?</em></td>
+<td><em>What did the crew know and decide?</em></td>
+</tr>
+<tr>
+<td>Typical duration</td>
+<td>~25 hours of data</td>
+<td>~2 hours of audio (loops over older content)</td>
+</tr>
+<tr>
+<td>Form</td>
+<td>Digital values sampled many times per second</td>
+<td>Multi-channel audio</td>
+</tr>
+<tr>
+<td>Strength together</td>
+<td>Correlates the machine's behavior with the crew's response, second by second</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="surviving-the-crash">Surviving the Crash<a class="headerlink" href="#surviving-the-crash" title="Permanent link">&para;</a></h3>
+<p>Recorders are only useful if they survive, so the memory itself is sealed inside a <strong>crash-survivable memory unit (CSMU)</strong> — a heavily armored module engineered to outlast the aircraft around it. Regulatory standards require the unit to withstand an impact shock on the order of <strong>3,400 g</strong>, a fire of roughly <strong>1,100 °C for up to an hour</strong>, and prolonged immersion under deep-sea pressure. The electronics that <em>write</em> the data are not protected; only the stored record needs to survive.</p>
+<p>When an aircraft goes down over water, finding the recorders becomes its own challenge, solved by the <strong>underwater locator beacon (ULB)</strong> — a "pinger" attached to the recorder that activates on contact with water and emits an acoustic signal (about 37.5 kHz) that search vessels can home in on. After <strong>Air France Flight 447</strong> disappeared into the Atlantic in 2009 and its recorders were not found until 2011 — after the beacon batteries had died — international standards were strengthened to require longer-lasting beacons (about 90 days) so that future deep-water recorders can be located before their signal fades.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Investigator Tip</p>
+<p><img alt="Trace holding magnifying glass" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+A recorder readout is data, not truth. The values can be mislabeled, a sensor can fail, and a parameter can read "normal" while the real system is broken. Always corroborate the recorders against independent evidence — radar tracks, the physical wreckage, and the witnesses. When two independent lines of evidence agree, your conclusion is solid. When they disagree, you have found your next question.</p>
+</div>
+<h3 id="rebuilding-the-flight-path">Rebuilding the Flight Path<a class="headerlink" href="#rebuilding-the-flight-path" title="Permanent link">&para;</a></h3>
+<p>The recorders describe the aircraft from the inside; outside observers describe it too. <strong>Radar and ADS-B flight-path reconstruction</strong> combines ground-radar returns with <strong>ADS-B (Automatic Dependent Surveillance–Broadcast)</strong> signals — position reports that modern aircraft broadcast automatically from their own GPS — to rebuild the three-dimensional track of the flight. This external record is invaluable when recorders are damaged, missing, or recovered late, and it provides an independent check on the FDR's own position data.</p>
+<hr />
+<h2 id="when-metal-fails-metallurgical-analysis">When Metal Fails: Metallurgical Analysis<a class="headerlink" href="#when-metal-fails-metallurgical-analysis" title="Permanent link">&para;</a></h2>
+<p>If the wreckage suggests a structural failure, the investigation moves into the materials laboratory. <strong>Metallurgical failure analysis</strong> is the examination of fractured metal components — often under a microscope — to determine <em>how</em> and <em>why</em> they broke. The central distinction is between a fracture that developed slowly over many flights and one that happened all at once.</p>
+<p>A <strong>fatigue fracture</strong> grows gradually under repeated cycles of stress, such as the pressurization and depressurization an airframe experiences on every flight. Under magnification, a fatigue surface shows two telltale features: <strong>beach marks</strong> (curved bands, visible to the eye, that record pauses or changes in the crack's growth) and microscopic <strong>striations</strong> (fine ridges, one per stress cycle, visible only under an electron microscope). A fatigue crack typically begins at a stress concentration — a rivet hole, a sharp corner, or a spot of corrosion — and spreads until the remaining metal can no longer carry the load.</p>
+<p>An <strong>overload (overstress) fracture</strong>, by contrast, happens in a single event when a force exceeds what the metal can bear all at once. Its surface looks completely different: rough, fibrous, or dimpled in ductile metals, with no beach marks and no striations, because there were no repeated cycles to leave them.</p>
+<p>Because this distinction can be hard to hold onto, the table below summarizes the contrast you should carry into the next section.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Fatigue Fracture</th>
+<th>Overload Fracture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cause</td>
+<td>Repeated stress cycles over time</td>
+<td>A single excessive force</td>
+</tr>
+<tr>
+<td>Time to develop</td>
+<td>Many flights / long period</td>
+<td>Instantaneous</td>
+</tr>
+<tr>
+<td>Surface to the eye</td>
+<td>Smooth zones with curved <strong>beach marks</strong></td>
+<td>Rough, fibrous, or dimpled</td>
+</tr>
+<tr>
+<td>Surface under microscope</td>
+<td>Fine <strong>striations</strong> (one per cycle)</td>
+<td>Dimples (ductile) or cleavage (brittle); no striations</td>
+</tr>
+<tr>
+<td>Typical origin</td>
+<td>A stress concentration: rivet hole, corrosion pit, sharp corner</td>
+<td>The point of peak applied load</td>
+</tr>
+<tr>
+<td>Classic example</td>
+<td>Comet (1950s); Aloha Airlines 243 (1988)</td>
+<td>A structure broken by a separate primary failure</td>
+</tr>
+</tbody>
+</table>
+<p>The history of aviation is, in part, a history of learning to read these surfaces. The <strong>de Havilland Comet</strong> — the first commercial jetliner — suffered catastrophic in-flight breakups in the 1950s that were eventually traced to <strong>metal fatigue</strong> cracking from the corners of its near-square windows, a finding that gave every later airliner its rounded windows. Decades later, <strong>Aloha Airlines Flight 243</strong> lost a large section of its upper fuselage in flight; investigators found that years of fatigue cracking, accelerated by salt-air corrosion and a high number of short pressurization cycles, had weakened the skin. In both cases, the metal itself recorded its own slow failure for anyone who knew how to look.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">This One Takes Practice</p>
+<p><img alt="Trace offering encouragement" class="mascot-admonition-img" src="../../img/mascot/encouraging.png" />
+Telling fatigue from overload on a real fracture surface is a skill metallurgists spend years developing — do not expect it to click on the first read. The shortcut to remember: <strong>fatigue is a story told over time</strong> (beach marks and striations are its chapters), while <strong>overload is a single sudden sentence</strong>. Get that mental image firmly in place and the laboratory details will hang on it.</p>
+</div>
+<hr />
+<h2 id="fire-explosion-and-the-human-story">Fire, Explosion, and the Human Story<a class="headerlink" href="#fire-explosion-and-the-human-story" title="Permanent link">&para;</a></h2>
+<p>Fire is common in crashes, and a key forensic question is <em>when</em> it started — in the air or on the ground. The chemistry you studied in Chapter 10 carries directly into the aircraft. <strong>In-flight fire and explosion patterns</strong> are read from soot deposition, heat damage, and metal deformation. Soot that streaks <em>backward along the exterior</em> of a fuselage section, for instance, indicates fire while the aircraft was still moving through the air; uniform charring concentrated at the impact point points instead to a post-impact ground fire. An internal <strong>explosion</strong> leaves its own signature — metal <strong>petalled and bent outward</strong>, fine pitting, and explosive residues — the very pattern that identified the bomb in the Pan Am 103 reconstruction. Detecting and identifying explosive residue uses the same trace-chemistry methods covered in the explosives section of Chapter 10.</p>
+<p>The investigation also studies the people on board, and here several earlier chapters converge. <strong>Human factors analysis</strong> examines the crew's performance — fatigue, training, workload, communication, and decision-making — recognizing that most accidents involve a <em>chain</em> of small human and organizational errors rather than a single villain. <strong>Aviation pathology and victim identification</strong> applies forensic pathology, odontology, and DNA (Chapters 8 and 11) to identify victims and to read injury patterns: the distribution of injuries can reveal whether occupants were braced, whether seatbelts were worn, and whether the forces were survivable. Toxicology (Chapter 9) screens the crew for impairing substances or for carbon monoxide that would indicate an in-flight fire.</p>
+<p>Closely tied to pathology is the <strong>crash survivability assessment</strong>, which asks a sober but vital question: <em>could anyone have survived this, and if not, why not?</em> Investigators classify the crash forces against the limits of human tolerance and examine whether occupiable space was preserved, whether restraints and seats held, and whether occupants could have escaped before fire or smoke overcame them. A crash is judged <strong>survivable</strong> when the deceleration forces stayed within human limits <em>and</em> a livable space remained; when survivors nonetheless die, the survival-factors group asks what about the seats, exits, or evacuation can be improved. This is prevention at its most direct — many modern advances in seat strength, fire-blocking cabin materials, and floor-path lighting came straight from survivability findings.</p>
+<h3 id="putting-it-together-the-probable-cause">Putting It Together: The Probable Cause<a class="headerlink" href="#putting-it-together-the-probable-cause" title="Permanent link">&para;</a></h3>
+<p>All of these threads — wreckage, recorders, metallurgy, fire, human factors, pathology — feed a single output. After months or years of analysis, the NTSB issues a final report stating the <strong>probable cause</strong>: the most likely explanation supported by the evidence, along with <strong>contributing factors</strong> and, most importantly, <strong>safety recommendations</strong>. The careful language is deliberate. Investigators write "probable cause," not "proven cause," because they are reasoning from evidence to the best explanation, in the same disciplined, hedged language you have seen throughout this book.</p>
+<p>The following workflow shows how the investigation moves from notification to that final report. Each stage is clickable to reveal a short description of what happens there.</p>
+<h4 id="diagram-ntsb-investigation-workflow-clickable">Diagram: NTSB Investigation Workflow (Clickable)<a class="headerlink" href="#diagram-ntsb-investigation-workflow-clickable" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/ntsb-investigation-workflow/main.html" width="100%" height="602px" scrolling="no"></iframe>
+
+<details>
+<summary>NTSB Investigation Workflow (Clickable)</summary>
+<p>Type: workflow
+<strong>sim-id:</strong> ntsb-investigation-workflow<br/>
+<strong>Library:</strong> Mermaid<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Describe the sequence of an aircraft accident investigation from notification to probable-cause determination (Bloom Level 2 — Understand; verb: describe).</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: Describe</p>
+<p>Diagram type: Mermaid flowchart (top-to-bottom). EVERY node MUST have a <code>click</code> directive that opens an infobox/tooltip with a one- to two-sentence definition, so the diagram is interactive rather than a static image.</p>
+<p>Nodes and the infobox text each click reveals:
+- "Notification &amp; Classification" → The event is reported and classified as an accident or incident under ICAO Annex 13, triggering the response.
+- "Go-Team Launch (IIC)" → The NTSB deploys specialist groups led by an Investigator-in-Charge within hours.
+- "On-Scene Documentation" → The debris field is photographed, mapped, and surveyed before anything is moved.
+- "Recorder Recovery (FDR/CVR)" → The flight data and cockpit voice recorders are located (via the underwater locator beacon if submerged) and read out.
+- "Wreckage Reconstruction" → Pieces are reassembled to reveal the origin and sequence of failure.
+- "Laboratory Analysis" → Metallurgy, fire/explosive chemistry, systems, and pathology examine the evidence.
+- "Human Factors &amp; Survivability" → Crew performance, injuries, and survivability are evaluated.
+- "Analysis &amp; Correlation" → All evidence streams are correlated; hypotheses are tested against the data.
+- "Probable Cause &amp; Safety Recommendations" → The final report states the probable cause, contributing factors, and recommendations to prevent recurrence.</p>
+<p>Edges connect the nodes in the order listed (Notification → ... → Probable Cause), with a feedback arrow from "Analysis &amp; Correlation" back to "Laboratory Analysis" to show that analysis can send investigators back for more testing.</p>
+<p>Color scheme: deep-purple node borders with amber highlight on hover, consistent with the textbook theme. Each node's infobox uses the glossary definition style.</p>
+<p>Implementation: Mermaid flowchart with <code>click</code> callbacks bound to a small JS handler that displays the infobox text; the diagram must be responsive to container width.</p>
+</details>
+<p>To anchor these concepts in real investigations, the timeline below collects landmark crashes whose findings reshaped aviation safety. Click any milestone to read what the investigation found and which forensic technique it advanced.</p>
+<h4 id="diagram-landmark-crash-investigations-timeline">Diagram: Landmark Crash Investigations Timeline<a class="headerlink" href="#diagram-landmark-crash-investigations-timeline" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/aviation-crash-investigation-timeline/main.html" width="100%" height="660px" scrolling="no"></iframe>
+
+<details>
+<summary>Landmark Crash Investigations Timeline</summary>
+<p>Type: timeline
+<strong>sim-id:</strong> aviation-crash-investigation-timeline<br/>
+<strong>Library:</strong> vis-timeline<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Recall landmark aircraft accident investigations and the forensic advances each produced (Bloom Level 1 — Remember; verb: identify).</p>
+<p>Bloom Level: Remember (L1)
+Bloom Verb: Identify</p>
+<p>Interactive behavior: Each milestone is clickable; clicking opens a detail panel below the timeline with the investigation's key finding and the forensic technique it advanced. Hovering shows a one-line summary. Provide era filter buttons and zoom/pan controls.</p>
+<p>Milestones (year — title — key forensic lesson):
+- 1954 — de Havilland Comet breakups → Metal fatigue from square window corners; led to rounded windows and the science of airframe fatigue testing.
+- 1977 — Tenerife runway collision → Human factors and cockpit communication; catalyzed Crew Resource Management (CRM).
+- 1988 — Aloha Airlines 243 → Fatigue plus corrosion in an aging fuselage; reshaped aging-aircraft inspection programs.
+- 1988 — Pan Am 103 (Lockerbie) → Outward metal petalling and explosive residue from wreckage reconstruction identified an in-flight bomb.
+- 1989 — United 232 (Sioux City) → Fan-disk fatigue fracture; advanced engine metallurgy and redundant hydraulic design.
+- 1996 — TWA 800 → Large-scale seabed recovery and hangar reconstruction supported a center-fuel-tank explosion; led to fuel-tank inerting rules.
+- 2009 — Air France 447 → Deep-ocean recorder recovery (after beacon batteries died) drove the 90-day underwater locator beacon standard.
+- 2009 — Colgan Air 3407 → Crew fatigue and training; led to U.S. pilot rest and qualification rule changes.</p>
+<p>Responsive design: timeline must resize to the container width.
+Color scheme: era bands consistent with the textbook theme (deep purple / amber accents).</p>
+</details>
+<hr />
+<h2 id="key-concepts-review">Key Concepts Review<a class="headerlink" href="#key-concepts-review" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the major concepts from this chapter.</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aircraft Accident Investigation</td>
+<td>Systematic, science-based reconstruction of an aviation accident to find its cause and prevent recurrence</td>
+</tr>
+<tr>
+<td>Accident vs. Incident</td>
+<td>An accident involves death, serious injury, or substantial damage; an incident does not, but is still studied</td>
+</tr>
+<tr>
+<td>ICAO Annex 13</td>
+<td>International standard for accident investigation; its sole objective is prevention, not blame</td>
+</tr>
+<tr>
+<td>NTSB</td>
+<td>Independent U.S. agency that determines probable cause and issues safety recommendations (no enforcement power)</td>
+</tr>
+<tr>
+<td>Go-Team / IIC</td>
+<td>Rapid-response specialist groups led by an Investigator-in-Charge</td>
+</tr>
+<tr>
+<td>Party System</td>
+<td>Manufacturers, operators, and unions assist under NTSB control; lawyers and insurers excluded</td>
+</tr>
+<tr>
+<td>Debris Field</td>
+<td>Distribution of wreckage; concentrated = intact impact, elongated/sorted = in-flight breakup</td>
+</tr>
+<tr>
+<td>Wreckage Reconstruction</td>
+<td>Physical reassembly of pieces to reveal the origin and sequence of failure</td>
+</tr>
+<tr>
+<td>FDR / CVR</td>
+<td>Flight data recorder (what the aircraft did) and cockpit voice recorder (what the crew knew)</td>
+</tr>
+<tr>
+<td>Crash-Survivable Memory Unit</td>
+<td>Armored module protecting the stored record against impact (~3,400 g), fire (~1,100 °C), and immersion</td>
+</tr>
+<tr>
+<td>Underwater Locator Beacon</td>
+<td>"Pinger" that activates in water (~37.5 kHz) so submerged recorders can be found</td>
+</tr>
+<tr>
+<td>Radar / ADS-B</td>
+<td>External flight-path reconstruction from ground radar and broadcast GPS positions</td>
+</tr>
+<tr>
+<td>Fatigue vs. Overload Fracture</td>
+<td>Fatigue grows over many cycles (beach marks, striations); overload breaks in one event</td>
+</tr>
+<tr>
+<td>In-Flight Fire / Explosion Patterns</td>
+<td>Soot streaming and outward metal petalling distinguish airborne events from ground fires</td>
+</tr>
+<tr>
+<td>Human Factors Analysis</td>
+<td>Study of crew fatigue, training, workload, and the chain of errors behind most accidents</td>
+</tr>
+<tr>
+<td>Aviation Pathology &amp; Survivability</td>
+<td>Victim identification and injury analysis; assessment of whether the crash was survivable</td>
+</tr>
+<tr>
+<td>Probable Cause</td>
+<td>The best evidence-supported explanation, with contributing factors and safety recommendations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<details class="question">
+<summary>Challenge: Read the Evidence</summary>
+<p>Searchers locate aircraft wreckage spread in a <strong>long, narrow band about 12 km long</strong>. The lightest interior materials are found near one end of the band, while the engines and landing gear are found roughly 11 km farther along the flight path. In the laboratory, a fractured wing-spar section shows a smooth region covered with curved <strong>beach marks</strong> and, under the electron microscope, fine <strong>striations</strong>, with the crack originating at a corroded rivet hole.</p>
+<p><strong>(a)</strong> Does the debris field suggest an intact ground impact or an in-flight breakup, and why? <strong>(b)</strong> What does the fracture surface tell you about how the spar failed? <strong>(c)</strong> Which agency would lead this investigation if no evidence of a deliberate act is found, and what is the ultimate purpose of its work?</p>
+<p><strong>Answer:</strong>
+<strong>(a)</strong> An <strong>in-flight breakup</strong>. A concentrated debris field indicates an intact impact; this field is long (12 km) and <strong>density-sorted</strong> — light materials fell short and dropped near the breakup point, while dense engines and landing gear carried their momentum far down-track. That sorting only happens when the aircraft comes apart at altitude.</p>
+<p><strong>(b)</strong> The spar failed by <strong>fatigue</strong>, not sudden overload. Beach marks (visible bands marking pauses in crack growth) and microscopic striations (one ridge per stress cycle) are the signatures of a crack that grew slowly over many flights. The origin at a <strong>corroded rivet hole</strong> is a classic fatigue initiation site — a stress concentration where cracking begins, exactly as in the Comet and Aloha 243 cases.</p>
+<p><strong>(c)</strong> With no sign of a deliberate act, the <strong>NTSB</strong> (under ICAO Annex 13) leads the investigation. Its purpose is <strong>prevention</strong> — to determine the probable cause and issue safety recommendations so the failure is not repeated — <em>not</em> to assign blame or liability.</p>
+</details>
+<hr />
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — and So Is the Book!</p>
+<p><img alt="Trace raising magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Look how far you've come, investigators. You started with fingerprints and a single drop of blood, and you're finishing by reconstructing an entire aircraft from a scattered field of wreckage and a charred orange box. Aviation crash forensics is the capstone of everything in this book — trace, fire, explosives, pathology, toxicology, and digital evidence all working together toward one goal that every forensic scientist shares: getting the truth right so that justice, and safety, can follow. You've learned to let the evidence speak, to hedge your conclusions honestly, and to follow every clue to its source. Now go find the ones nobody else thought to look for. Follow the evidence!</p>
+</div>
+<p><a href="references/">See Annotated References</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../18-social-media-osint/references/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotated References">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Annotated References
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Quiz
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
