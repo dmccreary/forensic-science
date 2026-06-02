@@ -1,10 +1,12 @@
 {
   "title": "Evidence Packaging Decision Guide",
-  "description": "Select the correct packaging material for a given evidence type (Bloom Level 3 — Apply; verb: select).",
-  "creator": "Dementia Education Project",
+  "description": "Apply (Bloom L3) evidence-packaging rules by selecting the correct packaging material for a given evidence item and seeing the forensic reason and courtroom risk of a wrong choice.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Evidence Packaging",
+    "Crime Scene Investigation",
+    "Evidence Preservation"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +14,35 @@
   "rights": "CC BY 4.0",
   "identifier": "evidence-packaging-guide",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — select the correct packaging material for a given evidence item.",
   "bloomVerb": "Select",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "Crime Scene Investigation and Evidence Collection",
-  "chapter_dir": "02-crime-scene-investigation"
+  "chapter_dir": "02-crime-scene-investigation",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Evidence Packaging Materials and Preservation",
+    "learningObjectives": [
+      "Select the correct packaging material for wet and dried biological evidence, dry trace, sharps, firearms, biohazards, digital devices, and impression casts.",
+      "Explain why breathable paper preserves biological evidence while airtight plastic causes mold growth and DNA degradation.",
+      "Connect each packaging choice to its courtroom consequence, including admissibility and handler safety."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Concept of physical evidence types; basic idea of DNA and contamination; awareness of chain of custody"
+  },
+  "pedagogical": {
+    "interactionPattern": "Decision-practice tool: a randomized evidence case card requires the learner to select one of five packaging choices, then delivers immediate correct/incorrect feedback with the forensic reason and courtroom risk; a Reference mode allows free browsing of every category",
+    "assessment": "Students choose packaging before any answer is shown; the sim tracks a running score and accuracy across attempts",
+    "modelType": "Decision/classification model mapping evidence types to correct packaging with consequence feedback",
+    "controls": [
+      "Mode dropdown (Practice / Reference)",
+      "five clickable packaging choices",
+      "Reference item dropdown",
+      "Next Item button",
+      "Reset Score button"
+    ]
+  }
 }

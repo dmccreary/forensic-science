@@ -22,9 +22,9 @@ let defaultTextSize = 16;
 let prevButton, nextButton, resetButton, breakCheckbox;
 
 // ---- state ----
-let currentStep = 4;        // index 0..5 of the active station
-let breakMode = true;      // when true, the current step's signature is missing
-let brokenStep = 4;        // which step's link was broken (-1 = none)
+let currentStep = 0;        // index 0..5 of the active station
+let breakMode = false;      // when true, the current step's signature is missing
+let brokenStep = -1;        // which step's link was broken (-1 = none)
 
 // ---- color scheme (per spec) ----
 const C_INVESTIGATOR = '#1f6feb';  // blue: active investigators
