@@ -27,7 +27,7 @@ forensic scientists, crime scene investigators, medical examiners, and digital f
 specialists. Students learn how physical, biological, chemical, and digital evidence is
 collected, analyzed, and presented in a court of law.
 
-The course spans **18 chapters** organized into six thematic modules:
+The course spans **19 chapters** organized into seven thematic modules:
 
 - **Module 1** — Forensic infrastructure and crime scene methodology
 - **Module 2** — Physical and microscopic trace evidence
@@ -35,6 +35,7 @@ The course spans **18 chapters** organized into six thematic modules:
 - **Module 4** — Chemical and biomolecular analysis
 - **Module 5** — Anatomical and ecological analysis
 - **Module 6** — Digital evidence, facial recognition, cell phone analytics, and social media analysis
+- **Module 7** - Airplane crash investigation
 
 ## Who This Book Is For
 
@@ -51,6 +52,7 @@ Use the navigation sidebar to explore:
 - **[Learning Graph](learning-graph/index.md)** — Interactive concept map showing how ideas connect
 - **[MicroSims](sims/index.md)** — Hands-on simulations for key techniques and processes
 - **[Glossary](glossary.md)** — Definitions for key forensic science terms
+- **[FAQ](faq.md)** - Frequently asked questions
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 ---
 title: Interactive Timeline of Forensic Science History
-description: Interactive Timeline of Forensic Science History
+description: Explore an interactive timeline of key milestones in forensic science history, from early fingerprinting to modern DNA analysis, zooming and panning through the discoveries.
 status: built
 library: vis-timeline
 bloom_level: Remember (L1) — identify and recall key milestones in forensic science history.

@@ -124,6 +124,12 @@ nav:
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Style Guide: learning-graph/mascot-test.md
       - FAQ Quality Report: learning-graph/faq-quality-report.md
+      - Book Metrics: learning-graph/book-metrics.md
+      - Chapter Metrics: learning-graph/chapter-metrics.md
+      - Coverage Notes: learning-graph/coverage-notes.md
+      - Diagram Details: learning-graph/diagram-details.md
+      - Diagram Table: learning-graph/diagram-table.md
+      - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
   - MicroSims:
     - List of MicroSims: sims/index.md
@@ -166,7 +172,9 @@ nav:
     - TLC Ink Separation Interactive Diagram: sims/tlc-ink-separation/index.md
     - Triangulation Measurement Technique: sims/triangulation-measurement/index.md
 
-
+  - Stories:
+      - Overview: stories/index.md
+      - Story Ideas: stories/story-ideas.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
@@ -252,6 +260,8 @@ exclude_docs: |
   **/image-prompt*.md
   **/image-prompts*.md
   **/cover-prompt.md
+  img/cover-image-prompt.md
+  img/mascot/character-sheet.md
   **/TODO.md
 
 # Rebuild on changes during `mkdocs serve`

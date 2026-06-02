@@ -1,6 +1,6 @@
 ---
 title: Daubert vs. Frye Admissibility Decision Workflow
-description: Daubert vs. Frye Admissibility Decision Workflow
+description: Compare how the Frye and Daubert standards evaluate the same scientific evidence by working through each admissibility test and seeing which evidence is allowed in court.
 status: built
 library: p5.js
 bloom_level: Analyze (L4) — compare and contrast how the Frye and Daubert standards evaluate the same scientific evidence.

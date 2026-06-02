@@ -1,6 +1,6 @@
 ---
 title: Criminal Justice Process — From Crime Scene to Verdict
-description: Criminal Justice Process — From Crime Scene to Verdict
+description: Step through the criminal justice process from crime scene to verdict, seeing where forensic evidence and constitutional protections apply at each stage.
 status: built
 library: p5.js
 bloom_level: Understand (L2) — explain the sequence of stages in the criminal justice process and where forensic evidence and constitutional protections apply.
