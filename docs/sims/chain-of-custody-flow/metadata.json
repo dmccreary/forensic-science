@@ -1,0 +1,21 @@
+{
+  "title": "Chain of Custody Flow",
+  "description": "Trace the chain of custody for an evidence item from collection to court and identify required documentation at each transfer (Bloom Level 2 — Understand; verb: explain).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "chain-of-custody-flow",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Explain",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Crime Scene Investigation and Evidence Collection",
+  "chapter_dir": "02-crime-scene-investigation"
+}

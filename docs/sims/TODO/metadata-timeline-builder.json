@@ -1,0 +1,14 @@
+{
+  "sim_id": "metadata-timeline-builder",
+  "diagram_name": "Metadata Recovery and Timeline Builder",
+  "chapter_number": 15,
+  "chapter_title": "Digital Forensics and Cybercrime Investigation",
+  "chapter_dir": "15-digital-forensics",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Apply",
+  "learning_objective": "Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** metadata-timeline-builder<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).\n\nBloom Level: Apply (L3)\nBloom Verb: Apply\n\nCanvas layout:\n- Left panel (~40%): Simulated file browser showing a folder of evidence photographs with file icons\n- Right panel (~60%): EXIF data readout panel + timeline visualization\n\nVisual elements:\n- Clickable file icons representing 6-8 simulated evidence photos with different timestamps and locations\n- EXIF readout showing: Camera Make/Model, Capture Date/Time, GPS Lat/Long, Device Time Zone\n- Timeline at bottom showing selected photos plotted in chronological order\n- Mini map showing GPS coordinates of selected photos as map pins\n\nInteractive controls:\n- Click any photo icon to load its EXIF data into the readout panel\n- \"Add to Timeline\" button places the photo on the chronological timeline\n- \"Plot on Map\" button shows the GPS coordinates on a simplified map grid\n- \"Export Timeline\" displays a formatted text report of all photos in chronological order\n\nData Visibility Requirements:\n- Show EXIF data in human-readable format\n- Show GPS coordinates in both decimal degrees and DMS (degrees/minutes/seconds) format\n- Highlight time zone inconsistencies in red when detected\n- Show the sorted chronological timeline as photos are added\n\nInstructional Rationale: An Apply-level objective (extract and use EXIF metadata) requires hands-on practice with simulated evidence files, building a timeline that mirrors real investigative workflow.\n\nColor scheme: Dark forensic blue background, white panels, green for verified data, red for anomalies/inconsistencies."
+}

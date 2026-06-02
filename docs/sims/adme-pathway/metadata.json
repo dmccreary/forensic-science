@@ -1,0 +1,21 @@
+{
+  "title": "ADME Pathway Interactive Flow Diagram",
+  "description": "Explain the ADME pharmacokinetic pathway and describe what happens to a drug at each stage (Bloom Level 2 — Understand; verb: explain).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "adme-pathway",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Explain",
+  "completion_status": "scaffold",
+  "chapter_number": 9,
+  "chapter_title": "Forensic Toxicology and Chemical Analysis",
+  "chapter_dir": "09-forensic-toxicology"
+}

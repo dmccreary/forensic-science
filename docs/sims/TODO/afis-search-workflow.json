@@ -1,0 +1,14 @@
+{
+  "sim_id": "afis-search-workflow",
+  "diagram_name": "AFIS Search and Comparison Workflow",
+  "chapter_number": 3,
+  "chapter_title": "Fingerprint Analysis and Dactyloscopy",
+  "chapter_dir": "03-fingerprint-analysis",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain",
+  "learning_objective": "Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom Level 2 — Understand; verb: explain).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: workflow\n**sim-id:** afis-search-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom Level 2 — Understand; verb: explain).\n\nBloom Level: Understand (L2)\nBloom Verb: Explain\n\nPurpose: Walk investigators through the AFIS search pipeline from latent print scan to candidate list to examiner review.\n\nVisual layout:\n- Horizontal step-through diagram with five stations:\n  1. Latent Print Scanned\n  2. Minutiae Extraction (mathematical encoding)\n  3. Database Search (comparison against stored templates)\n  4. Candidate List Generated (ranked results)\n  5. Human Examiner Review (final identification or exclusion)\n\nInteractive elements:\n- Click any station to reveal a detailed description panel\n- An animated \"minutiae map\" at Stage 2 shows a fingerprint with dots placed at ridge endings (red) and bifurcations (blue) — dots appear one by one as the extraction animates\n- At Stage 4, a simulated candidate list shows three \"match\" cards ranked by score (e.g., 92/100, 78/100, 61/100), each with a fingerprint thumbnail\n- At Stage 5, a banner reads \"AFIS does NOT make identifications — examiner required\"\n\nData Visibility Requirements:\n- Stage 2: Show the minutiae encoding process — a scanned print image, then overlay of dots at ridge endings and bifurcations, then a simplified (x, y, angle) coordinate list\n- Stage 4: Show candidate list with realistic AFIS score numbers\n\nHover text for each station explains the process in 2–3 sentences.\n\nColor scheme: Blue for database/technology stages, green for human review stage (reinforcing that the human makes the call).\n\nInstructional Rationale: The Understand objective (explain how AFIS works) requires the learner to trace the process with concrete data. Step-through with data visibility at each stage shows the transformation from print to template to candidate list."
+}

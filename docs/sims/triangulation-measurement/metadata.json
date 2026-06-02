@@ -1,0 +1,21 @@
+{
+  "title": "Triangulation Measurement Technique",
+  "description": "Apply triangulation measurement to record evidence position on a scaled sketch (Bloom Level 3 — Apply; verb: calculate).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "triangulation-measurement",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Crime Scene Investigation and Evidence Collection",
+  "chapter_dir": "02-crime-scene-investigation"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Firearms Ballistic Pathway Interactive Diagram",
+  "description": "Identify the three ballistic phases and the key evidence produced at each stage (Bloom Level 1 — Remember; verb: identify).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "ballistic-pathway",
+  "library": "p5.js",
+  "bloomLevel": "Remember (L1)",
+  "bloomVerb": "Identify",
+  "completion_status": "scaffold",
+  "chapter_number": 13,
+  "chapter_title": "Firearms, Ballistics, and Toolmark Examination",
+  "chapter_dir": "13-firearms-and-ballistics"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "area-of-origin-stringing",
+  "diagram_name": "Area of Origin Stringing Simulator",
+  "chapter_number": 7,
+  "chapter_title": "Bloodstain Pattern Analysis",
+  "chapter_dir": "07-bloodstain-pattern-analysis",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Apply",
+  "learning_objective": "Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** area-of-origin-stringing<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).\n\nBloom Level: Apply (L3)\nBloom Verb: Apply\n\nCanvas layout:\n- Main 3D-perspective view of a room with floor, one wall, and ceiling (isometric or 3D projection)\n- Multiple bloodstains visible on the floor with directional arrows\n- Strings extending backward from each stain at the calculated angle\n- Intersection zone highlighted in the air\n\nInteractive controls:\n- Click a bloodstain to see its measurements (width, length, calculated angle)\n- \"Add String\" button attaches a string to a selected stain and shows it projecting at the correct angle\n- After all strings are added, \"Find Intersection\" button highlights the approximate convergence zone in 3D\n- Sliders to adjust individual stain measurements to see how the convergence zone moves\n\nData Visibility Requirements:\n- Show angle of impact for each selected stain\n- Show the x, y, z coordinates of the intersection zone (in meters from the floor)\n- When the user changes a stain's angle, animate the string's slope changing and the convergence zone shifting\n\nDefault scenario: Five stains positioned on the floor with pre-calculated angles; the convergence zone indicates a source at approximately 1.2m height (consistent with a standing adult)\n\nInstructional Rationale: An Apply-level objective (determine 3D area of origin) requires the learner to connect multiple data points in space. A 3D interactive string model makes the geometry tangible.\n\nColor scheme: Floor in light wood color, walls light gray, bloodstains dark red, strings bright orange, convergence zone green highlight."
+}

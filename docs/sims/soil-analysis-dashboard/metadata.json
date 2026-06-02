@@ -1,0 +1,21 @@
+{
+  "title": "Soil Analysis Comparison Dashboard",
+  "description": "Analyze multiple soil properties together to compare a questioned soil sample to reference samples from known locations (Bloom Level 4 — Analyze; verb: compare).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "soil-analysis-dashboard",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "Compare",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "Glass, Soil, and Physical Trace Evidence",
+  "chapter_dir": "05-glass-soil-trace-evidence"
+}

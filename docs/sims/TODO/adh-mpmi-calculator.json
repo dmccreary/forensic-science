@@ -1,0 +1,14 @@
+{
+  "sim_id": "adh-mpmi-calculator",
+  "diagram_name": "ADH and mPMI Calculator MicroSim",
+  "chapter_number": 12,
+  "chapter_title": "Forensic Entomology and Decomposition Analysis",
+  "chapter_dir": "12-forensic-entomology",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate",
+  "learning_objective": "Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** adh-mpmi-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate\n\nCanvas layout:\n- Left panel (~50%): Temperature input table (hourly temperature entries for 7 days)\n- Right panel (~50%): Running ADH sum chart; mPMI result readout\n\nVisual elements:\n- A table where students enter or edit hourly temperature values (defaults pre-populated with a realistic warm-weather 7-day dataset)\n- A bar chart showing daily ADH contributions\n- A running cumulative ADH sum line graph\n- A labeled ADH threshold line (the ADH required to reach the student-specified developmental stage)\n- A \"mPMI result\" panel showing: days since oviposition, calendar date of estimated earliest death, and a confidence range\n\nInteractive controls:\n- Dropdown: Select insect species (Calliphora vicina, Lucilia sericata, Phormia regina)\n- Dropdown: Select observed developmental stage (First instar, Second instar, Third instar, Pupa)\n- Input: Base temperature (defaults to 2°C for C. vicina)\n- Input or edit hourly temperatures\n- \"Calculate mPMI\" button runs the ADH accumulation and identifies when the threshold was crossed\n\nData Visibility Requirements:\n- Show the ADH for each day\n- Show cumulative ADH over time\n- Show where cumulative ADH crosses the developmental threshold — this is the estimated first oviposition (= minimum death date)\n- Show the published ADH requirement for the selected species and stage (from reference table)\n\nInstructional Rationale: An Apply-level objective (calculate mPMI) requires the learner to perform the temperature-accumulation calculation themselves and see the result on the timeline.\n\nColor scheme: Blue for temperature bars, orange for cumulative ADH line, red dashed line for ADH threshold, green highlight for the mPMI result date."
+}

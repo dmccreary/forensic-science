@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Interactive Timeline of Forensic Science History</title>
+    <link href="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <main>
+    <div id="container">
+        <h1>Interactive Timeline of Forensic Science History</h1>
+
+        <div id="controls">
+            <span id="era-filters"></span>
+            <span class="spacer"></span>
+            <button id="btn-left" title="Pan left (older)">◀</button>
+            <button id="btn-zoom-out" title="Zoom out">−</button>
+            <button id="btn-zoom-in" title="Zoom in">+</button>
+            <button id="btn-right" title="Pan right (newer)">▶</button>
+            <button id="btn-fit" title="Show all milestones">Fit All</button>
+        </div>
+
+        <div id="timeline"></div>
+
+        <p id="instructions">
+            Hover a milestone for a quick summary, or click it to read the full story below.
+            The view opens on the modern era — pan left (◀) or press <b>Fit All</b> to reach the
+            ancient milestones (700&nbsp;CE and 1248).
+        </p>
+
+        <div id="legend"></div>
+
+        <div id="details">
+            <span class="placeholder">Click any milestone above to see its description, significance, and where it is covered in this book.</span>
+        </div>
+    </div>
+    </main>
+
+    <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="forensic-science-history-timeline.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* Interactive Timeline of Forensic Science History - styling */
+/* CANVAS_HEIGHT source of truth lives in forensic-science-history-timeline.js */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: aliceblue;
+    color: #212529;
+}
+
+#container {
+    width: 100%;
+    padding: 8px 12px 12px 12px;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 4px 0 8px 0;
+    color: #1a3a6c;
+}
+
+/* Controls row: era filters + zoom/pan buttons */
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#controls button {
+    font-size: 13px;
+    padding: 4px 10px;
+    border: 1px solid #adb5bd;
+    border-radius: 14px;
+    background: white;
+    color: #212529;
+    cursor: pointer;
+}
+
+#controls button:hover { background: #e9ecef; }
+
+#controls button.active {
+    background: #1a3a6c;
+    color: white;
+    border-color: #1a3a6c;
+}
+
+.spacer { flex: 1 1 auto; }
+
+/* Timeline container with edge padding so labels are not clipped */
+#timeline {
+    border: 1px solid silver;
+    border-radius: 6px;
+    background: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: hidden;
+}
+
+/* Override vis-timeline default clipping */
+.vis-timeline { overflow: visible !important; border: none !important; }
+.vis-panel.vis-center { overflow: visible !important; }
+.vis-item .vis-item-overflow { overflow: visible !important; }
+
+/* Ensure item boxes fit their text */
+.vis-item .vis-item-content {
+    white-space: nowrap !important;
+    padding: 3px 7px !important;
+    font-size: 12px;
+}
+.vis-item.vis-box { min-width: fit-content !important; }
+
+/* Era color classes for timeline items */
+.vis-item.era-gray   { background-color: #d6d8db; border-color: #6c757d; color: #212529; }
+.vis-item.era-blue   { background-color: #cfe2f3; border-color: #2c6fbb; color: #0b2545; }
+.vis-item.era-green  { background-color: #d5efd5; border-color: #2ca02c; color: #14401a; }
+.vis-item.era-purple { background-color: #e6d6f0; border-color: #7b3fa0; color: #3a1850; }
+.vis-item.era-orange { background-color: #fce3c4; border-color: #e08a1e; color: #5a3500; }
+
+.vis-item.vis-selected {
+    border-width: 2px !important;
+    box-shadow: 0 0 0 2px rgba(26, 58, 108, 0.4);
+}
+
+.vis-item .vis-item-content b { font-weight: 700; }
+
+/* Tooltip styling with text wrap */
+.vis-tooltip {
+    background: #2c3e50 !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    max-width: 300px !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+}
+
+#instructions {
+    font-size: 12px;
+    color: #495057;
+    margin: 6px 2px;
+}
+
+/* Legend */
+#legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin: 6px 2px;
+    font-size: 12px;
+    color: #343a40;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-swatch {
+    width: 14px; height: 14px;
+    border-radius: 3px;
+    border: 1px solid #888;
+    display: inline-block;
+}
+
+/* Detail panel populated on event click */
+#details {
+    border: 1px solid #dee2e6;
+    border-left: 5px solid #1a3a6c;
+    border-radius: 6px;
+    background: white;
+    padding: 10px 14px;
+    margin-top: 8px;
+    min-height: 84px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+#details h2 { font-size: 16px; margin: 0 0 4px 0; color: #1a3a6c; }
+#details .era-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+#details .xref {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6a1b9a;
+}
+#details .placeholder { color: #868e96; font-style: italic; }

@@ -1,0 +1,21 @@
+{
+  "title": "Headspace SPME Collection to GC-MS Workflow",
+  "description": "Explain how headspace SPME recovers volatile accelerant residues from arson debris and connects to GC-MS identification (Bloom Level 2 — Understand; verb: explain).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "headspace-spme-workflow",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Explain",
+  "completion_status": "scaffold",
+  "chapter_number": 10,
+  "chapter_title": "Fire Investigation, Arson, and Explosives",
+  "chapter_dir": "10-fire-arson-explosives"
+}

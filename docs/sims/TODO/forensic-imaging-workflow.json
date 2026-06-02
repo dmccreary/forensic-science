@@ -1,0 +1,14 @@
+{
+  "sim_id": "forensic-imaging-workflow",
+  "diagram_name": "Forensic Imaging and Hash Verification Workflow",
+  "chapter_number": 15,
+  "chapter_title": "Digital Forensics and Cybercrime Investigation",
+  "chapter_dir": "15-digital-forensics",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain",
+  "learning_objective": "Explain the forensic imaging procedure and verify the integrity of a forensic image using hash comparison (Bloom Level 2 — Understand; verb: explain).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: workflow\n**sim-id:** forensic-imaging-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Explain the forensic imaging procedure and verify the integrity of a forensic image using hash comparison (Bloom Level 2 — Understand; verb: explain).\n\nBloom Level: Understand (L2)\nBloom Verb: Explain\n\nCanvas layout:\n- Horizontal workflow with five stations: Original Drive → Write-Blocker → Forensic Workstation → Forensic Image → Hash Verification\n- Each station is a labeled icon with a detail panel that opens on click\n\nVisual elements:\n- Animated data flow arrows between stations\n- Write-blocker shown as a physical block preventing reverse data flow\n- Hash computation animation at Original Drive and at Forensic Image stations\n- Comparison panel showing MD5 and SHA-256 hashes side-by-side with green checkmark if matching\n\nInteractive controls:\n- Click each station to reveal purpose and procedure\n- \"Simulate Tamper\" button: modifies one bit in the image and recomputes hash — shows how the hash completely changes even for a 1-bit modification\n- Toggle: MD5 / SHA-256 display\n\nData Visibility Requirements:\n- Show example hash values in correct format (32 hex for MD5, 64 hex for SHA-256)\n- Show the tamper simulation: one character change in image → completely different hash value\n- Show the \"MATCH\" / \"MISMATCH\" result clearly\n\nInstructional Rationale: An Understand objective (explain the imaging and hash workflow) benefits from a visual, step-by-step workflow diagram with the ability to simulate tampering — making the importance of hash verification concrete and memorable.\n\nColor scheme: Blue for data flow, gray for hardware components, green for verified match, red for mismatch/tamper."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Social Network Analysis Graph Explorer",
+  "description": "Analyze a social network graph to identify hub nodes, broker nodes, and communication clusters relevant to a criminal investigation (Bloom Level 4 — Analyze; verb: analyze).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "social-network-analysis",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "Analyze",
+  "completion_status": "scaffold",
+  "chapter_number": 18,
+  "chapter_title": "Social Media Analysis and Open-Source Intelligence",
+  "chapter_dir": "18-social-media-osint"
+}

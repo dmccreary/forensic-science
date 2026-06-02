@@ -1,0 +1,14 @@
+{
+  "sim_id": "skeletal-sex-indicators",
+  "diagram_name": "Skeletal Sex Indicators Interactive Diagram",
+  "chapter_number": 11,
+  "chapter_title": "Forensic Anthropology and Skeletal Biology",
+  "chapter_dir": "11-forensic-anthropology",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "Identify",
+  "learning_objective": "Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** skeletal-sex-indicators<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).\n\nBloom Level: Remember (L1)\nBloom Verb: Identify\n\nPurpose: Allow investigators to compare male and female skeletal features side by side for the pelvis and skull.\n\nLayout:\n- Left panel: Male pelvis schematic | Right panel: Female pelvis schematic\n- Below: Male skull schematic | Female skull schematic\n- Each feature labeled with a clickable annotation\n\nInteractive controls:\n- Click any labeled feature (subpubic angle, greater sciatic notch, brow ridge, mastoid process, etc.) to reveal a pop-up explaining: (1) what the feature looks like in males vs. females, (2) how reliable this feature is as a sex indicator\n- Toggle between \"labeled\" and \"unlabeled\" modes for self-testing\n- \"Quiz Me\" mode: highlight a single feature and ask student to predict which sex (male/female) it belongs to\n\nData Visibility Requirements:\n- Each feature pop-up shows a simple line diagram comparing male vs. female morphology side by side\n- Shows accuracy percentage for each indicator (e.g., subpubic angle: ~95% accurate; skull features: ~85% accurate)\n\nInstructional Rationale: A Remember-level objective (identify features and their significance) benefits from a labeling/annotation interface where learners can explore each feature interactively and quiz themselves.\n\nColor scheme: Bone in warm tan/ivory; female features highlighted in blue; male features highlighted in red; pop-up panels in white."
+}

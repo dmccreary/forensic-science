@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latent Print Development Technique Selector</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Latent Print Development Technique Selector</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> latent-print-development</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> Apply (L3)</p>
+            <p><strong>Learning Objective:</strong> Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: microsim
+    **sim-id:** latent-print-development<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    Learning Objective: Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).
+    
+    Bloom Level: Apply (L3)
+    Bloom Verb: Select
+    
+    Canvas layout:
+    - Top section: evidence item display (selected from a dropdown)
+    - Bottom section: four technique option buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)
+    - Right panel: result panel showing what the developed print looks like after applying the chosen technique
+    
+    Visual elements:
+    - Evidence item illustrations: drinking glass, piece of paper, cardboard box, plastic bag, wooden door frame
+    - Before/after views — left shows the blank surface, right shows the developed print in the correct color for the chosen technique
+    - A "substrate porosity" indicator (porous / non-porous) that appears when the evidence item is selected
+    
+    Interactive controls:
+    - Dropdown: Select evidence item (glass, paper, cardboard, plastic bag, wood)
+    - Four technique buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)
+    - "Apply Technique" button triggers the before→after animation
+    - If wrong technique is selected, result panel shows "No visible ridge pattern — technique not effective on this substrate" with a brief explanation
+    
+    Data Visibility Requirements:
+    - Stage 1: Show selected evidence item with substrate porosity label
+    - Stage 2: User selects a technique and clicks Apply
+    - Stage 3: Show either a correct developed print (color matching the technique) or a "no result" failure with explanation
+    
+    Behavior:
+    - Cyanoacrylate on non-porous: shows white fumed ridges
+    - Ninhydrin on paper: shows purple Ruhemann's purple ridges
+    - Ninhydrin on glass: shows failure message
+    - Iodine on any surface: shows yellow-brown temporary result and "must photograph immediately" warning
+    
+    Instructional Rationale: An Apply-level objective (select technique by substrate) requires the student to actively choose and observe the consequence. Failure feedback for wrong choices teaches substrate logic better than a correct-only demonstration.
+    
+    Color scheme: Substrate in realistic textures (gray for glass, tan for paper). Developed prints in technique-accurate colors.
+    -->
+</body>
+</html>

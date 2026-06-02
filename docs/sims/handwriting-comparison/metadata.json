@@ -1,0 +1,21 @@
+{
+  "title": "Handwriting Characteristics Comparison MicroSim",
+  "description": "Identify the key handwriting characteristics used to compare questioned and known writing samples (Bloom Level 1 — Remember; verb: identify).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "handwriting-comparison",
+  "library": "p5.js",
+  "bloomLevel": "Remember (L1)",
+  "bloomVerb": "Identify",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "Document Examination and Forgery Detection",
+  "chapter_dir": "14-document-examination"
+}

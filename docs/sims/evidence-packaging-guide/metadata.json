@@ -1,0 +1,21 @@
+{
+  "title": "Evidence Packaging Decision Guide",
+  "description": "Select the correct packaging material for a given evidence type (Bloom Level 3 — Apply; verb: select).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "evidence-packaging-guide",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Select",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Crime Scene Investigation and Evidence Collection",
+  "chapter_dir": "02-crime-scene-investigation"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "becke-line-test",
+  "diagram_name": "Becke Line Test Simulator",
+  "chapter_number": 5,
+  "chapter_title": "Glass, Soil, and Physical Trace Evidence",
+  "chapter_dir": "05-glass-soil-trace-evidence",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Interpret",
+  "learning_objective": "Describe the Becke line test procedure and interpret the direction of line movement to determine whether the glass or oil has the higher refractive index (Bloom Level 2 — Understand; verb: interpret).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** becke-line-test<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Describe the Becke line test procedure and interpret the direction of line movement to determine whether the glass or oil has the higher refractive index (Bloom Level 2 — Understand; verb: interpret).\n\nBloom Level: Understand (L2)\nBloom Verb: Interpret\n\nCanvas layout:\n- Main view (~65%): circular microscope view simulation showing a glass fragment submerged in oil\n- Control panel (~35%): sliders for glass RI and oil RI, stage height adjustment, result readout\n\nVisual elements:\n- A simulated microscope field of view (circular, with slight vignetting)\n- A glass fragment outline visible in the center\n- A bright halo (Becke line) at the glass-oil boundary that moves in the correct direction as stage height is adjusted\n- A \"RI comparison\" readout showing glass RI vs. oil RI\n\nInteractive controls:\n- Slider: Glass RI (1.450–1.550)\n- Slider: Oil RI (1.450–1.550)\n- Slider: Stage height (focus / defocus above / below)\n- When stage height > focus: Becke line moves toward higher RI medium\n- When stage height < focus: Becke line moves toward lower RI medium\n- When glass RI = oil RI (±0.002): Becke line fades out; glass boundary becomes invisible\n\nData Visibility Requirements:\n- Stage 1: Show glass and oil at default RIs; both stage-height directions available\n- Stage 2: As stage height slider moves, animate Becke line movement direction\n- Stage 3: Show a panel with \"Conclusion: Glass RI > Oil RI / Glass RI < Oil RI / Match\"\n- Provide an oil selection tool (dropdown of 5 oils) to simulate the systematic narrowing process\n\nInstructional Rationale: The Understand objective (interpret Becke line movement) is best served by a simulation that lets students manipulate the RI difference and observe the directional response, rather than just reading a description.\n\nColor scheme: Dark microscope background, gray glass fragment, white/bright halo for Becke line, blue control panel."
+}

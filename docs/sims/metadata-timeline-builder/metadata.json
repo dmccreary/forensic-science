@@ -1,0 +1,21 @@
+{
+  "title": "Metadata Recovery and Timeline Builder",
+  "description": "Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "metadata-timeline-builder",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Apply",
+  "completion_status": "scaffold",
+  "chapter_number": 15,
+  "chapter_title": "Digital Forensics and Cybercrime Investigation",
+  "chapter_dir": "15-digital-forensics"
+}

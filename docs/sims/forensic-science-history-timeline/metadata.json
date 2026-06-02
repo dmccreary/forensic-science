@@ -1,0 +1,45 @@
+{
+  "title": "Interactive Timeline of Forensic Science History",
+  "description": "Interactive Timeline of Forensic Science History",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "History of Forensic Science"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "forensic-science-history-timeline",
+  "library": "vis-timeline",
+  "bloomLevel": "Remember (L1) — identify and recall key milestones in forensic science history.",
+  "bloomVerb": "Identify",
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Forensic Science and Legal Principles",
+  "chapter_dir": "01-intro-forensic-science",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "History of Forensic Science",
+    "learningObjectives": [
+      "Identify and recall key milestones in the development of forensic science.",
+      "Place modern forensic techniques in their historical and legal context."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "15-20 minutes",
+    "prerequisites": "None"
+  },
+  "pedagogical": {
+    "interactionPattern": "Clickable chronological timeline with hover summaries and click-to-reveal infoboxes",
+    "assessment": "Students build a Year/Milestone/Significance table and connect each milestone to its chapter",
+    "modelType": "Chronological data visualization",
+    "controls": [
+      "era filter buttons",
+      "pan left/right",
+      "zoom in/out",
+      "Fit All"
+    ]
+  }
+}

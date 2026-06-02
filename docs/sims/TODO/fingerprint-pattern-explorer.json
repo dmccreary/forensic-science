@@ -1,0 +1,14 @@
+{
+  "sim_id": "fingerprint-pattern-explorer",
+  "diagram_name": "Fingerprint Pattern Classification Explorer",
+  "chapter_number": 3,
+  "chapter_title": "Fingerprint Analysis and Dactyloscopy",
+  "chapter_dir": "03-fingerprint-analysis",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "Identify",
+  "learning_objective": "Identify the three fingerprint pattern families and their subtypes using defining structural features (Bloom Level 1 — Remember; verb: identify).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** fingerprint-pattern-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Identify the three fingerprint pattern families and their subtypes using defining structural features (Bloom Level 1 — Remember; verb: identify).\n\nBloom Level: Remember (L1)\nBloom Verb: Identify\n\nCanvas layout:\n- Left panel (~30%): pattern selection menu showing all 8 pattern types (Plain Loop Ulnar, Plain Loop Radial, Plain Whorl, Central Pocket Loop, Double Loop Whorl, Accidental Whorl, Plain Arch, Tented Arch)\n- Main display (~70%): enlarged fingerprint diagram for the selected pattern\n\nVisual elements:\n- Each pattern rendered as a schematic ridge diagram (not a photograph)\n- Key structural features annotated with clickable labels: Core (yellow), Delta (green), Ridge Flow (arrows)\n- A \"Features\" panel at the bottom listing the 2–3 defining characteristics of the selected pattern\n- A frequency badge showing \"Common: 60%\" / \"Less common: 35%\" / \"Rare: 5%\" for the three families\n\nInteractive controls:\n- Click any pattern in the left menu to load it in the main panel\n- Click annotated labels (Core, Delta, etc.) to get a pop-up definition\n- A \"Quiz Me\" mode presents a random pattern and asks the investigator to classify it from a dropdown; correct/wrong feedback with explanation follows\n\nData Visibility Requirements:\n- Stage 1: Show pattern with all annotations visible\n- Stage 2 (Quiz mode): Hide annotations, show only the ridge diagram; user must classify before annotations are revealed\n- Stage 3 (Quiz feedback): Show correct classification with annotations highlighted and a one-sentence explanation of the key feature that determines the classification\n\nDefault view: Ulnar Loop with all annotations visible\n\nInstructional Rationale: A Remember-level objective (identify and classify patterns) is best supported by an interactive labeling interface where learners can self-test with immediate corrective feedback.\n\nColor scheme: Ridges in dark gray on white background. Core highlighted yellow, deltas highlighted green, ridge flow arrows in blue."
+}

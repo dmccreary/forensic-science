@@ -1,0 +1,14 @@
+{
+  "sim_id": "handwriting-comparison",
+  "diagram_name": "Handwriting Characteristics Comparison MicroSim",
+  "chapter_number": 14,
+  "chapter_title": "Document Examination and Forgery Detection",
+  "chapter_dir": "14-document-examination",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "Identify",
+  "learning_objective": "Identify the key handwriting characteristics used to compare questioned and known writing samples (Bloom Level 1 — Remember; verb: identify).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** handwriting-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Identify the key handwriting characteristics used to compare questioned and known writing samples (Bloom Level 1 — Remember; verb: identify).\n\nBloom Level: Remember (L1)\nBloom Verb: Identify\n\nCanvas layout:\n- Left panel (~50%): Display of a questioned writing sample (simulated handwriting)\n- Right panel (~50%): Display of a known exemplar writing sample\n\nVisual elements:\n- Two side-by-side text panels showing simulated cursive writing of the same phrase\n- Annotated overlay markers that appear when the user clicks a characteristic\n- Characteristic panel at the bottom listing: Line Quality, Slant, Spacing, Letter Formation, Pen Lifts, Baseline\n\nInteractive controls:\n- Buttons for each characteristic; clicking highlights that characteristic on both samples\n- Toggle button \"Authentic / Forged\" switches the questioned sample between a high-quality match and a simulated forgery (with tremor and hesitation marks visible)\n- Slider: \"Magnification\" zooms in on the selected characteristic\n\nData Visibility Requirements:\n- Show quantitative slant angle measurement when Slant is selected\n- Show color-coded highlights for matching (green) and differing (red) characteristics\n- Show a summary panel: \"Matching characteristics: N / Differing characteristics: M\"\n\nInstructional Rationale: A Remember-level objective (identify characteristics) is best served by a visual comparison tool with labeled annotations, so students can recognize each characteristic before performing their own analysis.\n\nColor scheme: Warm cream background for paper, dark ink for writing, blue highlights for characteristics, green/red for match/difference overlay."
+}

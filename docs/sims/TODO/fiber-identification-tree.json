@@ -1,0 +1,14 @@
+{
+  "sim_id": "fiber-identification-tree",
+  "diagram_name": "Fiber Identification Decision Tree",
+  "chapter_number": 4,
+  "chapter_title": "Hair, Fiber, and Trace Evidence Analysis",
+  "chapter_dir": "04-hair-and-fiber-analysis",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Apply",
+  "learning_objective": "Apply a multi-step identification protocol (microscopy → burn test → solubility test) to classify an unknown fiber (Bloom Level 3 — Apply; verb: apply).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: infographic\n**sim-id:** fiber-identification-tree<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Apply a multi-step identification protocol (microscopy → burn test → solubility test) to classify an unknown fiber (Bloom Level 3 — Apply; verb: apply).\n\nBloom Level: Apply (L3)\nBloom Verb: Apply\n\nPurpose: Guide investigators through a branching decision tree for fiber classification.\n\nLayout:\n- Top-down branching flowchart structure\n- Each decision node is a clickable diamond shape; leaf nodes display the fiber classification\n\nInteractive elements:\n- Click a decision node to select \"Yes\" or \"No\" and advance to the next step\n- Each path reveals what the observation would look like (e.g., selecting \"Burns readily, smells like paper\" shows an animated orange flame)\n- Correct classifications (matching known fibers in the scenario) are confirmed with a green check; wrong paths show where the logic diverged\n- A \"Start New Sample\" button assigns a random unknown fiber with preset test results for the student to identify\n\nDecision nodes:\n1. Does the fiber melt approaching the flame? (Yes → synthetic branch; No → natural branch)\n2. (Natural branch) Does the residue form a crushable bead? (Yes → protein; No → cellulosic)\n3. (Synthetic branch) Does it form a hard black bead? (Yes → polyester/acrylic sub-tree; No → nylon sub-tree)\n4. Further discrimination by solubility results\n\nEach leaf node shows: fiber name, microscopic cross-section icon, typical crime scene sources (clothing type, carpet, upholstery).\n\nInstructional Rationale: An Apply-level objective (apply an identification protocol) is best served by a decision tree that forces the learner to choose at each step rather than passively reading a table. Incorrect paths teach the logic of the exception.\n\nColor scheme: Natural fiber branch in green tones, synthetic fiber branch in blue tones, decision diamonds in yellow."
+}

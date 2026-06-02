@@ -1,0 +1,21 @@
+{
+  "title": "BAC and Retro-Extrapolation Calculator",
+  "description": "Calculate BAC using the Widmark formula and perform a BAC retro-extrapolation (Bloom Level 3 — Apply; verb: calculate).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "bac-retro-extrapolation",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate",
+  "completion_status": "scaffold",
+  "chapter_number": 9,
+  "chapter_title": "Forensic Toxicology and Chemical Analysis",
+  "chapter_dir": "09-forensic-toxicology"
+}

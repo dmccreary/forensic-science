@@ -41,7 +41,9 @@ Each chapter follows this skeleton:
 5. **Tips and warnings** — sprinkle `mascot-tip` and `mascot-warning` where helpful.
 6. **Closing mascot celebration** — Trace cheers students on at the end.
 
-Chapters should target about 4,500 words for a typical 16-concept chapter.  Longer chapters with more concepts to cover may require more detailed content.
+## Chapter Length
+
+Chapters should target about 6,000 words for a typical 16-concept chapter.  Longer chapters with more concepts to cover may require more detailed content.
 
 Place MiroSim #### Diagram specifications whenever there are complex concepts in a chapter.
 These can be used to help students visualize complex concepts.

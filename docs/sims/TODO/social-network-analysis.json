@@ -1,0 +1,14 @@
+{
+  "sim_id": "social-network-analysis",
+  "diagram_name": "Social Network Analysis Graph Explorer",
+  "chapter_number": 18,
+  "chapter_title": "Social Media Analysis and Open-Source Intelligence",
+  "chapter_dir": "18-social-media-osint",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Analyze",
+  "learning_objective": "Analyze a social network graph to identify hub nodes, broker nodes, and communication clusters relevant to a criminal investigation (Bloom Level 4 — Analyze; verb: analyze).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** social-network-analysis<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Analyze a social network graph to identify hub nodes, broker nodes, and communication clusters relevant to a criminal investigation (Bloom Level 4 — Analyze; verb: analyze).\n\nBloom Level: Analyze (L4)\nBloom Verb: Analyze\n\nCanvas layout:\n- Full canvas: Force-directed graph visualization with labeled nodes\n- Control panel at bottom: metric selection and filtering\n\nVisual elements:\n- Nodes representing 15–20 simulated accounts (labeled with fake names)\n- Edges representing communication relationships with variable thickness based on frequency\n- Node color coding: suspect accounts in red, known associates in orange, peripheral contacts in gray\n- Node size proportional to selected centrality metric\n\nInteractive controls:\n- Dropdown: \"Color by\" — Degree Centrality / Betweenness Centrality / Clustering Coefficient\n- Dropdown: \"Size by\" — same options\n- Slider: \"Minimum connections\" — filters out nodes below a threshold\n- Click any node: displays name, degree, betweenness score, and list of connected accounts\n- \"Highlight clusters\" button — runs community detection and colors clusters differently\n- \"Show shortest path\" — click two nodes to highlight the shortest path between them\n\nData Visibility Requirements:\n- Show centrality scores in the node detail panel\n- Show the number of distinct communication clusters identified\n- Show the top 3 \"broker\" nodes by betweenness centrality in a summary panel\n\nInstructional Rationale: An Analyze-level objective (identify structure and key actors in a network) requires active manipulation of the graph — filtering, selecting metrics, and discovering structure through interaction rather than passive reading.\n\nColor scheme: Dark background, blue edges, node colors by role/metric, white labels, orange path highlighting."
+}

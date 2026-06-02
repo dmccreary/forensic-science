@@ -1,0 +1,14 @@
+{
+  "sim_id": "triangulation-measurement",
+  "diagram_name": "Triangulation Measurement Technique",
+  "chapter_number": 2,
+  "chapter_title": "Crime Scene Investigation and Evidence Collection",
+  "chapter_dir": "02-crime-scene-investigation",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate",
+  "learning_objective": "Apply triangulation measurement to record evidence position on a scaled sketch (Bloom Level 3 — Apply; verb: calculate).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** triangulation-measurement<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Apply triangulation measurement to record evidence position on a scaled sketch (Bloom Level 3 — Apply; verb: calculate).\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate\n\nCanvas layout:\n- Main drawing area (left ~75%): overhead view of a room\n- Control panel (right ~25%): input fields, instructions, measurement log\n\nVisual elements:\n- A rectangular room floor plan viewed from above\n- Two labeled reference points (A and B) at two corners, shown as green circles\n- A draggable orange dot representing an evidence item\n- Two dashed lines from the evidence item to reference points A and B\n- Live distance measurements displayed along the dashed lines in centimeters\n- A readout showing the calculated (x, y) coordinates of the evidence item\n\nInteractive controls:\n- Drag the evidence item anywhere within the room\n- Sliders to adjust room length and width (3m to 10m)\n- A \"Record Measurement\" button that appends current distances to a measurement log list\n- A \"Clear Log\" button\n\nData Visibility Requirements:\n- Stage 1: Show room with two fixed reference corners (A, B) and a default evidence item position\n- Stage 2: As user drags the evidence item, live-update distances to A and B\n- Stage 3: When \"Record Measurement\" is clicked, append a row to a log showing: Evidence Item #, Distance to A (cm), Distance to B (cm)\n\nDefault parameters:\n- Room: 6m × 5m\n- Evidence item starting position: roughly center of room\n- Reference point A: upper-left corner\n- Reference point B: upper-right corner\n\nBehavior:\n- Distances update in real time as the evidence item is dragged\n- Log panel demonstrates how multiple evidence items are recorded on a sketch sheet\n- Simulation recalculates positions accurately using the Pythagorean theorem\n\nInstructional Rationale: An Apply-level objective (calculate triangulation distances) requires the learner to perform the operation themselves. A draggable evidence item with live distance feedback gives immediate confirmation of whether the student understands what is being measured.\n\nColor scheme: Light gray room background, green reference points, orange evidence dot, blue dashed measurement lines."
+}

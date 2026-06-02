@@ -1,0 +1,14 @@
+{
+  "sim_id": "cdr-tower-triangulation",
+  "diagram_name": "CDR and Tower Triangulation Timeline MicroSim",
+  "chapter_number": 17,
+  "chapter_title": "Cell Phone Analytics and Mobile Forensics",
+  "chapter_dir": "17-cell-phone-analytics",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Use",
+  "learning_objective": "Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** cdr-tower-triangulation<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).\n\nBloom Level: Apply (L3)\nBloom Verb: Use\n\nCanvas layout:\n- Left panel (~50%): Simplified map grid showing cell tower locations and their coverage circles\n- Right panel (~50%): CDR table showing call timestamps and tower IDs\n\nVisual elements:\n- Map with 6–8 cell towers shown as icons, each with a labeled coverage circle\n- CDR table: rows showing timestamp, call type (outgoing/incoming), duration, tower ID\n- Timeline bar at the bottom showing device movement as a colored path connecting towers chronologically\n- Animated \"device\" icon that moves between towers as the timeline is played\n\nInteractive controls:\n- Click any CDR row to highlight the corresponding tower on the map\n- \"Play Timeline\" button — animates the device movement across the map based on CDR records\n- \"Show Triangulation\" button — displays triangulation calculation for a specific time window with 3-tower measurements shown\n- Slider: \"Playback speed\"\n\nData Visibility Requirements:\n- Show the geographic coverage area (circle radius) for each tower — radius varies by tower type\n- Show the trilateration math: three circles, their intersection, the estimated location point\n- Show the resulting location estimate with uncertainty radius\n- Export a formatted text timeline of tower contacts\n\nInstructional Rationale: An Apply-level objective (use CDR to reconstruct geographic movement) requires hands-on work with simulated CDR data, placing a device's movements in geographic and temporal context.\n\nColor scheme: Map in light gray, towers in blue, coverage circles in semi-transparent blue, device path in orange, selected tower in green."
+}

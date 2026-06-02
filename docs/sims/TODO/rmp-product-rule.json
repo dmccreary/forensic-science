@@ -1,0 +1,14 @@
+{
+  "sim_id": "rmp-product-rule",
+  "diagram_name": "Random Match Probability Product Rule Calculator",
+  "chapter_number": 8,
+  "chapter_title": "Forensic DNA Profiling",
+  "chapter_dir": "08-forensic-dna-profiling",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate",
+  "learning_objective": "Calculate random match probability using the product rule across multiple STR loci (Bloom Level 3 — Apply; verb: calculate).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** rmp-product-rule<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Calculate random match probability using the product rule across multiple STR loci (Bloom Level 3 — Apply; verb: calculate).\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate\n\nCanvas layout:\n- Table view: a list of STR loci with genotype fields and frequency inputs\n- Calculation panel: shows running product after each locus is added\n- Result display: final RMP expressed as a fraction and as \"1 in X\"\n\nVisual elements:\n- Each locus row shows: locus name, allele 1, allele 2, estimated genotype frequency (editable)\n- A \"running product\" bar that updates as each row is filled in\n- A log-scale visualization of the probability getting smaller and smaller as loci are added\n\nInteractive controls:\n- Students fill in genotype frequencies for 5–8 loci (pre-populated with realistic values from population databases)\n- \"Calculate Product\" button computes the RMP\n- A \"Compare to population sizes\" feature shows how the RMP compares to world population, US population, and planet Earth population\n\nData Visibility Requirements:\n- Show the intermediate product after each locus\n- Show the final RMP in both decimal and \"1 in X\" formats\n- Show a scale comparison: \"1 in 10^18 means if you randomly sampled people until you found a match, you would have to sample 1 billion times the Earth's population\"\n\nInstructional Rationale: An Apply-level objective (calculate RMP) requires the learner to perform the multiplication themselves and see the statistical power accumulate locus by locus — the \"wow moment\" when the probability becomes incomprehensibly small.\n\nColor scheme: White table background, blue product running total, red for very small probabilities, scale bars in green/orange/red."
+}

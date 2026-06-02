@@ -1,0 +1,14 @@
+{
+  "sim_id": "angle-of-impact-calculator",
+  "diagram_name": "Angle of Impact Calculator",
+  "chapter_number": 7,
+  "chapter_title": "Bloodstain Pattern Analysis",
+  "chapter_dir": "07-bloodstain-pattern-analysis",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate",
+  "learning_objective": "Calculate the angle of impact of a bloodstain from width-to-length measurements (Bloom Level 3 — Apply; verb: calculate).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** angle-of-impact-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Calculate the angle of impact of a bloodstain from width-to-length measurements (Bloom Level 3 — Apply; verb: calculate).\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate\n\nCanvas layout:\n- Left panel (~60%): a simulated bloodstain on a surface; user can drag handles to adjust width and length\n- Right panel (~40%): formula display, measurement inputs, calculated angle, geometric diagram\n\nVisual elements:\n- An elliptical bloodstain with two measurement arrows: horizontal (width) and vertical (length)\n- A geometric diagram showing the drop's trajectory angle relative to the surface plane\n- The formula sin θ = Width/Length displayed with live-updating values\n- The calculated angle displayed in degrees with a protractor arc overlay on the geometry diagram\n\nInteractive controls:\n- Drag handles on the stain to adjust width (5–30 mm) and length (5–60 mm)\n- Alternatively, enter width and length values in input boxes\n- \"Calculate\" button computes the angle\n- \"New Stain\" button generates a random stain for the student to measure and calculate\n\nData Visibility Requirements:\n- Stage 1: Show a bloodstain with default dimensions; formula visible with placeholder values\n- Stage 2: As dimensions change, live-update the ratio and calculated angle\n- Stage 3: Show the geometric diagram updating in real time to show the trajectory angle\n\nInstructional Rationale: An Apply-level objective (calculate angle from measurements) requires hands-on computation. Interactive stain manipulation gives immediate visual feedback connecting the formula to the physical shape.\n\nColor scheme: Bloodstain in dark red on tan/white surface; measurement arrows in blue; formula panel in white with dark text."
+}

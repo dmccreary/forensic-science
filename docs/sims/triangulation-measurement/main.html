@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulation Measurement Technique</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Triangulation Measurement Technique</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> triangulation-measurement</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> Apply (L3)</p>
+            <p><strong>Learning Objective:</strong> Apply triangulation measurement to record evidence position on a scaled sketch (Bloom Level 3 — Apply; verb: calculate).</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: microsim
+    **sim-id:** triangulation-measurement<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    Learning Objective: Apply triangulation measurement to record evidence position on a scaled sketch (Bloom Level 3 — Apply; verb: calculate).
+    
+    Bloom Level: Apply (L3)
+    Bloom Verb: Calculate
+    
+    Canvas layout:
+    - Main drawing area (left ~75%): overhead view of a room
+    - Control panel (right ~25%): input fields, instructions, measurement log
+    
+    Visual elements:
+    - A rectangular room floor plan viewed from above
+    - Two labeled reference points (A and B) at two corners, shown as green circles
+    - A draggable orange dot representing an evidence item
+    - Two dashed lines from the evidence item to reference points A and B
+    - Live distance measurements displayed along the dashed lines in centimeters
+    - A readout showing the calculated (x, y) coordinates of the evidence item
+    
+    Interactive controls:
+    - Drag the evidence item anywhere within the room
+    - Sliders to adjust room length and width (3m to 10m)
+    - A "Record Measurement" button that appends current distances to a measurement log list
+    - A "Clear Log" button
+    
+    Data Visibility Requirements:
+    - Stage 1: Show room with two fixed reference corners (A, B) and a default evidence item position
+    - Stage 2: As user drags the evidence item, live-update distances to A and B
+    - Stage 3: When "Record Measurement" is clicked, append a row to a log showing: Evidence Item #, Distance to A (cm), Distance to B (cm)
+    
+    Default parameters:
+    - Room: 6m × 5m
+    - Evidence item starting position: roughly center of room
+    - Reference point A: upper-left corner
+    - Reference point B: upper-right corner
+    
+    Behavior:
+    - Distances update in real time as the evidence item is dragged
+    - Log panel demonstrates how multiple evidence items are recorded on a sketch sheet
+    - Simulation recalculates positions accurately using the Pythagorean theorem
+    
+    Instructional Rationale: An Apply-level objective (calculate triangulation distances) requires the learner to perform the operation themselves. A draggable evidence item with live distance feedback gives immediate confirmation of whether the student understands what is being measured.
+    
+    Color scheme: Light gray room background, green reference points, orange evidence dot, blue dashed measurement lines.
+    -->
+</body>
+</html>

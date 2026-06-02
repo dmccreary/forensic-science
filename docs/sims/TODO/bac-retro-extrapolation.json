@@ -1,0 +1,14 @@
+{
+  "sim_id": "bac-retro-extrapolation",
+  "diagram_name": "BAC and Retro-Extrapolation Calculator",
+  "chapter_number": 9,
+  "chapter_title": "Forensic Toxicology and Chemical Analysis",
+  "chapter_dir": "09-forensic-toxicology",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate",
+  "learning_objective": "Calculate BAC using the Widmark formula and perform a BAC retro-extrapolation (Bloom Level 3 — Apply; verb: calculate).",
+  "completion_status": "specified",
+  "extracted_date": "2026-06-01",
+  "specification": "Type: microsim\n**sim-id:** bac-retro-extrapolation<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning Objective: Calculate BAC using the Widmark formula and perform a BAC retro-extrapolation (Bloom Level 3 — Apply; verb: calculate).\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate\n\nCanvas layout:\n- Left panel (~50%): BAC calculator (Widmark formula)\n- Right panel (~50%): BAC over time graph with retro-extrapolation line\n\nVisual elements:\n- Input fields for weight, sex, number of drinks, time elapsed since drinking began\n- A line graph showing BAC rising during consumption, then declining linearly during elimination\n- A vertical \"event time\" marker (e.g., \"Time of driving\") that the user can position\n- A horizontal \"legal limit\" line at 0.08%\n- A \"measured BAC at collection\" point plotted on the elimination curve\n\nInteractive controls:\n- Sliders for weight (40–150 kg), drinks consumed (1–10), time of blood draw (0–8 hours after last drink), elimination rate (0.010–0.025 g/dL/hr)\n- \"Calculate\" button updates the graph and shows BAC at event time vs. at draw time\n- \"Add Absorption Phase\" toggle shows the pre-peak absorption curve when enabled\n\nData Visibility Requirements:\n- Show Widmark calculation steps explicitly\n- Show retro-extrapolated BAC at event time with the arithmetic calculation\n- Color the area of the graph where BAC > 0.08% in red\n\nInstructional Rationale: An Apply-level objective (calculate and retro-extrapolate BAC) requires learners to input values and see both the formula and the result. A live graph makes the time-course of alcohol metabolism tangible.\n\nColor scheme: Blue line for BAC curve, red shaded area above legal limit, gray vertical marker for event time, yellow point for measured BAC."
+}

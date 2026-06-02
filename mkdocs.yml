@@ -67,8 +67,14 @@ nav:
       - Mascot Style Guide: learning-graph/mascot-test.md
 
   - MicroSims:
-      - List of MicroSims: sims/index.md
-      - Learning Graph Viewer: sims/graph-viewer/index.md
+    - List of MicroSims: sims/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Interactive Timeline of Forensic Science History: sims/forensic-science-history-timeline/index.md
+    - Locard Exchange Principle Visualizer: sims/locard-exchange-visualizer/index.md
+    - Daubert vs. Frye Admissibility Decision Workflow: sims/daubert-frye-decision-workflow/index.md
+    - Criminal Justice Process — From Crime Scene to Verdict: sims/criminal-justice-process-flow/index.md
+
+  - Glossary: glossary.md
 
   - License: license.md
   - Contact: contact.md

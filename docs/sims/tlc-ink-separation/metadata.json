@@ -1,0 +1,21 @@
+{
+  "title": "TLC Ink Separation Interactive Diagram",
+  "description": "Explain how TLC separates ink dye components for comparison, and interpret a TLC result as matching or non-matching (Bloom Level 2 — Understand; verb: explain).",
+  "creator": "Dementia Education Project",
+  "date": "2026-06-01",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "tlc-ink-separation",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Explain",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "Document Examination and Forgery Detection",
+  "chapter_dir": "14-document-examination"
+}

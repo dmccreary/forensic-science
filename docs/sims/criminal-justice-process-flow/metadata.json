@@ -1,0 +1,44 @@
+{
+  "title": "Criminal Justice Process — From Crime Scene to Verdict",
+  "description": "Criminal Justice Process — From Crime Scene to Verdict",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "Criminal Justice Process"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "criminal-justice-process-flow",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2) — explain the sequence of stages in the criminal justice process and where forensic evidence and constitutional protections apply.",
+  "bloomVerb": "Explain",
+  "completion_status": "implemented",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Forensic Science and Legal Principles",
+  "chapter_dir": "01-intro-forensic-science",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "The Criminal Justice Process and Forensic Entry Points",
+    "learningObjectives": [
+      "Explain the ordered sequence of the U.S. criminal justice process.",
+      "Identify where forensic evidence and constitutional protections apply at each stage."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "20 minutes",
+    "prerequisites": "None"
+  },
+  "pedagogical": {
+    "interactionPattern": "Clickable vertical flowchart with detail panel, forensic-entry-point highlight toggle, and constitutional badges",
+    "assessment": "Students summarize each stage and match constitutional rules to tagged stages",
+    "modelType": "Interactive process/workflow diagram",
+    "controls": [
+      "clickable stage bars",
+      "Highlight Forensic Entry Points checkbox",
+      "constitutional badge tooltips"
+    ]
+  }
+}
