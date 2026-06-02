@@ -249,3 +249,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     Fire destroys, but it cannot destroy the evidence of its own origin. You now understand the chemistry that creates and sustains combustion, the physical indicators that distinguish arson from accident, and the analytical methods that recover chemical signatures from debris. Chapter 11 takes us to skeletal evidence — the work of forensic anthropologists who reconstruct biological profiles from bones. Follow the evidence!
+
+[See Annotated References](./references.md)

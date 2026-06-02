@@ -16,14 +16,14 @@ chapter is organized around authentic casework methodologies used by practicing
 forensic scientists, crime scene investigators, medical examiners, and digital
 forensics specialists.
 
-The course is structured as six thematic modules spanning 18 chapters:
+The course is structured as six thematic modules spanning 19 chapters:
 
 - **Module 1** — Forensic infrastructure and crime scene methodology
 - **Module 2** — Physical and microscopic trace evidence
 - **Module 3** — Biological evidence and biochemistry
 - **Module 4** — Chemical and biomolecular analysis
 - **Module 5** — Anatomical and ecological analysis
-- **Module 6** — Materials science, digital evidence, facial recognition, cell phone analytics, and social media analysis
+- **Module 6** — Materials science, digital evidence, facial recognition, cell phone analytics, social media analysis, and aviation crash forensics
 
 By the end of the course, students will be able to apply scientific reasoning
 to solve simulated casework, communicate findings in the language of expert
@@ -109,6 +109,15 @@ context. It is also suitable for dual-enrollment programs at community colleges.
     (mapping relationships and communication patterns); image metadata in social
     media uploads; and authentication and admissibility standards for social
     media evidence under Federal Rules of Evidence 901
+19. **Aviation crash forensics and aircraft accident investigation** — the
+    ICAO Annex 13 framework and the NTSB go-team / Investigator-in-Charge
+    system, the prevention-not-blame principle, debris field analysis (intact
+    impact vs. in-flight breakup), wreckage reconstruction, flight data and
+    cockpit voice recorders (FDR/CVR), crash-survivable memory units and
+    underwater locator beacons, radar and ADS-B flight-path reconstruction,
+    metallurgical failure analysis (fatigue vs. overload fracture), in-flight
+    fire and explosion patterns, human factors analysis, aviation pathology and
+    crash survivability, and probable-cause determination
 
 ## Topics NOT Covered
 
@@ -129,6 +138,9 @@ following topics are explicitly excluded:
 - Unauthorized access to private social media accounts or scraping in violation
   of platform Terms of Service (OSINT collection is limited to publicly
   available content and lawfully obtained platform records)
+- Methods for sabotaging aircraft or constructing explosive or incendiary
+  devices (aviation crash forensics is treated at the post-event investigative
+  and diagnostic level only)
 - Graphic depictions of violence or crime-scene gore
 
 ## Learning Outcomes
@@ -162,6 +174,9 @@ following competencies organized by the 2001 Bloom's Taxonomy:
 - **Recall** the three legal mechanisms used to obtain social media records from
   platforms (preservation letter, subpoena, and court order) and the scope of
   data each compels.
+- **Identify** the stages of an aircraft accident investigation under ICAO
+  Annex 13 and the role of the NTSB go-team and Investigator-in-Charge, and
+  **name** the two flight recorders (FDR and CVR) and what each captures.
 
 ### Understand
 
@@ -191,6 +206,10 @@ following competencies organized by the 2001 Bloom's Taxonomy:
 - **Describe** how geotagged images and platform check-in features on
   Instagram and Facebook can corroborate or contradict a subject's claimed
   location.
+- **Explain** why the goal of an aircraft accident investigation is prevention
+  rather than blame, and **describe** how a crash-survivable memory unit and an
+  underwater locator beacon allow flight recorders to be recovered after a
+  severe impact or deep-water loss.
 
 ### Apply
 
@@ -220,6 +239,9 @@ following competencies organized by the 2001 Bloom's Taxonomy:
 - **Apply** social network analysis techniques to map communication
   relationships and identify key actors in a criminal network from platform
   connection and messaging data.
+- **Interpret** an aircraft debris field — its length and density sorting — to
+  distinguish an intact ground impact from a low- or high-altitude in-flight
+  breakup.
 
 ### Analyze
 
@@ -251,6 +273,9 @@ following competencies organized by the 2001 Bloom's Taxonomy:
   available from social media platforms and identify the specific legal
   authority (subpoena, court order, or search warrant) required for each
   category.
+- **Distinguish** a fatigue fracture from an overload fracture using the
+  features of the fracture surface (beach marks and striations vs. dimpled or
+  fibrous rupture) and infer the failure history each implies.
 
 ### Evaluate
 

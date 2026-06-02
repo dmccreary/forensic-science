@@ -402,3 +402,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     Digital evidence is fragile — but it is also pervasive. Every interaction with a device leaves a trace, and trained examiners know exactly where to look and in what order to look. You now understand the volatility hierarchy, the role of hash functions in preserving evidence integrity, the power of metadata in placing people and devices at specific times and locations, and the special challenges of encryption and the dark web. Chapter 16 turns to facial recognition — one of the most powerful and most controversial tools in modern law enforcement. Follow the evidence — face first.
+
+[See Annotated References](./references.md)

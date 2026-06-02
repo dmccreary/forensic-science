@@ -360,3 +360,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You have just learned to read shattered glass like a forensic detective and to match soil samples to their geographic origins. The trace evidence module is complete — you now have the tools to analyze hair, fiber, glass, and soil. In Chapter 6 we shift to biological evidence, starting with the forensic analysis of blood and other biological fluids. Follow the evidence!
+
+[See Annotated References](./references.md)

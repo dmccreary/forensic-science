@@ -1,0 +1,47 @@
+{
+  "title": "Debris Field Pattern Explorer",
+  "description": "Apply (Bloom L3) the reading of an aircraft debris field to distinguish an intact ground impact from an in-flight breakup by adjusting breakup altitude, wind, and aircraft speed.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "Aviation Crash Forensics",
+    "Debris Field Analysis"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "debris-field-pattern-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3) — interpret a debris field to distinguish an in-flight breakup from an intact ground impact.",
+  "bloomVerb": "Interpret",
+  "completion_status": "implemented",
+  "chapter_number": 19,
+  "chapter_title": "Aviation Crash Forensics and Aircraft Accident Investigation",
+  "chapter_dir": "19-aviation-crash-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Debris Field Analysis and Wreckage Distribution",
+    "learningObjectives": [
+      "Interpret the length and density sorting of a debris field to infer breakup altitude.",
+      "Distinguish an intact ground impact from a low- or high-altitude in-flight breakup."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Basic idea of free fall and air resistance; concept of an aircraft flight path"
+  },
+  "pedagogical": {
+    "interactionPattern": "Manipulate-Observe: adjust altitude, wind, speed, and sorting; read the live field length and verdict",
+    "assessment": "Students set sliders to match a described scenario and explain the resulting verdict",
+    "modelType": "Physics-lite ballistic-scatter model of wreckage distribution",
+    "controls": [
+      "Breakup altitude slider (0-12000 m)",
+      "Wind speed slider and direction selector",
+      "Aircraft speed slider",
+      "Show density sorting checkbox",
+      "Reset button"
+    ]
+  }
+}

@@ -515,3 +515,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You have just built the procedural foundation that every other chapter in this textbook stands on. Search patterns, packaging, chain of custody, documentation — these are not formalities, they are the difference between a conviction and a mistrial. Every laboratory technique you learn from here on begins with a properly processed crime scene. Follow the evidence — and protect it from the very first second. See you in Chapter 3!
+
+[See Annotated References](./references.md)

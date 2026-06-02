@@ -367,3 +367,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     Hair and fiber may be class evidence, but they are powerful class evidence when interpreted correctly. You now know how to calculate the medullary index, read scale patterns under a microscope, and classify fibers by their burn and solubility characteristics. In Chapter 5, we extend the trace evidence module to glass and soil — two more materials that carry a story about where someone has been. Follow the evidence!
+
+[See Annotated References](./references.md)

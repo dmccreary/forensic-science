@@ -1,0 +1,44 @@
+{
+  "title": "NTSB Investigation Workflow",
+  "description": "Understand (Bloom L2) the sequence of an aircraft accident investigation from notification to probable-cause determination by clicking each stage of an interactive flowchart.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "Aviation Crash Forensics",
+    "Accident Investigation Process"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "ntsb-investigation-workflow",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2) — describe the sequence of an aircraft accident investigation from notification to probable-cause determination.",
+  "bloomVerb": "Describe",
+  "completion_status": "implemented",
+  "chapter_number": 19,
+  "chapter_title": "Aviation Crash Forensics and Aircraft Accident Investigation",
+  "chapter_dir": "19-aviation-crash-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "The NTSB / ICAO Annex 13 Investigation Process",
+    "learningObjectives": [
+      "Describe the ordered stages of an aircraft accident investigation.",
+      "Explain why analysis can loop back to laboratory testing before a probable cause is stated."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Basic idea of an investigation; concept of evidence"
+  },
+  "pedagogical": {
+    "interactionPattern": "Click-to-reveal: select any stage to read a one- to two-sentence description of what happens there",
+    "assessment": "Students place the stages in order and explain the re-test feedback loop",
+    "modelType": "Interactive vertical flowchart with detail panel",
+    "controls": [
+      "Click a stage bar to open its infobox",
+      "Click the same stage again to clear the selection"
+    ]
+  }
+}

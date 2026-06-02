@@ -330,3 +330,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     From the tremor in a forged signature to the UV glow of a security thread, questioned documents carry the physical record of how they were made and who made them. You can now analyze handwriting characteristics, distinguish forgery types, interpret chromatographic ink comparisons, and evaluate currency authenticity. Chapter 15 shifts to the digital world — where forensic investigators recover evidence from phones, computers, and networks. Follow the evidence — even into the cloud.
+
+[See Annotated References](./references.md)

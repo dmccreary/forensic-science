@@ -275,3 +275,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     Facial recognition is one of the most powerful investigative tools of our time — and one that demands the most careful scrutiny before it reaches a courtroom. You now understand the pipeline from pixel to probability, the databases behind the systems, and the documented bias that must be disclosed to ensure fair application. Chapter 17 brings the investigation into the mobile world — the forensic analysis of cell phones, SIM cards, and the tower records that track every call. Follow the evidence — and the signal.
+
+[See Annotated References](./references.md)

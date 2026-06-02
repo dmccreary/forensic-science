@@ -325,3 +325,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     A cell phone is a witness that never sleeps and never forgets — as long as the investigator knows how to read it. CDR records place devices in space and time. GPS logs place them precisely. App data reveals what was communicated and purchased. And cloud backups survive even after the device is wiped. Chapter 18 extends the investigation to the social media and open-source intelligence that leaves a public digital trail alongside the private device record. Follow the evidence — wherever it was posted.
+
+[See Annotated References](./references.md)

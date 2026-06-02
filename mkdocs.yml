@@ -41,57 +41,79 @@ nav:
       - 1. Foundations & Legal Principles:
           - Chapter: chapters/01-intro-forensic-science/index.md
           - Quiz: chapters/01-intro-forensic-science/quiz.md
+          - Annotated References: chapters/01-intro-forensic-science/references.md
       - 2. Crime Scene Investigation:
           - Chapter: chapters/02-crime-scene-investigation/index.md
           - Quiz: chapters/02-crime-scene-investigation/quiz.md
+          - Annotated References: chapters/02-crime-scene-investigation/references.md
       - 3. Fingerprint Analysis:
           - Chapter: chapters/03-fingerprint-analysis/index.md
           - Quiz: chapters/03-fingerprint-analysis/quiz.md
+          - Annotated References: chapters/03-fingerprint-analysis/references.md
       - 4. Hair and Fiber Analysis:
           - Chapter: chapters/04-hair-and-fiber-analysis/index.md
           - Quiz: chapters/04-hair-and-fiber-analysis/quiz.md
+          - Annotated References: chapters/04-hair-and-fiber-analysis/references.md
       - 5. Glass, Soil & Trace Evidence:
           - Chapter: chapters/05-glass-soil-trace-evidence/index.md
           - Quiz: chapters/05-glass-soil-trace-evidence/quiz.md
+          - Annotated References: chapters/05-glass-soil-trace-evidence/references.md
       - 6. Forensic Serology:
           - Chapter: chapters/06-forensic-serology/index.md
           - Quiz: chapters/06-forensic-serology/quiz.md
+          - Annotated References: chapters/06-forensic-serology/references.md
       - 7. Bloodstain Pattern Analysis:
           - Chapter: chapters/07-bloodstain-pattern-analysis/index.md
           - Quiz: chapters/07-bloodstain-pattern-analysis/quiz.md
+          - Annotated References: chapters/07-bloodstain-pattern-analysis/references.md
       - 8. DNA Profiling:
           - Chapter: chapters/08-forensic-dna-profiling/index.md
           - Quiz: chapters/08-forensic-dna-profiling/quiz.md
+          - Annotated References: chapters/08-forensic-dna-profiling/references.md
       - 9. Forensic Toxicology:
           - Chapter: chapters/09-forensic-toxicology/index.md
           - Quiz: chapters/09-forensic-toxicology/quiz.md
+          - Annotated References: chapters/09-forensic-toxicology/references.md
       - 10. Fire, Arson & Explosives:
           - Chapter: chapters/10-fire-arson-explosives/index.md
           - Quiz: chapters/10-fire-arson-explosives/quiz.md
+          - Annotated References: chapters/10-fire-arson-explosives/references.md
       - 11. Forensic Anthropology:
           - Chapter: chapters/11-forensic-anthropology/index.md
           - Quiz: chapters/11-forensic-anthropology/quiz.md
+          - Annotated References: chapters/11-forensic-anthropology/references.md
       - 12. Forensic Entomology:
           - Chapter: chapters/12-forensic-entomology/index.md
           - Quiz: chapters/12-forensic-entomology/quiz.md
+          - Annotated References: chapters/12-forensic-entomology/references.md
       - 13. Firearms & Ballistics:
           - Chapter: chapters/13-firearms-and-ballistics/index.md
           - Quiz: chapters/13-firearms-and-ballistics/quiz.md
+          - Annotated References: chapters/13-firearms-and-ballistics/references.md
       - 14. Document Examination:
           - Chapter: chapters/14-document-examination/index.md
           - Quiz: chapters/14-document-examination/quiz.md
+          - Annotated References: chapters/14-document-examination/references.md
       - 15. Digital Forensics:
           - Chapter: chapters/15-digital-forensics/index.md
           - Quiz: chapters/15-digital-forensics/quiz.md
+          - Annotated References: chapters/15-digital-forensics/references.md
       - 16. Facial Recognition:
           - Chapter: chapters/16-facial-recognition/index.md
           - Quiz: chapters/16-facial-recognition/quiz.md
+          - Annotated References: chapters/16-facial-recognition/references.md
       - 17. Cell Phone Analytics:
           - Chapter: chapters/17-cell-phone-analytics/index.md
           - Quiz: chapters/17-cell-phone-analytics/quiz.md
+          - Annotated References: chapters/17-cell-phone-analytics/references.md
       - 18. Social Media & OSINT:
           - Chapter: chapters/18-social-media-osint/index.md
           - Quiz: chapters/18-social-media-osint/quiz.md
+          - Annotated References: chapters/18-social-media-osint/references.md
+      - 19. Aviation Crash Forensics:
+          - Chapter: chapters/19-aviation-crash-forensics/index.md
+          - Quiz: chapters/19-aviation-crash-forensics/quiz.md
+          - Annotated References: chapters/19-aviation-crash-forensics/references.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
@@ -110,6 +132,9 @@ nav:
     - Locard Exchange Principle Visualizer: sims/locard-exchange-visualizer/index.md
     - Daubert vs. Frye Admissibility Decision Workflow: sims/daubert-frye-decision-workflow/index.md
     - Criminal Justice Process — From Crime Scene to Verdict: sims/criminal-justice-process-flow/index.md
+    - Debris Field Pattern Explorer: sims/debris-field-pattern-explorer/index.md
+    - NTSB Investigation Workflow: sims/ntsb-investigation-workflow/index.md
+    - Landmark Crash Investigations Timeline: sims/aviation-crash-investigation-timeline/index.md
 
   - FAQ: faq.md
   - Glossary: glossary.md
@@ -121,8 +146,8 @@ nav:
 theme:
   name: material
   # Once a logo is generated, point this at docs/img/logo.png or a mascot pose:
-  # logo: img/logo.png
-  # favicon: img/favicon.ico
+  logo: img/mascot/neutral.png
+  favicon: img/favicon.ico
   palette:
     primary: 'deep purple'
     accent: 'amber'

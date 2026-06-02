@@ -376,3 +376,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You have just mastered one of the oldest and most powerful tools in forensic science — the fingerprint. From dermal papillae biology to AFIS database searches, you now understand *why* fingerprints are unique, *how* to develop invisible ones, and *what* examiners actually look at when comparing them. Chapter 4 takes us to the microscopic world of hair and fiber trace evidence. Follow the evidence!
+
+[See Annotated References](./references.md)

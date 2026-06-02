@@ -303,3 +303,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You have just learned to read the physics of violence encoded in bloodstains. From a single drop's width-to-length ratio to the three-dimensional stringing of a spatter event, BPA turns crime scene reconstruction into applied trigonometry. Chapter 8 moves from the physical analysis of blood to its molecular identity — forensic DNA profiling. Follow the evidence!
+
+[See Annotated References](./references.md)

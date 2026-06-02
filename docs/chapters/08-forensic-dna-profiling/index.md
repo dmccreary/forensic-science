@@ -326,3 +326,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     DNA profiling is where biology, chemistry, and statistics converge into one of the most powerful investigative tools ever created. You now understand the molecular basis of the technique, the PCR process that makes it possible from trace samples, and the statistical framework that gives a DNA match its extraordinary evidentiary weight. Chapter 9 takes us to forensic toxicology — what happens when the body itself becomes the evidence container. Follow the evidence!
+
+[See Annotated References](./references.md)

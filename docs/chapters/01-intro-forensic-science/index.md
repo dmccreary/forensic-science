@@ -526,3 +526,5 @@ Let's review the principles that anchor everything else in this course:
 !!! mascot-celebration "Case closed on Chapter 1!"
     ![Trace celebrates](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You have just built the legal and scientific foundation for everything else in this course. That is genuinely difficult, important work — and you did it in one chapter. Every DNA profile, every fingerprint match, every expert opinion you encounter in the remaining seventeen chapters exists within the framework you built today. Forensic science is a discipline where getting both the science *and* the law right matters equally. You're already doing both. Follow the evidence!
+
+[See Annotated References](./references.md)

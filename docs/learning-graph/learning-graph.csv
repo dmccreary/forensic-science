@@ -257,3 +257,23 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 256,Encryption in Digital Forensics,238,DIGIT
 257,Steganography,256,DIGIT
 258,Dark Web Evidence,238|256,DIGIT
+259,Aircraft Accident Investigation,2,AVIA
+260,Accident vs. Incident Classification,259,AVIA
+261,ICAO Annex 13,259,AVIA
+262,National Transportation Safety Board (NTSB),261,AVIA
+263,Go-Team and Investigator-in-Charge,262,AVIA
+264,Party System of Investigation,262,AVIA
+265,Debris Field Analysis,259|20,AVIA
+266,In-Flight Breakup vs. Intact Impact,265,AVIA
+267,Wreckage Reconstruction,266,AVIA
+268,Flight Data Recorder (FDR),259,AVIA
+269,Cockpit Voice Recorder (CVR),259,AVIA
+270,Crash-Survivable Memory Unit,268|269,AVIA
+271,Underwater Locator Beacon,270,AVIA
+272,Radar and ADS-B Flight Path Reconstruction,268,AVIA
+273,Metallurgical Failure Analysis,267|80,AVIA
+274,Fatigue versus Overload Fracture,273,AVIA
+275,In-Flight Fire and Explosion Patterns,156|168|267,AVIA
+276,Human Factors Analysis,259,AVIA
+277,Aviation Pathology and Victim Identification,121|185,AVIA
+278,Probable Cause and Crash Survivability,259|274|275|277,AVIA

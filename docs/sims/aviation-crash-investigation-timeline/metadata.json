@@ -1,0 +1,46 @@
+{
+  "title": "Landmark Crash Investigations Timeline",
+  "description": "Remember (Bloom L1) landmark aircraft accident investigations and the forensic advance each produced, on an interactive, filterable timeline.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-01",
+  "subject": [
+    "Forensic Science",
+    "Aviation Crash Forensics",
+    "History of Accident Investigation"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "aviation-crash-investigation-timeline",
+  "library": "vis-timeline",
+  "bloomLevel": "Remember (L1) — identify landmark aircraft accident investigations and the forensic advance each produced.",
+  "bloomVerb": "Identify",
+  "completion_status": "implemented",
+  "chapter_number": 19,
+  "chapter_title": "Aviation Crash Forensics and Aircraft Accident Investigation",
+  "chapter_dir": "19-aviation-crash-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Landmark Aircraft Accident Investigations",
+    "learningObjectives": [
+      "Identify eight landmark crash investigations and the year each occurred.",
+      "Match each investigation to the forensic technique or safety reform it advanced."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Familiarity with the chapter's forensic techniques (recorders, metallurgy, human factors)"
+  },
+  "pedagogical": {
+    "interactionPattern": "Hover-and-click timeline: hover for a summary, click for the key finding; filter by forensic-lesson theme",
+    "assessment": "Students match each crash to the technique or reform it produced",
+    "modelType": "Interactive vis-timeline with theme filters and zoom/pan",
+    "controls": [
+      "Theme filter buttons (structural, human factors, explosion/reconstruction, recorders)",
+      "Pan left / right buttons",
+      "Zoom in / out buttons",
+      "Fit All button"
+    ]
+  }
+}

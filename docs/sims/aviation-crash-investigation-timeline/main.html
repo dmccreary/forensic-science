@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Landmark Crash Investigations Timeline</title>
+    <link href="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <main>
+    <div id="container">
+        <h1>Landmark Crash Investigations Timeline</h1>
+
+        <div id="controls">
+            <span id="era-filters"></span>
+            <span class="spacer"></span>
+            <button id="btn-left" title="Pan left (older)">◀</button>
+            <button id="btn-zoom-out" title="Zoom out">−</button>
+            <button id="btn-zoom-in" title="Zoom in">+</button>
+            <button id="btn-right" title="Pan right (newer)">▶</button>
+            <button id="btn-fit" title="Show all milestones">Fit All</button>
+        </div>
+
+        <div id="timeline"></div>
+
+        <p id="instructions">
+            Hover a milestone for a quick summary, or click it to read the investigation's
+            key finding and the forensic technique it advanced. Use the theme buttons to filter
+            by the kind of forensic lesson each crash taught.
+        </p>
+
+        <div id="details">
+            <span class="placeholder">Click any milestone above to see what the investigation found and which forensic technique it advanced.</span>
+        </div>
+    </div>
+    </main>
+
+    <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="aviation-crash-investigation-timeline.js"></script>
+</body>
+</html>

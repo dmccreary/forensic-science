@@ -289,3 +289,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You have just learned to read time from the biology of insects — one of the most elegant applications of ecology in all of forensic science. Accumulated degree hours, succession patterns, and environmental variables give investigators a biological clock that no one can falsify. Chapter 13 brings us to the physical evidence of firearms — ballistics, toolmarks, and the microscopic striations that link a bullet to a specific weapon. Follow the evidence!
+
+[See Annotated References](./references.md)

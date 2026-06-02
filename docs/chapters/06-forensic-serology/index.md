@@ -248,3 +248,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     You now understand the language of biological fluids — from the composition of blood to the two-step testing hierarchy to the ABO chemistry that has been used in forensic casework for over a century. Chapter 7 takes this further by examining what happens when blood is not just a fluid but a dynamic projectile: bloodstain pattern analysis. Follow the evidence!
+
+[See Annotated References](./references.md)

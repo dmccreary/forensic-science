@@ -245,3 +245,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     From the microscopic striations on a bullet to the chemical signature of gunshot residue, firearms evidence links physical objects to specific events with remarkable precision. Chapter 14 shifts from weapons to words — the forensic examination of documents, handwriting, and forgery. Follow the evidence!
+
+[See Annotated References](./references.md)

@@ -1,10 +1,12 @@
 {
   "title": "Chain of Custody Flow",
-  "description": "Trace the chain of custody for an evidence item from collection to court and identify required documentation at each transfer (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
+  "description": "Understand (Bloom L2) the chain of custody by stepping through each evidence transfer from crime scene to courtroom and explaining the documentation required at every handoff.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Chain of Custody",
+    "Evidence Handling",
+    "Forensic Admissibility"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +14,34 @@
   "rights": "CC BY 4.0",
   "identifier": "chain-of-custody-flow",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain the chain of custody and the documentation required at each transfer.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "Crime Scene Investigation and Evidence Collection",
-  "chapter_dir": "02-crime-scene-investigation"
+  "chapter_dir": "02-crime-scene-investigation",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Chain of Custody and Evidence Documentation",
+    "learningObjectives": [
+      "Explain the six stages an evidence item passes through from collection to courtroom presentation.",
+      "Identify the documentation required at each transfer: item ID, date, location, condition notes, and signature.",
+      "Reason about why a single broken link can make evidence inadmissible in court."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Basic idea of a crime scene and physical evidence; concept of a courtroom trial"
+  },
+  "pedagogical": {
+    "interactionPattern": "Step-through workflow: Next/Prev navigation across six custody stations with an always-visible detail panel and a Break the Chain toggle",
+    "assessment": "Students narrate the responsible party and required documentation at each step, then test the consequence of a broken link",
+    "modelType": "State-machine workflow of sequential custody transfers",
+    "controls": [
+      "Prev button",
+      "Next button",
+      "Reset button",
+      "Break the Chain checkbox"
+    ]
+  }
 }

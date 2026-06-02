@@ -1,10 +1,12 @@
 {
   "title": "Evidence Search Pattern Selector",
-  "description": "Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).",
-  "creator": "Dementia Education Project",
+  "description": "Apply (Bloom L3) crime-scene search-pattern rules by selecting a search pattern for a given scene, running an animated sweep, and judging coverage, time, and personnel trade-offs against a live appropriateness rating.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Crime Scene Investigation",
+    "Evidence Search Patterns",
+    "Scene Documentation"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +14,36 @@
   "rights": "CC BY 4.0",
   "identifier": "search-pattern-selector",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — select the appropriate search pattern for a given scene description.",
   "bloomVerb": "Select",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "Crime Scene Investigation and Evidence Collection",
-  "chapter_dir": "02-crime-scene-investigation"
+  "chapter_dir": "02-crime-scene-investigation",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Crime-Scene Search Patterns and Systematic Coverage",
+    "learningObjectives": [
+      "Select an appropriate search pattern (grid/line, spiral, or zone) for a given scene type and size.",
+      "Compare search patterns on the trade-offs of coverage, time, and personnel required.",
+      "Explain why a systematic pattern reduces the chance of missed or contaminated evidence compared with a random search."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Concept of a secured crime scene; idea that physical evidence can be small and easily missed; basic grid/coordinate sense"
+  },
+  "pedagogical": {
+    "interactionPattern": "Select-and-run tool: the learner chooses a pattern, scene type, team size, and speed, runs an animated overhead sweep that colors cells gray (unsearched), yellow (active), and green (searched), and reads a live appropriateness rating plus an end-of-run efficiency summary",
+    "assessment": "A live fit rating judges the chosen pattern against the chosen scene type; a completion summary reports cells searched, steps elapsed, and an efficiency rating, and a warning appears when more searchers are chosen than a pattern uses efficiently",
+    "modelType": "Agent-based coverage simulation over a top-down grid with per-pattern path generation",
+    "controls": [
+      "Pattern dropdown (Grid / Line, Spiral Inward, Spiral Outward, Zone / Quadrant)",
+      "Scene type dropdown (indoor room, outdoor field, large outdoor area)",
+      "Searchers slider (1-6)",
+      "Speed slider",
+      "Start / Pause button",
+      "Reset button"
+    ]
+  }
 }

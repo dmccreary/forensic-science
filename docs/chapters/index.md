@@ -1,6 +1,6 @@
 # Chapters
 
-This textbook is organized into 18 chapters covering 303 concepts across 6 thematic modules.
+This textbook is organized into 19 chapters covering 323 concepts across 6 thematic modules.
 
 ## Chapter Overview
 
@@ -22,10 +22,11 @@ This textbook is organized into 18 chapters covering 303 concepts across 6 thema
 16. [Facial Recognition Technologies and Biometric Identification](16-facial-recognition/index.md) — Covers biometric principles, face detection algorithms, deep learning CNNs, law enforcement databases, CCTV analysis, and Daubert admissibility.
 17. [Cell Phone Analytics and Mobile Forensics](17-cell-phone-analytics/index.md) — Investigates SIM cards, IMEI, CDR analysis, tower triangulation, GPS extraction, iOS/Android forensics, and cloud data acquisition.
 18. [Social Media Analysis and Open-Source Intelligence](18-social-media-osint/index.md) — Examines OSINT principles, platform evidence collection, legal process, geolocation inference, social network analysis, and FRE 901 admissibility.
+19. [Aviation Crash Forensics and Aircraft Accident Investigation](19-aviation-crash-forensics/index.md) — Covers ICAO Annex 13 and the NTSB go-team system, debris field analysis, wreckage reconstruction, flight recorders, metallurgical failure analysis, in-flight fire and explosion patterns, human factors, and probable-cause determination.
 
 ## How to Use This Textbook
 
-Work through chapters in order — each chapter builds on concepts introduced in earlier ones. Chapters 1 and 2 establish the legal and procedural foundations required throughout the course. The six thematic modules (Chapters 1–2, 3–5, 6–8, 9–10, 11–12, and 13–18) can serve as natural unit boundaries for assessments. Each chapter index lists all concepts covered, so you can locate any specific topic quickly.
+Work through chapters in order — each chapter builds on concepts introduced in earlier ones. Chapters 1 and 2 establish the legal and procedural foundations required throughout the course. The six thematic modules (Chapters 1–2, 3–5, 6–8, 9–10, 11–12, and 13–19) can serve as natural unit boundaries for assessments. Each chapter index lists all concepts covered, so you can locate any specific topic quickly.
 
 ---
 

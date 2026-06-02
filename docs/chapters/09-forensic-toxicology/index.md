@@ -368,3 +368,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     Forensic toxicology turns the body into a chemical archive — the drugs, poisons, and alcohol in someone's system are a chronological record of what they consumed and when. You now know how the body processes substances, how chemists confirm their identities, and how alcohol metabolism allows investigators to work backward through time to a critical moment. Chapter 10 brings us fire, arson, and explosives. Follow the evidence!
+
+[See Annotated References](./references.md)

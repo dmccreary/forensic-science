@@ -265,3 +265,5 @@ The following table summarizes the major concepts from this chapter:
 !!! mascot-celebration "Case Closed — For Now"
     ![Trace raising magnifying glass in celebration](../../img/mascot/celebration.png){ class="mascot-admonition-img"}
     A skeleton is not just bones — it is a biological record of a person's life, death, and the interval between. You can now estimate sex, age, and stature, and you can distinguish the injuries of life from the injuries of death from the weathering of time. Chapter 12 continues with another time-based investigation — forensic entomology, where insects become the clock. Follow the evidence!
+
+[See Annotated References](./references.md)
