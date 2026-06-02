@@ -1,10 +1,14 @@
 {
   "title": "Social Network Analysis Graph Explorer",
-  "description": "Analyze a social network graph to identify hub nodes, broker nodes, and communication clusters relevant to a criminal investigation (Bloom Level 4 — Analyze; verb: analyze).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Analyze a simulated communication network of 16 accounts to find hub nodes, broker nodes, and communication clusters. Choose which centrality metric (degree, betweenness, or clustering coefficient) drives node color and size, filter weakly connected accounts with a minimum-connections slider, click any account to read its degree and betweenness and its connections, run community detection to highlight the clusters, and trace the shortest path between any two accounts.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Social Media Analysis",
+    "Open-Source Intelligence",
+    "Network Analysis",
+    "Digital Forensics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,38 @@
   "rights": "CC BY 4.0",
   "identifier": "social-network-analysis",
   "library": "p5.js",
-  "bloomLevel": "Analyze (L4)",
+  "bloomLevel": "Analyze (L4) — analyze a social network graph to identify hub nodes, broker nodes, and communication clusters.",
   "bloomVerb": "Analyze",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 18,
   "chapter_title": "Social Media Analysis and Open-Source Intelligence",
-  "chapter_dir": "18-social-media-osint"
+  "chapter_dir": "18-social-media-osint",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Identifying key actors and community structure in a communication network using centrality metrics",
+    "learningObjectives": [
+      "Distinguish hub accounts (high degree centrality) from broker accounts (high betweenness centrality) in a communication network.",
+      "Use a minimum-connections filter and centrality-based color/size encodings to surface the most important accounts.",
+      "Interpret community detection results to identify distinct communication clusters and the brokers that bridge them.",
+      "Trace the shortest communication path between two accounts."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Basic familiarity with graphs (nodes and edges) and the idea that some accounts are more connected or more central than others"
+  },
+  "pedagogical": {
+    "interactionPattern": "A force-directed graph of 16 simulated accounts (nodes) and 24 weighted communication links (edges) fills the canvas, with a summary/detail panel on the right. Two dropdowns let the student choose which centrality metric (degree, betweenness, or clustering coefficient) drives node color and node size. A 'Minimum connections' slider filters out weakly connected accounts. Clicking a node selects it and shows its degree, betweenness, clustering coefficient, and connection list. A 'Highlight clusters' button runs Girvan-Newman community detection and recolors nodes by cluster. A 'Shortest path' button enters a mode where clicking two nodes highlights the shortest path between them in orange. Nodes can be dragged to untangle the layout.",
+    "assessment": "Analysis through manipulation: the student must select metrics, filter the graph, and inspect nodes to answer questions such as which account is the most important hub, which accounts are brokers, how many communication clusters exist, and how two accounts are connected. The summary panel reports the cluster count and the top three brokers so students can check their reasoning.",
+    "modelType": "Graph/network model: nodes carry a role (suspect, associate, peripheral) and computed degree, betweenness (Brandes algorithm), and clustering-coefficient values; edges carry a message-frequency weight that sets line thickness. Community structure is computed with Girvan-Newman edge-betweenness removal, and shortest paths are found with breadth-first search.",
+    "controls": [
+      "'Color by' dropdown — Role / Degree centrality / Betweenness / Clustering coefficient",
+      "'Size by' dropdown — Degree centrality / Betweenness / Clustering coefficient",
+      "'Minimum connections' slider — hides nodes below the chosen degree",
+      "'Highlight clusters' button — toggles community-detection coloring",
+      "'Shortest path' button — enter mode, then click two accounts",
+      "'Reset' button — restore defaults",
+      "Clickable nodes (select / draggable)"
+    ]
+  }
 }

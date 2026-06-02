@@ -1,10 +1,14 @@
 {
   "title": "Becke Line Test Simulator",
-  "description": "Describe the Becke line test procedure and interpret the direction of line movement to determine whether the glass or oil has the higher refractive index (Bloom Level 2 — Understand; verb: interpret).",
-  "creator": "Dementia Education Project",
+  "description": "Simulated microscope view of a glass fragment in immersion oil. Adjust glass RI, oil RI, and stage height, then interpret the direction the bright Becke line moves to decide whether the glass or the oil has the higher refractive index.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Trace Evidence",
+    "Glass Analysis",
+    "Refractive Index",
+    "Becke Line Test"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "becke-line-test",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — interpret Becke line movement to compare refractive indices.",
   "bloomVerb": "Interpret",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 5,
   "chapter_title": "Glass, Soil, and Physical Trace Evidence",
-  "chapter_dir": "05-glass-soil-trace-evidence"
+  "chapter_dir": "05-glass-soil-trace-evidence",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Refractive index comparison by the Becke line method",
+    "learningObjectives": [
+      "Describe the Becke line test procedure for comparing refractive indices.",
+      "Interpret the direction the Becke line moves as stage height changes.",
+      "Conclude whether glass RI is greater than, less than, or equal to the oil RI."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Refraction basics; reading a numeric scale"
+  },
+  "pedagogical": {
+    "interactionPattern": "Microscope-view simulation: adjust glass RI, oil RI, and stage-height sliders (or pick an oil preset) and watch the Becke line move; a panel reports the conclusion",
+    "assessment": "Students predict the Becke line direction for a given RI difference and stage setting, then verify against the simulation",
+    "modelType": "Qualitative optics model: Becke line offsets toward the higher-RI medium when the stage is raised and fades when RIs match",
+    "controls": [
+      "Glass RI slider (1.450-1.550)",
+      "Oil RI slider (1.450-1.550)",
+      "Stage height slider (below / focus / above)",
+      "Oil preset dropdown (5 calibrated oils)"
+    ]
+  }
 }

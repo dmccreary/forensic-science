@@ -3,121 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area of Origin Stringing Simulator</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Area-of-Origin Stringing MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="area-of-origin-stringing.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Area of Origin Stringing Simulator</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> area-of-origin-stringing</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** area-of-origin-stringing<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Apply
-    
-    Canvas layout:
-    - Main 3D-perspective view of a room with floor, one wall, and ceiling (isometric or 3D projection)
-    - Multiple bloodstains visible on the floor with directional arrows
-    - Strings extending backward from each stain at the calculated angle
-    - Intersection zone highlighted in the air
-    
-    Interactive controls:
-    - Click a bloodstain to see its measurements (width, length, calculated angle)
-    - "Add String" button attaches a string to a selected stain and shows it projecting at the correct angle
-    - After all strings are added, "Find Intersection" button highlights the approximate convergence zone in 3D
-    - Sliders to adjust individual stain measurements to see how the convergence zone moves
-    
-    Data Visibility Requirements:
-    - Show angle of impact for each selected stain
-    - Show the x, y, z coordinates of the intersection zone (in meters from the floor)
-    - When the user changes a stain's angle, animate the string's slope changing and the convergence zone shifting
-    
-    Default scenario: Five stains positioned on the floor with pre-calculated angles; the convergence zone indicates a source at approximately 1.2m height (consistent with a standing adult)
-    
-    Instructional Rationale: An Apply-level objective (determine 3D area of origin) requires the learner to connect multiple data points in space. A 3D interactive string model makes the geometry tangible.
-    
-    Color scheme: Floor in light wood color, walls light gray, bloodstains dark red, strings bright orange, convergence zone green highlight.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

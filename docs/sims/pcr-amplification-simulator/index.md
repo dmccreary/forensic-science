@@ -1,63 +1,106 @@
 ---
 title: PCR Amplification Step-Through Simulator
-description: Explain the three steps of PCR (denaturation, annealing, extension) by tracing what happens to the DNA at each stage (Bloom Level 2 — Understand; verb: explain).
-status: scaffold
+description: Step through the three stages of one PCR cycle — denaturation, annealing, extension — and trace what happens to the DNA at each stage (Bloom L2 — Understand).
+status: built
 library: p5.js
-bloom_level: Understand (L2)
+bloom_level: Understand (L2) — explain the three steps of PCR by tracing what happens to the DNA at each stage.
+quality_score: 98
+image: /sims/pcr-amplification-simulator/pcr-amplification-simulator.png
+og:image: /sims/pcr-amplification-simulator/pcr-amplification-simulator.png
+twitter:image: /sims/pcr-amplification-simulator/pcr-amplification-simulator.png
+social:
+   cards: false
 ---
 
 # PCR Amplification Step-Through Simulator
 
+<iframe src="main.html" width="100%" height="502" scrolling="no"></iframe>
 
+[Run the PCR Amplification Step-Through Simulator Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+Forensic DNA analysis usually starts with a **tiny** amount of DNA — sometimes
+just a few cells from a touched surface. Before it can be profiled, that DNA has to
+be **amplified** into millions of copies. The tool that does this is the
+**polymerase chain reaction (PCR)**, and it works by repeating the same three
+temperature steps over and over:
+
+- **Denaturation (94 °C)** — heat unzips the double helix into two single strands.
+- **Annealing (60 °C)** — short **primers** bind to where copying should start.
+- **Extension (72 °C)** — **Taq polymerase** builds a new strand from each primer.
+
+Each complete cycle **doubles** the DNA. This MicroSim lets you step through the
+cycle one stage at a time and watch the molecule transform, with the temperature
+and copy count shown the whole way.
+
+## How to Use It
+
+1. Press **Next Step** to move through **Denaturation → Annealing → Extension**, one
+   stage at a time. Try to **predict** what the DNA will do before each reveal.
+2. Watch the **Molecular View**:
+   - Denaturation: the gray base-pair bridges break and the red and blue strands
+     drift apart.
+   - Annealing: yellow **primers** slide in and bind to each strand.
+   - Extension: a light-purple **new strand** grows from each primer while a gray
+     **polymerase** rides the growing end.
+3. Read the **side panel**: the temperature gauge, the current step name and
+   description, the cycle counter, and the **copies** counter.
+4. Press **Run Cycle** to auto-play all three steps, or **Run 5 Cycles** to watch the
+   copy count grow **exponentially** (×2, ×4, ×8, ×16, ×32).
+5. **Click any DNA part** — template strand, primer, new strand, or polymerase — to
+   read its definition.
+6. Press **Reset** to start over.
+
+## What You Can Learn
+
+- Explain what happens to the DNA at each PCR step and the temperature it needs.
+- Describe the jobs of the template strand, the primers, and Taq polymerase.
+- Explain why each cycle doubles the DNA, giving exponential amplification.
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/pcr-amplification-simulator/main.html"
+        width="100%" height="502" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 8–12 minutes
+**Bloom level:** Understand (L2) — explain.
+
+**Worked example.** Press Next Step three times and narrate each stage: "Heat
+separates the strands… the primers bind… the polymerase copies." Note the cycle
+counter ticks to 1 and copies jumps to ×2. Then press Run 5 Cycles and watch the
+copy count race to ×32.
+
+**Guided questions:**
+
+- Why must the temperature go *up* for denaturation but *down* for annealing?
+- What would happen to the reaction if you left the primers out?
+- After 10 cycles, how many copies would one starting molecule produce? (Hint:
+  it's a power of two.)
+
+**Extension.** Real PCR runs 28–35 cycles. Using the doubling rule, estimate how
+many copies 30 cycles makes from a single molecule, and discuss why that sensitivity
+is both PCR's greatest strength and a contamination risk in a forensic lab.
+
+## References
+
+- [Polymerase chain reaction (Wikipedia)](https://en.wikipedia.org/wiki/Polymerase_chain_reaction) — the denature/anneal/extend cycle and its uses.
+- [Taq polymerase (Wikipedia)](https://en.wikipedia.org/wiki/Taq_polymerase) — the heat-stable enzyme that makes PCR possible.
+- [DNA profiling (Wikipedia)](https://en.wikipedia.org/wiki/DNA_profiling) — how amplified DNA is used to identify individuals.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
 
 ## Specification
 
-The full specification below is extracted from
+This MicroSim was generated from a specification in
 [Chapter 8: Forensic DNA Profiling](../../chapters/08-forensic-dna-profiling/index.md).
 
-```text
-Type: microsim
-**sim-id:** pcr-amplification-simulator<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Learning Objective: Explain the three steps of PCR (denaturation, annealing, extension) by tracing what happens to the DNA at each stage (Bloom Level 2 — Understand; verb: explain).
-
-Bloom Level: Understand (L2)
-Bloom Verb: Explain
-
-Canvas layout:
-- Main view (~65%): molecular-level animation of the DNA strands
-- Side panel (~35%): temperature display, step label, step description, cycle counter
-
-Visual elements:
-- Two complementary DNA strands shown as colored lines (one strand red, one blue) with base pairs as short horizontal bridges
-- Primers shown as shorter yellow/green segments
-- New DNA synthesis shown as a growing strand in a lighter color
-- Temperature gauge on the side panel
-- A "copies so far" counter
-
-Interactive controls:
-- "Next Step" button advances through: Denature (94°C) → Anneal (60°C) → Extend (72°C)
-- "Run Cycle" button runs all three steps automatically with a 1-second pause between
-- "Run 5 Cycles" shows the exponential growth of copy count
-- Clicking on any DNA component (strand, primer, new strand) reveals a pop-up definition
-
-Data Visibility Requirements:
-- Denaturation step: show the hydrogen bond bridges disappearing one by one; temperature rises to 94°C; strands drift apart
-- Annealing step: show primers searching and binding to complementary positions; temperature drops to 60°C
-- Extension step: show new nucleotides being added one by one from the primer end; temperature rises to 72°C
-- After each complete cycle: show copy count double
-
-Instructional Rationale: An Understand objective (explain PCR steps) requires the learner to see the molecular transformation at each step with concrete data (temperature, copy count). Animation with Next-Step control supports prediction before each stage is revealed.
-
-Color scheme: Red and blue for template strands, yellow for primers, light purple for new strand synthesis, gray for enzyme.
-```
-
-## Related Resources
-
-- [Chapter 8: Forensic DNA Profiling](../../chapters/08-forensic-dna-profiling/index.md)
+> **Design note:** the strands, primers, and new DNA are **schematic** — straight
+> colored lines rather than a true double-helix model — so the focus stays on
+> *what changes* at each step. The temperatures (94/60/72 °C) and the doubling rule
+> are accurate; the per-step animation timing is for clarity, not real reaction
+> speed.

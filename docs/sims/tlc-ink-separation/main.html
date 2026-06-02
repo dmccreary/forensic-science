@@ -1,127 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TLC Ink Separation Interactive Diagram</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+  <title>TLC Ink Separation Interactive Diagram</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    main { display: block; }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <h1>TLC Ink Separation Interactive Diagram</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> tlc-ink-separation</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Understand (L2)</p>
-            <p><strong>Learning Objective:</strong> Explain how TLC separates ink dye components for comparison, and interpret a TLC result as matching or non-matching (Bloom Level 2 — Understand; verb: explain).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** tlc-ink-separation<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Explain how TLC separates ink dye components for comparison, and interpret a TLC result as matching or non-matching (Bloom Level 2 — Understand; verb: explain).
-    
-    Bloom Level: Understand (L2)
-    Bloom Verb: Explain
-    
-    Canvas layout:
-    - Left panel (~40%): TLC plate visualization showing spotted inks, solvent front, and separated spots
-    - Right panel (~60%): Controls and result interpretation
-    
-    Visual elements:
-    - Animated TLC plate showing solvent front rising from bottom to top
-    - Dye component spots appearing and migrating as the solvent front rises
-    - Multiple lanes: Questioned sample, Known Reference 1, Known Reference 2, Known Reference 3
-    - Rf value labels appear next to each spot when analysis is complete
-    - Toggle: White Light / UV Light mode (UV reveals additional fluorescent spots)
-    
-    Interactive controls:
-    - Dropdown: Select questioned ink type (ballpoint, rollerball, gel pen, fountain pen)
-    - Dropdown: Select reference inks for comparison lanes
-    - Button: "Run Chromatography" — animates solvent front rise and spot migration
-    - Button: "Toggle UV" — switches visualization to UV fluorescence mode
-    - Button: "Calculate Rf" — overlays Rf value calculations
-    
-    Data Visibility Requirements:
-    - Show solvent front distance and component distances used to calculate Rf
-    - Show color-coded match indicators: green checkmark when questioned Rf matches a reference; red X when it does not
-    - Show a "Match Determination" panel: "Questioned ink matches Reference 2 formulation (3/3 components matched)"
-    
-    Instructional Rationale: An Understand objective (explain TLC separation and interpret results) benefits from an animated, interactive chromatography simulation where students can run the separation and read the Rf comparisons themselves.
-    
-    Color scheme: White TLC plate background, colored dye spots, blue solvent front, green/red match indicators.
-    -->
+  <main></main>
+  <script src="tlc-ink-separation.js"></script>
+  <p><a href="./index.md">Back to Documentation</a></p>
 </body>
 </html>

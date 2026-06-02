@@ -1,10 +1,14 @@
 {
-  "title": "Angle of Impact Calculator",
-  "description": "Calculate the angle of impact of a bloodstain from width-to-length measurements (Bloom Level 3 — Apply; verb: calculate).",
-  "creator": "Dementia Education Project",
+  "title": "Angle-of-Impact Calculator",
+  "description": "Measure a bloodstain's width and length, apply sin theta = Width / Length, and reveal the angle of impact with a live trajectory and protractor diagram.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Bloodstain Pattern Analysis",
+    "Angle of Impact",
+    "Trigonometry",
+    "Trajectory"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,35 @@
   "rights": "CC BY 4.0",
   "identifier": "angle-of-impact-calculator",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — calculate the angle of impact from bloodstain width and length.",
   "bloomVerb": "Calculate",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 7,
   "chapter_title": "Bloodstain Pattern Analysis",
-  "chapter_dir": "07-bloodstain-pattern-analysis"
+  "chapter_dir": "07-bloodstain-pattern-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Angle of impact from bloodstain width-to-length ratio",
+    "learningObjectives": [
+      "Calculate the angle of impact from a bloodstain's width and length.",
+      "Explain how stain shape relates to the steepness of impact.",
+      "Connect the sin theta = W/L formula to the drop's physical trajectory."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Basic trigonometry (sine and inverse sine); ratios"
+  },
+  "pedagogical": {
+    "interactionPattern": "Calculator: size the stain by dragging handles or sliders, read the W/L ratio, then press Calculate to reveal the angle and trajectory",
+    "assessment": "Students compute sin theta = W/L and verify against the revealed angle",
+    "modelType": "Inverse-sine angle calculation with geometric trajectory diagram",
+    "controls": [
+      "Width slider (5-30 mm)",
+      "Length slider (5-60 mm)",
+      "Calculate button",
+      "New Stain button",
+      "drag handles on the stain edges"
+    ]
+  }
 }

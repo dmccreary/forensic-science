@@ -3,123 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAC and Retro-Extrapolation Calculator</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>BAC Retro-Extrapolation MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="bac-retro-extrapolation.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>BAC and Retro-Extrapolation Calculator</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> bac-retro-extrapolation</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Calculate BAC using the Widmark formula and perform a BAC retro-extrapolation (Bloom Level 3 — Apply; verb: calculate).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** bac-retro-extrapolation<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Calculate BAC using the Widmark formula and perform a BAC retro-extrapolation (Bloom Level 3 — Apply; verb: calculate).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Calculate
-    
-    Canvas layout:
-    - Left panel (~50%): BAC calculator (Widmark formula)
-    - Right panel (~50%): BAC over time graph with retro-extrapolation line
-    
-    Visual elements:
-    - Input fields for weight, sex, number of drinks, time elapsed since drinking began
-    - A line graph showing BAC rising during consumption, then declining linearly during elimination
-    - A vertical "event time" marker (e.g., "Time of driving") that the user can position
-    - A horizontal "legal limit" line at 0.08%
-    - A "measured BAC at collection" point plotted on the elimination curve
-    
-    Interactive controls:
-    - Sliders for weight (40–150 kg), drinks consumed (1–10), time of blood draw (0–8 hours after last drink), elimination rate (0.010–0.025 g/dL/hr)
-    - "Calculate" button updates the graph and shows BAC at event time vs. at draw time
-    - "Add Absorption Phase" toggle shows the pre-peak absorption curve when enabled
-    
-    Data Visibility Requirements:
-    - Show Widmark calculation steps explicitly
-    - Show retro-extrapolated BAC at event time with the arithmetic calculation
-    - Color the area of the graph where BAC > 0.08% in red
-    
-    Instructional Rationale: An Apply-level objective (calculate and retro-extrapolate BAC) requires learners to input values and see both the formula and the result. A live graph makes the time-course of alcohol metabolism tangible.
-    
-    Color scheme: Blue line for BAC curve, red shaded area above legal limit, gray vertical marker for event time, yellow point for measured BAC.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

@@ -1,64 +1,102 @@
 ---
-title: ADH and mPMI Calculator MicroSim
-description: Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).
-status: scaffold
+title: ADH minimum-PMI Calculator
+description: Calculate a minimum post-mortem interval from accumulated degree-hours and a temperature record (Bloom L3 — Apply).
+status: built
 library: p5.js
-bloom_level: Apply (L3)
+bloom_level: Apply (L3) — calculate minimum post-mortem interval from accumulated degree hours.
+quality_score: 98
+image: /sims/adh-mpmi-calculator/adh-mpmi-calculator.png
+og:image: /sims/adh-mpmi-calculator/adh-mpmi-calculator.png
+twitter:image: /sims/adh-mpmi-calculator/adh-mpmi-calculator.png
+social:
+   cards: false
 ---
 
-# ADH and mPMI Calculator MicroSim
+# ADH minimum-PMI Calculator
 
+<iframe src="main.html" width="100%" height="549" scrolling="no"></iframe>
 
+[Run the ADH mPMI Calculator Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+Blowfly larvae develop at a rate that depends on temperature. Forensic
+entomologists exploit this by counting **Accumulated Degree Hours (ADH)** — the
+sum, over time, of the temperature above a species-specific **base temperature**.
+Each developmental stage requires a known number of degree-hours to reach. By
+counting degree-hours *backward* from when a body is discovered until the total
+reaches the threshold for the observed stage, an analyst estimates the **minimum
+post-mortem interval (mPMI)** — the earliest the death could have occurred.
+
+This MicroSim lets you perform that calculation. Set a 7-day mean-temperature
+record, pick a species and larval stage, and watch the cumulative ADH accumulate
+back from the discovery day until it crosses the published threshold.
+
+## How to Use It
+
+1. Choose an **insect species** and the **developmental stage** observed on the
+   body. The stage sets the ADH threshold.
+2. Adjust the **Base Temp** slider (the temperature below which development
+   stops — it defaults to the species value).
+3. **Click any temperature bar** to select that day, then use the **Day Temp**
+   slider to edit its mean temperature.
+4. Press **Calculate mPMI**. The orange curve accumulates degree-hours back from
+   discovery; the green marker shows where it meets the red threshold line.
+5. Read the **minimum PMI** (in days) in the green result panel.
+
+## What You Can Learn
+
+- Calculate accumulated degree-hours from a temperature record and base
+  temperature.
+- Explain why warmer weather shortens the estimated PMI and cooler weather
+  lengthens it.
+- Interpret the crossing of cumulative ADH with a stage threshold as the
+  earliest possible time of death.
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/adh-mpmi-calculator/main.html"
+        width="100%" height="547" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Apply (L3) — calculate minimum PMI.
+
+**Worked calculation.** Walk students through one full calculation by hand for a
+single day (`ADH = (meanTemp − base) × 24`), then let them verify the running
+total against the simulator's cumulative curve.
+
+**Guided questions:**
+
+- Raise every day's temperature by 5°C. Does the estimated mPMI get longer or
+  shorter? Why?
+- Switch the species from *Calliphora vicina* (base 2°C) to *Lucilia sericata*
+  (base 9°C) at the same temperatures. What happens to the accumulated ADH, and
+  why?
+- Why is this called the *minimum* PMI rather than the exact time of death?
+
+**Extension.** Have students research real published ADH thresholds and discuss
+how measurement error in the temperature record propagates into the mPMI
+estimate.
+
+## References
+
+- [Forensic entomology (Wikipedia)](https://en.wikipedia.org/wiki/Forensic_entomology) — using insects to estimate time of death.
+- [Growing degree-day (Wikipedia)](https://en.wikipedia.org/wiki/Growing_degree-day) — the accumulated-temperature method adapted here as degree-hours.
+- [Post-mortem interval (Wikipedia)](https://en.wikipedia.org/wiki/Post-mortem_interval) — what the calculation estimates.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
 
 ## Specification
 
-The full specification below is extracted from
+This MicroSim was generated from a specification in
 [Chapter 12: Forensic Entomology and Decomposition Analysis](../../chapters/12-forensic-entomology/index.md).
 
-```text
-Type: microsim
-**sim-id:** adh-mpmi-calculator<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Learning Objective: Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).
-
-Bloom Level: Apply (L3)
-Bloom Verb: Calculate
-
-Canvas layout:
-- Left panel (~50%): Temperature input table (hourly temperature entries for 7 days)
-- Right panel (~50%): Running ADH sum chart; mPMI result readout
-
-Visual elements:
-- A table where students enter or edit hourly temperature values (defaults pre-populated with a realistic warm-weather 7-day dataset)
-- A bar chart showing daily ADH contributions
-- A running cumulative ADH sum line graph
-- A labeled ADH threshold line (the ADH required to reach the student-specified developmental stage)
-- A "mPMI result" panel showing: days since oviposition, calendar date of estimated earliest death, and a confidence range
-
-Interactive controls:
-- Dropdown: Select insect species (Calliphora vicina, Lucilia sericata, Phormia regina)
-- Dropdown: Select observed developmental stage (First instar, Second instar, Third instar, Pupa)
-- Input: Base temperature (defaults to 2°C for C. vicina)
-- Input or edit hourly temperatures
-- "Calculate mPMI" button runs the ADH accumulation and identifies when the threshold was crossed
-
-Data Visibility Requirements:
-- Show the ADH for each day
-- Show cumulative ADH over time
-- Show where cumulative ADH crosses the developmental threshold — this is the estimated first oviposition (= minimum death date)
-- Show the published ADH requirement for the selected species and stage (from reference table)
-
-Instructional Rationale: An Apply-level objective (calculate mPMI) requires the learner to perform the temperature-accumulation calculation themselves and see the result on the timeline.
-
-Color scheme: Blue for temperature bars, orange for cumulative ADH line, red dashed line for ADH threshold, green highlight for the mPMI result date.
-```
-
-## Related Resources
-
-- [Chapter 12: Forensic Entomology and Decomposition Analysis](../../chapters/12-forensic-entomology/index.md)
+> **Design note:** the specification calls for an editable *hourly* table across
+> 7 days (168 values). To keep the interface usable in a small embedded canvas,
+> the model uses 7 editable **daily mean** temperatures (ADH = (mean − base) ×
+> 24 per day). The ADH thresholds are illustrative reference values for teaching
+> the method, not casework figures.

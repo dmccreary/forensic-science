@@ -1,10 +1,14 @@
 {
   "title": "Skeletal Sex Indicators Interactive Diagram",
-  "description": "Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Compare male and female pelvis and skull features side by side to identify the morphological traits used to estimate biological sex from skeletal remains. Click any labeled feature (subpubic angle, greater sciatic notch, pelvic inlet, brow ridge, mastoid process, mental eminence) to see how it differs between the sexes and how reliable it is. Toggle labels off and use Quiz Me mode to self-test.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Forensic Anthropology",
+    "Skeletal Biology",
+    "Sex Estimation",
+    "Osteology"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "skeletal-sex-indicators",
   "library": "p5.js",
-  "bloomLevel": "Remember (L1)",
+  "bloomLevel": "Remember (L1) — identify the pelvic and cranial features used to estimate biological sex.",
   "bloomVerb": "Identify",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 11,
   "chapter_title": "Forensic Anthropology and Skeletal Biology",
-  "chapter_dir": "11-forensic-anthropology"
+  "chapter_dir": "11-forensic-anthropology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Pelvic and cranial features used to estimate biological sex from a skeleton",
+    "learningObjectives": [
+      "Identify the key pelvic features (subpubic angle, greater sciatic notch, pelvic inlet shape) and cranial features (brow ridge, mastoid process, mental eminence) used in sex estimation.",
+      "Describe how each feature differs between male and female skeletons.",
+      "Recall the relative reliability of each indicator, recognizing that pelvic features are more diagnostic than cranial ones."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Basic familiarity with the human skeleton and the terms pelvis and skull"
+  },
+  "pedagogical": {
+    "interactionPattern": "A 2x2 grid shows male and female pelvis schematics on top and male and female skull schematics below, with numbered, color-coded feature dots (red on the male schematics, blue on the female). Clicking any feature opens a detail panel describing the male vs. female form and a reliability bar with an accuracy percentage. A 'Hide Labels' toggle supports self-testing, and 'Quiz Me' enters a mode that presents one feature's morphology and asks the student to choose Male or Female, then gives correct/incorrect feedback.",
+    "assessment": "Self-testing and recall: the label toggle lets students check whether they can name each feature unaided, and Quiz Me converts the diagram into a male-vs-female identification task with immediate feedback, reinforcing which morphology indicates which sex.",
+    "modelType": "Annotated reference model: each feature is a record with a region, male and female descriptions, and an accuracy value; schematic line drawings of the pelvis and skull (drawn with sex-distinct proportions) anchor clickable feature dots, and the quiz draws a random feature/sex pair from the same data.",
+    "controls": [
+      "Clickable feature dots on each schematic",
+      "Hide Labels / Show Labels toggle button",
+      "Quiz Me button",
+      "Male and Female answer buttons (shown in quiz mode)"
+    ]
+  }
 }

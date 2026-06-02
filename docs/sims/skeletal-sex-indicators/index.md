@@ -1,56 +1,97 @@
 ---
 title: Skeletal Sex Indicators Interactive Diagram
-description: Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).
-status: scaffold
+description: Compare male and female pelvis and skull features side by side and identify the traits used to estimate biological sex from skeletal remains (Bloom L1 — Remember).
+status: built
 library: p5.js
-bloom_level: Remember (L1)
+bloom_level: Remember (L1) — identify the pelvic and cranial features used to estimate biological sex.
+quality_score: 98
+image: /sims/skeletal-sex-indicators/skeletal-sex-indicators.png
+og:image: /sims/skeletal-sex-indicators/skeletal-sex-indicators.png
+twitter:image: /sims/skeletal-sex-indicators/skeletal-sex-indicators.png
+social:
+   cards: false
 ---
 
 # Skeletal Sex Indicators Interactive Diagram
 
+<iframe src="main.html" width="100%" height="552" scrolling="no"></iframe>
 
+[Run the Skeletal Sex Indicators Diagram Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+When forensic anthropologists find skeletal remains, one of the first questions is:
+**was this person male or female?** The skeleton holds the answer — especially in the
+**pelvis**, which is shaped differently because of childbirth, and secondarily in the
+**skull**.
+
+This MicroSim puts the male and female versions **side by side** so you can identify
+each diagnostic feature, see how it differs between the sexes, and learn **how
+reliable** each one is. Pelvic features are the gold standard; skull features help but
+are less certain.
+
+## How to Use It
+
+1. The grid shows four schematics: **male** and **female pelvis** on top, **male** and
+   **female skull** below. Male features are marked in **red**, female in **blue**.
+2. **Click any numbered feature** — subpubic angle, greater sciatic notch, pelvic
+   inlet, brow ridge, mastoid process, or mental eminence (chin).
+3. The **Feature Detail** panel shows what that feature looks like in **males vs.
+   females** and a **reliability bar** with its accuracy as a sex indicator.
+4. Press **Hide Labels** to remove the names and test whether you can identify each
+   feature from memory.
+5. Press **Quiz Me**: one feature's description appears, and you choose **Male** or
+   **Female**. The sim tells you if you're right and reminds you how reliable that
+   feature is.
+
+## What You Can Learn
+
+- Identify the main pelvic and cranial features used to estimate biological sex.
+- Describe how each feature differs between male and female skeletons.
+- Recall which indicators are most reliable — and why the pelvis beats the skull.
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/skeletal-sex-indicators/main.html"
+        width="100%" height="552" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 8–12 minutes
+**Bloom level:** Remember (L1) — identify.
+
+**Worked example.** Click the **subpubic angle** on both pelvises. Note the male's
+narrow V (under 90°) versus the female's wide U (over 90°), and that this feature is
+~95% reliable. Then compare the **brow ridge** on the two skulls and notice its lower
+reliability (~85%).
+
+**Guided questions:**
+
+- Which three features are on the pelvis, and which three are on the skull?
+- Why is the female pelvis wider and the subpubic angle larger?
+- If the skull says "male" but the pelvis says "female," which should you trust more,
+  and why?
+
+**Extension.** Real cases often have only fragments of a skeleton. Using the
+reliability percentages here, explain why finding an intact pelvis is far more useful
+to an anthropologist than finding an intact skull.
+
+## References
+
+- [Forensic anthropology (Wikipedia)](https://en.wikipedia.org/wiki/Forensic_anthropology) — estimating sex, age, and ancestry from bone.
+- [Pelvis (Wikipedia)](https://en.wikipedia.org/wiki/Pelvis#Sexual_dimorphism) — sexual dimorphism of the human pelvis.
+- [Greater sciatic notch (Wikipedia)](https://en.wikipedia.org/wiki/Greater_sciatic_notch) — a key sex-estimation landmark.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
 
 ## Specification
 
-The full specification below is extracted from
+This MicroSim was generated from a specification in
 [Chapter 11: Forensic Anthropology and Skeletal Biology](../../chapters/11-forensic-anthropology/index.md).
 
-```text
-Type: infographic
-**sim-id:** skeletal-sex-indicators<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Learning Objective: Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).
-
-Bloom Level: Remember (L1)
-Bloom Verb: Identify
-
-Purpose: Allow investigators to compare male and female skeletal features side by side for the pelvis and skull.
-
-Layout:
-- Left panel: Male pelvis schematic | Right panel: Female pelvis schematic
-- Below: Male skull schematic | Female skull schematic
-- Each feature labeled with a clickable annotation
-
-Interactive controls:
-- Click any labeled feature (subpubic angle, greater sciatic notch, brow ridge, mastoid process, etc.) to reveal a pop-up explaining: (1) what the feature looks like in males vs. females, (2) how reliable this feature is as a sex indicator
-- Toggle between "labeled" and "unlabeled" modes for self-testing
-- "Quiz Me" mode: highlight a single feature and ask student to predict which sex (male/female) it belongs to
-
-Data Visibility Requirements:
-- Each feature pop-up shows a simple line diagram comparing male vs. female morphology side by side
-- Shows accuracy percentage for each indicator (e.g., subpubic angle: ~95% accurate; skull features: ~85% accurate)
-
-Instructional Rationale: A Remember-level objective (identify features and their significance) benefits from a labeling/annotation interface where learners can explore each feature interactively and quiz themselves.
-
-Color scheme: Bone in warm tan/ivory; female features highlighted in blue; male features highlighted in red; pop-up panels in white.
-```
-
-## Related Resources
-
-- [Chapter 11: Forensic Anthropology and Skeletal Biology](../../chapters/11-forensic-anthropology/index.md)
+> **Design note:** the pelvis and skull are **schematic line drawings** drawn with
+> sex-distinct proportions to highlight each feature — they are teaching diagrams, not
+> anatomically exact models. The accuracy percentages are typical published ranges;
+> real sex estimation scores several features together rather than relying on any one.

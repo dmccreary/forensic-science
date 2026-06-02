@@ -1,59 +1,96 @@
 ---
-title: Area of Origin Stringing Simulator
-description: Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).
-status: scaffold
+title: Area-of-Origin Stringing
+description: Determine the 3D area of origin of a blood source using stain direction and angle-of-impact data (Bloom L3 — Apply).
+status: built
 library: p5.js
-bloom_level: Apply (L3)
+bloom_level: Apply (L3) — determine the 3D area of origin from stain direction and angle data.
+quality_score: 98
+image: /sims/area-of-origin-stringing/area-of-origin-stringing.png
+og:image: /sims/area-of-origin-stringing/area-of-origin-stringing.png
+twitter:image: /sims/area-of-origin-stringing/area-of-origin-stringing.png
+social:
+   cards: false
 ---
 
-# Area of Origin Stringing Simulator
+# Area-of-Origin Stringing
 
+<iframe src="main.html" width="100%" height="502" scrolling="no"></iframe>
 
+[Run the Area-of-Origin Stringing MicroSim Fullscreen](main.html){ .md-button .md-button--primary }
 
-<iframe src="main.html" width="100%" height="600"></iframe>
+## About This MicroSim
 
-[Run MicroSim in Fullscreen](main.html){ .md-button .md-button--primary }
+Once an analyst knows the **direction** and **angle of impact** of several
+bloodstains, those stains can be traced backward through space to locate where
+the blood came from. Classically this was done with physical **strings** pinned
+to each stain and run back at the measured angle; the place where the strings
+cross is the **area of origin** of the source.
+
+This MicroSim shows a pseudo-3D room with five floor stains. Add a string to
+each stain, then find the point in the air where they converge — and read its
+x, y, z position in metres.
+
+## How to Use It
+
+1. **Click a stain** on the floor to read its width, length, and calculated
+   angle of impact.
+2. Press **Add String** to project a string back from each stain (in order) at
+   its angle.
+3. With at least two strings up, press **Find Intersection** to highlight the
+   green convergence zone and read its (x, y, z) coordinates.
+4. Drag the **Source height** slider and watch the strings re-slope and the
+   convergence zone rise or fall. Press **Reset** to start over.
+
+## What You Can Learn
+
+- Apply stain direction and angle-of-impact data to locate a source in 3D.
+- Explain why multiple stains are needed — a single string only gives a line,
+  not a point.
+- Interpret the convergence height (about 1.2 m here) as evidence about the
+  source's position, such as a standing or seated person.
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/area-of-origin-stringing/main.html"
+        width="100%" height="502" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Apply (L3) — determine the area of origin.
+
+**Walk-through.** Add strings one at a time and ask the class to predict where
+they will cross before pressing Find Intersection. Then move the height slider
+and discuss how the convergence point tracks the true source.
+
+**Guided questions:**
+
+- Why does one string alone fail to pin down the source?
+- The convergence sits about 1.2 m above the floor. What does that suggest about
+  the source's height?
+- If a stain's angle were measured incorrectly, what would happen to the
+  convergence zone?
+
+**Extension.** Connect this to the
+[Angle-of-Impact Calculator](../angle-of-impact-calculator/index.md): the angle
+each string uses comes directly from a stain's width-to-length ratio.
+
+## References
+
+- [Bloodstain pattern analysis (Wikipedia)](https://en.wikipedia.org/wiki/Bloodstain_pattern_analysis) — directionality, angle of impact, and area of origin.
+- [Area of convergence and origin](https://en.wikipedia.org/wiki/Bloodstain_pattern_analysis#Area_of_convergence_and_area_of_origin) — the stringing method.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
 
 ## Specification
 
-The full specification below is extracted from
+This MicroSim was generated from a specification in
 [Chapter 7: Bloodstain Pattern Analysis](../../chapters/07-bloodstain-pattern-analysis/index.md).
 
-```text
-Type: microsim
-**sim-id:** area-of-origin-stringing<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Learning Objective: Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).
-
-Bloom Level: Apply (L3)
-Bloom Verb: Apply
-
-Canvas layout:
-- Main 3D-perspective view of a room with floor, one wall, and ceiling (isometric or 3D projection)
-- Multiple bloodstains visible on the floor with directional arrows
-- Strings extending backward from each stain at the calculated angle
-- Intersection zone highlighted in the air
-
-Interactive controls:
-- Click a bloodstain to see its measurements (width, length, calculated angle)
-- "Add String" button attaches a string to a selected stain and shows it projecting at the correct angle
-- After all strings are added, "Find Intersection" button highlights the approximate convergence zone in 3D
-- Sliders to adjust individual stain measurements to see how the convergence zone moves
-
-Data Visibility Requirements:
-- Show angle of impact for each selected stain
-- Show the x, y, z coordinates of the intersection zone (in meters from the floor)
-- When the user changes a stain's angle, animate the string's slope changing and the convergence zone shifting
-
-Default scenario: Five stains positioned on the floor with pre-calculated angles; the convergence zone indicates a source at approximately 1.2m height (consistent with a standing adult)
-
-Instructional Rationale: An Apply-level objective (determine 3D area of origin) requires the learner to connect multiple data points in space. A 3D interactive string model makes the geometry tangible.
-
-Color scheme: Floor in light wood color, walls light gray, bloodstains dark red, strings bright orange, convergence zone green highlight.
-```
-
-## Related Resources
-
-- [Chapter 7: Bloodstain Pattern Analysis](../../chapters/07-bloodstain-pattern-analysis/index.md)
+> **Design note:** the room uses a 2D axonometric projection rather than true
+> 3D. The five strings are constructed to pass through one source point so the
+> convergence is clean for teaching; instead of per-stain angle sliders (which
+> would prevent convergence), a single **Source height** control moves the true
+> origin so students can watch the strings and convergence zone respond.

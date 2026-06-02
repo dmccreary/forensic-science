@@ -3,124 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFIS Search and Comparison Workflow</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>AFIS Search Workflow MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="afis-search-workflow.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>AFIS Search and Comparison Workflow</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> afis-search-workflow</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Understand (L2)</p>
-            <p><strong>Learning Objective:</strong> Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom Level 2 — Understand; verb: explain).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: workflow
-    **sim-id:** afis-search-workflow<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom Level 2 — Understand; verb: explain).
-    
-    Bloom Level: Understand (L2)
-    Bloom Verb: Explain
-    
-    Purpose: Walk investigators through the AFIS search pipeline from latent print scan to candidate list to examiner review.
-    
-    Visual layout:
-    - Horizontal step-through diagram with five stations:
-      1. Latent Print Scanned
-      2. Minutiae Extraction (mathematical encoding)
-      3. Database Search (comparison against stored templates)
-      4. Candidate List Generated (ranked results)
-      5. Human Examiner Review (final identification or exclusion)
-    
-    Interactive elements:
-    - Click any station to reveal a detailed description panel
-    - An animated "minutiae map" at Stage 2 shows a fingerprint with dots placed at ridge endings (red) and bifurcations (blue) — dots appear one by one as the extraction animates
-    - At Stage 4, a simulated candidate list shows three "match" cards ranked by score (e.g., 92/100, 78/100, 61/100), each with a fingerprint thumbnail
-    - At Stage 5, a banner reads "AFIS does NOT make identifications — examiner required"
-    
-    Data Visibility Requirements:
-    - Stage 2: Show the minutiae encoding process — a scanned print image, then overlay of dots at ridge endings and bifurcations, then a simplified (x, y, angle) coordinate list
-    - Stage 4: Show candidate list with realistic AFIS score numbers
-    
-    Hover text for each station explains the process in 2–3 sentences.
-    
-    Color scheme: Blue for database/technology stages, green for human review stage (reinforcing that the human makes the call).
-    
-    Instructional Rationale: The Understand objective (explain how AFIS works) requires the learner to trace the process with concrete data. Step-through with data visibility at each stage shows the transformation from print to template to candidate list.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

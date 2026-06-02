@@ -1,10 +1,14 @@
 {
   "title": "ADME Pathway Interactive Flow Diagram",
-  "description": "Explain the ADME pharmacokinetic pathway and describe what happens to a drug at each stage (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
+  "description": "Animate a drug's journey through Absorption, Distribution, Metabolism, and Elimination; pick a route of administration and watch the blood-concentration curve change as molecules flow through the organ stages.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Forensic Toxicology",
+    "Pharmacokinetics",
+    "ADME",
+    "Drug Metabolism"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "adme-pathway",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain the ADME pathway and what happens at each stage.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 9,
   "chapter_title": "Forensic Toxicology and Chemical Analysis",
-  "chapter_dir": "09-forensic-toxicology"
+  "chapter_dir": "09-forensic-toxicology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "ADME pharmacokinetic pathway and drug detection windows",
+    "learningObjectives": [
+      "Explain each of the four ADME phases and name the responsible organs.",
+      "Describe how route of administration changes the blood-concentration curve.",
+      "Relate blood concentration over time to detection windows in blood, urine, and hair."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Basic human anatomy (liver, kidneys); reading a line graph"
+  },
+  "pedagogical": {
+    "interactionPattern": "Step-through animation: choose a route, play/pause the molecule flow, click a stage to read its description",
+    "assessment": "Students explain each phase and interpret how the concentration curve differs by route",
+    "modelType": "Bateman-style absorption/elimination curve over a normalized 24-hour axis",
+    "controls": [
+      "Route dropdown (oral / IV / inhaled)",
+      "Pause/Play button",
+      "Reset button",
+      "click a stage box to open its description"
+    ]
+  }
 }

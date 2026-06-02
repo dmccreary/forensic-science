@@ -1,10 +1,14 @@
 {
-  "title": "Headspace SPME Collection to GC-MS Workflow",
-  "description": "Explain how headspace SPME recovers volatile accelerant residues from arson debris and connects to GC-MS identification (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "title": "Headspace SPME → GC-MS Workflow",
+  "description": "Explain how headspace solid-phase microextraction (SPME) recovers volatile accelerant residues from arson debris and connects to GC-MS identification. A five-station workflow shows debris collection, the sealed can with accumulating headspace vapors, SPME extraction, GC-MS injection, and an interactive chromatogram whose peak pattern is matched to a reference accelerant.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Fire and Arson Investigation",
+    "Accelerant Analysis",
+    "GC-MS",
+    "Solid-Phase Microextraction"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "headspace-spme-workflow",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain the SPME-to-GC-MS accelerant analysis workflow.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 10,
   "chapter_title": "Fire Investigation, Arson, and Explosives",
-  "chapter_dir": "10-fire-arson-explosives"
+  "chapter_dir": "10-fire-arson-explosives",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Recovering and identifying accelerant residues from fire debris with headspace SPME and GC-MS",
+    "learningObjectives": [
+      "Explain each stage of the headspace SPME workflow, from sealed-can collection to GC-MS analysis.",
+      "Explain why the sealed can and headspace step concentrate volatile accelerant vapors for sampling.",
+      "Interpret a GC-MS chromatogram: read the peak pattern and match it to a reference accelerant type."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Basic idea that liquids evaporate and that instruments can separate and identify chemicals"
+  },
+  "pedagogical": {
+    "interactionPattern": "A horizontal five-station workflow (Debris Collection → Sealed Can/Headspace → SPME Extraction → GC-MS Injection → Chromatogram) with animated blue data-flow dots. The sealed-can station animates accelerant molecules rising from the debris into the headspace. Clicking any station opens a detail panel with its purpose and a 'why this step' note. The chromatogram panel plots a Gaussian peak trace; clicking a peak reveals the compound name and retention time, and a reference-match panel names the matching accelerant. An accelerant selector switches the peak pattern between gasoline, lighter fluid, and kerosene; a Replay Vapor button restarts the headspace animation.",
+    "assessment": "Students read each station's role and why it is necessary, watch headspace saturation build, identify chromatogram peaks by clicking them, and confirm that the peak pattern matches the selected reference accelerant — switching accelerants shows how the pattern (and therefore the identification) changes.",
+    "modelType": "Step-through workflow diagram plus a chromatogram rendered as a sum of Gaussian peaks from per-accelerant peak tables (retention time, name, relative height) for gasoline (aromatic cluster), lighter fluid (light n-alkanes), and kerosene (heavy n-alkane series).",
+    "controls": [
+      "Click a station to reveal its purpose and rationale",
+      "Click a chromatogram peak to identify the compound and retention time",
+      "Accelerant selector (Gasoline / Lighter Fluid / Kerosene)",
+      "Replay Vapor button"
+    ]
+  }
 }

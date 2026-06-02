@@ -1,10 +1,14 @@
 {
-  "title": "Area of Origin Stringing Simulator",
-  "description": "Determine the three-dimensional area of origin using stain direction and angle-of-impact data (Bloom Level 3 — Apply; verb: apply).",
-  "creator": "Dementia Education Project",
+  "title": "Area-of-Origin Stringing",
+  "description": "A pseudo-3D room of floor bloodstains. Add a string to each stain to project it back at its angle of impact, then find the 3D convergence zone and read the source's x, y, z position in metres.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Bloodstain Pattern Analysis",
+    "Area of Origin",
+    "Stringing Method",
+    "Angle of Impact"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,35 @@
   "rights": "CC BY 4.0",
   "identifier": "area-of-origin-stringing",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — determine the 3D area of origin from stain direction and angle data.",
   "bloomVerb": "Apply",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 7,
   "chapter_title": "Bloodstain Pattern Analysis",
-  "chapter_dir": "07-bloodstain-pattern-analysis"
+  "chapter_dir": "07-bloodstain-pattern-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Determining the 3D area of origin of a blood source by stringing",
+    "learningObjectives": [
+      "Apply stain direction and angle-of-impact data to locate a source in 3D.",
+      "Explain why multiple stains are required to fix a single point of origin.",
+      "Interpret the convergence height as evidence about the source's position."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Angle of impact (sin theta = W/L); basic 3D coordinates"
+  },
+  "pedagogical": {
+    "interactionPattern": "Build-up: click stains for data, add strings one at a time, find the intersection, and adjust source height to watch convergence move",
+    "assessment": "Students locate the convergence zone and read its 3D coordinates",
+    "modelType": "Axonometric room with strings constructed through a shared source point",
+    "controls": [
+      "Add String button",
+      "Find Intersection button",
+      "Reset button",
+      "Source height slider (0.5-2.0 m)",
+      "click a stain to select it"
+    ]
+  }
 }

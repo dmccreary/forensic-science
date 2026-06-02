@@ -1,10 +1,14 @@
 {
   "title": "Glass Fracture Sequence Analyzer",
-  "description": "Apply the 3R Rule to determine impact direction and sequence from a glass fracture pattern (Bloom Level 3 — Apply; verb: apply).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Apply the fracture-sequencing rule — a radial crack stops when it meets a pre-existing crack — to determine which of two impacts on a glass pane happened first. Click the impact you believe cracked first, then reveal the termination points (red ✕) where the later impact's radial cracks were interrupted by the earlier ones.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Physical Trace Evidence",
+    "Glass Analysis",
+    "Fracture Sequencing",
+    "Crime Scene Reconstruction"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "glass-fracture-sequence",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — apply the fracture-sequencing rule to determine impact order.",
   "bloomVerb": "Apply",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 5,
   "chapter_title": "Glass, Soil, and Physical Trace Evidence",
-  "chapter_dir": "05-glass-soil-trace-evidence"
+  "chapter_dir": "05-glass-soil-trace-evidence",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Sequencing glass impacts from radial fracture termination",
+    "learningObjectives": [
+      "Apply the rule that a radial crack stops where it meets a pre-existing crack to decide which impact came first.",
+      "Identify termination points where the later impact's radial cracks are interrupted by the earlier impact's cracks.",
+      "Explain how fracture sequencing reconstructs the order of events at a crime scene."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Basic idea that glass cracks radiate from an impact point; no physics background required"
+  },
+  "pedagogical": {
+    "interactionPattern": "A glass pane shows two impact points, each with radial and concentric fractures. The radial cracks of the later impact that point toward the earlier impact are interrupted where they meet the earlier cracks. The student clicks the impact they think cracked first; Reveal Answer marks the termination points (red ✕), labels the impacts #1 and #2, and gives correct/incorrect feedback. New Pattern generates a fresh randomized two-impact scenario.",
+    "assessment": "The student applies the sequencing rule by choosing which impact cracked first. Feedback confirms the choice, highlights the termination points proving the order, and reports how many of the later impact's radials terminated.",
+    "modelType": "Geometric fracture model: radial cracks from the older impact run uninterrupted to the glass edge; radials from the younger impact aimed toward the older one are truncated at the meeting point and marked as terminations.",
+    "controls": [
+      "Click an impact point to choose which cracked first",
+      "Reveal Answer button",
+      "New Pattern button"
+    ]
+  }
 }

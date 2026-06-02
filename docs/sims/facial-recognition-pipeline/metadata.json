@@ -1,10 +1,14 @@
 {
-  "title": "Facial Recognition Pipeline Interactive Diagram",
-  "description": "Identify the stages of the facial recognition pipeline and the source of error at each stage (Bloom Level 1 — Remember; verb: identify).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "title": "Facial Recognition Pipeline",
+  "description": "Identify the five stages of an automated facial-recognition pipeline (Input Image, Face Detection, Landmark Extraction, Feature Vector, Database Comparison) and the source of error at each. Click a stage for detail, degrade the image quality, or switch between a deep-learning (CNN) and classical (Eigenface) algorithm to see how detection confidence, match scores, and demographic error rates change.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Digital Forensics",
+    "Facial Recognition",
+    "Biometrics",
+    "Algorithmic Bias"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "facial-recognition-pipeline",
   "library": "p5.js",
-  "bloomLevel": "Remember (L1)",
+  "bloomLevel": "Remember (L1) — identify the stages of the facial-recognition pipeline and the error source at each.",
   "bloomVerb": "Identify",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 16,
-  "chapter_title": "Facial Recognition Technologies and Biometric Identification",
-  "chapter_dir": "16-facial-recognition"
+  "chapter_title": "Facial Recognition",
+  "chapter_dir": "16-facial-recognition",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "The stages of an automated facial-recognition pipeline and the source of error at each",
+    "learningObjectives": [
+      "Identify the five stages of the facial-recognition pipeline in order.",
+      "Name the characteristic source of error introduced at each stage.",
+      "Recognize that match scores and demographic error rates depend on image quality and the recognition algorithm."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "15-20 minutes",
+    "prerequisites": "None; familiarity with the idea of a database lookup is helpful"
+  },
+  "pedagogical": {
+    "interactionPattern": "Clickable five-stage pipeline diagram with per-stage detail panels, an animated probe dot, a degrade/restore image-quality toggle, and an algorithm selector (CNN vs Eigenface) that updates match scores and a demographic-error panel",
+    "assessment": "Students identify each stage and its error source, then observe how degrading image quality and switching algorithms shift the similarity scores against the match threshold and the demographic error rates",
+    "modelType": "Stage-state explorer: each stage exposes what it does, what can go wrong, and the effect on the error rate, with a gallery ranking driven by a simple score table that varies by algorithm and image quality",
+    "controls": [
+      "Click a pipeline stage to view its detail and visual",
+      "Degrade/Restore Image Quality button",
+      "Algorithm selector (Deep Learning CNN / Classical Eigenface)"
+    ]
+  }
 }

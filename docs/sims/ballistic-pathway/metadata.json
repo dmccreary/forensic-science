@@ -1,10 +1,14 @@
 {
-  "title": "Firearms Ballistic Pathway Interactive Diagram",
-  "description": "Identify the three ballistic phases and the key evidence produced at each stage (Bloom Level 1 — Remember; verb: identify).",
-  "creator": "Dementia Education Project",
+  "title": "Firearms Ballistic Pathway",
+  "description": "Annotated diagram of the three ballistic phases — internal, external, terminal — with clickable evidence items (rifling marks, breech face impression, GSR, trajectory angle, wound characteristics) that identify what each is, when it is produced, and how it is collected.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Firearms Examination",
+    "Ballistics",
+    "Gunshot Residue",
+    "Wound Ballistics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,35 @@
   "rights": "CC BY 4.0",
   "identifier": "ballistic-pathway",
   "library": "p5.js",
-  "bloomLevel": "Remember (L1)",
+  "bloomLevel": "Remember (L1) — identify the evidence produced at each ballistic phase.",
   "bloomVerb": "Identify",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 13,
   "chapter_title": "Firearms, Ballistics, and Toolmark Examination",
-  "chapter_dir": "13-firearms-and-ballistics"
+  "chapter_dir": "13-firearms-and-ballistics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Ballistic phases and the evidence each produces",
+    "learningObjectives": [
+      "Identify the three ballistic phases: internal, external, and terminal.",
+      "Match each phase to the evidence it produces (rifling marks, breech face impression, GSR, trajectory, wound morphology).",
+      "Describe what each evidence type is, when it forms, and how it is collected."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "10-15 minutes",
+    "prerequisites": "None"
+  },
+  "pedagogical": {
+    "interactionPattern": "Annotated clickable diagram: click an evidence label (or the entry/exit wound) to open a detail panel; hover the barrel cross-section to animate rifling striations",
+    "assessment": "Students identify which phase produces each evidence item and read its collection procedure",
+    "modelType": "Static annotated infographic with click-to-reveal detail panel",
+    "controls": [
+      "Evidence dropdown",
+      "Animate rifling checkbox",
+      "Reset button",
+      "click evidence labels and wound regions",
+      "hover the barrel cross-section"
+    ]
+  }
 }

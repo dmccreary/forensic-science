@@ -1,126 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glass Fracture Sequence Analyzer</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+  <title>Glass Fracture Sequence Analyzer</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    main { display: block; }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Glass Fracture Sequence Analyzer</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> glass-fracture-sequence</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Apply the 3R Rule to determine impact direction and sequence from a glass fracture pattern (Bloom Level 3 — Apply; verb: apply).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** glass-fracture-sequence<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Apply the 3R Rule to determine impact direction and sequence from a glass fracture pattern (Bloom Level 3 — Apply; verb: apply).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Apply
-    
-    Canvas layout:
-    - Main view (~70%): rectangular glass panel showing fracture pattern
-    - Control panel (~30%): impact simulation controls and analysis tools
-    
-    Visual elements:
-    - Glass panel rendered as a light blue-gray rectangle
-    - Radial fracture lines in dark gray, radiating from impact point(s)
-    - Concentric fracture lines in medium gray, forming rings
-    - Impact point(s) marked with a small circle
-    - On termination events (second fracture meeting first), a small red "T" mark shows where the second fracture stopped
-    
-    Interactive controls:
-    - Click anywhere on the glass to add an impact point (up to 3 impacts)
-    - The simulation draws realistic radial and concentric fracture patterns for each impact
-    - A "Which came first?" quiz button: hides the impact sequence numbers and asks students to click the impacts in the order they believe they occurred
-    - Correct/wrong feedback with explanation citing the 3R Rule
-    
-    Data Visibility Requirements:
-    - Stage 1: Show a pre-built two-impact fracture pattern with the sequence hidden
-    - Stage 2: Student clicks to identify which impact point is #1 (first), then #2 (second)
-    - Stage 3: Reveal correct sequence; highlight the termination points where fracture lines from impact #2 stop at fracture lines from impact #1
-    
-    Instructional Rationale: An Apply-level objective (apply the 3R Rule) requires the student to use the rule to reach a conclusion, not just recall it. The sequence quiz format forces active analysis.
-    
-    Color scheme: Light blue-gray glass; dark gray radial lines; medium gray concentric lines; red termination marks; green for correct answer highlights.
-    -->
+  <main></main>
+  <script src="glass-fracture-sequence.js"></script>
+  <p><a href="./index.md">Back to Documentation</a></p>
 </body>
 </html>

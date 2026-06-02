@@ -3,129 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABO Blood Typing Interactive Simulator</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>ABO Blood Typing Interactive Simulator MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="abo-blood-typing.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>ABO Blood Typing Interactive Simulator</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> abo-blood-typing</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Understand (L2)</p>
-            <p><strong>Learning Objective:</strong> Explain the ABO blood typing procedure and interpret agglutination results to determine blood type (Bloom Level 2 — Understand; verb: interpret).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** abo-blood-typing<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Explain the ABO blood typing procedure and interpret agglutination results to determine blood type (Bloom Level 2 — Understand; verb: interpret).
-    
-    Bloom Level: Understand (L2)
-    Bloom Verb: Interpret
-    
-    Canvas layout:
-    - Main view (~65%): two test wells side by side (one labeled Anti-A, one labeled Anti-B)
-    - Control panel (~35%): blood type selection (hidden initially), reaction results, explanation panel
-    
-    Visual elements:
-    - Two circular test wells on a slide background
-    - Animated agglutination: when a reaction occurs, small circles (RBCs) cluster together into visible clumps
-    - When no reaction occurs, the circles remain evenly dispersed
-    - A color indicator: agglutination (positive) shown as dark red clumped mass; no agglutination (negative) as smooth reddish tint
-    
-    Interactive controls:
-    - A "Select Blood Sample" dropdown with four mystery samples (each corresponds to a blood type)
-    - "Add Anti-A" and "Add Anti-B" buttons that trigger the well animations
-    - A "Determine Blood Type" button that reveals the correct answer after the student makes their prediction
-    - Rh factor add-on: a third well with Anti-D reagent can be shown/hidden
-    
-    Data Visibility Requirements:
-    - Stage 1: Show two empty wells
-    - Stage 2: Student adds reagents; animation shows agglutination or smooth suspension
-    - Stage 3: Student predicts blood type; "Reveal" button shows correct type with explanation
-    
-    Behavior:
-    - Type A: Anti-A well agglutinates; Anti-B well stays clear
-    - Type B: Anti-B agglutinates; Anti-A clear
-    - Type AB: Both wells agglutinate
-    - Type O: Neither well agglutinates
-    
-    Instructional Rationale: The Understand objective (interpret agglutination results) requires the learner to observe the reaction and connect visual output to underlying chemistry — best achieved by animated simulation rather than text description.
-    
-    Color scheme: Dark red for agglutination, light reddish tint for clear suspension, white slide background.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

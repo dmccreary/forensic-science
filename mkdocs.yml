@@ -127,14 +127,46 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
-    - Learning Graph Viewer: sims/graph-viewer/index.md
-    - Interactive Timeline of Forensic Science History: sims/forensic-science-history-timeline/index.md
-    - Locard Exchange Principle Visualizer: sims/locard-exchange-visualizer/index.md
-    - Daubert vs. Frye Admissibility Decision Workflow: sims/daubert-frye-decision-workflow/index.md
+    - ABO Blood Typing Interactive Simulator: sims/abo-blood-typing/index.md
+    - ADH minimum-PMI Calculator: sims/adh-mpmi-calculator/index.md
+    - ADME Pathway Interactive Flow Diagram: sims/adme-pathway/index.md
+    - AFIS Search Workflow: sims/afis-search-workflow/index.md
+    - Angle-of-Impact Calculator: sims/angle-of-impact-calculator/index.md
+    - Area-of-Origin Stringing: sims/area-of-origin-stringing/index.md
+    - BAC Retro-Extrapolation: sims/bac-retro-extrapolation/index.md
+    - Becke Line Test Simulator: sims/becke-line-test/index.md
+    - CDR & Tower Triangulation Timeline: sims/cdr-tower-triangulation/index.md
+    - Chain of Custody Flow: sims/chain-of-custody-flow/index.md
     - Criminal Justice Process — From Crime Scene to Verdict: sims/criminal-justice-process-flow/index.md
+    - Daubert vs. Frye Admissibility Decision Workflow: sims/daubert-frye-decision-workflow/index.md
     - Debris Field Pattern Explorer: sims/debris-field-pattern-explorer/index.md
-    - NTSB Investigation Workflow: sims/ntsb-investigation-workflow/index.md
+    - Evidence Packaging Guide: sims/evidence-packaging-guide/index.md
+    - Evidence Search Pattern Selector: sims/search-pattern-selector/index.md
+    - Facial Recognition Pipeline: sims/facial-recognition-pipeline/index.md
+    - Fiber Identification Decision Tree: sims/fiber-identification-tree/index.md
+    - Fingerprint Pattern Classification Explorer: sims/fingerprint-pattern-explorer/index.md
+    - Firearms Ballistic Pathway: sims/ballistic-pathway/index.md
+    - Forensic Imaging & Hash Verification Workflow: sims/forensic-imaging-workflow/index.md
+    - Glass Fracture Sequence Analyzer: sims/glass-fracture-sequence/index.md
+    - Handwriting Characteristics Comparison: sims/handwriting-comparison/index.md
+    - Headspace SPME → GC-MS Workflow: sims/headspace-spme-workflow/index.md
+    - Interactive Timeline of Forensic Science History: sims/forensic-science-history-timeline/index.md
     - Landmark Crash Investigations Timeline: sims/aviation-crash-investigation-timeline/index.md
+    - Latent Print Development Technique Selector: sims/latent-print-development/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Locard Exchange Principle Visualizer: sims/locard-exchange-visualizer/index.md
+    - Medullary Index Calculator: sims/medullary-index-calculator/index.md
+    - Metadata Recovery and Timeline Builder: sims/metadata-timeline-builder/index.md
+    - NTSB Investigation Workflow: sims/ntsb-investigation-workflow/index.md
+    - PCR Amplification Step-Through Simulator: sims/pcr-amplification-simulator/index.md
+    - Random Match Probability Product Rule Calculator: sims/rmp-product-rule/index.md
+    - Skeletal Sex Indicators Interactive Diagram: sims/skeletal-sex-indicators/index.md
+    - Social Network Analysis Graph Explorer: sims/social-network-analysis/index.md
+    - Soil Analysis Comparison Dashboard: sims/soil-analysis-dashboard/index.md
+    - TLC Ink Separation Interactive Diagram: sims/tlc-ink-separation/index.md
+    - Triangulation Measurement Technique: sims/triangulation-measurement/index.md
+
+
 
   - FAQ: faq.md
   - Glossary: glossary.md

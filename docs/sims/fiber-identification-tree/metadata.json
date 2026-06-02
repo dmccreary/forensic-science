@@ -1,10 +1,14 @@
 {
   "title": "Fiber Identification Decision Tree",
-  "description": "Apply a multi-step identification protocol (microscopy → burn test → solubility test) to classify an unknown fiber (Bloom Level 3 — Apply; verb: apply).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Apply a multi-step forensic protocol (burn test, microscopy, solubility) to classify an unknown textile fiber. Read the observed test results for a sample, then answer Yes/No at each decision node to walk a branching tree to a classification (Cotton, Wool, Silk, Nylon, or Polyester).",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Trace Evidence",
+    "Fiber Analysis",
+    "Microscopy",
+    "Burn Test"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "fiber-identification-tree",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — apply a multi-step identification protocol to classify an unknown fiber.",
   "bloomVerb": "Apply",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 4,
   "chapter_title": "Hair, Fiber, and Trace Evidence Analysis",
-  "chapter_dir": "04-hair-and-fiber-analysis"
+  "chapter_dir": "04-hair-and-fiber-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Classifying textile fibers with a branching burn / microscopy / solubility protocol",
+    "learningObjectives": [
+      "Apply a sequential identification protocol (burn test, then microscopy, then solubility) to an unknown fiber.",
+      "Use observed test results to choose Yes/No at each decision node and reach a classification.",
+      "Distinguish natural (cellulosic and protein) fibers from synthetic fibers by their burn behavior and residue."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "20-25 minutes",
+    "prerequisites": "Familiarity with reading a flowchart; the idea that fibers can be natural or synthetic"
+  },
+  "pedagogical": {
+    "interactionPattern": "Top-down branching decision tree with diamond decision nodes and leaf classifications. A sample card lists the observed burn, microscopy, and solubility results; the student answers Yes/No to traverse the highlighted node and gets per-step match feedback, ending at a leaf marked correct or incorrect.",
+    "assessment": "Students read the sample's observed results, answer each decision correctly, and reach the matching fiber leaf (green check); diverging answers are flagged so the student sees where the logic broke down",
+    "modelType": "Deterministic decision tree: each node tests one boolean property of the randomly assigned sample (melts, burning-hair smell, hard black bead, bleach-soluble) that the student infers from the observation card",
+    "controls": [
+      "Answer: Yes button",
+      "Answer: No button",
+      "Start New Sample button (assigns a random unknown fiber with preset test results)"
+    ]
+  }
 }

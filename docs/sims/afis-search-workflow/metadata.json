@@ -1,10 +1,14 @@
 {
-  "title": "AFIS Search and Comparison Workflow",
-  "description": "Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
+  "title": "AFIS Search Workflow",
+  "description": "Step through the five AFIS stations from latent scan to examiner review, with concrete data at each stage: the scanned print, the (x, y, angle) minutiae template, the database search, the scored candidate list, and the human examiner decision.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Fingerprint Analysis",
+    "Dactyloscopy",
+    "AFIS",
+    "Minutiae"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "afis-search-workflow",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain how AFIS encodes minutiae and generates a candidate list for examiner review.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 3,
   "chapter_title": "Fingerprint Analysis and Dactyloscopy",
-  "chapter_dir": "03-fingerprint-analysis"
+  "chapter_dir": "03-fingerprint-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "AFIS fingerprint search pipeline and minutiae encoding",
+    "learningObjectives": [
+      "Explain how AFIS encodes a fingerprint as a numeric minutiae template rather than an image.",
+      "Describe what an AFIS candidate list and similarity scores mean.",
+      "Explain why a human examiner, not AFIS, makes the final identification or exclusion."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Familiarity with fingerprint ridge patterns and minutiae"
+  },
+  "pedagogical": {
+    "interactionPattern": "Workflow step-through: advance through five stations, click a station to reveal its description and a stage-specific data visualization",
+    "assessment": "Students explain each stage and interpret the candidate scores and examiner role",
+    "modelType": "Five-station pipeline with animated minutiae extraction and a scored candidate list",
+    "controls": [
+      "Prev button",
+      "Next button",
+      "Replay animation button",
+      "click a station box to jump to that stage"
+    ]
+  }
 }

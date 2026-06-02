@@ -1,10 +1,14 @@
 {
   "title": "ABO Blood Typing Interactive Simulator",
-  "description": "Explain the ABO blood typing procedure and interpret agglutination results to determine blood type (Bloom Level 2 — Understand; verb: interpret).",
-  "creator": "Dementia Education Project",
+  "description": "Interpret agglutination reactions with Anti-A, Anti-B, and Anti-D antisera to determine the ABO/Rh type of a mystery blood sample.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Forensic Serology",
+    "Blood Typing",
+    "ABO Blood Group",
+    "Agglutination"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,36 @@
   "rights": "CC BY 4.0",
   "identifier": "abo-blood-typing",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — interpret agglutination results to determine blood type.",
   "bloomVerb": "Interpret",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 6,
   "chapter_title": "Forensic Serology and Biological Fluid Analysis",
-  "chapter_dir": "06-forensic-serology"
+  "chapter_dir": "06-forensic-serology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "ABO/Rh blood typing and agglutination",
+    "learningObjectives": [
+      "Interpret agglutination patterns to determine ABO blood type.",
+      "Connect a positive antiserum reaction to a specific red-cell antigen.",
+      "Explain the reaction patterns of Type O and Type AB blood."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Basic idea of antigens and antibodies"
+  },
+  "pedagogical": {
+    "interactionPattern": "Predict-Test-Observe: select mystery sample, add antisera, observe agglutination, predict type, reveal",
+    "assessment": "Students predict the blood type from the +/- reaction pattern before revealing the answer",
+    "modelType": "Rule-based reaction simulation with animated agglutination",
+    "controls": [
+      "Sample dropdown",
+      "Add Anti-A button",
+      "Add Anti-B button",
+      "Reveal Type button",
+      "New Sample button",
+      "Test Rh (Anti-D) checkbox"
+    ]
+  }
 }
