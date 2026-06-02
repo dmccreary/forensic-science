@@ -3,130 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidence Search Pattern Selector</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Search Pattern Selector MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="search-pattern-selector.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Evidence Search Pattern Selector</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> search-pattern-selector</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** search-pattern-selector<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Select
-    
-    Canvas layout:
-    - Scene display area (left ~70%): overhead grid representing the scene
-    - Control panel (right ~30%): pattern selection, scene parameters, animated searcher dots
-    
-    Visual elements:
-    - A grid representing a top-down scene view (outdoor field, interior room)
-    - Animated dots representing searchers moving through the scene using the selected pattern
-    - Color-coded cells: unsearched (light gray), currently being searched (yellow), searched (green)
-    - A summary panel showing the pattern's best-use conditions
-    
-    Interactive controls:
-    - Dropdown: Select pattern (Grid, Spiral Inward, Spiral Outward, Zone)
-    - Slider: Number of searchers (1–6)
-    - Dropdown: Scene type (indoor room, outdoor field, large outdoor area)
-    - Button: "Start Search" / "Pause" / "Reset"
-    - Animation speed slider
-    
-    Default parameters:
-    - Pattern: Grid
-    - Searchers: 2
-    - Scene: outdoor field (20×20 grid)
-    
-    Behavior:
-    - "Start Search" animates searcher dots moving through the selected pattern
-    - At completion, a summary shows total cells searched, animation steps elapsed, and a pattern efficiency rating
-    - If the user selects more searchers than the pattern supports efficiently, a warning tooltip appears
-    - Clicking a grid cell reveals the type of evidence that might be found there (randomly assigned from a list: fiber, footwear impression, latent print, etc.)
-    
-    Instructional Rationale: An Apply-level objective (select and use a search pattern) requires the learner to experiment with the variables that govern pattern selection — scene size, team size, pattern type — and observe the consequences. Animation with coverage feedback makes the trade-offs visible rather than abstract.
-    
-    Color scheme: Gray unsearched, yellow active, green cleared. If "contamination mode" is toggled on, cells a searcher skips appear red.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

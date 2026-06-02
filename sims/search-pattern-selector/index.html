@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook on forensic science techniques, evidence analysis, and crime scene investigation">
+        <meta name="description" content="Apply (Bloom L3) crime-scene search-pattern rules by selecting a search pattern for a given scene, running an animated overhead sweep, and judging the coverage, time, and personnel trade-offs against a live fit rating.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Index - Forensic Science</title>
+        <title>Evidence Search Pattern Selector - Forensic Science</title>
       
     
     
@@ -59,7 +59,9 @@
     
     
     
-  </head>
+    <meta property="og:image" content="https://dmccreary.github.io/forensic-science/sims/search-pattern-selector/search-pattern-selector.png">
+  <meta name="twitter:image" content="https://dmccreary.github.io/forensic-science/sims/search-pattern-selector/search-pattern-selector.png">
+</head>
   
   
     
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Evidence Search Pattern Selector
             
           </span>
         </div>
@@ -613,18 +615,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#specification" class="md-nav__link">
+  <a href="#about-this-microsim" class="md-nav__link">
     <span class="md-ellipsis">
-      Specification
+      About This MicroSim
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-resources" class="md-nav__link">
+  <a href="#how-to-use-it" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Resources
+      How to Use It
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What You Can Learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson Plan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification
     </span>
   </a>
   
@@ -653,72 +691,115 @@
   
 
 
-<hr />
-<p>title: Evidence Search Pattern Selector
-description: Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).
-status: scaffold
-library: p5.js
-bloom_level: Apply (L3)</p>
-<hr />
 <h1 id="evidence-search-pattern-selector">Evidence Search Pattern Selector<a class="headerlink" href="#evidence-search-pattern-selector" title="Permanent link">&para;</a></h1>
-<iframe src="main.html" width="100%" height="600"></iframe>
+<iframe src="main.html" width="100%" height="602" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run MicroSim in Fullscreen</a></p>
-<h2 id="specification">Specification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
-<p>The full specification below is extracted from
-<a href="../../chapters/02-crime-scene-investigation/">Chapter 2: Crime Scene Investigation and Evidence Collection</a>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Type: microsim
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>**sim-id:** search-pattern-selector&lt;br/&gt;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>**Library:** p5.js&lt;br/&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>**Status:** Specified
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Learning Objective: Select the appropriate search pattern for a given scene description (Bloom Level 3 — Apply; verb: select).
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Bloom Level: Apply (L3)
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Bloom Verb: Select
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Canvas layout:
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>- Scene display area (left ~70%): overhead grid representing the scene
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>- Control panel (right ~30%): pattern selection, scene parameters, animated searcher dots
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Visual elements:
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>- A grid representing a top-down scene view (outdoor field, interior room)
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>- Animated dots representing searchers moving through the scene using the selected pattern
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>- Color-coded cells: unsearched (light gray), currently being searched (yellow), searched (green)
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>- A summary panel showing the pattern&#39;s best-use conditions
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Interactive controls:
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>- Dropdown: Select pattern (Grid, Spiral Inward, Spiral Outward, Zone)
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>- Slider: Number of searchers (1–6)
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>- Dropdown: Scene type (indoor room, outdoor field, large outdoor area)
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>- Button: &quot;Start Search&quot; / &quot;Pause&quot; / &quot;Reset&quot;
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>- Animation speed slider
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>Default parameters:
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>- Pattern: Grid
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>- Searchers: 2
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>- Scene: outdoor field (20×20 grid)
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>Behavior:
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>- &quot;Start Search&quot; animates searcher dots moving through the selected pattern
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>- At completion, a summary shows total cells searched, animation steps elapsed, and a pattern efficiency rating
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>- If the user selects more searchers than the pattern supports efficiently, a warning tooltip appears
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>- Clicking a grid cell reveals the type of evidence that might be found there (randomly assigned from a list: fiber, footwear impression, latent print, etc.)
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>Instructional Rationale: An Apply-level objective (select and use a search pattern) requires the learner to experiment with the variables that govern pattern selection — scene size, team size, pattern type — and observe the consequences. Animation with coverage feedback makes the trade-offs visible rather than abstract.
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>Color scheme: Gray unsearched, yellow active, green cleared. If &quot;contamination mode&quot; is toggled on, cells a searcher skips appear red.
-</span></code></pre></div>
-<h2 id="related-resources">Related Resources<a class="headerlink" href="#related-resources" title="Permanent link">&para;</a></h2>
+<p><a class="md-button md-button--primary" href="main.html">Run the Search Pattern Selector Fullscreen</a></p>
+<h2 id="about-this-microsim">About This MicroSim<a class="headerlink" href="#about-this-microsim" title="Permanent link">&para;</a></h2>
+<p>When investigators search a crime scene, they do not wander around looking for
+clues — they follow a <strong>systematic search pattern</strong> so that every part of the
+scene is covered and nothing is missed, double-searched, or trampled. The right
+pattern depends on the scene: a small room, a measurable outdoor field, and a
+sprawling outdoor area each call for a different approach, and each choice trades
+off <strong>coverage, time, and the number of searchers</strong> you need.</p>
+<p>This MicroSim turns that decision into a <strong>select-and-run tool</strong>. You <strong>select</strong> a
+search pattern — Grid/Line, Spiral Inward, Spiral Outward, or Zone/Quadrant —
+choose a scene type and team size, and press <strong>Start Search</strong>. Animated searcher
+dots sweep an overhead grid: cells go from <strong>gray</strong> (unsearched) to <strong>yellow</strong>
+(being searched right now) to <strong>green</strong> (searched). A live <strong>fit rating</strong> tells you
+whether your pattern suits the scene, a <strong>warning</strong> appears when you assign more
+searchers than the pattern uses well, and a <strong>summary</strong> at the end reports how many
+cells were covered, how many steps it took, and an overall efficiency rating.</p>
+<h2 id="how-to-use-it">How to Use It<a class="headerlink" href="#how-to-use-it" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Pick a <strong>Pattern</strong> from the first dropdown (start with <strong>Grid</strong>).</li>
+<li>Pick a <strong>Scene</strong> from the second dropdown — an indoor room, an outdoor field,
+   or a large outdoor area. The grid resizes to match the scene.</li>
+<li>Read the <strong>fit rating</strong> in the right-hand panel: green (good fit), amber
+   (workable but not ideal), or red (poor fit) for the pattern-and-scene pair.</li>
+<li>Set the number of <strong>Searchers</strong> (1–6) and the animation <strong>Speed</strong> with the
+   sliders. If you assign too many searchers for the pattern, a <strong>warning</strong> appears.</li>
+<li>Press <strong>Start Search</strong> to run the sweep; press it again to <strong>Pause</strong> or
+   <strong>Resume</strong>. Watch cells turn yellow then green as coverage builds.</li>
+<li>When the search finishes, read the <strong>summary</strong>: cells searched, steps elapsed,
+   and the <strong>efficiency rating</strong>. Then <strong>click any green cell</strong> to reveal the kind
+   of evidence that might have been found there.</li>
+<li>Press <strong>Reset</strong> (or change any setting) to clear the scene and try a different
+   combination.</li>
+</ol>
+<h2 id="what-you-can-learn">What You Can Learn<a class="headerlink" href="#what-you-can-learn" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../chapters/02-crime-scene-investigation/">Chapter 2: Crime Scene Investigation and Evidence Collection</a></li>
+<li><strong>Select</strong> an appropriate search pattern for a given scene type and size, and see
+  immediately whether your choice fits.</li>
+<li>Compare patterns on the real trade-offs: a <strong>grid</strong> is the most thorough single-team
+  method for a measurable rectangle; a <strong>spiral</strong> suits a small scene with one searcher
+  or a single central focal point; <strong>zones</strong> let a large scene be covered in parallel
+  by several teams.</li>
+<li>Recognize that <strong>more searchers is not always better</strong> — crowding a single spiral or
+  line path wastes people and raises the risk of stepping on evidence.</li>
+<li>Understand <em>why</em> a systematic pattern beats a random search: overlap and full coverage
+  are what keep small items (a fiber, a latent print, a spent cartridge) from being missed.</li>
 </ul>
+<p>You can embed this MicroSim on your own web page with this iframe:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://dmccreary.github.io/forensic-science/sims/search-pattern-selector/main.html&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;602&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h2 id="lesson-plan">Lesson Plan<a class="headerlink" href="#lesson-plan" title="Permanent link">&para;</a></h2>
+<p><strong>Audience:</strong> High-school forensic science (grades 9–12)
+<strong>Time:</strong> 15–20 minutes
+<strong>Bloom level:</strong> Apply (L3) — select the appropriate search pattern for a given scene.</p>
+<p><strong>Predict-then-run (the core routine).</strong> For each scene, students <em>first</em> state which
+pattern they would choose and why, <em>then</em> select it and press Start Search to test their
+reasoning against the fit rating and the efficiency summary. The prediction step is what
+pushes this activity from "watch dots move" to <em>applying</em> a selection rule. Have students
+run the same scene with two different patterns and compare the step counts.</p>
+<p><strong>Guided questions:</strong></p>
+<ul>
+<li>Set the scene to <strong>Large outdoor area</strong> and try the <strong>Spiral Inward</strong> pattern. Why does
+  the fit rating warn against it, and which pattern does the panel recommend instead?</li>
+<li>Choose the <strong>Spiral Inward</strong> pattern, then drag the <strong>Searchers</strong> slider to 6. Read the
+  warning. In plain language, why does crowding one spiral path waste searchers?</li>
+<li>Run an <strong>Indoor room</strong> with the <strong>Grid</strong> pattern at one searcher, then at two. How does
+  the number of steps change, and what does that tell you about the coverage-versus-time
+  trade-off?</li>
+</ul>
+<p><strong>Extension.</strong> Real scenes are rarely a clean rectangle. Ask students to describe a scene
+the sim does <em>not</em> model — a winding hiking trail, a multi-room apartment, a vehicle
+interior — and argue which pattern (or combination) they would choose and what they would
+give up. Note honestly that no pattern guarantees finding everything: search effectiveness
+also depends on lighting, searcher training, and how well the scene was secured first.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Crime_scene">Crime scene (Wikipedia)</a> — how scenes are secured, documented, and systematically searched, and why method matters.</li>
+<li><a href="https://en.wikipedia.org/wiki/Forensic_search">Forensic search (Wikipedia)</a> — overview of organized search approaches used to locate physical and digital evidence.</li>
+<li><a href="https://en.wikipedia.org/wiki/Boustrophedon">Boustrophedon (Wikipedia)</a> — the back-and-forth "as the ox plows" sweep that the grid and zone searchers in this sim follow.</li>
+<li><a href="https://p5js.org/reference/">p5.js reference</a> — the library used to build this simulation.</li>
+</ul>
+<h2 id="specification">Specification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<p>This MicroSim was generated from a specification in
+<a href="../../chapters/02-crime-scene-investigation/">Chapter 2: Crime Scene Investigation and Evidence Collection</a>.</p>
+<blockquote>
+<p><strong>Design note:</strong> the specification asked for a control panel along the right ~30%
+that itself held "animated searcher dots." To keep the <strong>Apply (L3)</strong> objective in
+focus — <em>selecting</em> the right pattern — the right panel was used for the decision
+feedback (pattern description, live fit rating, scene recommendation, searcher
+warning, and the coverage summary) while the animated searcher dots run on the
+<strong>overhead grid</strong> where their coverage is actually visible. The spec's optional
+"contamination mode" (red skipped cells) was omitted because every pattern in this
+build provides complete coverage, so there are no skipped cells to flag; the more
+instructive risk — assigning too many searchers to a single path — is surfaced as a
+live warning instead. The click-to-reveal-evidence behavior is preserved on searched
+(green) cells.</p>
+</blockquote>
 
 
 
 
 
 
+
+  
+  
 
 
 
