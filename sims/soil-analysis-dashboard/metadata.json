@@ -1,10 +1,14 @@
 {
   "title": "Soil Analysis Comparison Dashboard",
-  "description": "Analyze multiple soil properties together to compare a questioned soil sample to reference samples from known locations (Bloom Level 4 — Analyze; verb: compare).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Compare a questioned soil sample (from a suspect's boots) against three reference samples across four criteria at once: Munsell color, particle-size distribution (gravel/sand/silt/clay), pH, and density-gradient banding. Click a reference column to compare it with the questioned sample, press Match Score to compute a weighted similarity score, and New Case to load a fresh scenario. Matching gradient bands are outlined green and non-matching bands red.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Trace Evidence",
+    "Soil Analysis",
+    "Geology",
+    "Physical Evidence Comparison"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,35 @@
   "rights": "CC BY 4.0",
   "identifier": "soil-analysis-dashboard",
   "library": "p5.js",
-  "bloomLevel": "Analyze (L4)",
+  "bloomLevel": "Analyze (L4) — compare a questioned soil sample to reference samples across multiple properties simultaneously.",
   "bloomVerb": "Compare",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 5,
   "chapter_title": "Glass, Soil, and Physical Trace Evidence",
-  "chapter_dir": "05-glass-soil-trace-evidence"
+  "chapter_dir": "05-glass-soil-trace-evidence",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Comparing a questioned soil sample to known references using color, particle size, pH, and density-gradient banding",
+    "learningObjectives": [
+      "Compare a questioned soil sample to reference samples across four independent criteria at once.",
+      "Read specific numeric values for pH and gravel/sand/silt/clay percentages and judge how closely two samples agree.",
+      "Interpret a density-gradient column: recognize which mineral bands align between samples and which do not.",
+      "Synthesize the four lines of evidence into an overall match judgment and recognize that a single matching property is weak while agreement across all four is strong."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Awareness that soil varies from place to place and that trace evidence can link a person to a location"
+  },
+  "pedagogical": {
+    "interactionPattern": "A 2x2 dashboard shows the same four samples (Questioned, Reference A, B, C) as columns within each of four criterion panels: Munsell color swatches, a stacked particle-size bar chart, a pH scale with markers, and a density-gradient tube with colored bands. Clicking any reference column selects it for comparison and highlights it (and the questioned column) across all four panels. A 'Match Score' button computes a weighted similarity (color distance, pH difference, particle-size overlap, band-match fraction) and prints a percentage. In the gradient-tube panel the selected reference's bands are outlined green where they align with a questioned band and red where they do not. Hovering any panel shows a tooltip explaining that criterion's forensic significance. 'New Case' loads a different scenario.",
+    "assessment": "Analysis through simultaneous comparison: the learner must inspect four criteria, decide which reference best matches the questioned sample, and confirm with the computed match score. The default scenario is designed so Reference C (exact location) scores high, Reference B (nearby) is intermediate, and Reference A (distant, different geology) scores low, letting students check whether their visual judgment matches the quantitative score.",
+    "modelType": "Comparison/scoring model: each sample is a record of Munsell notation, an RGB color, four particle-size percentages, a pH value, and a list of density-gradient bands (height + color). Similarity is computed per criterion and averaged into a 0-100 match score; band matching uses a height-and-color tolerance test against the questioned sample.",
+    "controls": [
+      "Clickable reference columns (A, B, C) to select the comparison sample",
+      "'Match Score' button — compute and display the weighted similarity score",
+      "'New Case' button — load a different questioned/reference scenario",
+      "Hover tooltips on each of the four criterion panels"
+    ]
+  }
 }

@@ -1,10 +1,14 @@
 {
   "title": "Medullary Index Calculator",
-  "description": "Calculate the medullary index of a hair sample and interpret the result as human or non-human (Bloom Level 3 — Apply; verb: calculate).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Calculate the medullary index (MI = medulla diameter ÷ shaft diameter) of a hair cross-section and interpret it as human, ambiguous, or non-human. Drag two sliders to set the medulla and shaft diameters; the cross-section diagram and the MI value update live, with a color-coded result badge and a species comparison row (human, dog, cat, rodent).",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Hair Analysis",
+    "Trace Evidence",
+    "Medullary Index",
+    "Microscopy"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "medullary-index-calculator",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — calculate the medullary index and apply the interpretation rule to classify a hair.",
   "bloomVerb": "Calculate",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 4,
   "chapter_title": "Hair, Fiber, and Trace Evidence Analysis",
-  "chapter_dir": "04-hair-and-fiber-analysis"
+  "chapter_dir": "04-hair-and-fiber-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Calculating and interpreting the medullary index of a hair",
+    "learningObjectives": [
+      "Calculate the medullary index as the ratio of medulla diameter to overall shaft diameter.",
+      "Apply the interpretation rule: MI ≤ 0.33 is consistent with human hair, while MI ≥ 0.50 indicates likely non-human (animal) hair.",
+      "Compare a measured medullary index against typical species values to support a human vs. non-human classification."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Understanding that a hair shaft has an outer cortex and an inner medulla; basic ratio arithmetic"
+  },
+  "pedagogical": {
+    "interactionPattern": "The student drags two sliders to set the medulla diameter and the overall shaft diameter (in µm). A hair cross-section diagram redraws live, showing the medulla as a dark inner circle inside the lighter cortex, with dimension arrows for both diameters. A readout panel shows the MI formula, the computed value to two decimals, and a color-coded result badge (green Human, orange Ambiguous, red Non-human likely). A 'New Sample' button loads preset diameter pairs.",
+    "assessment": "Formative exploration: by sweeping the sliders the student discovers the human/ambiguous/non-human thresholds and reads how each ratio maps to a classification. A species comparison row (human, dog, cat, rodent) lets the student check a calculated value against typical reference indices.",
+    "modelType": "Deterministic ratio model: MI = medulla ÷ shaft, drawn to scale on a SCALE_MAX of 120 µm; the interpretation thresholds (0.33 and 0.50) drive the badge color and explanatory note.",
+    "controls": [
+      "Medulla diameter slider (1-80 µm)",
+      "Shaft diameter slider (30-120 µm)",
+      "New Sample button (loads preset diameter pairs)"
+    ]
+  }
 }

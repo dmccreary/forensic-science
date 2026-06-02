@@ -1,120 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skeletal Sex Indicators Interactive Diagram</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+  <title>Skeletal Sex Indicators Interactive Diagram</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    main { display: block; }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Skeletal Sex Indicators Interactive Diagram</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> skeletal-sex-indicators</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Remember (L1)</p>
-            <p><strong>Learning Objective:</strong> Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: infographic
-    **sim-id:** skeletal-sex-indicators<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Identify the pelvic and cranial morphological features used to estimate biological sex from skeletal remains (Bloom Level 1 — Remember; verb: identify).
-    
-    Bloom Level: Remember (L1)
-    Bloom Verb: Identify
-    
-    Purpose: Allow investigators to compare male and female skeletal features side by side for the pelvis and skull.
-    
-    Layout:
-    - Left panel: Male pelvis schematic | Right panel: Female pelvis schematic
-    - Below: Male skull schematic | Female skull schematic
-    - Each feature labeled with a clickable annotation
-    
-    Interactive controls:
-    - Click any labeled feature (subpubic angle, greater sciatic notch, brow ridge, mastoid process, etc.) to reveal a pop-up explaining: (1) what the feature looks like in males vs. females, (2) how reliable this feature is as a sex indicator
-    - Toggle between "labeled" and "unlabeled" modes for self-testing
-    - "Quiz Me" mode: highlight a single feature and ask student to predict which sex (male/female) it belongs to
-    
-    Data Visibility Requirements:
-    - Each feature pop-up shows a simple line diagram comparing male vs. female morphology side by side
-    - Shows accuracy percentage for each indicator (e.g., subpubic angle: ~95% accurate; skull features: ~85% accurate)
-    
-    Instructional Rationale: A Remember-level objective (identify features and their significance) benefits from a labeling/annotation interface where learners can explore each feature interactively and quiz themselves.
-    
-    Color scheme: Bone in warm tan/ivory; female features highlighted in blue; male features highlighted in red; pop-up panels in white.
-    -->
+  <main></main>
+  <script src="skeletal-sex-indicators.js"></script>
+  <p><a href="./index.md">Back to Documentation</a></p>
 </body>
 </html>

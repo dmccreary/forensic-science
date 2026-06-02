@@ -1,10 +1,14 @@
 {
-  "title": "Handwriting Characteristics Comparison MicroSim",
-  "description": "Identify the key handwriting characteristics used to compare questioned and known writing samples (Bloom Level 1 — Remember; verb: identify).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "title": "Handwriting Characteristics Comparison",
+  "description": "Identify the key handwriting characteristics — Line Quality, Slant, Spacing, Letter Formation, Pen Lifts, and Baseline — used to compare a questioned writing sample with a known exemplar. Click a characteristic to highlight it on both samples, toggle the questioned sample between authentic and forged, and use the magnification slider to look closer.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Questioned Document Examination",
+    "Handwriting Analysis",
+    "Forgery Detection",
+    "Document Forensics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "handwriting-comparison",
   "library": "p5.js",
-  "bloomLevel": "Remember (L1)",
+  "bloomLevel": "Remember (L1) — identify the characteristics used to compare handwriting samples.",
   "bloomVerb": "Identify",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 14,
   "chapter_title": "Document Examination and Forgery Detection",
-  "chapter_dir": "14-document-examination"
+  "chapter_dir": "14-document-examination",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Characteristics used to compare questioned and known handwriting samples",
+    "learningObjectives": [
+      "Identify the six characteristics document examiners compare: Line Quality, Slant, Spacing, Letter Formation, Pen Lifts, and Baseline.",
+      "Recognize how a forgery differs from an authentic sample in each characteristic.",
+      "Read a comparison summary reporting matching versus differing characteristics."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "10-15 minutes",
+    "prerequisites": "None beyond familiarity with the idea that everyone's handwriting is distinctive"
+  },
+  "pedagogical": {
+    "interactionPattern": "Two side-by-side samples — a known exemplar and a questioned sample — render the same simulated cursive writing. A row of characteristic chips lets the student click any of the six characteristics to highlight it on both samples (blue on the exemplar, green for a match or red for a difference on the questioned sample). A toggle switches the questioned sample between authentic and forged (the forgery adds tremor, slant change, baseline drift, and hesitation pen lifts). A magnification slider zooms both samples.",
+    "assessment": "The student selects each characteristic and reads its label, description, and a MATCH/DIFFERS badge, plus a running comparison summary (matching vs. differing characteristics) that updates between the authentic and forged states.",
+    "modelType": "Procedurally generated cursive stroke path parameterized by slant, tremor, baseline wave, loop spacing, and pen-lift positions, with deterministic seeds so the authentic sample closely matches the exemplar and the forged sample diverges in five of six characteristics.",
+    "controls": [
+      "Click a characteristic chip to highlight it on both samples",
+      "Show Forged / Show Authentic Sample toggle button",
+      "Magnification slider"
+    ]
+  }
 }

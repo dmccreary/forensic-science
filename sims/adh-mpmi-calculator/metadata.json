@@ -1,10 +1,14 @@
 {
-  "title": "ADH and mPMI Calculator MicroSim",
-  "description": "Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).",
-  "creator": "Dementia Education Project",
+  "title": "ADH minimum-PMI Calculator",
+  "description": "Calculate a minimum post-mortem interval by accumulating degree-hours backward from discovery until cumulative ADH meets the threshold for a chosen blowfly species and larval stage.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Forensic Entomology",
+    "Accumulated Degree Hours",
+    "Post-mortem Interval",
+    "Decomposition"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,36 @@
   "rights": "CC BY 4.0",
   "identifier": "adh-mpmi-calculator",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — calculate minimum post-mortem interval from accumulated degree hours.",
   "bloomVerb": "Calculate",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 12,
   "chapter_title": "Forensic Entomology and Decomposition Analysis",
-  "chapter_dir": "12-forensic-entomology"
+  "chapter_dir": "12-forensic-entomology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Accumulated degree hours and minimum post-mortem interval",
+    "learningObjectives": [
+      "Calculate accumulated degree-hours from a temperature record and base temperature.",
+      "Estimate a minimum post-mortem interval from cumulative ADH and a stage threshold.",
+      "Explain how temperature and base temperature affect the PMI estimate."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Arithmetic with averages; concept of insect life stages"
+  },
+  "pedagogical": {
+    "interactionPattern": "Calculator: set temperatures and base, choose species/stage, run an accumulation sweep, read mPMI",
+    "assessment": "Students compute degree-hours and verify the running total against the cumulative curve",
+    "modelType": "Degree-hour accumulation model with threshold crossing",
+    "controls": [
+      "Species dropdown",
+      "Stage dropdown",
+      "Base temperature slider",
+      "Selected-day temperature slider",
+      "Calculate mPMI button",
+      "click a bar to select a day"
+    ]
+  }
 }

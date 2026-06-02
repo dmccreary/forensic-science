@@ -1,10 +1,14 @@
 {
   "title": "PCR Amplification Step-Through Simulator",
-  "description": "Explain the three steps of PCR (denaturation, annealing, extension) by tracing what happens to the DNA at each stage (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Step through one cycle of the polymerase chain reaction — Denaturation (94°C), Annealing (60°C), and Extension (72°C) — and watch the DNA transform at each stage. A temperature gauge, step description, cycle counter, and an exponential copy counter track the reaction; 'Run Cycle' and 'Run 5 Cycles' show the doubling, and clicking any DNA part (template strand, primer, new strand, polymerase) reveals its definition.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "DNA Profiling",
+    "Polymerase Chain Reaction",
+    "Molecular Biology",
+    "DNA Amplification"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,35 @@
   "rights": "CC BY 4.0",
   "identifier": "pcr-amplification-simulator",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain the three steps of PCR by tracing what happens to the DNA at each stage.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 8,
   "chapter_title": "Forensic DNA Profiling",
-  "chapter_dir": "08-forensic-dna-profiling"
+  "chapter_dir": "08-forensic-dna-profiling",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "The three steps of the polymerase chain reaction (PCR)",
+    "learningObjectives": [
+      "Explain what happens to the DNA during denaturation, annealing, and extension, and the temperature each step requires.",
+      "Describe the roles of the template strand, primers, and Taq polymerase in copying DNA.",
+      "Explain why each completed cycle doubles the number of target copies, producing exponential amplification."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Basic structure of DNA (double helix, complementary base pairing); idea that DNA can be copied"
+  },
+  "pedagogical": {
+    "interactionPattern": "The student presses 'Next Step' to advance through Denaturation → Annealing → Extension one stage at a time, or 'Run Cycle' / 'Run 5 Cycles' to auto-play with pauses. A molecular view animates the two template strands (red and blue), base-pair bridges breaking during denaturation, yellow primers binding during annealing, and a light-purple new strand growing from each primer with a polymerase enzyme during extension. A side panel shows a temperature gauge, the current step name and description, a cycle counter, and a copy counter that doubles each cycle. Clicking any DNA part shows a definition pop-up.",
+    "assessment": "Formative, prediction-friendly: the step-by-step control lets the student predict what the strands will do before each stage is revealed, and the temperature and copy-count readouts give concrete data to explain why each step occurs and how amplification grows exponentially.",
+    "modelType": "Staged animation model: a step index (0-2) selects the active stage; a per-step progress value drives the visual transformation (strand separation, bridge fade, primer binding, new-strand growth) and the temperature interpolates toward the step's target; completing extension increments the cycle and doubles the copy count (copies = 2^cycle).",
+    "controls": [
+      "Next Step button (advance one stage)",
+      "Run Cycle button (auto-run all three stages once)",
+      "Run 5 Cycles button (show exponential growth)",
+      "Reset button",
+      "Clickable DNA parts (template strand, primer, new strand, polymerase) for definitions"
+    ]
+  }
 }

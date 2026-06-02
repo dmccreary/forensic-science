@@ -3,126 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADH and mPMI Calculator MicroSim</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>ADH minimum-PMI Calculator MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="adh-mpmi-calculator.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>ADH and mPMI Calculator MicroSim</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> adh-mpmi-calculator</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** adh-mpmi-calculator<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Calculate minimum post-mortem interval using Accumulated Degree Hours and ambient temperature records (Bloom Level 3 — Apply; verb: calculate).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Calculate
-    
-    Canvas layout:
-    - Left panel (~50%): Temperature input table (hourly temperature entries for 7 days)
-    - Right panel (~50%): Running ADH sum chart; mPMI result readout
-    
-    Visual elements:
-    - A table where students enter or edit hourly temperature values (defaults pre-populated with a realistic warm-weather 7-day dataset)
-    - A bar chart showing daily ADH contributions
-    - A running cumulative ADH sum line graph
-    - A labeled ADH threshold line (the ADH required to reach the student-specified developmental stage)
-    - A "mPMI result" panel showing: days since oviposition, calendar date of estimated earliest death, and a confidence range
-    
-    Interactive controls:
-    - Dropdown: Select insect species (Calliphora vicina, Lucilia sericata, Phormia regina)
-    - Dropdown: Select observed developmental stage (First instar, Second instar, Third instar, Pupa)
-    - Input: Base temperature (defaults to 2°C for C. vicina)
-    - Input or edit hourly temperatures
-    - "Calculate mPMI" button runs the ADH accumulation and identifies when the threshold was crossed
-    
-    Data Visibility Requirements:
-    - Show the ADH for each day
-    - Show cumulative ADH over time
-    - Show where cumulative ADH crosses the developmental threshold — this is the estimated first oviposition (= minimum death date)
-    - Show the published ADH requirement for the selected species and stage (from reference table)
-    
-    Instructional Rationale: An Apply-level objective (calculate mPMI) requires the learner to perform the temperature-accumulation calculation themselves and see the result on the timeline.
-    
-    Color scheme: Blue for temperature bars, orange for cumulative ADH line, red dashed line for ADH threshold, green highlight for the mPMI result date.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

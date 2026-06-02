@@ -1,10 +1,14 @@
 {
   "title": "Latent Print Development Technique Selector",
-  "description": "Select the correct latent print development technique based on substrate porosity (Bloom Level 3 — Apply; verb: select).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Apply substrate-porosity logic to select the correct latent fingerprint development technique. Choose an evidence item (glass, paper, cardboard, plastic bag, wood), pick a technique (Cyanoacrylate, Ninhydrin, Silver Nitrate, or Iodine), and apply it; a correct choice develops a print in the technique-accurate color, while a wrong choice shows a 'no visible ridge pattern' failure with the substrate reason.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Fingerprint Analysis",
+    "Latent Print Development",
+    "Dactyloscopy",
+    "Evidence Processing"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "latent-print-development",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — select a development technique by matching it to substrate porosity.",
   "bloomVerb": "Select",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 3,
   "chapter_title": "Fingerprint Analysis and Dactyloscopy",
-  "chapter_dir": "03-fingerprint-analysis"
+  "chapter_dir": "03-fingerprint-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Selecting a latent print development technique based on substrate porosity",
+    "learningObjectives": [
+      "Apply the rule that porous substrates take chemical reagents (Ninhydrin, Silver Nitrate) while non-porous substrates take Cyanoacrylate fuming.",
+      "Select the correct technique for a given evidence item and predict the developed print color.",
+      "Explain why a mismatched technique produces no visible ridge pattern."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Knowledge that fingerprints leave invisible sweat/oil residue; basic idea of porous vs. non-porous materials"
+  },
+  "pedagogical": {
+    "interactionPattern": "The student selects an evidence item from a dropdown; a before panel shows the substrate with a porous/non-porous badge and a faint invisible latent print. The student chooses one of four technique buttons and presses Apply Technique. The after panel animates the result: a correct technique reveals ridges in the technique-accurate color (white cyanoacrylate, purple ninhydrin, dark silver-nitrate, yellow-brown iodine), while a wrong technique shows 'No visible ridge pattern'. A feedback panel explains the substrate logic and, on failure, why the technique did not work.",
+    "assessment": "Active choice with consequence: the student must match technique to substrate. Correct choices develop a print; incorrect choices fail with a substrate-specific explanation, teaching porosity logic through error feedback rather than a correct-only demonstration.",
+    "modelType": "Rule-based substrate model: each technique works on porous, non-porous, or any surface; success is computed by comparing the chosen technique's requirement to the selected item's porosity, then a procedural loop-pattern fingerprint is rendered in the technique's color.",
+    "controls": [
+      "Evidence item dropdown (glass, paper, cardboard, plastic bag, wood)",
+      "Four technique buttons (Cyanoacrylate, Ninhydrin, Silver Nitrate, Iodine)",
+      "Apply Technique button"
+    ]
+  }
 }

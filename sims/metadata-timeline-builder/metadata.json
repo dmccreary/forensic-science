@@ -1,10 +1,14 @@
 {
   "title": "Metadata Recovery and Timeline Builder",
-  "description": "Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Click simulated evidence photos to recover their EXIF metadata (camera make/model, capture date and time, GPS coordinates in decimal degrees and DMS, and device time zone), then add photos to a chronological timeline and plot them on a mini map. Time-zone inconsistencies are flagged in red so the student learns to question a timestamp before trusting it.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Digital Forensics",
+    "EXIF Metadata",
+    "Cybercrime Investigation",
+    "Evidence Timeline"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,35 @@
   "rights": "CC BY 4.0",
   "identifier": "metadata-timeline-builder",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — apply EXIF metadata recovery to extract timestamps and GPS coordinates and construct an event timeline.",
   "bloomVerb": "Apply",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 15,
   "chapter_title": "Digital Forensics and Cybercrime Investigation",
-  "chapter_dir": "15-digital-forensics"
+  "chapter_dir": "15-digital-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Recovering EXIF metadata and building a chronological evidence timeline",
+    "learningObjectives": [
+      "Apply EXIF metadata recovery to extract the capture timestamp, GPS coordinates, and device time zone from a digital photo.",
+      "Convert GPS coordinates between decimal degrees and degrees/minutes/seconds (DMS) and plot them on a map.",
+      "Construct a chronological timeline from multiple evidence files and detect time-zone inconsistencies that cast doubt on a timestamp."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "12-18 minutes",
+    "prerequisites": "Awareness that digital photos carry embedded EXIF metadata; basic latitude/longitude and 24-hour clock concepts"
+  },
+  "pedagogical": {
+    "interactionPattern": "The student clicks any of eight simulated evidence photos in a file-browser panel; the selected photo's EXIF metadata loads into a readout showing camera make/model, capture date and time, GPS coordinates in both decimal and DMS, and the device time zone. 'Add to Timeline' places the photo on a chronological timeline that auto-sorts by capture time; 'Plot on Map' toggles a mini map that pins the selected photo and all timeline photos by GPS; 'Export Timeline' prints a formatted chronological report to the console; 'Clear' empties the timeline.",
+    "assessment": "Investigative workflow practice: the student must read metadata, recognize when a device time zone disagrees with the case home zone (flagged in red on the EXIF panel, the timeline, and the map), and assemble a defensible chronological sequence rather than simply viewing facts.",
+    "modelType": "Data-driven model: each photo is a record with timestamp, time zone, GPS, and camera fields; the timeline is computed by sorting added records by capture time, the map projects GPS onto a normalized grid, and an anomaly flag fires whenever a photo's time zone differs from the case home zone.",
+    "controls": [
+      "Clickable evidence photo icons (8 simulated photos)",
+      "Add to Timeline button",
+      "Plot on Map button (toggle)",
+      "Export Timeline button",
+      "Clear button"
+    ]
+  }
 }

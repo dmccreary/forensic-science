@@ -1,10 +1,14 @@
 {
   "title": "TLC Ink Separation Interactive Diagram",
-  "description": "Explain how TLC separates ink dye components for comparison, and interpret a TLC result as matching or non-matching (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Explain how thin-layer chromatography (TLC) separates ink into its dye components and interpret the result as a match or non-match. A solvent front rises up the plate and carries each dye a characteristic distance; the ratio of spot distance to solvent-front distance is the Rf value. Run the separation, switch to UV to reveal fluorescent components, calculate Rf values, and compare the questioned ink to reference lanes component by component.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Document Examination",
+    "Questioned Documents",
+    "Ink Analysis",
+    "Chromatography"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,36 @@
   "rights": "CC BY 4.0",
   "identifier": "tlc-ink-separation",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain how TLC separates ink dye components and interpret a TLC result as matching or non-matching.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 14,
   "chapter_title": "Document Examination and Forgery Detection",
-  "chapter_dir": "14-document-examination"
+  "chapter_dir": "14-document-examination",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Separating ink into dye components by thin-layer chromatography and comparing Rf values",
+    "learningObjectives": [
+      "Explain how a rising solvent front separates an ink into its individual dye components on a TLC plate.",
+      "Calculate an Rf value as the ratio of a spot's travel distance to the solvent-front distance.",
+      "Interpret a UV-light view that reveals fluorescent components not visible in white light.",
+      "Compare a questioned ink's component pattern to reference lanes and decide whether it matches."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Awareness that inks are mixtures of dyes and that questioned-document examiners compare inks"
+  },
+  "pedagogical": {
+    "interactionPattern": "A TLC plate occupies the left ~40% of the canvas with four lanes (Questioned, Reference 1, 2, 3); the right ~60% is a result-interpretation panel. A dashed origin line and a blue solvent-front line bracket the plate. 'Run Chromatography' animates the solvent front rising from the origin while each dye spot migrates to its Rf-proportional height. 'Toggle UV' switches the plate to a dark fluorescence view that reveals UV-only components (e.g., an optical brightener). 'Calculate Rf' overlays Rf values next to each spot and in the table. Two dropdowns select the questioned ink type and the reference lane set. The panel shows the questioned ink's per-component spot distance and Rf, a component-by-component match count against each reference with green-check / red-X indicators, and a Match Determination box.",
+    "assessment": "Interpretation and explanation: students run the separation, read the Rf values they compute, and use the component-by-component comparison to decide which reference the questioned ink matches. The Match Determination box confirms or contradicts their reading, and switching to UV tests whether they account for hidden fluorescent components.",
+    "modelType": "Chromatography model: each ink is a list of dye components, each with a color, a characteristic Rf, and an optional UV-only flag. Spot position is computed as origin minus Rf times the current solvent-front travel; matching compares questioned components to reference components within an Rf tolerance and a color-distance tolerance.",
+    "controls": [
+      "'Questioned ink' dropdown — ballpoint, rollerball, gel pen, fountain pen",
+      "'Reference set' dropdown — choose which inks fill the three reference lanes",
+      "'Run Chromatography' button — animate the solvent front and spot migration",
+      "'Toggle UV' button — switch between white-light and UV fluorescence views",
+      "'Calculate Rf' button — show/hide Rf value overlays"
+    ]
+  }
 }

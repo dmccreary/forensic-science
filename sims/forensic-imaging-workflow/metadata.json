@@ -1,10 +1,14 @@
 {
-  "title": "Forensic Imaging and Hash Verification Workflow",
-  "description": "Explain the forensic imaging procedure and verify the integrity of a forensic image using hash comparison (Bloom Level 2 — Understand; verb: explain).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "title": "Forensic Imaging & Hash Verification Workflow",
+  "description": "Explain the forensic imaging procedure — Original Drive, Write-Blocker, Forensic Workstation, Forensic Image, and Hash Verification — and verify image integrity by comparing MD5 or SHA-256 hashes. The Simulate Tamper control changes one byte of the image and recomputes its hash, showing how the entire value changes and the comparison flips from MATCH to MISMATCH.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Digital Forensics",
+    "Evidence Integrity",
+    "Hashing",
+    "Chain of Custody"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,33 @@
   "rights": "CC BY 4.0",
   "identifier": "forensic-imaging-workflow",
   "library": "p5.js",
-  "bloomLevel": "Understand (L2)",
+  "bloomLevel": "Understand (L2) — explain the imaging workflow and how hash comparison verifies integrity.",
   "bloomVerb": "Explain",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 15,
   "chapter_title": "Digital Forensics and Cybercrime Investigation",
-  "chapter_dir": "15-digital-forensics"
+  "chapter_dir": "15-digital-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Forensic disk imaging and verifying a copy with cryptographic hashes",
+    "learningObjectives": [
+      "Explain the five stages of forensic imaging and the role of the write-blocker.",
+      "Explain how comparing a hash of the original to a hash of the image proves the copy is identical.",
+      "Describe why a single changed byte produces a completely different hash, so any tampering is detected."
+    ],
+    "bloomLevel": "Understand (L2)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Basic idea of a file and of copying data; no cryptography background required"
+  },
+  "pedagogical": {
+    "interactionPattern": "Horizontal five-station workflow with animated data-flow dots and a write-blocker that blocks reverse flow. Clicking a station reveals its purpose and procedure. A hash-comparison panel shows the original and image hashes side by side in the selected algorithm; the Simulate Tamper button changes the image and recomputes its hash to flip MATCH into MISMATCH.",
+    "assessment": "Students read each station's role and observe that an untampered image yields matching hashes (MATCH); after Simulate Tamper the image hash changes entirely and the result becomes MISMATCH, illustrating integrity verification",
+    "modelType": "Workflow diagram plus a hash-comparison panel backed by correctly formatted example hash values (32 hex MD5, 64 hex SHA-256) for the untampered and tampered states",
+    "controls": [
+      "Click a station to reveal its purpose and procedure",
+      "Simulate Tamper / Restore Image button",
+      "MD5 / SHA-256 algorithm selector"
+    ]
+  }
 }

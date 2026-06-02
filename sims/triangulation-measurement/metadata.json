@@ -1,10 +1,14 @@
 {
   "title": "Triangulation Measurement Technique",
-  "description": "Apply triangulation measurement to record evidence position on a scaled sketch (Bloom Level 3 — Apply; verb: calculate).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Apply triangulation to record evidence position on a scaled crime-scene sketch. Drag an evidence item around an overhead room floor plan and read the live straight-line distances from two fixed reference corners (A and B), computed with the Pythagorean theorem. Adjust the room dimensions with sliders, and record each measurement to a log the way an investigator fills in a sketch sheet.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Crime Scene Investigation",
+    "Evidence Collection",
+    "Crime Scene Sketching",
+    "Measurement"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,36 @@
   "rights": "CC BY 4.0",
   "identifier": "triangulation-measurement",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — calculate triangulation distances to record an evidence item's position on a scaled sketch.",
   "bloomVerb": "Calculate",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 2,
   "chapter_title": "Crime Scene Investigation and Evidence Collection",
-  "chapter_dir": "02-crime-scene-investigation"
+  "chapter_dir": "02-crime-scene-investigation",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Recording the position of evidence with the triangulation method on a scaled crime-scene sketch",
+    "learningObjectives": [
+      "Apply the triangulation method: measure an evidence item's straight-line distance from two fixed reference points.",
+      "Use the Pythagorean theorem to relate an item's (x, y) coordinates to its distances from two corners.",
+      "Read distances in centimeters from a scaled overhead floor plan.",
+      "Record multiple evidence items to a measurement log as on a real sketch sheet."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Familiarity with the Pythagorean theorem and the idea of measuring from fixed reference points"
+  },
+  "pedagogical": {
+    "interactionPattern": "An overhead floor plan of a room fills the left ~72% of the canvas, with a 1-meter grid and two fixed green reference corners (A at upper-left, B at upper-right). A draggable orange evidence dot is connected to A and B by blue dashed lines whose midpoints show the live distance in centimeters; the dot also displays its (x, y) coordinates measured from A. The right panel shows the live distances and coordinates plus a measurement log. Two sliders set the room width and length (3-10 m). 'Record Measurement' appends the current item number and its A/B distances to the log; 'Clear Log' empties it.",
+    "assessment": "Application with immediate feedback: the student drags the item and the distances recompute via the Pythagorean theorem, confirming whether they understand what triangulation measures. Recording several items builds a log that mirrors how positions are documented on a scaled sketch, and changing the room size tests whether the student understands that distances are measured to fixed corners.",
+    "modelType": "Geometric model: the evidence item has a position in meters from corner A; distance to A is sqrt(x^2 + y^2) and distance to B is sqrt((W - x)^2 + y^2), where W is the room width. Pixel geometry is scaled to keep the room's real aspect ratio as the sliders change its dimensions.",
+    "controls": [
+      "Draggable evidence item (orange dot) anywhere within the room",
+      "'Room width' slider — 3 to 10 m",
+      "'Room length' slider — 3 to 10 m",
+      "'Record Measurement' button — append the current distances to the log",
+      "'Clear Log' button — empty the measurement log"
+    ]
+  }
 }

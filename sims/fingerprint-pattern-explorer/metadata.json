@@ -1,10 +1,14 @@
 {
   "title": "Fingerprint Pattern Classification Explorer",
-  "description": "Identify the three fingerprint pattern families and their subtypes using defining structural features (Bloom Level 1 — Remember; verb: identify).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Identify the three fingerprint pattern families (loops, whorls, arches) and their eight subtypes by their defining structural features. Browse schematic ridge diagrams with annotated core, delta, and ridge-flow markers, then switch to Quiz Me mode to self-test classification with immediate feedback.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Fingerprint Analysis",
+    "Dactyloscopy",
+    "Pattern Classification",
+    "Biometrics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "fingerprint-pattern-explorer",
   "library": "p5.js",
-  "bloomLevel": "Remember (L1)",
+  "bloomLevel": "Remember (L1) — identify the fingerprint pattern families and subtypes by their defining features.",
   "bloomVerb": "Identify",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 3,
   "chapter_title": "Fingerprint Analysis and Dactyloscopy",
-  "chapter_dir": "03-fingerprint-analysis"
+  "chapter_dir": "03-fingerprint-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Classifying fingerprint patterns by core, delta count, and ridge flow",
+    "learningObjectives": [
+      "Identify the three fingerprint pattern families: loops, whorls, and arches.",
+      "Name the eight subtypes and the structural feature that defines each.",
+      "Use delta count and ridge flow to classify a pattern: loops have one delta, whorls two, arches none."
+    ],
+    "bloomLevel": "Remember (L1)",
+    "duration": "15-20 minutes",
+    "prerequisites": "None"
+  },
+  "pedagogical": {
+    "interactionPattern": "Annotated-diagram explorer with a self-test quiz. A left menu lists all eight patterns; selecting one shows an enlarged schematic ridge diagram with clickable Core / Delta / Ridge Flow annotations, a defining-features panel, and a family frequency badge. Quiz Me mode hides the annotations and asks the learner to classify an unknown print from a dropdown, then reveals the answer with the key distinguishing feature.",
+    "assessment": "In Quiz Me mode the learner classifies a randomly chosen pattern from a dropdown; correct/incorrect feedback names the true pattern and its key feature, and the annotations are revealed",
+    "modelType": "Schematic ridge renderer for eight pattern subtypes with parameterized core, delta, and ridge-flow annotation markers (not photographic prints)",
+    "controls": [
+      "Click a pattern in the left menu to load it (study mode)",
+      "Click a Core / Delta / Ridge Flow chip for its definition",
+      "Quiz Me / Study Mode toggle button",
+      "Classification dropdown and Check Answer / Next Pattern button (quiz mode)"
+    ]
+  }
 }

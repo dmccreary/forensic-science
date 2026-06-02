@@ -1,10 +1,14 @@
 {
-  "title": "BAC and Retro-Extrapolation Calculator",
-  "description": "Calculate BAC using the Widmark formula and perform a BAC retro-extrapolation (Bloom Level 3 — Apply; verb: calculate).",
-  "creator": "Dementia Education Project",
+  "title": "BAC Retro-Extrapolation",
+  "description": "Calculate peak blood alcohol concentration with the Widmark formula, then retro-extrapolate a measured BAC backward from the blood-draw time to an earlier event time on a live BAC-over-time graph with a 0.08% legal limit.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Forensic Toxicology",
+    "Blood Alcohol Concentration",
+    "Widmark Formula",
+    "Retro-extrapolation"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,38 @@
   "rights": "CC BY 4.0",
   "identifier": "bac-retro-extrapolation",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — calculate BAC with the Widmark formula and perform a retro-extrapolation.",
   "bloomVerb": "Calculate",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 9,
   "chapter_title": "Forensic Toxicology and Chemical Analysis",
-  "chapter_dir": "09-forensic-toxicology"
+  "chapter_dir": "09-forensic-toxicology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Widmark BAC calculation and retro-extrapolation",
+    "learningObjectives": [
+      "Calculate peak BAC from weight, sex, and number of drinks using the Widmark formula.",
+      "Retro-extrapolate a measured BAC backward to an earlier event time.",
+      "Explain why a sub-limit BAC at draw can still indicate over-limit BAC earlier."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "15-20 minutes",
+    "prerequisites": "Linear rates; reading a line graph; basic algebra"
+  },
+  "pedagogical": {
+    "interactionPattern": "Calculator + graph: set inputs, drag the event-time marker, press Calculate to reveal the retro-extrapolation arithmetic",
+    "assessment": "Students compute BAC at the event time by hand and verify against the revealed result",
+    "modelType": "Widmark peak BAC with linear zero-order elimination and optional absorption phase",
+    "controls": [
+      "Sex dropdown",
+      "Show absorption phase checkbox",
+      "Calculate button",
+      "Weight slider (40-150 kg)",
+      "Drinks slider (1-10)",
+      "Blood-draw time slider (0-8 h)",
+      "Elimination rate slider (0.010-0.025)",
+      "drag the event-time marker on the graph"
+    ]
+  }
 }

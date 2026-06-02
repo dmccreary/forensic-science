@@ -1,10 +1,14 @@
 {
   "title": "Random Match Probability Product Rule Calculator",
-  "description": "Calculate random match probability using the product rule across multiple STR loci (Bloom Level 3 — Apply; verb: calculate).",
-  "creator": "Dementia Education Project",
-  "date": "2026-06-01",
+  "description": "Apply the product rule to calculate a DNA profile's random match probability (RMP). A table of STR loci shows each locus's genotype and population frequency; toggle loci in and out with checkboxes and watch the running product shrink on a log scale, then read the RMP as a fraction, as '1 in X', and compared to U.S. and world population sizes.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-06-02",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "DNA Profiling",
+    "Random Match Probability",
+    "STR Loci",
+    "Population Genetics"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "rmp-product-rule",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — calculate random match probability using the product rule across multiple STR loci.",
   "bloomVerb": "Calculate",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 8,
   "chapter_title": "Forensic DNA Profiling",
-  "chapter_dir": "08-forensic-dna-profiling"
+  "chapter_dir": "08-forensic-dna-profiling",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Calculating random match probability with the product rule",
+    "learningObjectives": [
+      "Apply the product rule by multiplying single-locus genotype frequencies to obtain a multi-locus random match probability.",
+      "Express a random match probability in both scientific-notation and '1 in X' form.",
+      "Explain how adding loci drives the probability exponentially smaller and compare the result to real population sizes."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Idea that an STR locus has a genotype with a population frequency; multiplying decimals/probabilities; reading scientific notation"
+  },
+  "pedagogical": {
+    "interactionPattern": "A table lists eight STR loci with realistic genotype frequencies, each with a checkbox. As the student toggles loci on and off, a running-product curve on a log scale updates to show the cumulative probability dropping locus by locus. 'Calculate Product' reveals the final RMP in scientific notation and as '1 in X', and a 'How rare is that?' panel draws log-scaled bars comparing the inverse RMP to U.S. and world population sizes. 'Select All' and 'Clear' set the locus set quickly.",
+    "assessment": "Active calculation: the student builds the product themselves and sees the statistical power accumulate, reaching the 'wow moment' when the match probability falls below the world population. The population comparison gives a concrete check on whether the profile is rare enough to be individualizing.",
+    "modelType": "Product-rule model: RMP is the cumulative product of the included loci's genotype frequencies; the running product and a log-scale curve are recomputed live, and the inverse RMP is compared against fixed population reference values.",
+    "controls": [
+      "One checkbox per STR locus (include/exclude from the product)",
+      "Select All button",
+      "Clear button",
+      "Calculate Product button (reveal the RMP and population comparison)"
+    ]
+  }
 }

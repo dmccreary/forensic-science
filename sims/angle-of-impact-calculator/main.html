@@ -3,123 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angle of Impact Calculator</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Angle-of-Impact Calculator MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
     </style>
+    <script src="angle-of-impact-calculator.js"></script>
 </head>
 <body>
-    <div id="container">
-        <h1>Angle of Impact Calculator</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> angle-of-impact-calculator</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Calculate the angle of impact of a bloodstain from width-to-length measurements (Bloom Level 3 — Apply; verb: calculate).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** angle-of-impact-calculator<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Calculate the angle of impact of a bloodstain from width-to-length measurements (Bloom Level 3 — Apply; verb: calculate).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Calculate
-    
-    Canvas layout:
-    - Left panel (~60%): a simulated bloodstain on a surface; user can drag handles to adjust width and length
-    - Right panel (~40%): formula display, measurement inputs, calculated angle, geometric diagram
-    
-    Visual elements:
-    - An elliptical bloodstain with two measurement arrows: horizontal (width) and vertical (length)
-    - A geometric diagram showing the drop's trajectory angle relative to the surface plane
-    - The formula sin θ = Width/Length displayed with live-updating values
-    - The calculated angle displayed in degrees with a protractor arc overlay on the geometry diagram
-    
-    Interactive controls:
-    - Drag handles on the stain to adjust width (5–30 mm) and length (5–60 mm)
-    - Alternatively, enter width and length values in input boxes
-    - "Calculate" button computes the angle
-    - "New Stain" button generates a random stain for the student to measure and calculate
-    
-    Data Visibility Requirements:
-    - Stage 1: Show a bloodstain with default dimensions; formula visible with placeholder values
-    - Stage 2: As dimensions change, live-update the ratio and calculated angle
-    - Stage 3: Show the geometric diagram updating in real time to show the trajectory angle
-    
-    Instructional Rationale: An Apply-level objective (calculate angle from measurements) requires hands-on computation. Interactive stain manipulation gives immediate visual feedback connecting the formula to the physical shape.
-    
-    Color scheme: Bloodstain in dark red on tan/white surface; measurement arrows in blue; formula panel in white with dark text.
-    -->
+    <main></main>
+    <br/>
+    <a href=".">Back to Documentation</a>
 </body>
 </html>

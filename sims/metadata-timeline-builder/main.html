@@ -1,126 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metadata Recovery and Timeline Builder</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+  <title>Metadata Recovery and Timeline Builder</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    main { display: block; }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Metadata Recovery and Timeline Builder</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> metadata-timeline-builder</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3)</p>
-            <p><strong>Learning Objective:</strong> Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: microsim
-    **sim-id:** metadata-timeline-builder<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Learning Objective: Apply EXIF metadata recovery to extract timestamps and GPS coordinates from digital evidence files and construct an event timeline (Bloom Level 3 — Apply; verb: apply).
-    
-    Bloom Level: Apply (L3)
-    Bloom Verb: Apply
-    
-    Canvas layout:
-    - Left panel (~40%): Simulated file browser showing a folder of evidence photographs with file icons
-    - Right panel (~60%): EXIF data readout panel + timeline visualization
-    
-    Visual elements:
-    - Clickable file icons representing 6-8 simulated evidence photos with different timestamps and locations
-    - EXIF readout showing: Camera Make/Model, Capture Date/Time, GPS Lat/Long, Device Time Zone
-    - Timeline at bottom showing selected photos plotted in chronological order
-    - Mini map showing GPS coordinates of selected photos as map pins
-    
-    Interactive controls:
-    - Click any photo icon to load its EXIF data into the readout panel
-    - "Add to Timeline" button places the photo on the chronological timeline
-    - "Plot on Map" button shows the GPS coordinates on a simplified map grid
-    - "Export Timeline" displays a formatted text report of all photos in chronological order
-    
-    Data Visibility Requirements:
-    - Show EXIF data in human-readable format
-    - Show GPS coordinates in both decimal degrees and DMS (degrees/minutes/seconds) format
-    - Highlight time zone inconsistencies in red when detected
-    - Show the sorted chronological timeline as photos are added
-    
-    Instructional Rationale: An Apply-level objective (extract and use EXIF metadata) requires hands-on practice with simulated evidence files, building a timeline that mirrors real investigative workflow.
-    
-    Color scheme: Dark forensic blue background, white panels, green for verified data, red for anomalies/inconsistencies.
-    -->
+  <main></main>
+  <script src="metadata-timeline-builder.js"></script>
+  <p><a href="./index.md">Back to Documentation</a></p>
 </body>
 </html>

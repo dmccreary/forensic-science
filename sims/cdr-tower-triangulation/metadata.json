@@ -1,10 +1,14 @@
 {
-  "title": "CDR and Tower Triangulation Timeline MicroSim",
-  "description": "Use CDR and cell tower data to reconstruct a device's geographic movement across an investigative timeline (Bloom Level 3 — Apply; verb: use).",
-  "creator": "Dementia Education Project",
+  "title": "CDR & Tower Triangulation Timeline",
+  "description": "Reconstruct a device's geographic movement from Call Detail Records and cell-tower data. Play the timeline to animate the device between towers, click CDR rows to locate towers, and show the trilateration that estimates a position from three tower ranges.",
+  "creator": "Forensic Science Intelligent Textbook",
   "date": "2026-06-01",
   "subject": [
-    "dementia"
+    "Forensic Science",
+    "Mobile Forensics",
+    "Cell Phone Analytics",
+    "Call Detail Records",
+    "Trilateration"
   ],
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -12,10 +16,34 @@
   "rights": "CC BY 4.0",
   "identifier": "cdr-tower-triangulation",
   "library": "p5.js",
-  "bloomLevel": "Apply (L3)",
+  "bloomLevel": "Apply (L3) — use CDR and tower data to reconstruct device movement.",
   "bloomVerb": "Use",
-  "completion_status": "scaffold",
+  "completion_status": "implemented",
   "chapter_number": 17,
   "chapter_title": "Cell Phone Analytics and Mobile Forensics",
-  "chapter_dir": "17-cell-phone-analytics"
+  "chapter_dir": "17-cell-phone-analytics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Reconstructing device movement from CDR and cell-tower geometry",
+    "learningObjectives": [
+      "Use CDR rows (time, tower ID) to order a device's tower contacts.",
+      "Reconstruct geographic movement by mapping tower contacts onto a coverage map over time.",
+      "Apply trilateration: estimate a location from three tower ranges and state its uncertainty."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "20-25 minutes",
+    "prerequisites": "Reading a table; basic coordinate geometry; the idea of a coverage radius"
+  },
+  "pedagogical": {
+    "interactionPattern": "Map + table + timeline: play the timeline to animate the device along its tower path, click CDR rows to highlight the tower, and toggle a trilateration overlay showing three range circles converging on an estimated location",
+    "assessment": "Students order the tower contacts, trace the path, and interpret the trilateration estimate and its uncertainty radius",
+    "modelType": "Discrete tower-contact path animation plus a geometric trilateration overlay (three circles intersecting at the estimate)",
+    "controls": [
+      "Play/Pause Timeline button",
+      "Show/Hide Triangulation button",
+      "Playback speed slider (0.25x-3x)",
+      "click a CDR row to locate its tower"
+    ]
+  }
 }
