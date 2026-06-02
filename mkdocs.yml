@@ -38,24 +38,60 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      - 1. Foundations & Legal Principles: chapters/01-intro-forensic-science/index.md
-      - 2. Crime Scene Investigation: chapters/02-crime-scene-investigation/index.md
-      - 3. Fingerprint Analysis: chapters/03-fingerprint-analysis/index.md
-      - 4. Hair and Fiber Analysis: chapters/04-hair-and-fiber-analysis/index.md
-      - 5. Glass, Soil & Trace Evidence: chapters/05-glass-soil-trace-evidence/index.md
-      - 6. Forensic Serology: chapters/06-forensic-serology/index.md
-      - 7. Bloodstain Pattern Analysis: chapters/07-bloodstain-pattern-analysis/index.md
-      - 8. DNA Profiling: chapters/08-forensic-dna-profiling/index.md
-      - 9. Forensic Toxicology: chapters/09-forensic-toxicology/index.md
-      - 10. Fire, Arson & Explosives: chapters/10-fire-arson-explosives/index.md
-      - 11. Forensic Anthropology: chapters/11-forensic-anthropology/index.md
-      - 12. Forensic Entomology: chapters/12-forensic-entomology/index.md
-      - 13. Firearms & Ballistics: chapters/13-firearms-and-ballistics/index.md
-      - 14. Document Examination: chapters/14-document-examination/index.md
-      - 15. Digital Forensics: chapters/15-digital-forensics/index.md
-      - 16. Facial Recognition: chapters/16-facial-recognition/index.md
-      - 17. Cell Phone Analytics: chapters/17-cell-phone-analytics/index.md
-      - 18. Social Media & OSINT: chapters/18-social-media-osint/index.md
+      - 1. Foundations & Legal Principles:
+          - Chapter: chapters/01-intro-forensic-science/index.md
+          - Quiz: chapters/01-intro-forensic-science/quiz.md
+      - 2. Crime Scene Investigation:
+          - Chapter: chapters/02-crime-scene-investigation/index.md
+          - Quiz: chapters/02-crime-scene-investigation/quiz.md
+      - 3. Fingerprint Analysis:
+          - Chapter: chapters/03-fingerprint-analysis/index.md
+          - Quiz: chapters/03-fingerprint-analysis/quiz.md
+      - 4. Hair and Fiber Analysis:
+          - Chapter: chapters/04-hair-and-fiber-analysis/index.md
+          - Quiz: chapters/04-hair-and-fiber-analysis/quiz.md
+      - 5. Glass, Soil & Trace Evidence:
+          - Chapter: chapters/05-glass-soil-trace-evidence/index.md
+          - Quiz: chapters/05-glass-soil-trace-evidence/quiz.md
+      - 6. Forensic Serology:
+          - Chapter: chapters/06-forensic-serology/index.md
+          - Quiz: chapters/06-forensic-serology/quiz.md
+      - 7. Bloodstain Pattern Analysis:
+          - Chapter: chapters/07-bloodstain-pattern-analysis/index.md
+          - Quiz: chapters/07-bloodstain-pattern-analysis/quiz.md
+      - 8. DNA Profiling:
+          - Chapter: chapters/08-forensic-dna-profiling/index.md
+          - Quiz: chapters/08-forensic-dna-profiling/quiz.md
+      - 9. Forensic Toxicology:
+          - Chapter: chapters/09-forensic-toxicology/index.md
+          - Quiz: chapters/09-forensic-toxicology/quiz.md
+      - 10. Fire, Arson & Explosives:
+          - Chapter: chapters/10-fire-arson-explosives/index.md
+          - Quiz: chapters/10-fire-arson-explosives/quiz.md
+      - 11. Forensic Anthropology:
+          - Chapter: chapters/11-forensic-anthropology/index.md
+          - Quiz: chapters/11-forensic-anthropology/quiz.md
+      - 12. Forensic Entomology:
+          - Chapter: chapters/12-forensic-entomology/index.md
+          - Quiz: chapters/12-forensic-entomology/quiz.md
+      - 13. Firearms & Ballistics:
+          - Chapter: chapters/13-firearms-and-ballistics/index.md
+          - Quiz: chapters/13-firearms-and-ballistics/quiz.md
+      - 14. Document Examination:
+          - Chapter: chapters/14-document-examination/index.md
+          - Quiz: chapters/14-document-examination/quiz.md
+      - 15. Digital Forensics:
+          - Chapter: chapters/15-digital-forensics/index.md
+          - Quiz: chapters/15-digital-forensics/quiz.md
+      - 16. Facial Recognition:
+          - Chapter: chapters/16-facial-recognition/index.md
+          - Quiz: chapters/16-facial-recognition/quiz.md
+      - 17. Cell Phone Analytics:
+          - Chapter: chapters/17-cell-phone-analytics/index.md
+          - Quiz: chapters/17-cell-phone-analytics/quiz.md
+      - 18. Social Media & OSINT:
+          - Chapter: chapters/18-social-media-osint/index.md
+          - Quiz: chapters/18-social-media-osint/quiz.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md

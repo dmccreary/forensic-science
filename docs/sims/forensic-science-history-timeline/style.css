@@ -41,12 +41,13 @@ h1 {
     cursor: pointer;
 }
 
-#controls button:hover { background: #e9ecef; }
+#controls button:hover { filter: brightness(0.95); }
 
+/* Active filter keeps its era color and gains a dark ring so it stays legible on any swatch color */
 #controls button.active {
-    background: #1a3a6c;
-    color: white;
     border-color: #1a3a6c;
+    box-shadow: 0 0 0 2px #1a3a6c;
+    font-weight: 700;
 }
 
 .spacer { flex: 1 1 auto; }
@@ -109,23 +110,6 @@ h1 {
     margin: 6px 2px;
 }
 
-/* Legend */
-#legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-    margin: 6px 2px;
-    font-size: 12px;
-    color: #343a40;
-}
-.legend-item { display: flex; align-items: center; gap: 5px; }
-.legend-swatch {
-    width: 14px; height: 14px;
-    border-radius: 3px;
-    border: 1px solid #888;
-    display: inline-block;
-}
-
 /* Detail panel populated on event click */
 #details {
     border: 1px solid #dee2e6;
@@ -134,8 +118,8 @@ h1 {
     background: white;
     padding: 10px 14px;
     margin-top: 8px;
-    height: 104px;
-    overflow-y: auto;          /* long milestone descriptions scroll within the panel */
+    height: 185px;             /* tall enough to show the longest milestone description without scrolling */
+    overflow-y: auto;
     font-size: 14px;
     line-height: 1.45;
 }

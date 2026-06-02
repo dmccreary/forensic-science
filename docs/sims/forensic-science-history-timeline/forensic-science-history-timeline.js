@@ -65,6 +65,20 @@ const EVENTS = [
     xref: "Covered in this chapter (Chapter 1)"
   },
   {
+    year: 1954, display: '1954', era: 'green',
+    title: "Borkenstein invents the Breathalyzer",
+    summary: "First practical roadside test for alcohol intoxication.",
+    body: "Indiana State Police captain Robert Borkenstein built the Breathalyzer, a portable device that estimated blood alcohol concentration from a breath sample — giving police and toxicologists the first reliable, field-usable chemical test for impaired driving.",
+    xref: "See Chapter 9 (Forensic Toxicology)"
+  },
+  {
+    year: 1980, display: '~1980', era: 'green',
+    title: "AFIS automates fingerprint matching",
+    summary: "Computers begin searching fingerprint databases.",
+    body: "The FBI's first Automated Fingerprint Identification System (AFIS) let computers compare a print against huge databases in minutes rather than the days that manual searching required — turning fingerprints from a filing problem into a fast, searchable forensic tool.",
+    xref: "See Chapter 3 (Fingerprint Analysis)"
+  },
+  {
     year: 1984, display: '1984', era: 'purple',
     title: "Colin Pitchfork case — first DNA conviction",
     summary: "Alec Jeffreys' DNA profiling solves a double murder.",
@@ -113,7 +127,6 @@ const ERAS = [
 let timeline, dataset, allItems, currentFilter = 'all';
 
 document.addEventListener('DOMContentLoaded', function () {
-  buildLegend();
   buildFilterButtons();
 
   // Build timeline items. content shows the year + headline; title is the hover tooltip.
@@ -204,28 +217,19 @@ function fitAll() {
   timeline.setWindow(new Date(minD - 90 * year), new Date(maxD + 90 * year), { animation: true });
 }
 
-function buildLegend() {
-  const legend = document.getElementById('legend');
-  ERAS.forEach(function (era) {
-    const item = document.createElement('span');
-    item.className = 'legend-item';
-    item.innerHTML = '<span class="legend-swatch" style="background:' + era.color + '"></span>' + era.label;
-    legend.appendChild(item);
-  });
-}
-
 function buildFilterButtons() {
   const wrap = document.getElementById('era-filters');
-  const makeBtn = function (key, label) {
+  const makeBtn = function (key, label, color) {
     const b = document.createElement('button');
     b.textContent = label;
     b.dataset.era = key;
+    if (color) b.style.background = color;   // era buttons carry the era color (replaces the old bottom legend)
     if (key === 'all') b.classList.add('active');
     b.onclick = function () { filterEra(key, b); };
     wrap.appendChild(b);
   };
   makeBtn('all', 'All eras');
-  ERAS.forEach(function (era) { makeBtn(era.key, era.label.split(' (')[0]); });
+  ERAS.forEach(function (era) { makeBtn(era.key, era.label.split(' (')[0], era.color); });
 }
 
 function filterEra(key, btn) {

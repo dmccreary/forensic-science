@@ -13,7 +13,7 @@ social:
 
 # Interactive Timeline of Forensic Science History
 
-<iframe src="main.html" width="100%" height="607" scrolling="no"></iframe>
+<iframe src="main.html" width="100%" height="660" scrolling="no"></iframe>
 
 [Run the Timeline MicroSim Fullscreen](main.html){ .md-button .md-button--primary }
 
@@ -46,7 +46,7 @@ You can embed this MicroSim on your own web page with this iframe:
 
 ```html
 <iframe src="https://dmccreary.github.io/forensic-science/sims/forensic-science-history-timeline/main.html"
-        width="100%" height="582" scrolling="no"></iframe>
+        width="100%" height="660" scrolling="no"></iframe>
 ```
 
 ## Lesson Plan
