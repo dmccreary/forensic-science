@@ -1,7 +1,7 @@
 ---
 title: Locard Exchange Principle Visualizer
 description: Apply (Bloom L3) the Locard Exchange Principle to predict and verify what trace evidence is produced and transferred when two objects make physical contact.
-status: implemented
+status: built
 library: p5.js
 bloom_level: Apply (L3) — predict and verify what trace evidence transfers when two objects make physical contact.
 image: /sims/locard-exchange-visualizer/locard-exchange-visualizer.png

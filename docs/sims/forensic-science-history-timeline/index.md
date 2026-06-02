@@ -1,7 +1,7 @@
 ---
 title: Interactive Timeline of Forensic Science History
 description: Interactive Timeline of Forensic Science History
-status: implemented
+status: built
 library: vis-timeline
 bloom_level: Remember (L1) — identify and recall key milestones in forensic science history.
 image: /sims/forensic-science-history-timeline/forensic-science-history-timeline.png
@@ -13,7 +13,7 @@ social:
 
 # Interactive Timeline of Forensic Science History
 
-<iframe src="main.html" width="100%" height="582" scrolling="no"></iframe>
+<iframe src="main.html" width="100%" height="607" scrolling="no"></iframe>
 
 [Run the Timeline MicroSim Fullscreen](main.html){ .md-button .md-button--primary }
 

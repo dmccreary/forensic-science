@@ -1,7 +1,7 @@
 ---
 title: Criminal Justice Process — From Crime Scene to Verdict
 description: Criminal Justice Process — From Crime Scene to Verdict
-status: implemented
+status: built
 library: p5.js
 bloom_level: Understand (L2) — explain the sequence of stages in the criminal justice process and where forensic evidence and constitutional protections apply.
 image: /sims/criminal-justice-process-flow/criminal-justice-process-flow.png

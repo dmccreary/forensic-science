@@ -134,7 +134,8 @@ h1 {
     background: white;
     padding: 10px 14px;
     margin-top: 8px;
-    min-height: 84px;
+    height: 104px;
+    overflow-y: auto;          /* long milestone descriptions scroll within the panel */
     font-size: 14px;
     line-height: 1.45;
 }

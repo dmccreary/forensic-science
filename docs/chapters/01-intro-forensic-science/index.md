@@ -75,7 +75,7 @@ Before we look at how the field developed, let's place a few key milestones on a
 
 #### Diagram: Interactive Timeline of Forensic Science History
 
-<iframe src="../../sims/forensic-science-history-timeline/main.html" width="100%" height="582px" scrolling="no"></iframe>
+<iframe src="../../sims/forensic-science-history-timeline/main.html" width="100%" height="607px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Interactive Timeline of Forensic Science History</summary>

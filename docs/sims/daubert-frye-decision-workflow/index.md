@@ -1,7 +1,7 @@
 ---
 title: Daubert vs. Frye Admissibility Decision Workflow
 description: Daubert vs. Frye Admissibility Decision Workflow
-status: implemented
+status: built
 library: p5.js
 bloom_level: Analyze (L4) — compare and contrast how the Frye and Daubert standards evaluate the same scientific evidence.
 image: /sims/daubert-frye-decision-workflow/daubert-frye-decision-workflow.png

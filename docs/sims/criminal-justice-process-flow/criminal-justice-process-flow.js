@@ -148,22 +148,22 @@ function drawFlowchart(x, w) {
     text(s.n, x + 16, y + barH / 2);
     textStyle(NORMAL);
 
-    // stage name
+    // stage name (vertically centered within the bar)
     fill('#212529');
     textAlign(LEFT, CENTER);
     textSize(barH < 38 ? 11.5 : 12.5);
-    text(s.name, x + 32, y + barH / 2, w - 56, barH);
+    text(s.name, x + 32, y, w - 56, barH);
 
-    // constitutional badge
+    // constitutional badge (vertically centered, right side)
     if (s.amendment) {
       noStroke();
       fill('#6a1b9a');
-      ellipse(x + w - 14, y + 13, 18, 18);
+      ellipse(x + w - 16, y + barH / 2, 18, 18);
       fill('white');
       textAlign(CENTER, CENTER);
       textSize(11);
       textStyle(BOLD);
-      text('§', x + w - 14, y + 12);
+      text('§', x + w - 16, y + barH / 2 - 1);
       textStyle(NORMAL);
     }
 
@@ -219,7 +219,8 @@ function drawDetailPanel(x, w) {
       fill('#343a40');
       textAlign(LEFT, CENTER);
       textSize(11.5);
-      text(c.label, x + 34, ly + 8, w - 46, 18);
+      // point-form CENTER on the swatch's mid-line (ly + 8) for true vertical centering
+      text(c.label, x + 34, ly + 8);
       ly += 24;
     }
     // forensic highlight legend
@@ -231,7 +232,7 @@ function drawDetailPanel(x, w) {
     fill('#343a40');
     textAlign(LEFT, CENTER);
     textSize(11.5);
-    text('Forensic entry point (toggle below)', x + 34, ly + 8, w - 46, 18);
+    text('Forensic entry point (toggle below)', x + 34, ly + 8);
     return;
   }
 
@@ -246,7 +247,8 @@ function drawDetailPanel(x, w) {
   textAlign(LEFT, CENTER);
   textSize(13);
   textStyle(BOLD);
-  text('Stage ' + s.n + ': ' + s.name, x + 12, top + 17, w - 24, 30);
+  // box spans the full band height so the title is vertically centered in the band
+  text('Stage ' + s.n + ': ' + s.name, x + 12, top, w - 24, 34);
   textStyle(NORMAL);
 
   let yy = top + 46;
@@ -289,7 +291,8 @@ function drawControlLabel() {
   textAlign(LEFT, CENTER);
   textSize(12);
   const msg = (selected >= 0) ? ('Selected: stage ' + STAGES[selected].n) : 'Click a stage to begin';
-  text(msg, canvasWidth - 220, drawHeight + 25, 210, 20);
+  // vertically aligned with the checkbox row at drawHeight + 14
+  text(msg, canvasWidth - 220, drawHeight + 12, 210, 20);
 }
 
 function drawBadgeTooltip() {

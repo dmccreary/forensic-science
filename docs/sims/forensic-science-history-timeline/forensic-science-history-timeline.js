@@ -1,5 +1,5 @@
 // Interactive Timeline of Forensic Science History - vis-timeline
-// CANVAS_HEIGHT: 580
+// CANVAS_HEIGHT: 605
 // Bloom Level: Remember (L1) - identify and recall key milestones in forensic science history.
 // Students hover for a one-line summary, click any milestone to read its full
 // significance and a cross-reference to the chapter where it is covered in depth.
@@ -139,13 +139,14 @@ document.addEventListener('DOMContentLoaded', function () {
     margin: { item: { horizontal: 40, vertical: 8 }, axis: 30 },
     zoomMin: 1000 * 60 * 60 * 24 * 365 * 5,      // 5 years
     zoomMax: 1000 * 60 * 60 * 24 * 365 * 1600,   // ~1600 years (covers full span)
-    min: new Date(600, 0, 1),
-    max: new Date(2040, 0, 1),
+    min: new Date(500, 0, 1),
+    max: new Date(2100, 0, 1),   // must sit well past the right window bound, else it silently clamps it
     stack: true,
     selectable: true,
     showCurrentTime: false,
     moveable: true,
     zoomable: false,   // wheel zoom disabled; use +/- buttons (prevents page-scroll hijack)
+    align: 'center',   // center labels on their date so the last item does not clip the right edge
     tooltip: { followMouse: true }
   };
 
@@ -167,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, true);
 
   // Default view focuses on the dense modern cluster; ancient milestones are a pan away.
-  timeline.setWindow(new Date(1810, 0, 1), new Date(2038, 0, 1), { animation: false });
+  timeline.setWindow(new Date(1795, 0, 1), new Date(2068, 0, 1), { animation: false });
 
   timeline.on('select', function (props) {
     if (props.items.length > 0) showDetails(props.items[0]);
@@ -182,8 +183,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function shortHeadline(t) {
-  // Keep timeline labels compact; full text shows in the detail panel.
-  return t.length > 34 ? t.slice(0, 32) + '…' : t;
+  // Keep timeline labels compact so boxes do not clip the container edges;
+  // the full headline always shows in the detail panel on click.
+  return t.length > 22 ? t.slice(0, 21) + '…' : t;
 }
 
 function pan(fraction) {
@@ -198,7 +200,8 @@ function fitAll() {
   const ts = allItems.map(function (i) { return i.start.getTime(); });
   const minD = Math.min.apply(null, ts), maxD = Math.max.apply(null, ts);
   const year = 365 * 24 * 60 * 60 * 1000;
-  timeline.setWindow(new Date(minD - 30 * year), new Date(maxD + 30 * year), { animation: true });
+  // generous padding so centered labels on the first/last items are not clipped
+  timeline.setWindow(new Date(minD - 90 * year), new Date(maxD + 90 * year), { animation: true });
 }
 
 function buildLegend() {
@@ -233,7 +236,7 @@ function filterEra(key, btn) {
   dataset.clear();
   dataset.add(filtered);
   if (key === 'all') {
-    timeline.setWindow(new Date(1810, 0, 1), new Date(2038, 0, 1), { animation: true });
+    timeline.setWindow(new Date(1795, 0, 1), new Date(2068, 0, 1), { animation: true });
   } else {
     fitAll();
   }

@@ -1,40 +1,58 @@
 ---
-title: 'Forensic Science'
-description: 'An interactive intelligent textbook on forensic science techniques, evidence analysis, and crime scene investigation'
+title: Forensic Science
+description: A rigorous, laboratory-intensive intelligent textbook on forensic science techniques, evidence analysis, and crime scene investigation for high school and dual-enrollment students.
 image: img/cover.png
+og:image: img/cover.png
+twitter:image: img/cover.png
+hide:
+  - toc
 ---
+<style>
+.md-content__inner h1 {display: none !important;}
+</style>
 
 # Forensic Science
 
 <figure markdown>
-  ![Forensic Science cover](./img/cover.png){ width="100%" }
+  ![Forensic Science — An Intelligent Textbook](./img/cover.png){ width="100%" }
 </figure>
 
-An interactive intelligent textbook on forensic science techniques, evidence analysis, and crime scene investigation
+Welcome to **Forensic Science**, a rigorous, laboratory-intensive intelligent textbook
+that bridges chemistry, biology, physics, and law through the lens of criminal investigation.
+
+## About This Book
+
+Every chapter is organized around authentic casework methodologies used by practicing
+forensic scientists, crime scene investigators, medical examiners, and digital forensics
+specialists. Students learn how physical, biological, chemical, and digital evidence is
+collected, analyzed, and presented in a court of law.
+
+The course spans **18 chapters** organized into six thematic modules:
+
+- **Module 1** — Forensic infrastructure and crime scene methodology
+- **Module 2** — Physical and microscopic trace evidence
+- **Module 3** — Biological evidence and biochemistry
+- **Module 4** — Chemical and biomolecular analysis
+- **Module 5** — Anatomical and ecological analysis
+- **Module 6** — Digital evidence, facial recognition, cell phone analytics, and social media analysis
+
+## Who This Book Is For
+
+High school students (grades 9–12) with a background in introductory biology and
+chemistry. The course is appropriate for college-prep and AP-track students seeking
+a rigorous application of STEM skills in a real-world investigative context. It is
+also suitable for dual-enrollment programs at community colleges.
+
+## How to Use This Book
+
+Use the navigation sidebar to explore:
+
+- **[Chapters](chapters/index.md)** — Main educational content with labs, case studies, and MicroSims
+- **[Learning Graph](learning-graph/index.md)** — Interactive concept map showing how ideas connect
+- **[MicroSims](sims/index.md)** — Hands-on simulations for key techniques and processes
+- **[Glossary](glossary.md)** — Definitions for key forensic science terms
 
 ## Getting Started
 
-This is an intelligent textbook built with MkDocs Material. Use the navigation
-sidebar on the left to explore chapters, the learning graph, MicroSims, and
-supporting reference content.
-
-## Front Matter
-
-- **About** — audience, prerequisites, and how to read the book
-- **Course Description** — the seed document used to generate the learning graph
-
-## Chapters
-
-The main body of the book lives under [Chapters](chapters/index.md). Each
-chapter has its own folder with a two-digit prefix (e.g. `01-introduction`).
-
-## Learning Graph
-
-The [Learning Graph](learning-graph/index.md) shows how concepts depend on each
-other. Concepts are introduced in dependency order so prerequisites are always
-covered before they are used.
-
-## MicroSims
-
-Interactive simulations live under [MicroSims](sims/index.md). Each MicroSim
-focuses on one concept and is embeddable as an iframe inside chapter content.
+Begin with [Chapter 1: Foundations & Legal Principles](chapters/01-intro-forensic-science/index.md)
+to understand how forensic science operates within the US legal system.
