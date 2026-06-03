@@ -75,6 +75,8 @@ A **scene log** — a written record of every person who enters and exits the pe
 
 ## The Seven S's of Crime Scene Investigation
 
+![Seven S's Infographic](seven-s-infographic.png)
+
 The field has developed a memorable framework that organizes first-responder and investigative team actions into a logical sequence. The Seven S's, in procedural order, are:
 
 1. **Secure** the scene
