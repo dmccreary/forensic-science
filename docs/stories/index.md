@@ -1,6 +1,8 @@
 ---
 title: Stories
 description: Mini graphic-novel stories that bring forensic science to life — the real people who built the field, and fictional cases that separate CSI-style TV from real investigative work.
+toc:
+    hide
 ---
 
 # Stories

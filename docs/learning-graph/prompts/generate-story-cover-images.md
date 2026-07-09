@@ -15,4 +15,4 @@ The following was given to Codex ChatGPT 5.5
     ![Cover Image](./cover.png)
     ```
 
-I had had a OpenAI "Plus" plan for $20/month and it used 
+I had had a OpenAI "Plus" plan for $20/month and it used about 30% of the five-hour token limit to generate these images.
