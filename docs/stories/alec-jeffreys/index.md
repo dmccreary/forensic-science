@@ -238,7 +238,7 @@ Alec Jeffreys did not discover DNA fingerprinting by looking for it. He discover
 
 | Challenge | How Jeffreys Responded | Lesson for Today |
 |---|---|---|
-| Unexpected experimental result | Stopped work and analysed the anomaly instead of dismissing it | Scientific breakthroughs often hide in data that doesn't fit the expected pattern |
+| Unexpected experimental result | Stopped work and analyzed the anomaly instead of dismissing it | Scientific breakthroughs often hide in data that doesn't fit the expected pattern |
 | Police expected DNA to confirm guilt | Reported what the evidence showed — a non-match — regardless of the investigation's preferred outcome | Forensic scientists must report evidence neutrally; their duty is to the truth, not to a particular verdict |
 | Mass screening produced no early result | Continued the process systematically; the answer eventually surfaced through non-scientific means | Rigorous method plus patient persistence — even when progress is invisible |
 | DNA evidence could be misunderstood as absolute | Always expressed matches as random-match probabilities, not certainties | A statistic is not a verdict; interpretation, contamination risk, and context always matter |
@@ -262,5 +262,5 @@ The next time you hear that DNA "proved" someone guilty, pause and ask the more 
 1. [Wikipedia: Alec Jeffreys](https://en.wikipedia.org/wiki/Alec_Jeffreys) — Biography of the British geneticist who invented DNA fingerprinting at the University of Leicester in 1984
 2. [Wikipedia: DNA profiling](https://en.wikipedia.org/wiki/DNA_profiling) — Overview of DNA fingerprinting and forensic DNA analysis, including the development of STR profiling and national databases
 3. [Wikipedia: Colin Pitchfork](https://en.wikipedia.org/wiki/Colin_Pitchfork) — Article on the 1988 case in which Pitchfork became the first person convicted of murder using DNA evidence
-4. [Encyclopaedia Britannica: Alec Jeffreys](https://www.britannica.com/biography/Alec-Jeffreys) — Curated encyclopaedic biography covering Jeffreys' discovery, its applications, and his recognition including a knighthood
+4. [Encyclopedia Britannica: Alec Jeffreys](https://www.britannica.com/biography/Alec-Jeffreys) — Curated encyclopedic biography covering Jeffreys' discovery, its applications, and his recognition including a knighthood
 5. [University of Leicester: The Discovery of DNA Fingerprinting](https://le.ac.uk/dna-fingerprinting) — The University of Leicester's own account of Jeffreys' discovery, the Pitchfork case, and the lasting impact of the technique developed in its laboratories
