@@ -10,7 +10,7 @@ social:
 
 # The Barcode in Your Blood
 
-![](./cover.png)
+![Cover Image](./cover.png)
 
 <details>
 <summary>Cover Image Prompt</summary>
