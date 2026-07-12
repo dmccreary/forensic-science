@@ -201,6 +201,8 @@ one student or a small group.
 
 -   **[Hash It Out](hash-it-out/index.md)**
 
+    ![Hash It Out — Digital Evidence Integrity cover](hash-it-out/cover.png)
+
     🔀 Combination · Ch 15
 
     Compute and compare cryptographic hashes to detect tampering of digital evidence.

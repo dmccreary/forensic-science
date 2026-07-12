@@ -3,6 +3,8 @@ title: Hash It Out — Digital Evidence Integrity
 description: A digital lab where investigators compute MD5 and SHA-256 hashes of an evidence file, watch a single changed character rewrite the entire hash, and use hash matching to prove which of three seized files is the untouched original.
 ---
 
+![Cover Image](./cover.png)
+
 # Hash It Out — Digital Evidence Integrity
 
 !!! mascot-welcome "Welcome, Investigators!"
