@@ -19,12 +19,12 @@ Each investigation is tagged with one of three **lab types**:
 
 | Badge | Type | What it means |
 |-------|------|---------------|
-| 🧪 **Physical** | Real bench lab | Solvable with **under $100 of supplies per group**, purchasable by a teacher from a grocery store, hardware store, or a science-supply vendor (Carolina, Home Science Tools, Amazon). |
+| 🧪 **Physical** | Real bench lab | Solvable with **under $50 of supplies per group**, purchasable by a teacher from a grocery store, hardware store, or a science-supply vendor (Carolina, Home Science Tools, Amazon). |
 | 💻 **Virtual** | Digital lab | Solved with a combination of the [`/story-generator`](../../story-generator) skill and one or more [MicroSims](../sims/index.md). No consumables. |
 | 🔀 **Combination** | Hybrid | A physical bench step **plus** a virtual step — typically used to simulate an expensive or slow instrument (DNA sequencer, GC-MS, insect rearing) that a classroom cannot afford or wait for. |
 
 !!! note "Budget & safety ground rules"
-    - **$100/group cap** covers *consumables only*. Shared classroom equipment
+    - **$50/group cap** covers *consumables only*. Shared classroom equipment
       (compound microscopes, a UV flashlight, a laptop) is assumed to already be
       on hand and is called out separately as **"Assumes access to…"**.
     - **No real blood, no real body fluids, no controlled substances, no live

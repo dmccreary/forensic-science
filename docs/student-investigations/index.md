@@ -1,18 +1,18 @@
 ---
 title: Student Investigations
-description: Hands-on forensic labs where students solve a crime, crack a mystery, or complete an investigation — physical bench labs under $100 per group, virtual labs built from stories and MicroSims, and combinations that simulate expensive instruments.
+description: Hands-on forensic labs where students solve a crime, crack a mystery, or complete an investigation — physical bench labs under $50 per group, virtual labs built from stories and MicroSims, and combinations that simulate expensive instruments.
 hide:
     - toc
 ---
 
 # Student Investigations
 
-Every investigation below hands you a **mystery** and asks the evidence to
+Every one of the 28 investigations below hands you a **mystery** and asks the evidence to
 answer it. Each one is a self-contained **Hands-On Lab** a teacher can assign to
-one student or a small group.  We try to make every student investigation focus
-on hands on real bench skills unless the cost of doing so are out-of-range
-for a typical high-school lab.  When this occurs we use a on-line simulated
-lab.
+one student or a small group. We try to make every student investigation focus
+on real, hands-on bench skills — unless the cost of doing so is out of range
+for a typical high-school lab. When that happens, we use an online simulated
+lab instead.
 
 **Lab types:** 
 
@@ -20,11 +20,7 @@ lab.
 2. 💻 **Virtual** (solved with stories and interactive MicroSims)
 3. 🔀 **Combination** (a physical step plus a virtual step that simulates an expensive instrument)
 
-!!! tip "Two labs are ready to run"
-    **[Locard's Silent Witness](locard-silent-witness/index.md)** and
-    **[Map the Scene](map-the-scene-triangulation/index.md)** have complete
-    student handouts. The rest are on the way — see the full
-    [lab-idea catalog](ideas.md) for supplies and MicroSim specs for all 28.
+See our [Lab-Idea Catalog](./ideas.md) for how we got started, and our [Summary Table](../teachers-guide/student-investigations-summary.md) for a list of supplies and risk factors for each of our 28 student-investigation labs.
 
 <div class="grid cards" markdown>
 
