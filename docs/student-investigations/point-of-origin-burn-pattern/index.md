@@ -3,6 +3,8 @@ title: Point of Origin — Reading a Burn Pattern
 description: A virtual arson investigation where investigators read V-patterns, spalling, and pour-pattern char across a scene to trace a fire back to its origin, weigh accidental against set, and justify the call with the fire tetrahedron.
 ---
 
+![Cover Image](./cover.png)
+
 # Point of Origin — Reading a Burn Pattern
 
 !!! mascot-welcome "Welcome, Investigators!"

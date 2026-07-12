@@ -153,6 +153,8 @@ one student or a small group.
 
 -   **[Point of Origin](point-of-origin-burn-pattern/index.md)**
 
+    ![Point of Origin — Reading a Burn Pattern cover](point-of-origin-burn-pattern/cover.png)
+
     💻 Virtual · Ch 10
 
     Read V-patterns and char to locate a fire's origin and spot arson.
