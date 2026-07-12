@@ -96,51 +96,31 @@ mark with **one specific tool.** That side-by-side alignment is exactly what a
 
 Before you pick up a tool, see how striation matching works.
 
-### Proposed MicroSim: Striation-Overlay Comparator
+### Explore: Striation-Overlay Comparator
+
+Slide a suspect tool's test mark to align its striations with the crime-scene
+toolmark, then score the correlation to identify or exclude the tool.
+
+<iframe src="../../sims/striation-overlay-comparator/main.html" width="100%" height="565" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Striation-Overlay Comparator Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** striation-overlay-comparator<br/>
 **Library:** p5.js<br/>
-**Status:** Specified
+**Status:** Implemented
 
 Learning Objective: Compare two toolmark striation patterns by overlaying them
 and scoring their alignment, mimicking the split-field view of a comparison
 microscope (Bloom Level 4 — Analyze).
-
-**Concept.** The canvas shows two striation strips — a **questioned** mark on
-the left and a **known** mark on the right — each drawn as a band of vertical
-lines with realistic variation in spacing, depth, and a few distinctive "nick"
-grooves. The learner slides the known strip across a central dividing line (the
-comparison-microscope "bridge") to try to line its striations up with the
-questioned strip.
-
-**Interaction & controls.**
-
-- `createSlider()` — **Shift**: translate the known strip horizontally to hunt
-  for alignment.
-- `createSlider()` — **Rotate**: apply a small angular tilt to correct for a
-  differently angled mark.
-- `createButton('Score Alignment')` — computes a cross-correlation between the
-  two striation profiles and reports a **match score (0–100%)** with a plain-
-  English verdict band (No match / Inconclusive / Consistent).
-- `createSelect()` — **Known tool**: pick which suspect tool's striation set is
-  loaded on the right (Screwdriver A, Chisel B, Bolt cutter C), only one of which
-  truly matches the questioned strip.
-- `createCheckbox('Overlay mode')` — toggles between **side-by-side** (split
-  field) and **overlaid** (superimposed, semi-transparent) comparison views.
-
-**Feedback.** Matching grooves glow green where the profiles coincide; mismatched
-grooves stay red. A running readout shows the current shift, rotation, and score
-so students can see that a real match still holds after small alignment
-adjustments — while a wrong tool never climbs above the "inconclusive" band no
-matter how they slide it.
 </details>
 
-Once built, this comparator lets you rehearse the key move — **sliding one mark
-against another until the striations either line up or clearly don't** — before
-you do it for real under the loupe.
+Check each tool's **class width** first — a tool of the wrong size is excluded on
+class before you ever look at striations. Then pick a tool, slide it until the
+striations line up, and press **Score Alignment**. Only one tool truly matches; a
+wrong tool never reaches a match no matter how you shift it. This rehearses the key
+move — sliding one mark against another until the striations line up or clearly
+don't — before you do it for real under the loupe.
 
 ## Procedure
 

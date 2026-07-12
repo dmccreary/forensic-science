@@ -1,0 +1,50 @@
+{
+  "title": "Presumptive-Test Decision Tool",
+  "description": "A Kastle-Meyer presumptive blood-test simulator that teaches presumptive-versus-confirmatory reasoning and false positives. Pick a reddish-brown sample (Stain A, rust water, ketchup, horseradish extract, or blood simulant), run the presumptive peroxidase test and watch peroxidase-active samples flash bright pink, then run a confirmatory test to reveal the truth. Horseradish is the classic false positive: it screens positive but is not blood, driving home that a presumptive test screens while a confirmatory test confirms.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Forensic Serology",
+    "Presumptive Blood Tests",
+    "Kastle-Meyer Test",
+    "Confirmatory Tests"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "presumptive-test-decision-tool",
+  "library": "p5.js",
+  "bloomLevel": "Evaluate (L5) — judge which stains warrant confirmatory testing and reason about false positives in a presumptive blood screen.",
+  "bloomVerb": "Evaluate",
+  "completion_status": "implemented",
+  "chapter_number": 6,
+  "chapter_title": "Forensic Serology and Biological Fluid Analysis",
+  "chapter_dir": "06-forensic-serology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Presumptive versus confirmatory blood testing and false positives in the Kastle-Meyer test",
+    "learningObjectives": [
+      "Perform a Kastle-Meyer-style presumptive test on an unknown reddish-brown stain.",
+      "Interpret a rapid bright-pink color change as a positive presumptive result for peroxidase activity.",
+      "Explain why a presumptive positive is not proof of blood, using horseradish as the classic false positive.",
+      "Distinguish the role of a presumptive screen from that of a confirmatory identification test."
+    ],
+    "bloomLevel": "Evaluate (L5)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Familiarity with the idea of screening versus confirmation and that hemoglobin acts as a peroxidase"
+  },
+  "pedagogical": {
+    "interactionPattern": "A spot-plate scene fills the left ~55% of the canvas: a labeled well holds the selected sample, a pipette releases a reagent drop during the presumptive run, and the well morphs toward bright pink in proportion to the sample's peroxidase activity. A dropdown selects one of five samples. 'Run Presumptive Test' animates the reagent drop and develops the color; a right-hand verdict panel explains that a pink flash is presumptive only. 'Run Confirmatory Test' (enabled after screening) resolves the ground truth — only Stain A and the blood simulant are truly blood, while horseradish is revealed as a false positive. 'Reset' returns to the sample-ready state.",
+    "assessment": "Evaluation with staged feedback: the student screens each sample, reads the presumptive verdict, then commits to a confirmatory test that either validates or overturns the screen. Meeting the horseradish false positive forces the student to articulate why a presumptive positive means 'consistent with blood, confirm it' rather than 'this is blood.'",
+    "modelType": "Qualitative peroxidase model: each sample carries a presumptive reaction strength (0 to 1) that drives a color lerp from the sample color toward pink, plus an independent confirmatory truth flag for whether the stain is actually blood. Blood simulant and Stain A are true positives, horseradish is a strong false positive, rust reacts weakly, and ketchup is negative.",
+    "controls": [
+      "'Sample' dropdown — Stain A (reddish-brown), Rust water, Ketchup, Horseradish extract, or Blood simulant",
+      "'Run Presumptive Test' button — animate the reagent drop and develop the presumptive color",
+      "'Run Confirmatory Test' button — reveal whether the stain is truly blood",
+      "'Reset' button — return the well to the sample-ready state"
+    ]
+  }
+}

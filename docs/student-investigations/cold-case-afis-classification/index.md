@@ -129,34 +129,24 @@ and the ranked candidate list. Watch how the match **score** drops off after the
 top few candidates — that gap between rank 1 and rank 2 is a signal an examiner
 weighs, but never treats as proof on its own.
 
-### Proposed MicroSim: Minutiae-Tagging Canvas
+### Explore: Minutiae-Tagging Canvas
+
+Tag each ridge ending and bifurcation on the cold-case print, then search the
+six-suspect database and watch AFIS rank the candidates by how many of your
+minutiae overlap each one.
+
+<iframe src="../../sims/minutiae-tagging-canvas/main.html" width="100%" height="560" scrolling="no"></iframe>
 
 <details markdown="1">
-<summary>Minutiae-Tagging Canvas — proposed interactive widget (not yet built)</summary>
+<summary>Minutiae-Tagging Canvas Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** minutiae-tagging-canvas<br/>
 **Library:** p5.js<br/>
-**Status:** Specified (proposed — no iframe yet)
+**Status:** Implemented
 
-**Concept.** A zoomable canvas displays a latent print image. Investigators
-click each **ridge ending** and each **bifurcation** they find. The sim scores
-the tagged points against a hidden **ground-truth** set (rewarding correct
-placements, penalizing missed or invented points) and then returns a **ranked
-candidate list** of suspects by minutiae overlap — turning the abstract "AFIS
-score" into something the investigator generates by hand.
-
-**Proposed controls (p5.js built-ins).**
-
-- `createButton('Reset')` — clear all tagged points and start over.
-- `createSelect()` — choose the print's pattern type (loop / whorl / arch)
-  before tagging.
-- `createSlider(1, 8, 3, 1)` — zoom level for inspecting fine ridge detail.
-
-Learning Objective: Locate and tag minutiae on a zoomable print and interpret
-the resulting ranked candidate list (Bloom Level 4 — Analyze).
-
-Until this widget is built, tag minutiae by hand on the printed exemplar cards
-using the paper procedure in Part 2 below.
+Learning Objective: Locate and classify minutiae on a latent print and interpret
+the resulting ranked AFIS candidate list, recognizing that the system ranks while
+a human examiner decides (Bloom Level 4 — Analyze).
 </details>
 
 ## Procedure

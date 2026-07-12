@@ -114,40 +114,24 @@ fall. This is the pharmacology backdrop to your case: identifying a powder is
 step one, but a toxicologist ultimately cares how it moves through — and out
 of — a body.
 
-### Proposed MicroSim: GC-MS Peak-Match Widget
+### Explore: Confirm the Identity with GC-MS
 
-The confirmatory step in this lab uses a MicroSim that has been **specified but
-not yet built**. Use the paper reference library your teacher provides as a
-stand-in until it ships.
+Take your presumptive call to the confirmatory instrument: overlay a reference
+candidate on the unknown and see whether **both** the retention time **and** the
+fragmentation pattern truly match.
+
+<iframe src="../../sims/gcms-peak-match/main.html" width="100%" height="580" scrolling="no"></iframe>
 
 <details markdown="1">
-<summary>GC-MS Peak-Match Confirmation Widget — specification</summary>
+<summary>GC-MS Peak-Match Confirmation Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** gcms-peak-match<br/>
-**Library:** Chart.js<br/>
-**Status:** Specified
+**Library:** p5.js<br/>
+**Status:** Implemented
 
 Learning Objective: Confirm the identity of an unknown by matching its
 retention time and mass-spectrum fragmentation pattern to a reference library
 (Bloom Level 3 — Apply).
-
-**Layout.** Two stacked Chart.js panels. **Top:** a retention-time
-**chromatogram** (x = time in seconds, y = detector signal) showing the
-unknown's peak. **Bottom:** a **mass-spectrum** bar chart (x = mass-to-charge
-ratio *m/z*, y = relative abundance) showing the unknown's fragmentation
-pattern.
-
-**Interaction.** A `createSelect()` dropdown lets the student choose a candidate
-from a small **reference library** (4–6 entries). Selecting a candidate overlays
-its reference chromatogram and spectrum on the unknown's. A
-`createButton('Score Match')` reports a similarity score for retention time and
-for the fragmentation pattern, and turns green only when **both** align. A
-`createCheckbox('Show library only')` hides the unknown so students study the
-references first.
-
-**Teaching point.** The widget makes the presumptive-vs-confirmatory contrast
-concrete: a color test gave a *class*; matching **both** the retention time
-**and** the full fragmentation pattern gives an *identification*.
 </details>
 
 ## Procedure

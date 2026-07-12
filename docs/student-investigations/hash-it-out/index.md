@@ -103,25 +103,22 @@ Step through the workflow and notice **where the hash is taken** — once on the
 original, once on the copy. That before-and-after pair is the whole point. Now
 you'll compute those hashes yourself.
 
-### Proposed MicroSim: Live Hash & Tamper Detector
+### Explore: Live Hash & Tamper Detector
+
+Type evidence text, flip a single character to watch the avalanche effect rewrite
+the whole fingerprint, then compare two files to authenticate the untouched original.
+
+<iframe src="../../sims/live-hash-tamper-detector/main.html" width="100%" height="640px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Live Hash & Tamper Detector Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** live-hash-tamper-detector<br/>
-**Library:** HTML / JavaScript (Web Crypto API, in-browser)<br/>
-**Status:** Specified
+**Library:** JavaScript (Web Crypto)<br/>
+**Status:** Implemented
 
 Learning Objective: Compute and compare MD5 and SHA-256 digests and demonstrate
 the avalanche effect from a single-character change (Bloom Level 3 — Apply).
-
-Design: A text box holds the "evidence" content. A **Hash** button computes the
-MD5 and SHA-256 digests live and displays both in full. A **Tamper** toggle flips
-one byte of the input and re-hashes, coloring every changed hex character so the
-avalanche effect is visible at a glance. A **Compare** mode accepts two files (or
-two text blocks), hashes both, and reports a green **MATCH** or a red **MISMATCH**
-with the count of differing characters. Controls: a text input, a `Hash` button,
-a `Tamper` checkbox, and a `Compare` button.
 </details>
 
 ## Procedure

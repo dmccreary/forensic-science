@@ -1,0 +1,51 @@
+{
+  "title": "GC-MS Peak-Match Confirmation",
+  "description": "Apply GC-MS confirmation to an unknown substance. A top gas chromatogram shows the unknown's dominant peak at a characteristic retention time; a bottom mass spectrum shows its fragmentation pattern as labeled m/z bars. Pick a candidate from a reference library of four substances, overlay its retention time and spectrum on the unknown, and read a match score. Reinforces that a color test is only presumptive and GC-MS is the confirmatory step that names the molecule.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Forensic Toxicology",
+    "Chemical Analysis",
+    "Gas Chromatography",
+    "Mass Spectrometry",
+    "GC-MS Confirmation"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "gcms-peak-match",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3) — match retention time and fragmentation pattern to confirm an unknown's identity against a reference library.",
+  "bloomVerb": "Confirm",
+  "completion_status": "implemented",
+  "chapter_number": 9,
+  "chapter_title": "Forensic Toxicology and Chemical Analysis",
+  "chapter_dir": "09-forensic-toxicology",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Confirming an unknown substance with GC-MS by matching retention time and mass-spectrum fragmentation pattern to a reference library",
+    "learningObjectives": [
+      "Read a gas chromatogram to find an unknown's characteristic retention time.",
+      "Read a mass spectrum as a fragmentation pattern of labeled m/z peaks.",
+      "Overlay a reference candidate and judge the match from both features together.",
+      "Explain why GC-MS is the confirmatory step after a presumptive color test."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Familiarity with presumptive color tests and the idea that a chromatogram separates compounds while a mass spectrum fragments them"
+  },
+  "pedagogical": {
+    "interactionPattern": "Two stacked charts fill the left of the canvas. The top gas chromatogram plots detector abundance versus retention time and shows the unknown as one dominant filled peak; the bottom mass spectrum plots relative intensity versus m/z as labeled bars for the unknown's fragmentation pattern. A dropdown selects one of four reference candidates (Caffeine, Aspirin, Pseudoephedrine, Compound X). 'Overlay & Score' draws the candidate's retention peak and spectrum in a second color over the unknown and reports a retention-time match, a fragment-pattern match, and an overall percentage in a verdict panel. 'New Unknown' deterministically cycles which substance is the unknown; 'Reveal Match' discloses the unknown's true identity.",
+    "assessment": "Application with immediate feedback: only when the student selects the candidate whose retention time AND fragmentation pattern both match the unknown does the overall score reach the CONFIRMED band. Mismatched candidates score low even if they share an occasional fragment, making the presumptive-versus-confirmatory distinction concrete.",
+    "modelType": "Qualitative analytical model: each library substance has a stored retention time and a set of m/z fragment peaks. The retention-time score falls off with the time difference; the spectral score is the intensity-weighted fraction of the unknown's fragments the candidate reproduces within an m/z tolerance; the overall score is a weighted blend that reaches 100% only for the true substance.",
+    "controls": [
+      "'Candidate' dropdown — choose a reference substance to overlay",
+      "'Overlay & Score' button — overlay the candidate and compute the match",
+      "'New Unknown' button — cycle to a different unknown substance",
+      "'Reveal Match' button — disclose the unknown's true identity"
+    ]
+  }
+}

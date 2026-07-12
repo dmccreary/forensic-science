@@ -1,0 +1,51 @@
+{
+  "title": "Minutiae-Tagging Canvas",
+  "description": "Tag the minutiae on a stylized loop fingerprint, then search a six-suspect AFIS database. Choose a tag type (ridge ending or bifurcation) and click the print to place tags; each tag is scored against hidden ground-truth minutiae. Searching the database ranks the six candidates by how many of your tagged minutiae overlap each suspect's template, reinforcing that AFIS ranks candidates while a human examiner makes the final identification.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Fingerprint Analysis",
+    "Dactyloscopy",
+    "AFIS",
+    "Minutiae"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "minutiae-tagging-canvas",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) — locate and classify minutiae on a latent print and interpret the resulting ranked AFIS candidate list.",
+  "bloomVerb": "Analyze",
+  "completion_status": "implemented",
+  "chapter_number": 3,
+  "chapter_title": "Fingerprint Analysis and Dactyloscopy",
+  "chapter_dir": "03-fingerprint-analysis",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Tagging minutiae on a latent print and interpreting an AFIS ranked candidate list",
+    "learningObjectives": [
+      "Locate ridge endings and bifurcations on a stylized loop fingerprint.",
+      "Classify each tagged minutia by type and place it at the correct ridge location.",
+      "Interpret an AFIS ranked candidate list produced from minutiae overlap rather than a single yes/no match.",
+      "Explain why AFIS ranks candidates while a human examiner makes the final identification."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Familiarity with fingerprint pattern types and the definitions of ridge ending and bifurcation"
+  },
+  "pedagogical": {
+    "interactionPattern": "A stylized loop fingerprint is drawn procedurally in the left ~56% of the canvas inside an oval scan boundary, with six hidden ground-truth minutiae anchored to fractional coordinates. A dropdown selects the tag type (ridge ending or bifurcation); clicking inside the print oval places a marker (circle for endings, triangle for bifurcations) that is immediately scored against the nearest ground-truth point within tolerance and colored green (correct location and type), orange (right spot, wrong type), or red (off-ridge). 'Search AFIS Database' ranks the six suspect templates by how many correctly tagged minutiae they share and displays the ranked list with score bars in the right panel. 'Clear Tags' resets, and 'Show Answer' overlays the ground-truth minutiae as dashed markers.",
+    "assessment": "Analysis with immediate per-tag feedback and a delayed database ranking: the student must both place and classify minutiae accurately, then read a ranked candidate list whose scores depend on their own tagging. The design forces the student to interpret why the top candidate is a lead rather than a verdict, echoing the human-in-the-loop safeguard behind real AFIS use.",
+    "modelType": "Overlap model: each tag is matched to the nearest of six ground-truth minutiae within a pixel tolerance and marked correct, partial, or spurious. Each of six candidate templates holds a subset of the ground-truth indices; a candidate's match score is the count of the student's correctly tagged minutiae that fall within that candidate's template, and candidates are sorted by score to build the ranked list.",
+    "controls": [
+      "'Tag type' dropdown — Ridge ending or Bifurcation",
+      "Click on the print oval — place a tag of the selected type",
+      "'Search AFIS Database' button — rank the six suspects by minutiae overlap",
+      "'Clear Tags' button — remove all tags and clear the ranking",
+      "'Show Answer' button — toggle the ground-truth minutiae overlay"
+    ]
+  }
+}

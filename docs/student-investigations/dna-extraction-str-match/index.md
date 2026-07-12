@@ -133,41 +133,29 @@ in a few hundred" at one locus to "1 in billions" once several agree. That
 collapse is *why* a full CODIS match is so powerful, and why a single locus is
 never enough.
 
-### Proposed MicroSim: STR Electropherogram Comparison
+### Explore: STR Electropherogram Comparison
+
+Compare the crime-scene STR profile against each suspect across five CODIS loci and
+tally the matching loci to include or exclude them.
+
+<iframe src="../../sims/str-electropherogram-comparison/main.html" width="100%" height="585" scrolling="no"></iframe>
 
 <details markdown="1">
-<summary>STR Electropherogram Comparison Interactive MicroSim (proposed)</summary>
+<summary>STR Electropherogram Comparison Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** str-electropherogram-comparison<br/>
-**Library:** p5.js / Chart.js<br/>
-**Status:** Specified
+**Library:** p5.js<br/>
+**Status:** Implemented
 
 Learning Objective: Compare crime-scene and suspect STR peak sets across CODIS
 loci to determine matching loci and include or exclude a suspect (Bloom Level 4
 — Analyze).
-
-**Description.** Renders a crime-scene STR profile alongside a chosen suspect's
-profile as **electropherogram peak sets** at **4–6 CODIS loci** (e.g. TH01, TPOX,
-CSF1PO, D5S818, D7S820, D13S317). Each locus shows one or two peaks whose
-horizontal positions represent repeat counts (alleles).
-
-**Controls (p5.js built-ins).**
-
-- `createSelect()` — pick which **locus** to display.
-- `createSelect()` — pick which **suspect** (1, 2, or 3) to compare against the scene.
-- `createButton('Overlay / Side-by-side')` — toggle between **overlaid** traces
-  (scene and suspect on the same axis) and a **side-by-side** view.
-- A **"Matching loci"** readout tallies how many loci the selected suspect shares
-  with the scene and flags any mismatch as an **exclusion**.
-
-**Behavior.** A locus counts as a match only when *both* alleles align with the
-scene's peaks. A single mismatched locus marks the suspect **excluded**, mirroring
-real casework where one non-matching locus rules a person out.
 </details>
 
-Until this comparison sim is built, work the STR match from the **evidence card**
-your teacher provides (a printed table of repeat counts per locus for the scene
-and all three suspects) and record it in the data table below.
+Pick each suspect in turn, check whether their orange peaks sit at the same repeat
+numbers as the scene's blue peaks, then press **Compare Loci**. Exactly one suspect
+matches all five loci; the others differ at a locus — and a single mismatch is
+enough to exclude. Record the repeat counts and matches in the data table below.
 
 ## Procedure
 

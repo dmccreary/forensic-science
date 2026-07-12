@@ -1,0 +1,51 @@
+{
+  "title": "EXIF Geolocation & Alibi Timeline",
+  "description": "Analyze a set of recovered photos by scrubbing a timeline slider through an afternoon. Each photo carries hidden EXIF metadata — a timestamp, a GPS location, and a device model — and drops as a numbered pin on a schematic map with four labeled places (Home, Downtown, Crime Scene, Park). The photo whose timestamp is nearest the slider is highlighted and its EXIF fields are read out in a side panel. Turn on the suspect's claimed location ('Home all day') to draw a ring around Home; whenever the highlighted photo's GPS is not Home, the tool flags the alibi as contradicted and names the place and time. Play the timeline to watch the device travel.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Digital Forensics",
+    "EXIF Metadata",
+    "Geolocation",
+    "Timeline Analysis",
+    "Alibi Verification"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "exif-map-plot",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) — plot EXIF GPS points over time and test whether the timeline contradicts a suspect's claimed location.",
+  "bloomVerb": "Analyze",
+  "completion_status": "implemented",
+  "chapter_number": 15,
+  "chapter_title": "Digital Forensics and Cybercrime Investigation",
+  "chapter_dir": "15-digital-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Using EXIF timestamps and GPS metadata to place a device in space and time and to test an alibi",
+    "learningObjectives": [
+      "Read the timestamp, GPS location, and device model from a photo's EXIF metadata.",
+      "Plot photos as pins on a map and order them into a chronological timeline.",
+      "Analyze whether a device's location trail contradicts a suspect's claimed location.",
+      "Distinguish what the metadata supports (the device was here) from an over-broad claim (the suspect was here)."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Familiarity with the idea that photos store hidden EXIF metadata, including a timestamp and optional GPS coordinates"
+  },
+  "pedagogical": {
+    "interactionPattern": "A schematic map fills the left of the canvas: a plain grid with four labeled place nodes (Home, Downtown, Crime Scene, Park) and no real map tiles. Five recovered photos each carry EXIF metadata and drop as numbered pins at their GPS place, connected by a faint dashed route in time order. A time slider scrubs an afternoon (9:00-16:00); the photo whose timestamp is nearest the slider is highlighted (orange pin) and its full EXIF — timestamp, GPS place, device model — is read out in the right panel. A checkbox draws the suspect's claimed 'Home all day' ring; whenever the highlighted photo's GPS is not Home, a red banner and panel status flag the alibi as contradicted, naming the place and time. A 'Play timeline' button auto-advances the slider so students watch the device travel; 'Reset' returns to the start. A timeline strip along the bottom shows every photo as a tick with a moving current-time marker.",
+    "assessment": "Analysis with immediate feedback: the student scrubs the slider and reads whether each photo's GPS is consistent with 'Home all day.' The contradiction becomes visible the moment the highlighted photo falls outside the Home ring during the crime window, letting the student cite the exact photo, place, and time that breaks the alibi. Because all photos share one device model, the exercise also reinforces confirming a single device before trusting the trail.",
+    "modelType": "Discrete event model: each photo is an event with a fixed time (minutes since midnight) and a categorical GPS place. The highlighted event is the one minimizing the absolute time difference from the slider. The alibi test is a boolean comparison of the highlighted event's place against the claimed place (Home).",
+    "controls": [
+      "'Time' slider — scrub the afternoon from 9:00 to 16:00",
+      "'Show claimed location (Home all day)' checkbox — draw the alibi ring around Home and enable the contradiction flag",
+      "'Play timeline' button — auto-advance the slider to watch the device travel",
+      "'Reset' button — return the slider to the start and clear the claimed location"
+    ]
+  }
+}

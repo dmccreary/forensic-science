@@ -93,37 +93,23 @@ pattern. So the strongest arson evidence isn't one dramatic burn — it's the
 no burn path connecting them (fire can't teleport, so two unconnected origins
 scream *set*). Any accelerant call must then be **confirmed in the lab.**
 
-### Proposed MicroSim: Burn-Pattern Origin Explorer
+### Explore: Trace the Fire to Its Origin
 
-The primary analysis tool for this lab has been **specified but not yet built.**
-Use the printed room diagram as a stand-in until it ships.
+Read the V-patterns and char in a top-down room plan, drop your point of origin,
+and let the sim score how close you got — then reveal whether a second origin
+raises the arson red flag.
+
+<iframe src="../../sims/burn-pattern-origin-explorer/main.html" width="100%" height="570" scrolling="no"></iframe>
 
 <details markdown="1">
-<summary>Burn-Pattern Origin Explorer — specification</summary>
+<summary>Burn-Pattern Origin Explorer Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** burn-pattern-origin-explorer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified
+**Status:** Implemented
 
 Learning Objective: Locate a fire's point of origin from burn-severity evidence
 and flag multiple origins as an arson indicator (Bloom Level 4 — Analyze).
-
-**Layout.** A top-down **room diagram** (walls, door, shelving, furniture) with a
-heat-shaded burn overlay. The student's job is to place and defend a point of
-origin.
-
-**Interaction.** Clicking the floor drops a **suspected origin marker**; multiple
-markers can be placed. A set of draggable **burn-severity probes** report the
-char depth at any spot the student drags them to, so they can hunt for the
-deepest, lowest damage. A `createButton('Reset')` clears all markers. A
-`createSlider()` scrubs a **time-lapse of fire spread** so students see the
-plume grow from the true origin outward. A `createCheckbox('Show accelerant
-trail')` reveals where (if anywhere) an ignitable liquid was placed. On
-**Score**, the sim rates how close the student's origin is to ground truth and
-**flags whether multiple genuine origins exist** — the arson red flag.
-
-**Teaching point.** The deepest, lowest burn plus a converging V-pattern locates
-the origin; two unconnected origins are strong evidence of a set fire.
 </details>
 
 ### Explore: From Debris to Chromatogram

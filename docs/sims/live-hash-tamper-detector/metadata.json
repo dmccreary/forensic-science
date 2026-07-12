@@ -1,0 +1,52 @@
+{
+  "title": "Live Hash & Tamper Detector",
+  "description": "Compute and compare cryptographic hashes of digital evidence, entirely in the browser and offline. Type evidence text and the tool computes its MD5 (128-bit) and SHA-256 (256-bit) hex digests live. A 'Tamper: flip one character' button mutates a single character and re-hashes, highlighting every changed hex digit and counting them so the avalanche effect is visible at a glance. A separate 'Compare two files' section hashes two text blocks with SHA-256 and reports a color-coded MATCH (bit-for-bit identical original) or MISMATCH (tampered) with the count of differing digits. SHA-256 uses the Web Crypto API; MD5 uses a compact public-domain implementation, so nothing is sent over the network.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Digital Forensics",
+    "Cryptographic Hashing",
+    "MD5",
+    "SHA-256",
+    "Evidence Integrity"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "live-hash-tamper-detector",
+  "library": "JavaScript (Web Crypto)",
+  "bloomLevel": "Apply (L3) — compute and compare MD5 and SHA-256 digests and demonstrate the avalanche effect from a single-character change.",
+  "bloomVerb": "Compute",
+  "completion_status": "implemented",
+  "chapter_number": 15,
+  "chapter_title": "Digital Forensics and Cybercrime Investigation",
+  "chapter_dir": "15-digital-forensics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Using cryptographic hash functions to verify the integrity of digital evidence and detect tampering",
+    "learningObjectives": [
+      "Compute the MD5 and SHA-256 hex digests of a block of evidence text.",
+      "Demonstrate the avalanche effect: change one character and observe roughly half the digest change.",
+      "Compare two files by SHA-256 to decide whether they are bit-for-bit identical.",
+      "Use hash matching to authenticate an untouched original and exclude tampered copies."
+    ],
+    "bloomLevel": "Apply (L3)",
+    "duration": "8-12 minutes",
+    "prerequisites": "Familiarity with the idea of a hash as a fixed-length fingerprint of data and that identical input yields an identical hash"
+  },
+  "pedagogical": {
+    "interactionPattern": "A clean light panel built from ordinary DOM elements (no canvas). An 'Evidence text' textarea is prefilled with a sample sentence; as the investigator types or clicks 'Compute Hashes', the MD5 and SHA-256 hex digests update live in monospace. A 'Tamper: flip one character' button mutates exactly one character, re-hashes, highlights every hex digit that changed, and reports the counts (the avalanche effect). A second 'Compare two files' section takes two text blocks, hashes both with SHA-256, and shows a green MATCH or a red MISMATCH with the number of differing hex digits and both digests, the differing digits highlighted. Everything runs offline in a secure context.",
+    "assessment": "Application with immediate feedback: the student watches the same input always yield the same digest, then sees a one-character edit rewrite nearly the whole fingerprint, reinforcing that a hash either matches exactly or it does not. The compare section turns this into an authentication task — given two files, the student uses the SHA-256 match/mismatch to decide which is the untouched original.",
+    "modelType": "Deterministic cryptographic model: MD5 (128-bit) via a public-domain implementation and SHA-256 (256-bit) via crypto.subtle.digest. The avalanche count is the Hamming distance in hex digits between the pre-edit and post-edit digests; the compare verdict is exact string equality of two SHA-256 digests.",
+    "controls": [
+      "'Evidence text' textarea — the input whose hashes are computed live",
+      "'Compute Hashes' button — recompute the MD5 and SHA-256 digests",
+      "'Tamper: flip one character' button — mutate one character, re-hash, and highlight the avalanche of changed digits",
+      "'File A' and 'File B' textareas — the two inputs to compare",
+      "'Compare' button — hash both files with SHA-256 and report MATCH or MISMATCH"
+    ]
+  }
+}

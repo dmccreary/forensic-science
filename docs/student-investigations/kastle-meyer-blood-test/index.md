@@ -99,36 +99,24 @@ result — a **false positive.** So a Kastle-Meyer positive means "**consistent
 with** blood; confirm it," never "this is blood." That distinction is the entire
 lesson.
 
-### Proposed MicroSim: Presumptive-Test Decision Tool
+### Explore: Presumptive-Test Decision Tool
 
-No interactive simulation exists for this investigation yet. The specification
-below describes one that could be built to model the screen-then-confirm decision.
+Pick a reddish-brown sample, run the presumptive test to watch peroxidase-active
+stains flash pink, then run the confirmatory test to see which "positives" were
+really blood — and which were false alarms.
+
+<iframe src="../../sims/presumptive-test-decision-tool/main.html" width="100%" height="530" scrolling="no"></iframe>
 
 <details markdown="1">
-<summary>Presumptive-Test Decision Tool — MicroSim specification</summary>
+<summary>Presumptive-Test Decision Tool Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** presumptive-test-decision-tool<br/>
 **Library:** p5.js<br/>
-**Status:** Specified
+**Status:** Implemented
 
-**Learning Objective:** Decide which stains warrant confirmatory testing based on
-presumptive results, and reason about false positives (Bloom Level 5 —
-Evaluate).
-
-**Description.** A bench of labeled unknown stains (blood, ketchup, rust,
-horseradish, fruit juice). The student clicks **"Add reagent"** on a stain and
-the sim animates the color: a *fast* pink flash for true peroxidase sources, a
-*slow or no* change for inert stains, and a *false-positive* pink for rust or a
-plant source. The student then sorts each stain into **"Send to confirmatory"**
-or **"Set aside."** The sim scores the decisions and reveals which "positives"
-were false — reinforcing that presumptive tests screen, not identify.
-
-**Controls (p5.js builtin):**
-`createButton('Add reagent')` — runs the reaction on the selected stain;
-`createSelect()` — picks the stain to test;
-`createButton('Reset bench')` — clears results;
-`createCheckbox('Reveal ground truth')` — shows what each stain actually was
-after the student commits.
+Learning Objective: Judge which stains warrant confirmatory testing and reason
+about false positives, distinguishing a presumptive screen from a confirmatory
+identification (Bloom Level 5 — Evaluate).
 </details>
 
 ## Procedure

@@ -102,25 +102,23 @@ Load each photo's metadata into the builder and watch the events snap into
 chronological order. Notice how a single out-of-place timestamp can crack a whole
 alibi — then you'll add the *where* by plotting the coordinates.
 
-### Proposed MicroSim: EXIF Map-Plot & Alibi Overlay
+### Explore: EXIF Map-Plot & Alibi Overlay
+
+Scrub the timeline and watch each photo's hidden GPS pin the device to a place and
+time — until one pin lands far from the suspect's claimed "home all day."
+
+<iframe src="../../sims/exif-map-plot/main.html" width="100%" height="570px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>EXIF Map-Plot & Alibi Overlay Interactive MicroSim</summary>
 Type: microsim<br/>
 **sim-id:** exif-map-plot<br/>
-**Library:** Leaflet / Plotly (map + timeline)<br/>
-**Status:** Specified
+**Library:** p5.js<br/>
+**Status:** Implemented
 
-Learning Objective: Plot EXIF GPS points on a map and animate them over time to
-test a suspect's claimed location (Bloom Level 4 — Analyze).
-
-Design: Each photo's GPS coordinate drops as a numbered pin on a street map. A
-timeline **slider** scrubs through the afternoon, lighting up each pin at its
-timestamp so students watch the device *travel*. A **checkbox** overlays the
-suspect's claimed location (a home marker with a radius) so the contradiction is
-visual: pins that fall far outside the home circle during the crime window break
-the alibi. Controls: a time `slider`, a `Show claimed location` checkbox, and a
-`Reset` button.
+Learning Objective: Plot EXIF GPS points on a schematic map and scrub them over
+time to test whether the device's trail contradicts a suspect's claimed location
+(Bloom Level 4 — Analyze).
 </details>
 
 ## Procedure
