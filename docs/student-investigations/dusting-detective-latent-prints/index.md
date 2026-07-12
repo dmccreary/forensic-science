@@ -3,6 +3,8 @@ title: The Dusting Detective — Developing Latent Prints
 description: A hands-on lab where investigators develop invisible latent fingerprints on glass, plastic, and paper with dusting powder and tape lifts, then match a recovered print to a suspect exemplar to learn who handled a ransom note.
 ---
 
+![Cover Image](./cover.png)
+
 # The Dusting Detective — Developing Latent Prints
 
 !!! mascot-welcome "Welcome, Investigators!"

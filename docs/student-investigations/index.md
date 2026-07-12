@@ -41,6 +41,8 @@ one student or a small group.
 
 -   **[The Dusting Detective](dusting-detective-latent-prints/index.md)**
 
+    ![The Dusting Detective — Developing Latent Prints cover](dusting-detective-latent-prints/cover.png)
+
     🧪 Physical · Ch 3
 
     Develop latent fingerprints with powder and match them to a suspect exemplar.
