@@ -105,6 +105,8 @@ one student or a small group.
 
 -   **[Type the Blood](type-the-blood/index.md)**
 
+    ![Type the Blood — Who Was at the Scene? cover](type-the-blood/cover.png)
+
     🧪 Physical · Ch 6
 
     Determine ABO/Rh type from agglutination to include or exclude suspects.

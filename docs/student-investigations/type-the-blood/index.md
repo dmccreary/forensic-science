@@ -3,6 +3,8 @@ title: Type the Blood — Who Was at the Scene?
 description: A hands-on lab where investigators ABO/Rh type four suspects and a crime-scene stain from agglutination reactions, then use blood type to exclude suspects and learn why blood type rules people out far more powerfully than it names a culprit.
 ---
 
+![Cover Image](./cover.png)
+
 # Type the Blood — Who Was at the Scene?
 
 !!! mascot-welcome "Welcome, Investigators!"
