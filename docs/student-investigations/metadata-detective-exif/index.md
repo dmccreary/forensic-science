@@ -3,6 +3,8 @@ title: Metadata Detective — EXIF Geolocation
 description: A virtual lab where investigators extract EXIF timestamps, GPS coordinates, and device data from a set of photos, plot them on a map, and build a timeline that quietly dismantles a suspect's "I was home all day" alibi.
 ---
 
+![Cover Image](./cover.png)
+
 # Metadata Detective — EXIF Geolocation
 
 !!! mascot-welcome "Welcome, Investigators!"

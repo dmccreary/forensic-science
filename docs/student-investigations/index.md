@@ -209,6 +209,8 @@ one student or a small group.
 
 -   **[Metadata Detective](metadata-detective-exif/index.md)**
 
+    ![Metadata Detective — EXIF Geolocation cover](metadata-detective-exif/cover.png)
+
     💻 Virtual · Ch 15, 18
 
     Use EXIF timestamps and GPS to break a suspect's alibi.
