@@ -3,6 +3,8 @@ title: The Broken Window — Refractive Index Match
 description: A combination lab where investigators bracket a glass fragment's refractive index with the Becke line immersion method, then fine-tune a simulated immersion oil to an exact match and decide whether jacket glass came from a broken window.
 ---
 
+![Cover Image](./cover.png)
+
 # The Broken Window — Refractive Index Match
 
 !!! mascot-welcome "Welcome, Investigators!"

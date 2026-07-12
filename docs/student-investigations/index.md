@@ -73,6 +73,8 @@ one student or a small group.
 
 -   **[The Broken Window](broken-window-refractive-index/index.md)**
 
+    ![The Broken Window — Refractive Index Match cover](broken-window-refractive-index/cover.png)
+
     🔀 Combination · Ch 5
 
     Use the Becke line to compare glass fragments to a source window.
