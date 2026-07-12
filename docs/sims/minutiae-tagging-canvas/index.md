@@ -52,3 +52,50 @@ identification.
 Locate and classify minutiae on a latent print and interpret the resulting ranked
 AFIS candidate list, recognizing that the system ranks while a human examiner
 decides (Bloom Level 4 — Analyze).
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/minutiae-tagging-canvas/main.html"
+        width="100%" height="560" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Analyze (L4) — locate and classify minutiae and interpret a ranked candidate list.
+
+**Warm-up.** Show investigators a loop print and ask: "A computer cannot really
+'see' a fingerprint the way you do. What handful of features could you reduce this
+print to so a database could compare it quickly?"
+
+**Guided questions:**
+
+- Tag several minutiae and read the green, orange, and red feedback. What is the
+  difference between a ridge ending and a bifurcation, and why does getting the
+  *type* right matter to AFIS?
+- After you search the database, the six suspects come back ranked. Why does AFIS
+  return a ranked candidate list instead of a single "match"?
+- Whose job is it to make the final identification — the computer or a human
+  examiner — and what could go wrong if we skipped the human step?
+
+**Extension.** Research how real AFIS systems weight minutiae direction and ridge
+count, and discuss why a high score is a lead to investigate, not proof of
+identity.
+
+## References
+
+- [Fingerprint (Wikipedia)](https://en.wikipedia.org/wiki/Fingerprint) — ridge patterns and how prints are used as evidence.
+- [Automated fingerprint identification (Wikipedia)](https://en.wikipedia.org/wiki/Automated_fingerprint_identification) — how AFIS ranks candidates from minutiae maps.
+- [Minutiae (Wikipedia)](https://en.wikipedia.org/wiki/Minutiae) — the ridge endings and bifurcations you tag in this tool.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 3: Fingerprint Analysis and Dactyloscopy](../../chapters/03-fingerprint-analysis/index.md).
+
+> **Design note:** the print, ground-truth minutiae, and six-suspect database are
+> stylized for teaching — scoring rewards correct location and type qualitatively
+> rather than reproducing a production AFIS matching algorithm.

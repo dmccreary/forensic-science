@@ -173,6 +173,7 @@ nav:
     - Area-of-Origin Stringing: sims/area-of-origin-stringing/index.md
     - BAC Retro-Extrapolation: sims/bac-retro-extrapolation/index.md
     - Becke Line Test Simulator: sims/becke-line-test/index.md
+    - Burn-Pattern Origin Explorer: sims/burn-pattern-origin-explorer/index.md
     - CDR & Tower Triangulation Timeline: sims/cdr-tower-triangulation/index.md
     - Chain of Custody Flow: sims/chain-of-custody-flow/index.md
     - Criminal Justice Process — From Crime Scene to Verdict: sims/criminal-justice-process-flow/index.md
@@ -180,11 +181,13 @@ nav:
     - Debris Field Pattern Explorer: sims/debris-field-pattern-explorer/index.md
     - Evidence Packaging Guide: sims/evidence-packaging-guide/index.md
     - Evidence Search Pattern Selector: sims/search-pattern-selector/index.md
+    - EXIF Geolocation & Alibi Timeline: sims/exif-map-plot/index.md
     - Facial Recognition Pipeline: sims/facial-recognition-pipeline/index.md
     - Fiber Identification Decision Tree: sims/fiber-identification-tree/index.md
     - Fingerprint Pattern Classification Explorer: sims/fingerprint-pattern-explorer/index.md
     - Firearms Ballistic Pathway: sims/ballistic-pathway/index.md
     - Forensic Imaging & Hash Verification Workflow: sims/forensic-imaging-workflow/index.md
+    - GC-MS Peak-Match Confirmation: sims/gcms-peak-match/index.md
     - Glass Fracture Sequence Analyzer: sims/glass-fracture-sequence/index.md
     - Handwriting Characteristics Comparison: sims/handwriting-comparison/index.md
     - Headspace SPME → GC-MS Workflow: sims/headspace-spme-workflow/index.md
@@ -192,17 +195,24 @@ nav:
     - Landmark Crash Investigations Timeline: sims/aviation-crash-investigation-timeline/index.md
     - Latent Print Development Technique Selector: sims/latent-print-development/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Live Hash & Tamper Detector: sims/live-hash-tamper-detector/index.md
     - Locard Exchange Principle Visualizer: sims/locard-exchange-visualizer/index.md
     - Medullary Index Calculator: sims/medullary-index-calculator/index.md
     - Metadata Recovery and Timeline Builder: sims/metadata-timeline-builder/index.md
+    - Minutiae-Tagging Canvas: sims/minutiae-tagging-canvas/index.md
     - NTSB Investigation Workflow: sims/ntsb-investigation-workflow/index.md
     - PCR Amplification Step-Through Simulator: sims/pcr-amplification-simulator/index.md
+    - Presumptive-Test Decision Tool: sims/presumptive-test-decision-tool/index.md
     - Random Match Probability Product Rule Calculator: sims/rmp-product-rule/index.md
     - Skeletal Sex Indicators Interactive Diagram: sims/skeletal-sex-indicators/index.md
     - Social Network Analysis Graph Explorer: sims/social-network-analysis/index.md
     - Soil Analysis Comparison Dashboard: sims/soil-analysis-dashboard/index.md
+    - STR Electropherogram Comparison: sims/str-electropherogram-comparison/index.md
+    - Striation-Overlay Comparator: sims/striation-overlay-comparator/index.md
     - TLC Ink Separation Interactive Diagram: sims/tlc-ink-separation/index.md
     - Triangulation Measurement Technique: sims/triangulation-measurement/index.md
+
+
 
   - Stories:
       - Overview: stories/index.md
@@ -223,7 +233,6 @@ nav:
   - FAQ: faq.md
   - Glossary: glossary.md
   - Teacher's Guide: teachers-guide/index.md
-
   - License: license.md
   - Contact: contact.md
 
@@ -308,6 +317,7 @@ exclude_docs: |
   img/cover-image-prompt.md
   img/mascot/character-sheet.md
   **/TODO.md
+  teachers-guide/products.md
 
 # Rebuild on changes during `mkdocs serve`
 watch:

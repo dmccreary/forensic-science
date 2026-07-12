@@ -57,3 +57,50 @@ timestamp, GPS, and device fields; plot photos into a chronological timeline on
 a map; and analyze whether a device's location trail contradicts a suspect's
 claimed location — while distinguishing what the metadata actually supports (the
 *device* was there) from an over-broad claim (the *person* was there).
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/exif-map-plot/main.html"
+        width="100%" height="570" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Analyze (L4) — plot EXIF GPS points over time and test whether the timeline contradicts a claimed alibi.
+
+**Warm-up.** Ask investigators: "Every photo carries a hidden logbook. Besides the
+image, what does a phone quietly record each time the shutter fires, and how could
+that help or hurt a suspect?"
+
+**Guided questions:**
+
+- Scrub the time slider and read the EXIF panel. Which three fields is the tool
+  using, and how do the timestamp and GPS together let you place the device in
+  space and time?
+- Turn on the "Home all day" claim and play the timeline. At what moment does the
+  alibi break, and what exactly contradicts it?
+- The metadata shows the *device* was at the crime scene. Why is it an over-reach
+  to conclude the *person* was there?
+
+**Extension.** Discuss how EXIF metadata can be stripped or forged, and why a
+defensible analysis pairs metadata with other evidence rather than trusting it
+alone.
+
+## References
+
+- [Exif (Wikipedia)](https://en.wikipedia.org/wiki/Exif) — the metadata standard storing timestamp, GPS, and device fields.
+- [Geotagging (Wikipedia)](https://en.wikipedia.org/wiki/Geotagging) — how GPS coordinates get embedded in a photo.
+- [Digital forensics (Wikipedia)](https://en.wikipedia.org/wiki/Digital_forensics) — recovering and reasoning about digital evidence.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 15: Digital Forensics and Cybercrime Investigation](../../chapters/15-digital-forensics/index.md).
+
+> **Design note:** the map is a schematic grid and the five photos are stylized for
+> teaching — coordinates and timestamps are chosen to make the alibi contradiction
+> clear, not drawn from real device data.

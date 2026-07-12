@@ -68,9 +68,42 @@ You can embed this MicroSim on your own web page with this iframe:
         width="100%" height="580" scrolling="no"></iframe>
 ```
 
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Apply (L3) — match retention time and fragmentation pattern to confirm identity.
+
+**Warm-up.** Ask investigators: "A field color test just turned purple. A
+prosecutor asks, 'So it's definitely this drug?' Why can't you say yes yet, and
+what instrument would you reach for?"
+
+**Guided questions:**
+
+- Overlay a candidate that matches the retention time but not the fragmentation
+  pattern. Why is that *not* a confirmed match, and what does each of the two
+  features tell you?
+- Why is matching two independent features (retention time *and* mass spectrum)
+  far stronger evidence than matching either one alone?
+- GC-MS is called a confirmatory "gold standard." What makes a mass-spectrum
+  fragmentation pattern almost as unique as a fingerprint?
+
+**Extension.** Look up how real labs build and search mass-spectral reference
+libraries (such as the NIST library), and discuss why a good library match still
+requires an analyst's judgment.
+
 ## References
 
 - [Gas chromatography–mass spectrometry (Wikipedia)](https://en.wikipedia.org/wiki/Gas_chromatography%E2%80%93mass_spectrometry) — how the two instruments combine to confirm an identity.
-- [Retention time (Wikipedia)](https://en.wikipedia.org/wiki/Retention_time) — the chromatographic feature plotted on the top panel.
-- [Mass spectrum (Wikipedia)](https://en.wikipedia.org/wiki/Mass_spectrum) — reading a fragmentation pattern.
+- [Mass spectrometry (Wikipedia)](https://en.wikipedia.org/wiki/Mass_spectrometry) — how a molecule is fragmented into an identifying pattern.
+- [Gas chromatography (Wikipedia)](https://en.wikipedia.org/wiki/Gas_chromatography) — how compounds are separated by retention time.
 - [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 9: Forensic Toxicology and Chemical Analysis](../../chapters/09-forensic-toxicology/index.md).
+
+> **Design note:** the chromatogram peaks and mass spectra are stylized for
+> teaching — retention times and fragment bars are chosen to make the two-feature
+> confirmation logic visible, not to reproduce instrument-grade data.

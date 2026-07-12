@@ -209,9 +209,9 @@ features you relied on.
       the striation match findable with a hand lens.
     - **Clay matters:** Firm plasticine holds fine detail better than soft
       children's dough. Chill it briefly if it's too soft to take striations.
-    - **The MicroSim is specified, not built.** Until the Striation-Overlay
-      Comparator exists, have students do the sliding comparison physically by
-      rocking one clay strip beside another under the loupe.
+    - **Use the Striation-Overlay Comparator** above to rehearse the sliding
+      comparison on screen first, then have students do it physically by rocking
+      one clay strip beside another under the loupe.
     - **Differentiation:** For a quicker lab, compare compression marks only. For
       a challenge, add two same-model tools (see the Extension) so class
       characteristics can't separate them.

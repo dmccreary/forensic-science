@@ -55,3 +55,49 @@ Analyze crime-scene and suspect STR electropherograms locus by locus to determin
 how many CODIS loci match and decide whether to **include** or **exclude** each
 suspect — recognizing that one mismatched locus is enough to exclude (Bloom Level
 4 — Analyze).
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/str-electropherogram-comparison/main.html"
+        width="100%" height="585" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Analyze (L4) — compare STR peak sets across CODIS loci to include or exclude a suspect.
+
+**Warm-up.** Ask investigators: "A lab does not read your whole genome — it reads
+a few repeat sites called loci. If a suspect's peaks match the crime scene at four
+loci but differ at the fifth, are they included or excluded?"
+
+**Guided questions:**
+
+- Compare each of the three suspects locus by locus. What does a peak's
+  left-to-right position represent, and what does it mean when two peaks sit at
+  the same position?
+- Why is a *single* mismatched locus enough to exclude a suspect, while a match at
+  every tested locus only supports inclusion?
+- Switch between Overlay and Side-by-side views. How does each view help you decide
+  whether the orange peaks line up with the blue?
+
+**Extension.** Research why real CODIS profiles use 20 core loci and how adding
+loci drives the random-match probability down to one in billions.
+
+## References
+
+- [DNA profiling (Wikipedia)](https://en.wikipedia.org/wiki/DNA_profiling) — how STR profiles are generated and compared.
+- [Microsatellite (Wikipedia)](https://en.wikipedia.org/wiki/Microsatellite) — the short tandem repeats read at each locus.
+- [Combined DNA Index System (Wikipedia)](https://en.wikipedia.org/wiki/Combined_DNA_Index_System) — the CODIS loci this tool compares.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 8: Forensic DNA Profiling](../../chapters/08-forensic-dna-profiling/index.md).
+
+> **Design note:** the five electropherograms are stylized for teaching — peak
+> positions and allele counts are chosen to make locus-by-locus inclusion and
+> exclusion clear, not to reproduce real capillary-electrophoresis traces.

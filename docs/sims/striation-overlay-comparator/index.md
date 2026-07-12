@@ -55,3 +55,51 @@ Analyze two toolmark striation patterns by aligning the suspect test mark to the
 crime-scene mark and scoring their correlation — excluding a tool on **class**
 characteristics and identifying the source tool on **individual** characteristics,
 just as a comparison microscope does (Bloom Level 4 — Analyze).
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/striation-overlay-comparator/main.html"
+        width="100%" height="565" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Analyze (L4) — align and score toolmark striations to identify or exclude a suspect tool.
+
+**Warm-up.** Ask investigators: "The nicks worn into one screwdriver's edge are
+unique to that tool. If we drag it across metal, what kind of pattern does it
+leave, and how could that pattern tie a specific tool to a crime scene?"
+
+**Guided questions:**
+
+- Read the class-width row first. How can you exclude a tool *before* you ever
+  slide its striations, and why is that faster than a full comparison?
+- Pick the matching tool and align it. What do the "score %" and the count of
+  coinciding lines tell you, and why does a wrong tool never climb to a match no
+  matter how you shift it?
+- What is the difference between a **class** characteristic and an **individual**
+  characteristic, and which one lets you identify one specific tool?
+
+**Extension.** Research the debate over the scientific validity of toolmark
+identification and why examiners now emphasize documented, reproducible
+comparisons.
+
+## References
+
+- [Forensic firearm examination (Wikipedia)](https://en.wikipedia.org/wiki/Forensic_firearm_examination) — how examiners compare toolmarks and striations.
+- [Comparison microscope (Wikipedia)](https://en.wikipedia.org/wiki/Comparison_microscope) — the split-field instrument this tool re-creates.
+- [Ballistic fingerprinting (Wikipedia)](https://en.wikipedia.org/wiki/Ballistic_fingerprinting) — matching marks left by a specific firearm or tool.
+- [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 13: Firearms, Ballistics, and Toolmark Examination](../../chapters/13-firearms-and-ballistics/index.md).
+
+> **Design note:** the striation strips and scoring are stylized for teaching —
+> the alignment score is a qualitative measure chosen to illustrate
+> class-versus-individual reasoning, not a validated statistical toolmark-match
+> metric.

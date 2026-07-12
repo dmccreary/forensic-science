@@ -175,8 +175,8 @@ enough to exclude. Record the repeat counts and matches in the data table below.
 
 6. Open the **PCR Amplification Simulator** and run enough cycles to "amplify" the
    crime-scene sample. Note how many copies a readable profile needs.
-7. From your evidence card (or the proposed STR comparison sim), record the
-   **repeat counts at each CODIS locus** for the **scene** and each suspect.
+7. From your evidence card (or the **STR Electropherogram Comparison** sim above),
+   record the **repeat counts at each CODIS locus** for the **scene** and each suspect.
 
 **Part 3 — Compare and weigh the match.**
 

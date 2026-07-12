@@ -65,9 +65,42 @@ You can embed this MicroSim on your own web page with this iframe:
         width="100%" height="570" scrolling="no"></iframe>
 ```
 
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Analyze (L4) — locate a fire's point of origin and flag multiple origins as an arson indicator.
+
+**Warm-up.** Ask investigators: "Fire moves up and out. If a flame burns a
+V-shaped scar into a wall, where on that V would you expect the fire to have
+started?"
+
+**Guided questions:**
+
+- Using the V-pattern apex and the deepest char, place your origin estimate. What
+  two cues did you combine, and how does the burn-severity overlay confirm or
+  correct your call?
+- Run the *Suspicious (two origins)* scenario. Why are two separate origins with
+  no burn path between them a strong arson indicator?
+- A single origin near an electrical outlet is "consistent with an accident." Why
+  is that phrasing more careful than saying "this was an accident"?
+
+**Extension.** Investigate how burn indicators can be misread (flashover,
+ventilation effects) and why an accelerant claim always requires laboratory
+confirmation of a residue sample.
+
 ## References
 
 - [Fire investigation (Wikipedia)](https://en.wikipedia.org/wiki/Fire_investigation) — how investigators trace a fire to its origin.
-- [Point of origin (Wikipedia)](https://en.wikipedia.org/wiki/Point_of_origin) — the target of burn-pattern analysis.
 - [Arson (Wikipedia)](https://en.wikipedia.org/wiki/Arson) — multiple origins and accelerants as indicators of a set fire.
+- [Fire triangle (Wikipedia)](https://en.wikipedia.org/wiki/Fire_triangle) — the fuel, heat, and oxygen a fire needs to spread from its origin.
 - [p5.js reference](https://p5js.org/reference/) — the library used to build this simulation.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 10: Fire Investigation, Arson, and Explosives](../../chapters/10-fire-arson-explosives/index.md).
+
+> **Design note:** the room, V-patterns, and char gradient are stylized for
+> teaching — the spread model is a qualitative time-lapse chosen to make origin
+> reasoning visible, not a physics-based fire simulation.

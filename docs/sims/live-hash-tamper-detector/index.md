@@ -60,3 +60,52 @@ page. No text ever leaves your machine.
 SHA-256 digests of evidence, demonstrate the avalanche effect by changing a single
 character, and use a SHA-256 match or mismatch to authenticate an untouched
 original and rule out tampered copies.
+
+You can embed this MicroSim on your own web page with this iframe:
+
+```html
+<iframe src="https://dmccreary.github.io/forensic-science/sims/live-hash-tamper-detector/main.html"
+        width="100%" height="640" scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+**Audience:** High-school forensic science (grades 9–12)
+**Time:** 15–20 minutes
+**Bloom level:** Apply (L3) — compute and compare MD5 and SHA-256 digests and demonstrate the avalanche effect.
+
+**Warm-up.** Ask investigators: "How can a lab prove that a seized hard drive is
+bit-for-bit identical to the copy shown in court, without comparing every single
+byte by hand?"
+
+**Guided questions:**
+
+- Type a sentence, then press "Tamper: flip one character." Roughly how many hex
+  digits changed, and why does a one-character edit rewrite so much of the digest
+  (the avalanche effect)?
+- In "Compare two files," change one character in File B. How does the
+  MATCH/MISMATCH result let you authenticate an untouched original and exclude a
+  tampered copy?
+- SHA-256 produces 64 hex digits and MD5 produces 32. Why does a longer digest
+  make an accidental collision far less likely?
+
+**Extension.** Research why MD5 is now considered broken for security use while
+still handy for quick integrity checks, and how hashing supports chain of custody
+for digital evidence.
+
+## References
+
+- [SHA-2 (Wikipedia)](https://en.wikipedia.org/wiki/SHA-2) — the family that includes the SHA-256 digest used here.
+- [MD5 (Wikipedia)](https://en.wikipedia.org/wiki/MD5) — the 128-bit hash shown alongside SHA-256.
+- [Cryptographic hash function (Wikipedia)](https://en.wikipedia.org/wiki/Cryptographic_hash_function) — the properties, including the avalanche effect, that make hashing useful for tamper detection.
+- [Web Crypto API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) — the browser API used to compute SHA-256.
+
+## Specification
+
+This MicroSim was generated from a specification in
+[Chapter 15: Digital Forensics and Cybercrime Investigation](../../chapters/15-digital-forensics/index.md).
+
+> **Design note:** the hashing is real (SHA-256 via Web Crypto, MD5 via a bundled
+> routine), but the "evidence" text and tamper demo are simplified for teaching —
+> the tool illustrates integrity verification rather than a full forensic imaging
+> workflow.

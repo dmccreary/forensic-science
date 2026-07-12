@@ -1,240 +1,61 @@
 ---
 title: List of MicroSims for Forensic Science
 description: A list of all the interactive MicroSims used in the Forensic Science intelligent textbook.
-image: /sims/index-screen-image.png
-og:image: /sims/index-screen-image.png
 hide:
-    - toc
+  - toc
 ---
 
 # List of MicroSims for Forensic Science
 
-Interactive Micro Simulations to help students explore forensic science
-concepts hands-on. Each MicroSim focuses on a single idea — drag, click,
-calculate, and observe to build understanding.
-
-<div class="grid cards" markdown>
-
--   **[ABO Blood Typing Interactive Simulator](./abo-blood-typing/index.md)**
-
-    ![ABO Blood Typing Interactive Simulator](./abo-blood-typing/abo-blood-typing.png)
-
-    Interpret agglutination results to determine ABO/Rh blood type (Bloom L2 — Understand).
-
--   **[ADH minimum-PMI Calculator](./adh-mpmi-calculator/index.md)**
-
-    ![ADH minimum-PMI Calculator](./adh-mpmi-calculator/adh-mpmi-calculator.png)
-
-    Calculate a minimum post-mortem interval from accumulated degree-hours and a temperature record (Bloom L3 — Apply).
-
--   **[ADME Pathway Interactive Flow Diagram](./adme-pathway/index.md)**
-
-    ![ADME Pathway Interactive Flow Diagram](./adme-pathway/adme-pathway.png)
-
-    Explain the ADME pharmacokinetic pathway and describe what happens to a drug at each stage (Bloom L2 — Understand).
-
--   **[AFIS Search Workflow](./afis-search-workflow/index.md)**
-
-    ![AFIS Search Workflow](./afis-search-workflow/afis-search-workflow.png)
-
-    Explain how AFIS encodes minutiae and generates a candidate list for human examiner review (Bloom L2 — Understand).
-
--   **[Angle-of-Impact Calculator](./angle-of-impact-calculator/index.md)**
-
-    ![Angle-of-Impact Calculator](./angle-of-impact-calculator/angle-of-impact-calculator.png)
-
-    Calculate the angle of impact of a bloodstain from its width-to-length ratio (Bloom L3 — Apply).
-
--   **[Area-of-Origin Stringing](./area-of-origin-stringing/index.md)**
-
-    ![Area-of-Origin Stringing](./area-of-origin-stringing/area-of-origin-stringing.png)
-
-    Determine the 3D area of origin of a blood source using stain direction and angle-of-impact data (Bloom L3 — Apply).
-
--   **[BAC Retro-Extrapolation](./bac-retro-extrapolation/index.md)**
-
-    ![BAC Retro-Extrapolation](./bac-retro-extrapolation/bac-retro-extrapolation.png)
-
-    Calculate BAC with the Widmark formula and retro-extrapolate it back to an earlier event time (Bloom L3 — Apply).
-
--   **[Becke Line Test Simulator](./becke-line-test/index.md)**
-
-    ![Becke Line Test Simulator](./becke-line-test/becke-line-test.png)
-
-    Interpret which way the bright Becke line moves to decide whether glass or oil has the higher refractive index (Bloom L2 — Understand).
-
--   **[CDR & Tower Triangulation Timeline](./cdr-tower-triangulation/index.md)**
-
-    ![CDR & Tower Triangulation Timeline](./cdr-tower-triangulation/cdr-tower-triangulation.png)
-
-    Use Call Detail Records and cell-tower data to reconstruct a device's movement and trilaterate its location (Bloom L3 — Apply).
-
--   **[Chain of Custody Flow](./chain-of-custody-flow/index.md)**
-
-    ![Chain of Custody Flow](./chain-of-custody-flow/chain-of-custody-flow.png)
-
-    Step through each evidence transfer from crime scene to courtroom and explain the documentation required at every handoff (Bloom L2 — Understand).
-
--   **[Criminal Justice Process — From Crime Scene to Verdict](./criminal-justice-process-flow/index.md)**
-
-    ![Criminal Justice Process — From Crime Scene to Verdict](./criminal-justice-process-flow/criminal-justice-process-flow.png)
-
-    Step through the criminal justice process from crime scene to verdict, seeing where forensic evidence and constitutional protections apply at each stage.
-
--   **[Daubert vs. Frye Admissibility Decision Workflow](./daubert-frye-decision-workflow/index.md)**
-
-    ![Daubert vs. Frye Admissibility Decision Workflow](./daubert-frye-decision-workflow/daubert-frye-decision-workflow.png)
-
-    Compare how the Frye and Daubert standards evaluate the same scientific evidence and see which evidence is allowed in court (Bloom L4 — Analyze).
-
--   **[Debris Field Pattern Explorer](./debris-field-pattern-explorer/index.md)**
-
-    ![Debris Field Pattern Explorer](./debris-field-pattern-explorer/debris-field-pattern-explorer.png)
-
-    Read an aircraft debris field to distinguish an intact ground impact from an in-flight breakup by adjusting breakup altitude, wind, and aircraft speed (Bloom L3 — Apply).
-
--   **[Evidence Packaging Guide](./evidence-packaging-guide/index.md)**
-
-    ![Evidence Packaging Guide](./evidence-packaging-guide/evidence-packaging-guide.png)
-
-    Select the correct packaging material for a given evidence item and see the forensic reason and courtroom risk of a wrong choice (Bloom L3 — Apply).
-
--   **[Evidence Search Pattern Selector](./search-pattern-selector/index.md)**
-
-    ![Evidence Search Pattern Selector](./search-pattern-selector/search-pattern-selector.png)
-
-    Select a search pattern for a given scene, run an animated overhead sweep, and judge coverage, time, and personnel trade-offs against a live fit rating (Bloom L3 — Apply).
-
--   **[Facial Recognition Pipeline](./facial-recognition-pipeline/index.md)**
-
-    ![Facial Recognition Pipeline](./facial-recognition-pipeline/facial-recognition-pipeline.png)
-
-    Identify the five stages of an automated facial-recognition pipeline and the source of error at each (Bloom L1 — Remember).
-
--   **[Fiber Identification Decision Tree](./fiber-identification-tree/index.md)**
-
-    ![Fiber Identification Decision Tree](./fiber-identification-tree/fiber-identification-tree.png)
-
-    Apply a multi-step protocol (burn test, microscopy, solubility) to classify an unknown textile fiber (Bloom L3 — Apply).
-
--   **[Fingerprint Pattern Classification Explorer](./fingerprint-pattern-explorer/index.md)**
-
-    ![Fingerprint Pattern Classification Explorer](./fingerprint-pattern-explorer/fingerprint-pattern-explorer.png)
-
-    Identify the three fingerprint pattern families and their eight subtypes by their defining structural features (Bloom L1 — Remember).
-
--   **[Firearms Ballistic Pathway](./ballistic-pathway/index.md)**
-
-    ![Firearms Ballistic Pathway](./ballistic-pathway/ballistic-pathway.png)
-
-    Identify the three ballistic phases and the evidence each produces by clicking an annotated trigger-to-wound diagram (Bloom L1 — Remember).
-
--   **[Forensic Imaging & Hash Verification Workflow](./forensic-imaging-workflow/index.md)**
-
-    ![Forensic Imaging & Hash Verification Workflow](./forensic-imaging-workflow/forensic-imaging-workflow.png)
-
-    Explain the forensic imaging procedure and verify image integrity with hash comparison (Bloom L2 — Understand).
-
--   **[Glass Fracture Sequence Analyzer](./glass-fracture-sequence/index.md)**
-
-    ![Glass Fracture Sequence Analyzer](./glass-fracture-sequence/glass-fracture-sequence.png)
-
-    Apply the fracture-sequencing rule to determine which of two impacts on a glass pane happened first (Bloom L3 — Apply).
-
--   **[Handwriting Characteristics Comparison](./handwriting-comparison/index.md)**
-
-    ![Handwriting Characteristics Comparison](./handwriting-comparison/handwriting-comparison.png)
-
-    Identify the key characteristics used to compare a questioned handwriting sample with a known exemplar (Bloom L1 — Remember).
-
--   **[Headspace SPME → GC-MS Workflow](./headspace-spme-workflow/index.md)**
-
-    ![Headspace SPME → GC-MS Workflow](./headspace-spme-workflow/headspace-spme-workflow.png)
-
-    Explain how headspace SPME recovers volatile accelerant residues from arson debris and connects to GC-MS identification (Bloom L2 — Understand).
-
--   **[Interactive Timeline of Forensic Science History](./forensic-science-history-timeline/index.md)**
-
-    ![Interactive Timeline of Forensic Science History](./forensic-science-history-timeline/forensic-science-history-timeline.png)
-
-    Explore an interactive timeline of key milestones in forensic science history, from early fingerprinting to modern DNA analysis (Bloom L1 — Remember).
-
--   **[Landmark Crash Investigations Timeline](./aviation-crash-investigation-timeline/index.md)**
-
-    ![Landmark Crash Investigations Timeline](./aviation-crash-investigation-timeline/aviation-crash-investigation-timeline.png)
-
-    Explore landmark aircraft accident investigations and the forensic advance each produced, on an interactive, filterable timeline (Bloom L1 — Remember).
-
--   **[Latent Print Development Technique Selector](./latent-print-development/index.md)**
-
-    ![Latent Print Development Technique Selector](./latent-print-development/latent-print-development.png)
-
-    Apply substrate-porosity logic to select the correct latent fingerprint development technique (Bloom L3 — Apply).
-
--   **[Locard Exchange Principle Visualizer](./locard-exchange-visualizer/index.md)**
-
-    ![Locard Exchange Principle Visualizer](./locard-exchange-visualizer/locard-exchange-visualizer.png)
-
-    Apply the Locard Exchange Principle to predict and verify what trace evidence is produced and transferred when two objects make physical contact (Bloom L3 — Apply).
-
--   **[Medullary Index Calculator](./medullary-index-calculator/index.md)**
-
-    ![Medullary Index Calculator](./medullary-index-calculator/medullary-index-calculator.png)
-
-    Calculate the medullary index (MI = medulla ÷ shaft) of a hair cross-section and classify it as human, ambiguous, or non-human (Bloom L3 — Apply).
-
--   **[Metadata Recovery and Timeline Builder](./metadata-timeline-builder/index.md)**
-
-    ![Metadata Recovery and Timeline Builder](./metadata-timeline-builder/metadata-timeline-builder.png)
-
-    Recover EXIF metadata from simulated evidence photos, build a chronological timeline, and detect time-zone anomalies (Bloom L3 — Apply).
-
--   **[NTSB Investigation Workflow](./ntsb-investigation-workflow/index.md)**
-
-    ![NTSB Investigation Workflow](./ntsb-investigation-workflow/ntsb-investigation-workflow.png)
-
-    Step through the sequence of an aircraft accident investigation from notification to probable-cause determination on an interactive flowchart (Bloom L2 — Understand).
-
--   **[PCR Amplification Step-Through Simulator](./pcr-amplification-simulator/index.md)**
-
-    ![PCR Amplification Step-Through Simulator](./pcr-amplification-simulator/pcr-amplification-simulator.png)
-
-    Step through the three stages of one PCR cycle — denaturation, annealing, extension — and trace what happens to the DNA at each (Bloom L2 — Understand).
-
--   **[Random Match Probability Product Rule Calculator](./rmp-product-rule/index.md)**
-
-    ![Random Match Probability Product Rule Calculator](./rmp-product-rule/rmp-product-rule.png)
-
-    Apply the product rule across STR loci to calculate a DNA profile's random match probability and compare it to population sizes (Bloom L3 — Apply).
-
--   **[Skeletal Sex Indicators Interactive Diagram](./skeletal-sex-indicators/index.md)**
-
-    ![Skeletal Sex Indicators Interactive Diagram](./skeletal-sex-indicators/skeletal-sex-indicators.png)
-
-    Compare male and female pelvis and skull features side by side and identify the traits used to estimate biological sex from skeletal remains (Bloom L1 — Remember).
-
--   **[Social Network Analysis Graph Explorer](./social-network-analysis/index.md)**
-
-    ![Social Network Analysis Graph Explorer](./social-network-analysis/social-network-analysis.png)
-
-    Analyze a simulated communication network to identify hub accounts, broker accounts, and clusters using centrality, filtering, community detection, and shortest-path tracing (Bloom L4 — Analyze).
-
--   **[Soil Analysis Comparison Dashboard](./soil-analysis-dashboard/index.md)**
-
-    ![Soil Analysis Comparison Dashboard](./soil-analysis-dashboard/soil-analysis-dashboard.png)
-
-    Compare a questioned soil sample to three references across Munsell color, particle size, pH, and density-gradient banding at once, then score the match (Bloom L4 — Analyze).
-
--   **[TLC Ink Separation Interactive Diagram](./tlc-ink-separation/index.md)**
-
-    ![TLC Ink Separation Interactive Diagram](./tlc-ink-separation/tlc-ink-separation.png)
-
-    Run a thin-layer chromatography separation, calculate Rf values, switch to UV light, and compare a questioned ink to reference lanes (Bloom L2 — Understand).
-
--   **[Triangulation Measurement Technique](./triangulation-measurement/index.md)**
-
-    ![Triangulation Measurement Technique](./triangulation-measurement/triangulation-measurement.png)
-
-    Drag an evidence item around a scaled room floor plan and read live triangulation distances from two reference corners, then record them to a sketch log (Bloom L3 — Apply).
-
+This book includes **46 interactive MicroSims** — self-contained, browser-based visualizations you can explore directly. Click any thumbnail to open the MicroSim.
+
+<!-- This gallery is generated by generate-sims-index.py — edits here will be overwritten. -->
+
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:1.5em;">
+  <a href="abo-blood-typing/" title="ABO Blood Typing Interactive Simulator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="abo-blood-typing/abo-blood-typing.png" alt="ABO Blood Typing Interactive Simulator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">ABO Blood Typing Interactive Simulator</span></a>
+  <a href="adh-mpmi-calculator/" title="ADH minimum-PMI Calculator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="adh-mpmi-calculator/adh-mpmi-calculator.png" alt="ADH minimum-PMI Calculator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">ADH minimum-PMI Calculator</span></a>
+  <a href="adme-pathway/" title="ADME Pathway Interactive Flow Diagram" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="adme-pathway/adme-pathway.png" alt="ADME Pathway Interactive Flow Diagram" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">ADME Pathway Interactive Flow Diagram</span></a>
+  <a href="afis-search-workflow/" title="AFIS Search Workflow" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="afis-search-workflow/afis-search-workflow.png" alt="AFIS Search Workflow" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">AFIS Search Workflow</span></a>
+  <a href="angle-of-impact-calculator/" title="Angle-of-Impact Calculator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="angle-of-impact-calculator/angle-of-impact-calculator.png" alt="Angle-of-Impact Calculator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Angle-of-Impact Calculator</span></a>
+  <a href="area-of-origin-stringing/" title="Area-of-Origin Stringing" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="area-of-origin-stringing/area-of-origin-stringing.png" alt="Area-of-Origin Stringing" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Area-of-Origin Stringing</span></a>
+  <a href="bac-retro-extrapolation/" title="BAC Retro-Extrapolation" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="bac-retro-extrapolation/bac-retro-extrapolation.png" alt="BAC Retro-Extrapolation" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">BAC Retro-Extrapolation</span></a>
+  <a href="becke-line-test/" title="Becke Line Test Simulator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="becke-line-test/becke-line-test.png" alt="Becke Line Test Simulator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Becke Line Test Simulator</span></a>
+  <a href="burn-pattern-origin-explorer/" title="Burn-Pattern Origin Explorer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="burn-pattern-origin-explorer/burn-pattern-origin-explorer.png" alt="Burn-Pattern Origin Explorer" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Burn-Pattern Origin Explorer</span></a>
+  <a href="cdr-tower-triangulation/" title="CDR &amp; Tower Triangulation Timeline" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="cdr-tower-triangulation/cdr-tower-triangulation.png" alt="CDR &amp; Tower Triangulation Timeline" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">CDR &amp; Tower Triangulation Timeline</span></a>
+  <a href="chain-of-custody-flow/" title="Chain of Custody Flow" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="chain-of-custody-flow/chain-of-custody-flow.png" alt="Chain of Custody Flow" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Chain of Custody Flow</span></a>
+  <a href="criminal-justice-process-flow/" title="Criminal Justice Process — From Crime Scene to Verdict" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="criminal-justice-process-flow/criminal-justice-process-flow.png" alt="Criminal Justice Process — From Crime Scene to Verdict" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Criminal Justice Process — From Crime Scene to Verdict</span></a>
+  <a href="daubert-frye-decision-workflow/" title="Daubert vs. Frye Admissibility Decision Workflow" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="daubert-frye-decision-workflow/daubert-frye-decision-workflow.png" alt="Daubert vs. Frye Admissibility Decision Workflow" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Daubert vs. Frye Admissibility Decision Workflow</span></a>
+  <a href="debris-field-pattern-explorer/" title="Debris Field Pattern Explorer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="debris-field-pattern-explorer/debris-field-pattern-explorer.png" alt="Debris Field Pattern Explorer" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Debris Field Pattern Explorer</span></a>
+  <a href="evidence-packaging-guide/" title="Evidence Packaging Guide" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="evidence-packaging-guide/evidence-packaging-guide.png" alt="Evidence Packaging Guide" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Evidence Packaging Guide</span></a>
+  <a href="search-pattern-selector/" title="Evidence Search Pattern Selector" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="search-pattern-selector/search-pattern-selector.png" alt="Evidence Search Pattern Selector" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Evidence Search Pattern Selector</span></a>
+  <a href="exif-map-plot/" title="EXIF Geolocation &amp; Alibi Timeline" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="exif-map-plot/exif-map-plot.png" alt="EXIF Geolocation &amp; Alibi Timeline" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">EXIF Geolocation &amp; Alibi Timeline</span></a>
+  <a href="facial-recognition-pipeline/" title="Facial Recognition Pipeline" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="facial-recognition-pipeline/facial-recognition-pipeline.png" alt="Facial Recognition Pipeline" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Facial Recognition Pipeline</span></a>
+  <a href="fiber-identification-tree/" title="Fiber Identification Decision Tree" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="fiber-identification-tree/fiber-identification-tree.png" alt="Fiber Identification Decision Tree" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Fiber Identification Decision Tree</span></a>
+  <a href="fingerprint-pattern-explorer/" title="Fingerprint Pattern Classification Explorer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="fingerprint-pattern-explorer/fingerprint-pattern-explorer.png" alt="Fingerprint Pattern Classification Explorer" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Fingerprint Pattern Classification Explorer</span></a>
+  <a href="ballistic-pathway/" title="Firearms Ballistic Pathway" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="ballistic-pathway/ballistic-pathway.png" alt="Firearms Ballistic Pathway" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Firearms Ballistic Pathway</span></a>
+  <a href="forensic-imaging-workflow/" title="Forensic Imaging &amp; Hash Verification Workflow" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="forensic-imaging-workflow/forensic-imaging-workflow.png" alt="Forensic Imaging &amp; Hash Verification Workflow" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Forensic Imaging &amp; Hash Verification Workflow</span></a>
+  <a href="gcms-peak-match/" title="GC-MS Peak-Match Confirmation" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="gcms-peak-match/gcms-peak-match.png" alt="GC-MS Peak-Match Confirmation" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">GC-MS Peak-Match Confirmation</span></a>
+  <a href="glass-fracture-sequence/" title="Glass Fracture Sequence Analyzer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="glass-fracture-sequence/glass-fracture-sequence.png" alt="Glass Fracture Sequence Analyzer" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Glass Fracture Sequence Analyzer</span></a>
+  <a href="handwriting-comparison/" title="Handwriting Characteristics Comparison" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="handwriting-comparison/handwriting-comparison.png" alt="Handwriting Characteristics Comparison" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Handwriting Characteristics Comparison</span></a>
+  <a href="headspace-spme-workflow/" title="Headspace SPME → GC-MS Workflow" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="headspace-spme-workflow/headspace-spme-workflow.png" alt="Headspace SPME → GC-MS Workflow" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Headspace SPME → GC-MS Workflow</span></a>
+  <a href="forensic-science-history-timeline/" title="Interactive Timeline of Forensic Science History" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="forensic-science-history-timeline/forensic-science-history-timeline.png" alt="Interactive Timeline of Forensic Science History" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Interactive Timeline of Forensic Science History</span></a>
+  <a href="aviation-crash-investigation-timeline/" title="Landmark Crash Investigations Timeline" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="aviation-crash-investigation-timeline/aviation-crash-investigation-timeline.png" alt="Landmark Crash Investigations Timeline" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Landmark Crash Investigations Timeline</span></a>
+  <a href="latent-print-development/" title="Latent Print Development Technique Selector" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="latent-print-development/latent-print-development.png" alt="Latent Print Development Technique Selector" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Latent Print Development Technique Selector</span></a>
+  <a href="graph-viewer/" title="Learning Graph Viewer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><span style="display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/10;background:linear-gradient(135deg,#eef2f7,#dde6f0);color:#8a97a5;font-size:0.8rem;border-bottom:1px solid #eee;">no preview</span><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Learning Graph Viewer</span></a>
+  <a href="live-hash-tamper-detector/" title="Live Hash &amp; Tamper Detector" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="live-hash-tamper-detector/live-hash-tamper-detector.png" alt="Live Hash &amp; Tamper Detector" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Live Hash &amp; Tamper Detector</span></a>
+  <a href="locard-exchange-visualizer/" title="Locard Exchange Principle Visualizer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="locard-exchange-visualizer/locard-exchange-visualizer.png" alt="Locard Exchange Principle Visualizer" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Locard Exchange Principle Visualizer</span></a>
+  <a href="medullary-index-calculator/" title="Medullary Index Calculator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="medullary-index-calculator/medullary-index-calculator.png" alt="Medullary Index Calculator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Medullary Index Calculator</span></a>
+  <a href="metadata-timeline-builder/" title="Metadata Recovery and Timeline Builder" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="metadata-timeline-builder/metadata-timeline-builder.png" alt="Metadata Recovery and Timeline Builder" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Metadata Recovery and Timeline Builder</span></a>
+  <a href="minutiae-tagging-canvas/" title="Minutiae-Tagging Canvas" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="minutiae-tagging-canvas/minutiae-tagging-canvas.png" alt="Minutiae-Tagging Canvas" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Minutiae-Tagging Canvas</span></a>
+  <a href="ntsb-investigation-workflow/" title="NTSB Investigation Workflow" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="ntsb-investigation-workflow/ntsb-investigation-workflow.png" alt="NTSB Investigation Workflow" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">NTSB Investigation Workflow</span></a>
+  <a href="pcr-amplification-simulator/" title="PCR Amplification Step-Through Simulator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="pcr-amplification-simulator/pcr-amplification-simulator.png" alt="PCR Amplification Step-Through Simulator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">PCR Amplification Step-Through Simulator</span></a>
+  <a href="presumptive-test-decision-tool/" title="Presumptive-Test Decision Tool" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="presumptive-test-decision-tool/presumptive-test-decision-tool.png" alt="Presumptive-Test Decision Tool" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Presumptive-Test Decision Tool</span></a>
+  <a href="rmp-product-rule/" title="Random Match Probability Product Rule Calculator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="rmp-product-rule/rmp-product-rule.png" alt="Random Match Probability Product Rule Calculator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Random Match Probability Product Rule Calculator</span></a>
+  <a href="skeletal-sex-indicators/" title="Skeletal Sex Indicators Interactive Diagram" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="skeletal-sex-indicators/skeletal-sex-indicators.png" alt="Skeletal Sex Indicators Interactive Diagram" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Skeletal Sex Indicators Interactive Diagram</span></a>
+  <a href="social-network-analysis/" title="Social Network Analysis Graph Explorer" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="social-network-analysis/social-network-analysis.png" alt="Social Network Analysis Graph Explorer" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Social Network Analysis Graph Explorer</span></a>
+  <a href="soil-analysis-dashboard/" title="Soil Analysis Comparison Dashboard" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="soil-analysis-dashboard/soil-analysis-dashboard.png" alt="Soil Analysis Comparison Dashboard" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Soil Analysis Comparison Dashboard</span></a>
+  <a href="str-electropherogram-comparison/" title="STR Electropherogram Comparison" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="str-electropherogram-comparison/str-electropherogram-comparison.png" alt="STR Electropherogram Comparison" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">STR Electropherogram Comparison</span></a>
+  <a href="striation-overlay-comparator/" title="Striation-Overlay Comparator" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="striation-overlay-comparator/striation-overlay-comparator.png" alt="Striation-Overlay Comparator" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Striation-Overlay Comparator</span></a>
+  <a href="tlc-ink-separation/" title="TLC Ink Separation Interactive Diagram" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="tlc-ink-separation/tlc-ink-separation.png" alt="TLC Ink Separation Interactive Diagram" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">TLC Ink Separation Interactive Diagram</span></a>
+  <a href="triangulation-measurement/" title="Triangulation Measurement Technique" style="display:block;border:1px solid #e3e7ec;border-radius:8px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,0.08);"><img src="triangulation-measurement/triangulation-measurement.png" alt="Triangulation Measurement Technique" loading="lazy" style="width:100%;aspect-ratio:16/10;object-fit:cover;background:#f5f7fa;display:block;border-bottom:1px solid #eee;"><span style="display:block;padding:9px 11px;font-size:0.85rem;font-weight:600;line-height:1.3;">Triangulation Measurement Technique</span></a>
 </div>
