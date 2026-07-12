@@ -3,6 +3,8 @@ title: Fiber Under Fire — Burn & Solubility ID
 description: A physical lab where investigators identify six unknown fibers recovered from a suspect's car using a controlled burn test and an acetone solubility test, then key each fiber with a dichotomous chart to match the victim's sweater.
 ---
 
+![Cover Image](./cover.png)
+
 # Fiber Under Fire — Burn & Solubility ID
 
 !!! mascot-welcome "Welcome, Investigators!"

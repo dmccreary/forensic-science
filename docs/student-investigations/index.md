@@ -65,6 +65,8 @@ one student or a small group.
 
 -   **[Fiber Under Fire](fiber-under-fire/index.md)**
 
+    ![Fiber Under Fire — Burn & Solubility ID cover](fiber-under-fire/cover.png)
+
     🧪 Physical · Ch 4
 
     Identify unknown fibers by burn behavior and solubility using a dichotomous key.
