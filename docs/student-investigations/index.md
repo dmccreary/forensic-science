@@ -49,6 +49,8 @@ one student or a small group.
 
 -   **[Cold Case — AFIS Classification](cold-case-afis-classification/index.md)**
 
+    ![Cold Case — AFIS Classification Challenge cover](cold-case-afis-classification/cover.png)
+
     💻 Virtual · Ch 3
 
     Classify a latent print and search a suspect database the way AFIS does.

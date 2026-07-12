@@ -3,6 +3,8 @@ title: Cold Case — AFIS Classification Challenge
 description: A virtual investigation where investigators classify a museum-heist latent print, count its minutiae, and search a six-suspect database to learn why AFIS ranks candidates while a human examiner makes the final call.
 ---
 
+![Cover Image](./cover.png)
+
 # Cold Case — AFIS Classification Challenge
 
 !!! mascot-welcome "Welcome, Investigators!"
