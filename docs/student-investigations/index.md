@@ -137,6 +137,8 @@ one student or a small group.
 
 -   **[Beat the Odds](random-match-probability/index.md)**
 
+    ![Beat the Odds — Random Match Probability cover](random-match-probability/cover.png)
+
     💻 Virtual · Ch 8
 
     Apply the product rule to compute a random match probability for a jury.

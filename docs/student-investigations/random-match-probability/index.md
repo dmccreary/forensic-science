@@ -3,6 +3,8 @@ title: Beat the Odds — Random Match Probability
 description: A mock-trial investigation where investigators apply the product rule across DNA loci to calculate a random match probability and write a courtroom explanation of what "1 in 7 billion" really means to a jury.
 ---
 
+![Cover Image](./cover.png)
+
 # Beat the Odds — Random Match Probability
 
 !!! mascot-welcome "Welcome, Investigators!"
