@@ -81,6 +81,8 @@ one student or a small group.
 
 -   **[Which Blow Came First?](glass-fracture-sequencing/index.md)**
 
+    ![Which Blow Came First? Glass Fracture Sequencing cover](glass-fracture-sequencing/cover.png)
+
     🔀 Combination · Ch 5
 
     Sequence impacts on fractured glass using the 3R rule.

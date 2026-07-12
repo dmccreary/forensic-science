@@ -3,6 +3,8 @@ title: Which Blow Came First? Glass Fracture Sequencing
 description: A combination lab where investigators apply the 3R rule and the terminating-fracture principle to a pane with two bullet holes and read the crack patterns to determine which shot was fired first.
 ---
 
+![Cover Image](./cover.png)
+
 # Which Blow Came First? Glass Fracture Sequencing
 
 !!! mascot-welcome "Welcome, Investigators!"
