@@ -89,6 +89,8 @@ one student or a small group.
 
 -   **[Soil Signatures](soil-signatures/index.md)**
 
+    ![Soil Signatures — Matching the Suspect’s Boots cover](soil-signatures/cover.png)
+
     🧪 Physical · Ch 5
 
     Match boot soil to a location by color, pH, and particle layering.

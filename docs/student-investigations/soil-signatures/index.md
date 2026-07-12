@@ -3,6 +3,8 @@ title: Soil Signatures — Matching the Suspect's Boots
 description: A physical bench lab where investigators characterize soil by color, pH, particle-size layering, and mineral sparkle, then match dirt scraped from a suspect's boots to one of three crime-scene locations.
 ---
 
+![Cover Image](./cover.png)
+
 # Soil Signatures — Matching the Suspect's Boots
 
 !!! mascot-welcome "Welcome, Investigators!"
