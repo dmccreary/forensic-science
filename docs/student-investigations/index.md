@@ -161,6 +161,8 @@ one student or a small group.
 
 -   **[Bones Tell Tales](bones-tell-tales/index.md)**
 
+    ![Bones Tell Tales — Sex & Stature Estimation cover](bones-tell-tales/cover.png)
+
     🔀 Combination · Ch 11
 
     Estimate biological sex and stature from skeletal measurements.

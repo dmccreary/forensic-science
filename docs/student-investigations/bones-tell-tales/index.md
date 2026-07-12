@@ -3,6 +3,8 @@ title: Bones Tell Tales — Sex & Stature Estimation
 description: A combination lab where investigators measure pelvic and cranial features to estimate biological sex, apply a long-bone regression equation to estimate stature, and build a biological profile to match skeletal remains against three missing-person reports.
 ---
 
+![Cover Image](./cover.png)
+
 # Bones Tell Tales — Sex & Stature Estimation
 
 !!! mascot-welcome "Welcome, Investigators!"
