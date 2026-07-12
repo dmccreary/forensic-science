@@ -3,6 +3,8 @@ title: Forged or Genuine? Handwriting Examination
 description: A hands-on lab where investigators collect requested exemplars, examine line quality, slant, and spacing, and rank three questioned signatures on a disputed check from most to least likely forged.
 ---
 
+![Cover Image](./cover.png)
+
 # Forged or Genuine? Handwriting Examination
 
 !!! mascot-welcome "Welcome, Investigators!"

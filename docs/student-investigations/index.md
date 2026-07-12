@@ -193,6 +193,8 @@ one student or a small group.
 
 -   **[Forged or Genuine?](handwriting-examination/index.md)**
 
+    ![Forged or Genuine? Handwriting Examination cover](handwriting-examination/cover.png)
+
     🔀 Combination · Ch 14
 
     Compare questioned and known handwriting to judge authenticity.
