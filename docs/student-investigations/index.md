@@ -185,6 +185,8 @@ one student or a small group.
 
 -   **[Which Pen Wrote the Note?](ink-chromatography/index.md)**
 
+    ![Which Pen Wrote the Ransom Note? Ink Chromatography cover](ink-chromatography/cover.png)
+
     🧪 Physical · Ch 14
 
     Separate ink pigments by chromatography to identify the pen used.

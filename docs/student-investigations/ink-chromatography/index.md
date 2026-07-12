@@ -3,6 +3,8 @@ title: Which Pen Wrote the Ransom Note? Ink Chromatography
 description: A hands-on lab where investigators separate the hidden dyes inside six black inks with paper chromatography and match one pen's pigment fingerprint to the ink on a ransom note.
 ---
 
+![Cover Image](./cover.png)
+
 # Which Pen Wrote the Ransom Note? Ink Chromatography
 
 !!! mascot-welcome "Welcome, Investigators!"
