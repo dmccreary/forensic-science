@@ -3,6 +3,8 @@ title: From Strawberry to Suspect — DNA Extraction + STR Match
 description: A two-part lab where investigators first extract real, visible DNA from strawberries with kitchen chemistry, then simulate PCR and compare a crime-scene STR profile against three suspects across CODIS loci to include or exclude them.
 ---
 
+![Cover Image](./cover.png)
+
 # From Strawberry to Suspect — DNA Extraction + STR Match
 
 !!! mascot-welcome "Welcome, Investigators!"

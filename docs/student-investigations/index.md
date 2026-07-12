@@ -129,6 +129,8 @@ one student or a small group.
 
 -   **[From Strawberry to Suspect](dna-extraction-str-match/index.md)**
 
+    ![From Strawberry to Suspect — DNA Extraction + STR Match cover](dna-extraction-str-match/cover.png)
+
     🔀 Combination · Ch 8
 
     Extract real DNA, then match a simulated STR profile to a suspect.
