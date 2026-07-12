@@ -1,0 +1,50 @@
+{
+  "title": "Striation-Overlay Comparator",
+  "description": "Analyze toolmark striations the way a comparison microscope does. Two horizontal strips are stacked: the crime-scene toolmark on top and a suspect tool's test mark below, each a set of parallel vertical striation lines. Pick a suspect tool, slide its test-mark strip to align its striations with the scene mark, then score the alignment as a correlation percentage. Exactly one of the three tools shares the scene's individual striation pattern; the class-width readout also lets a mismatched tool be excluded on class alone.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Firearms and Ballistics",
+    "Toolmark Examination",
+    "Striation Comparison",
+    "Comparison Microscope"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "striation-overlay-comparator",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) — compare two toolmark striation patterns by aligning them and scoring their correlation to identify or exclude a suspect tool.",
+  "bloomVerb": "Compare",
+  "completion_status": "implemented",
+  "chapter_number": 13,
+  "chapter_title": "Firearms, Ballistics, and Toolmark Examination",
+  "chapter_dir": "13-firearms-and-ballistics",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Aligning and scoring toolmark striations to identify or exclude a suspect tool",
+    "learningObjectives": [
+      "Distinguish class characteristics (mark width) from individual characteristics (striation pattern).",
+      "Align a suspect tool's striations to a crime-scene toolmark as a comparison microscope does.",
+      "Score striation correlation and interpret a match versus no-match verdict.",
+      "Exclude a tool on class characteristics and identify the source tool on individual characteristics."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Familiarity with toolmarks, striations, and the difference between class and individual characteristics"
+  },
+  "pedagogical": {
+    "interactionPattern": "The crime-scene toolmark is drawn as a strip of vertical striation lines at the top; the selected suspect tool's test mark is a second strip below it, separated by a comparison-microscope bridge line. A dropdown chooses among three suspect tools; a slider shifts the suspect strip horizontally to align its striations with the scene mark. 'Score Alignment' computes the percentage of scene striations that coincide with a suspect striation within tolerance at the current shift, prints a MATCH or NO MATCH verdict, and draws green vertical guides through the coinciding lines. 'Reset' returns the shift to zero. A class-width readout marks a tool as excluded on class when its width differs from the scene mark.",
+    "assessment": "Analysis with immediate feedback: the student first checks the class width to see whether a tool can be excluded outright, then slides the striations into alignment and scores the individual match. Because only one tool's striation pattern truly aligns, a wrong tool never reaches the match threshold no matter how it is shifted, reinforcing that a real identification survives small alignment adjustments while a coincidental one does not.",
+    "modelType": "Translation-correlation model: each strip is a set of striation positions given as fractions of strip width. The suspect strip has a fixed offset plus a user shift; two striations coincide when their pixel positions fall within a fixed tolerance. The correlation score is the fraction of scene striations with a coinciding suspect striation. Only the matching tool shares the scene's positions, so it reaches 100% at the aligning shift.",
+    "controls": [
+      "'Tool' dropdown — choose Tool 1 (Screwdriver), Tool 2 (Chisel), or Tool 3 (Bolt cutter)",
+      "'Shift (align)' slider — translate the suspect strip horizontally to align striations",
+      "'Score Alignment' button — compute the correlation percentage and show the verdict",
+      "'Reset' button — return the shift to zero and clear the verdict"
+    ]
+  }
+}

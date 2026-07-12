@@ -1009,9 +1009,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-burn-pattern-origin-explorer" class="md-nav__link">
+  <a href="#explore-trace-the-fire-to-its-origin" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Burn-Pattern Origin Explorer
+      Explore: Trace the Fire to Its Origin
     </span>
   </a>
   
@@ -1559,6 +1559,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1859,9 +1891,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-burn-pattern-origin-explorer" class="md-nav__link">
+  <a href="#explore-trace-the-fire-to-its-origin" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Burn-Pattern Origin Explorer
+      Explore: Trace the Fire to Its Origin
     </span>
   </a>
   
@@ -2051,31 +2083,20 @@ pattern. So the strongest arson evidence isn't one dramatic burn — it's the
 <strong>geometry</strong>: an origin low on the floor, or <strong>multiple separate origins</strong> with
 no burn path connecting them (fire can't teleport, so two unconnected origins
 scream <em>set</em>). Any accelerant call must then be <strong>confirmed in the lab.</strong></p>
-<h3 id="proposed-microsim-burn-pattern-origin-explorer">Proposed MicroSim: Burn-Pattern Origin Explorer<a class="headerlink" href="#proposed-microsim-burn-pattern-origin-explorer" title="Permanent link">&para;</a></h3>
-<p>The primary analysis tool for this lab has been <strong>specified but not yet built.</strong>
-Use the printed room diagram as a stand-in until it ships.</p>
+<h3 id="explore-trace-the-fire-to-its-origin">Explore: Trace the Fire to Its Origin<a class="headerlink" href="#explore-trace-the-fire-to-its-origin" title="Permanent link">&para;</a></h3>
+<p>Read the V-patterns and char in a top-down room plan, drop your point of origin,
+and let the sim score how close you got — then reveal whether a second origin
+raises the arson red flag.</p>
+<iframe src="../../sims/burn-pattern-origin-explorer/main.html" width="100%" height="570" scrolling="no"></iframe>
+
 <details>
-<summary>Burn-Pattern Origin Explorer — specification</summary>
+<summary>Burn-Pattern Origin Explorer Interactive MicroSim</summary>
 <p>Type: microsim<br/>
 <strong>sim-id:</strong> burn-pattern-origin-explorer<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified</p>
+<strong>Status:</strong> Implemented</p>
 <p>Learning Objective: Locate a fire's point of origin from burn-severity evidence
 and flag multiple origins as an arson indicator (Bloom Level 4 — Analyze).</p>
-<p><strong>Layout.</strong> A top-down <strong>room diagram</strong> (walls, door, shelving, furniture) with a
-heat-shaded burn overlay. The student's job is to place and defend a point of
-origin.</p>
-<p><strong>Interaction.</strong> Clicking the floor drops a <strong>suspected origin marker</strong>; multiple
-markers can be placed. A set of draggable <strong>burn-severity probes</strong> report the
-char depth at any spot the student drags them to, so they can hunt for the
-deepest, lowest damage. A <code>createButton('Reset')</code> clears all markers. A
-<code>createSlider()</code> scrubs a <strong>time-lapse of fire spread</strong> so students see the
-plume grow from the true origin outward. A <code>createCheckbox('Show accelerant
-trail')</code> reveals where (if anywhere) an ignitable liquid was placed. On
-<strong>Score</strong>, the sim rates how close the student's origin is to ground truth and
-<strong>flags whether multiple genuine origins exist</strong> — the arson red flag.</p>
-<p><strong>Teaching point.</strong> The deepest, lowest burn plus a converging V-pattern locates
-the origin; two unconnected origins are strong evidence of a set fire.</p>
 </details>
 <h3 id="explore-from-debris-to-chromatogram">Explore: From Debris to Chromatogram<a class="headerlink" href="#explore-from-debris-to-chromatogram" title="Permanent link">&para;</a></h3>
 <p>Once you flag a spot as a likely accelerant pour, a real investigator bags the

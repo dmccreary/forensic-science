@@ -1,0 +1,50 @@
+{
+  "title": "STR Electropherogram Comparison",
+  "description": "Analyze a crime-scene DNA profile against a chosen suspect across five CODIS loci. Each locus draws an electropherogram trace with one or two allele peaks at repeat-number positions. Overlay or set the scene and suspect traces side by side, focus a single locus or view all five, then tally matching loci to include or exclude the suspect. Exactly one of the three suspects matches the scene at every locus; the others differ at one or more loci, and a single mismatched locus produces an exclusion.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Forensic DNA Profiling",
+    "Short Tandem Repeats",
+    "Electropherogram Interpretation",
+    "CODIS Loci"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "str-electropherogram-comparison",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) — compare crime-scene and suspect STR peak sets across CODIS loci to determine matching loci and include or exclude a suspect.",
+  "bloomVerb": "Compare",
+  "completion_status": "implemented",
+  "chapter_number": 8,
+  "chapter_title": "Forensic DNA Profiling",
+  "chapter_dir": "08-forensic-dna-profiling",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Comparing STR electropherogram profiles across CODIS loci to include or exclude a suspect",
+    "learningObjectives": [
+      "Read an STR electropherogram as allele peaks positioned at short-tandem-repeat counts.",
+      "Compare a crime-scene genotype with a suspect genotype at a single CODIS locus.",
+      "Tally matching loci across five CODIS loci to reach an inclusion or exclusion.",
+      "Explain why a single mismatched locus excludes a suspect outright."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Familiarity with DNA, short tandem repeats, alleles, and the idea of a genetic profile"
+  },
+  "pedagogical": {
+    "interactionPattern": "Five stacked locus panels each show an electropherogram axis of repeat-number positions with the crime-scene genotype (blue) and the selected suspect's genotype (orange) drawn as one or two peaks. A suspect dropdown switches between Suspect A, B, and C; a locus dropdown focuses one locus at full height or shows all five; a view button toggles overlaid traces versus stacked side-by-side traces. 'Compare Loci' tallies how many of the five loci match, flags the first differing locus, and prints an inclusion or exclusion verdict in a banner, with a per-locus match or differs badge on each panel.",
+    "assessment": "Analysis with immediate feedback: the student inspects peak positions locus by locus and predicts whether the suspect matches, then presses Compare Loci to check. Because exactly one suspect matches all five loci and each other suspect differs at a different locus, the exercise rewards reading each locus carefully rather than guessing, and reinforces that one mismatched locus is enough to exclude.",
+    "modelType": "Discrete genotype model: each locus has a crime-scene genotype of one or two integer alleles (repeat counts); a suspect matches a locus only when the sorted allele set equals the scene's. Peaks are drawn as Gaussian bumps centered on each allele's mapped x-position; a locus match requires every allele to align.",
+    "controls": [
+      "'Suspect' dropdown — choose Suspect A, B, or C",
+      "'Locus' dropdown — focus one CODIS locus or view all five",
+      "'View' button — toggle overlay versus side-by-side traces",
+      "'Compare Loci' button — tally matching loci and show the inclusion/exclusion verdict"
+    ]
+  }
+}

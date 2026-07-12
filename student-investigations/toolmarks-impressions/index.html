@@ -1072,9 +1072,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-striation-overlay-comparator" class="md-nav__link">
+  <a href="#explore-striation-overlay-comparator" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Striation-Overlay Comparator
+      Explore: Striation-Overlay Comparator
     </span>
   </a>
   
@@ -1550,6 +1550,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1850,9 +1882,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-striation-overlay-comparator" class="md-nav__link">
+  <a href="#explore-striation-overlay-comparator" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Striation-Overlay Comparator
+      Explore: Striation-Overlay Comparator
     </span>
   </a>
   
@@ -2038,46 +2070,27 @@ known impression and — if they match ridge-for-ridge — you can associate tha
 mark with <strong>one specific tool.</strong> That side-by-side alignment is exactly what a
 <strong>comparison microscope</strong> does in a real lab.</p>
 <p>Before you pick up a tool, see how striation matching works.</p>
-<h3 id="proposed-microsim-striation-overlay-comparator">Proposed MicroSim: Striation-Overlay Comparator<a class="headerlink" href="#proposed-microsim-striation-overlay-comparator" title="Permanent link">&para;</a></h3>
+<h3 id="explore-striation-overlay-comparator">Explore: Striation-Overlay Comparator<a class="headerlink" href="#explore-striation-overlay-comparator" title="Permanent link">&para;</a></h3>
+<p>Slide a suspect tool's test mark to align its striations with the crime-scene
+toolmark, then score the correlation to identify or exclude the tool.</p>
+<iframe src="../../sims/striation-overlay-comparator/main.html" width="100%" height="565" scrolling="no"></iframe>
+
 <details>
 <summary>Striation-Overlay Comparator Interactive MicroSim</summary>
 <p>Type: microsim<br/>
 <strong>sim-id:</strong> striation-overlay-comparator<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified</p>
+<strong>Status:</strong> Implemented</p>
 <p>Learning Objective: Compare two toolmark striation patterns by overlaying them
 and scoring their alignment, mimicking the split-field view of a comparison
 microscope (Bloom Level 4 — Analyze).</p>
-<p><strong>Concept.</strong> The canvas shows two striation strips — a <strong>questioned</strong> mark on
-the left and a <strong>known</strong> mark on the right — each drawn as a band of vertical
-lines with realistic variation in spacing, depth, and a few distinctive "nick"
-grooves. The learner slides the known strip across a central dividing line (the
-comparison-microscope "bridge") to try to line its striations up with the
-questioned strip.</p>
-<p><strong>Interaction &amp; controls.</strong></p>
-<ul>
-<li><code>createSlider()</code> — <strong>Shift</strong>: translate the known strip horizontally to hunt
-  for alignment.</li>
-<li><code>createSlider()</code> — <strong>Rotate</strong>: apply a small angular tilt to correct for a
-  differently angled mark.</li>
-<li><code>createButton('Score Alignment')</code> — computes a cross-correlation between the
-  two striation profiles and reports a <strong>match score (0–100%)</strong> with a plain-
-  English verdict band (No match / Inconclusive / Consistent).</li>
-<li><code>createSelect()</code> — <strong>Known tool</strong>: pick which suspect tool's striation set is
-  loaded on the right (Screwdriver A, Chisel B, Bolt cutter C), only one of which
-  truly matches the questioned strip.</li>
-<li><code>createCheckbox('Overlay mode')</code> — toggles between <strong>side-by-side</strong> (split
-  field) and <strong>overlaid</strong> (superimposed, semi-transparent) comparison views.</li>
-</ul>
-<p><strong>Feedback.</strong> Matching grooves glow green where the profiles coincide; mismatched
-grooves stay red. A running readout shows the current shift, rotation, and score
-so students can see that a real match still holds after small alignment
-adjustments — while a wrong tool never climbs above the "inconclusive" band no
-matter how they slide it.</p>
 </details>
-<p>Once built, this comparator lets you rehearse the key move — <strong>sliding one mark
-against another until the striations either line up or clearly don't</strong> — before
-you do it for real under the loupe.</p>
+<p>Check each tool's <strong>class width</strong> first — a tool of the wrong size is excluded on
+class before you ever look at striations. Then pick a tool, slide it until the
+striations line up, and press <strong>Score Alignment</strong>. Only one tool truly matches; a
+wrong tool never reaches a match no matter how you shift it. This rehearses the key
+move — sliding one mark against another until the striations line up or clearly
+don't — before you do it for real under the loupe.</p>
 <h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
 <p><strong>Part 1 — Make the known impressions.</strong></p>
 <ol>
@@ -2201,9 +2214,9 @@ comparison had to stay "inconclusive."</p>
   the striation match findable with a hand lens.</li>
 <li><strong>Clay matters:</strong> Firm plasticine holds fine detail better than soft
   children's dough. Chill it briefly if it's too soft to take striations.</li>
-<li><strong>The MicroSim is specified, not built.</strong> Until the Striation-Overlay
-  Comparator exists, have students do the sliding comparison physically by
-  rocking one clay strip beside another under the loupe.</li>
+<li><strong>Use the Striation-Overlay Comparator</strong> above to rehearse the sliding
+  comparison on screen first, then have students do it physically by rocking
+  one clay strip beside another under the loupe.</li>
 <li><strong>Differentiation:</strong> For a quicker lab, compare compression marks only. For
   a challenge, add two same-model tools (see the Extension) so class
   characteristics can't separate them.</li>

@@ -964,9 +964,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-str-electropherogram-comparison" class="md-nav__link">
+  <a href="#explore-str-electropherogram-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: STR Electropherogram Comparison
+      Explore: STR Electropherogram Comparison
     </span>
   </a>
   
@@ -1568,6 +1568,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1886,9 +1918,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-str-electropherogram-comparison" class="md-nav__link">
+  <a href="#explore-str-electropherogram-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: STR Electropherogram Comparison
+      Explore: STR Electropherogram Comparison
     </span>
   </a>
   
@@ -2103,36 +2135,25 @@ frequencies into an overall random match probability (Bloom Level 3 — Apply).<
 in a few hundred" at one locus to "1 in billions" once several agree. That
 collapse is <em>why</em> a full CODIS match is so powerful, and why a single locus is
 never enough.</p>
-<h3 id="proposed-microsim-str-electropherogram-comparison">Proposed MicroSim: STR Electropherogram Comparison<a class="headerlink" href="#proposed-microsim-str-electropherogram-comparison" title="Permanent link">&para;</a></h3>
+<h3 id="explore-str-electropherogram-comparison">Explore: STR Electropherogram Comparison<a class="headerlink" href="#explore-str-electropherogram-comparison" title="Permanent link">&para;</a></h3>
+<p>Compare the crime-scene STR profile against each suspect across five CODIS loci and
+tally the matching loci to include or exclude them.</p>
+<iframe src="../../sims/str-electropherogram-comparison/main.html" width="100%" height="585" scrolling="no"></iframe>
+
 <details>
-<summary>STR Electropherogram Comparison Interactive MicroSim (proposed)</summary>
+<summary>STR Electropherogram Comparison Interactive MicroSim</summary>
 <p>Type: microsim<br/>
 <strong>sim-id:</strong> str-electropherogram-comparison<br/>
-<strong>Library:</strong> p5.js / Chart.js<br/>
-<strong>Status:</strong> Specified</p>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Implemented</p>
 <p>Learning Objective: Compare crime-scene and suspect STR peak sets across CODIS
 loci to determine matching loci and include or exclude a suspect (Bloom Level 4
 — Analyze).</p>
-<p><strong>Description.</strong> Renders a crime-scene STR profile alongside a chosen suspect's
-profile as <strong>electropherogram peak sets</strong> at <strong>4–6 CODIS loci</strong> (e.g. TH01, TPOX,
-CSF1PO, D5S818, D7S820, D13S317). Each locus shows one or two peaks whose
-horizontal positions represent repeat counts (alleles).</p>
-<p><strong>Controls (p5.js built-ins).</strong></p>
-<ul>
-<li><code>createSelect()</code> — pick which <strong>locus</strong> to display.</li>
-<li><code>createSelect()</code> — pick which <strong>suspect</strong> (1, 2, or 3) to compare against the scene.</li>
-<li><code>createButton('Overlay / Side-by-side')</code> — toggle between <strong>overlaid</strong> traces
-  (scene and suspect on the same axis) and a <strong>side-by-side</strong> view.</li>
-<li>A <strong>"Matching loci"</strong> readout tallies how many loci the selected suspect shares
-  with the scene and flags any mismatch as an <strong>exclusion</strong>.</li>
-</ul>
-<p><strong>Behavior.</strong> A locus counts as a match only when <em>both</em> alleles align with the
-scene's peaks. A single mismatched locus marks the suspect <strong>excluded</strong>, mirroring
-real casework where one non-matching locus rules a person out.</p>
 </details>
-<p>Until this comparison sim is built, work the STR match from the <strong>evidence card</strong>
-your teacher provides (a printed table of repeat counts per locus for the scene
-and all three suspects) and record it in the data table below.</p>
+<p>Pick each suspect in turn, check whether their orange peaks sit at the same repeat
+numbers as the scene's blue peaks, then press <strong>Compare Loci</strong>. Exactly one suspect
+matches all five loci; the others differ at a locus — and a single mismatch is
+enough to exclude. Record the repeat counts and matches in the data table below.</p>
 <h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
 <p><strong>Part 1 — Extract the DNA (physical).</strong></p>
 <ol>
@@ -2150,8 +2171,8 @@ and all three suspects) and record it in the data table below.</p>
 <ol>
 <li>Open the <strong>PCR Amplification Simulator</strong> and run enough cycles to "amplify" the
    crime-scene sample. Note how many copies a readable profile needs.</li>
-<li>From your evidence card (or the proposed STR comparison sim), record the
-   <strong>repeat counts at each CODIS locus</strong> for the <strong>scene</strong> and each suspect.</li>
+<li>From your evidence card (or the <strong>STR Electropherogram Comparison</strong> sim above),
+   record the <strong>repeat counts at each CODIS locus</strong> for the <strong>scene</strong> and each suspect.</li>
 </ol>
 <p><strong>Part 3 — Compare and weigh the match.</strong></p>
 <ol>

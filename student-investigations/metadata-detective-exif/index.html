@@ -1165,9 +1165,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-exif-map-plot-alibi-overlay" class="md-nav__link">
+  <a href="#explore-exif-map-plot-alibi-overlay" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: EXIF Map-Plot &amp; Alibi Overlay
+      Explore: EXIF Map-Plot &amp; Alibi Overlay
     </span>
   </a>
   
@@ -1402,6 +1402,38 @@
   
     
     
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
       
         
           
@@ -1868,9 +1900,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-exif-map-plot-alibi-overlay" class="md-nav__link">
+  <a href="#explore-exif-map-plot-alibi-overlay" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: EXIF Map-Plot &amp; Alibi Overlay
+      Explore: EXIF Map-Plot &amp; Alibi Overlay
     </span>
   </a>
   
@@ -2057,22 +2089,20 @@ ordered timeline and compare it against a claimed alibi (Bloom Level 3 — Apply
 <p>Load each photo's metadata into the builder and watch the events snap into
 chronological order. Notice how a single out-of-place timestamp can crack a whole
 alibi — then you'll add the <em>where</em> by plotting the coordinates.</p>
-<h3 id="proposed-microsim-exif-map-plot-alibi-overlay">Proposed MicroSim: EXIF Map-Plot &amp; Alibi Overlay<a class="headerlink" href="#proposed-microsim-exif-map-plot-alibi-overlay" title="Permanent link">&para;</a></h3>
+<h3 id="explore-exif-map-plot-alibi-overlay">Explore: EXIF Map-Plot &amp; Alibi Overlay<a class="headerlink" href="#explore-exif-map-plot-alibi-overlay" title="Permanent link">&para;</a></h3>
+<p>Scrub the timeline and watch each photo's hidden GPS pin the device to a place and
+time — until one pin lands far from the suspect's claimed "home all day."</p>
+<iframe src="../../sims/exif-map-plot/main.html" width="100%" height="570px" scrolling="no"></iframe>
+
 <details>
 <summary>EXIF Map-Plot &amp; Alibi Overlay Interactive MicroSim</summary>
 <p>Type: microsim<br/>
 <strong>sim-id:</strong> exif-map-plot<br/>
-<strong>Library:</strong> Leaflet / Plotly (map + timeline)<br/>
-<strong>Status:</strong> Specified</p>
-<p>Learning Objective: Plot EXIF GPS points on a map and animate them over time to
-test a suspect's claimed location (Bloom Level 4 — Analyze).</p>
-<p>Design: Each photo's GPS coordinate drops as a numbered pin on a street map. A
-timeline <strong>slider</strong> scrubs through the afternoon, lighting up each pin at its
-timestamp so students watch the device <em>travel</em>. A <strong>checkbox</strong> overlays the
-suspect's claimed location (a home marker with a radius) so the contradiction is
-visual: pins that fall far outside the home circle during the crime window break
-the alibi. Controls: a time <code>slider</code>, a <code>Show claimed location</code> checkbox, and a
-<code>Reset</code> button.</p>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Implemented</p>
+<p>Learning Objective: Plot EXIF GPS points on a schematic map and scrub them over
+time to test whether the device's trail contradicts a suspect's claimed location
+(Bloom Level 4 — Analyze).</p>
 </details>
 <h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
 <p><strong>Part 1 — Read the metadata.</strong></p>

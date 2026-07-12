@@ -1144,9 +1144,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-live-hash-tamper-detector" class="md-nav__link">
+  <a href="#explore-live-hash-tamper-detector" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Live Hash &amp; Tamper Detector
+      Explore: Live Hash &amp; Tamper Detector
     </span>
   </a>
   
@@ -1402,6 +1402,38 @@
   
     
     
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
       
         
           
@@ -1868,9 +1900,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-live-hash-tamper-detector" class="md-nav__link">
+  <a href="#explore-live-hash-tamper-detector" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Live Hash &amp; Tamper Detector
+      Explore: Live Hash &amp; Tamper Detector
     </span>
   </a>
   
@@ -2058,22 +2090,19 @@ hashing verifies integrity at each step (Bloom Level 2 — Understand).</p>
 <p>Step through the workflow and notice <strong>where the hash is taken</strong> — once on the
 original, once on the copy. That before-and-after pair is the whole point. Now
 you'll compute those hashes yourself.</p>
-<h3 id="proposed-microsim-live-hash-tamper-detector">Proposed MicroSim: Live Hash &amp; Tamper Detector<a class="headerlink" href="#proposed-microsim-live-hash-tamper-detector" title="Permanent link">&para;</a></h3>
+<h3 id="explore-live-hash-tamper-detector">Explore: Live Hash &amp; Tamper Detector<a class="headerlink" href="#explore-live-hash-tamper-detector" title="Permanent link">&para;</a></h3>
+<p>Type evidence text, flip a single character to watch the avalanche effect rewrite
+the whole fingerprint, then compare two files to authenticate the untouched original.</p>
+<iframe src="../../sims/live-hash-tamper-detector/main.html" width="100%" height="640px" scrolling="no"></iframe>
+
 <details>
 <summary>Live Hash &amp; Tamper Detector Interactive MicroSim</summary>
 <p>Type: microsim<br/>
 <strong>sim-id:</strong> live-hash-tamper-detector<br/>
-<strong>Library:</strong> HTML / JavaScript (Web Crypto API, in-browser)<br/>
-<strong>Status:</strong> Specified</p>
+<strong>Library:</strong> JavaScript (Web Crypto)<br/>
+<strong>Status:</strong> Implemented</p>
 <p>Learning Objective: Compute and compare MD5 and SHA-256 digests and demonstrate
 the avalanche effect from a single-character change (Bloom Level 3 — Apply).</p>
-<p>Design: A text box holds the "evidence" content. A <strong>Hash</strong> button computes the
-MD5 and SHA-256 digests live and displays both in full. A <strong>Tamper</strong> toggle flips
-one byte of the input and re-hashes, coloring every changed hex character so the
-avalanche effect is visible at a glance. A <strong>Compare</strong> mode accepts two files (or
-two text blocks), hashes both, and reports a green <strong>MATCH</strong> or a red <strong>MISMATCH</strong>
-with the count of differing characters. Controls: a text input, a <code>Hash</code> button,
-a <code>Tamper</code> checkbox, and a <code>Compare</code> button.</p>
 </details>
 <h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
 <p><strong>Part 1 — Hash the original.</strong></p>

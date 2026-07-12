@@ -862,9 +862,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-presumptive-test-decision-tool" class="md-nav__link">
+  <a href="#explore-presumptive-test-decision-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Presumptive-Test Decision Tool
+      Explore: Presumptive-Test Decision Tool
     </span>
   </a>
   
@@ -1550,6 +1550,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1850,9 +1882,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#proposed-microsim-presumptive-test-decision-tool" class="md-nav__link">
+  <a href="#explore-presumptive-test-decision-tool" class="md-nav__link">
     <span class="md-ellipsis">
-      Proposed MicroSim: Presumptive-Test Decision Tool
+      Explore: Presumptive-Test Decision Tool
     </span>
   </a>
   
@@ -2041,31 +2073,21 @@ certain fruits, and even chemical oxidizers like <strong>rust</strong> can trigg
 result — a <strong>false positive.</strong> So a Kastle-Meyer positive means "<strong>consistent
 with</strong> blood; confirm it," never "this is blood." That distinction is the entire
 lesson.</p>
-<h3 id="proposed-microsim-presumptive-test-decision-tool">Proposed MicroSim: Presumptive-Test Decision Tool<a class="headerlink" href="#proposed-microsim-presumptive-test-decision-tool" title="Permanent link">&para;</a></h3>
-<p>No interactive simulation exists for this investigation yet. The specification
-below describes one that could be built to model the screen-then-confirm decision.</p>
+<h3 id="explore-presumptive-test-decision-tool">Explore: Presumptive-Test Decision Tool<a class="headerlink" href="#explore-presumptive-test-decision-tool" title="Permanent link">&para;</a></h3>
+<p>Pick a reddish-brown sample, run the presumptive test to watch peroxidase-active
+stains flash pink, then run the confirmatory test to see which "positives" were
+really blood — and which were false alarms.</p>
+<iframe src="../../sims/presumptive-test-decision-tool/main.html" width="100%" height="530" scrolling="no"></iframe>
+
 <details>
-<summary>Presumptive-Test Decision Tool — MicroSim specification</summary>
+<summary>Presumptive-Test Decision Tool Interactive MicroSim</summary>
 <p>Type: microsim<br/>
 <strong>sim-id:</strong> presumptive-test-decision-tool<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified</p>
-<p><strong>Learning Objective:</strong> Decide which stains warrant confirmatory testing based on
-presumptive results, and reason about false positives (Bloom Level 5 —
-Evaluate).</p>
-<p><strong>Description.</strong> A bench of labeled unknown stains (blood, ketchup, rust,
-horseradish, fruit juice). The student clicks <strong>"Add reagent"</strong> on a stain and
-the sim animates the color: a <em>fast</em> pink flash for true peroxidase sources, a
-<em>slow or no</em> change for inert stains, and a <em>false-positive</em> pink for rust or a
-plant source. The student then sorts each stain into <strong>"Send to confirmatory"</strong>
-or <strong>"Set aside."</strong> The sim scores the decisions and reveals which "positives"
-were false — reinforcing that presumptive tests screen, not identify.</p>
-<p><strong>Controls (p5.js builtin):</strong>
-<code>createButton('Add reagent')</code> — runs the reaction on the selected stain;
-<code>createSelect()</code> — picks the stain to test;
-<code>createButton('Reset bench')</code> — clears results;
-<code>createCheckbox('Reveal ground truth')</code> — shows what each stain actually was
-after the student commits.</p>
+<strong>Status:</strong> Implemented</p>
+<p>Learning Objective: Judge which stains warrant confirmatory testing and reason
+about false positives, distinguishing a presumptive screen from a confirmatory
+identification (Bloom Level 5 — Evaluate).</p>
 </details>
 <h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
 <p><strong>Part 1 — Prepare and verify the test.</strong></p>

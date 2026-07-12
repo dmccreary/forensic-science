@@ -1,0 +1,53 @@
+{
+  "title": "Burn-Pattern Origin Explorer",
+  "description": "Analyze burn-pattern evidence in a top-down room plan to locate a fire's point of origin. V-pattern scorch cones point toward each origin and the deepest, most-concentrated char marks it. Click to place an origin estimate, scrub a fire-spread time-lapse, optionally reveal the full burn-severity gradient, and score how close the estimate is to the nearest true origin. Two unconnected origins raise the arson red flag.",
+  "creator": "Forensic Science Intelligent Textbook",
+  "date": "2026-07-12",
+  "subject": [
+    "Forensic Science",
+    "Fire Investigation",
+    "Arson",
+    "Point of Origin",
+    "Burn Patterns",
+    "V-Pattern"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "burn-pattern-origin-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) — locate a fire's point of origin from burn-severity evidence and flag multiple origins as an arson indicator.",
+  "bloomVerb": "Analyze",
+  "completion_status": "implemented",
+  "chapter_number": 10,
+  "chapter_title": "Fire Investigation, Arson, and Explosives",
+  "chapter_dir": "10-fire-arson-explosives",
+  "educational": {
+    "gradeLevel": "9-12",
+    "subjectArea": "Forensic Science",
+    "topic": "Locating a fire's point of origin from V-pattern and char evidence, and recognizing multiple origins as an arson indicator",
+    "learningObjectives": [
+      "Interpret V-pattern scorch cones as pointers toward a fire's origin.",
+      "Use burn severity — the deepest, most concentrated char — to locate the origin.",
+      "Estimate a point of origin and judge its accuracy against ground truth.",
+      "Recognize two unconnected origins as a strong arson indicator that still requires lab confirmation."
+    ],
+    "bloomLevel": "Analyze (L4)",
+    "duration": "10-15 minutes",
+    "prerequisites": "Familiarity with the fire tetrahedron, V-patterns, and the idea that fire climbs up and out from its origin"
+  },
+  "pedagogical": {
+    "interactionPattern": "A top-down room plan (walls, doorway, shelving, workbench) fills the left of the canvas. V-pattern scorch cones on the walls point toward each hidden origin and a deep char blotch marks it. The student clicks the floor to drop an origin estimate. A scenario dropdown switches between an accidental single-origin fire and a suspicious two-origin fire. A fire-spread time-lapse slider grows the char outward from the origin(s). A 'Show burn severity' checkbox reveals the full heat gradient (hidden by default so students reason from the cues). 'Score My Origin' reports the distance from the estimate to the nearest true origin with an Excellent / Good / Off rating; when two genuine origins exist and are revealed, a red-flag banner warns of arson.",
+    "assessment": "Analysis with immediate feedback: the student must synthesize V-pattern direction and char concentration to predict the origin, then the sim scores the estimate against ground truth. The two-origin scenario tests whether the student recognizes that two separated origins with no connecting burn path indicate a set fire.",
+    "modelType": "Qualitative spatial model: burn severity at any point is the maximum Gaussian falloff from the true origin(s), with the falloff radius growing as the time-lapse advances. Distance from the estimate to the nearest origin is converted to meters using the room's real dimensions to assign a rating.",
+    "controls": [
+      "'Scenario' dropdown — accidental (single origin) or suspicious (two origins)",
+      "'Show burn severity' checkbox — reveal or hide the full heat gradient",
+      "Fire-spread slider — scrub the time-lapse from 0 to 100%",
+      "Click the floor — place an origin estimate marker",
+      "'Score My Origin' button — rate the estimate against the nearest true origin",
+      "'Reset' button — clear the estimate and score"
+    ]
+  }
+}
