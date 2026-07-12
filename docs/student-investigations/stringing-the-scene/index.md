@@ -3,6 +3,8 @@ title: Stringing the Scene — Finding the Area of Origin
 description: A hands-on lab where investigators run strings back from directional bloodstains to locate the 2D area of convergence, then use impact angles to project the strings into 3D and pinpoint the area of origin where the victim was struck.
 ---
 
+![Cover Image](./cover.png)
+
 # Stringing the Scene — Finding the Area of Origin
 
 !!! mascot-welcome "Welcome, Investigators!"

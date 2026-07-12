@@ -121,6 +121,8 @@ one student or a small group.
 
 -   **[Stringing the Scene](stringing-the-scene/index.md)**
 
+    ![Stringing the Scene — Finding the Area of Origin cover](stringing-the-scene/cover.png)
+
     🔀 Combination · Ch 7
 
     Reconstruct the 3D area of origin of a bloodstain pattern.
