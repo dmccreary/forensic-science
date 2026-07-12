@@ -232,7 +232,9 @@ nav:
 
   - FAQ: faq.md
   - Glossary: glossary.md
-  - Teacher's Guide: teachers-guide/index.md
+  - Teacher's Guide:
+      - teachers-guide/index.md
+      - Student Investigations Summary: teachers-guide/student-investigations-summary.md
   - License: license.md
   - Contact: contact.md
 
