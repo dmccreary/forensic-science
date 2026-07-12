@@ -115,7 +115,37 @@ nav:
           - Quiz: chapters/19-aviation-crash-forensics/quiz.md
           - Annotated References: chapters/19-aviation-crash-forensics/references.md
 
-  - Student Investigations: student-investigations/ideas.md
+  - Student Investigations:
+      - student-investigations/index.md
+      - "Lab Idea Catalog": student-investigations/ideas.md
+      - "1. Locard's Silent Witness": student-investigations/locard-silent-witness/index.md
+      - "2. Map the Scene — Triangulation": student-investigations/map-the-scene-triangulation/index.md
+      - "3. The Dusting Detective": student-investigations/dusting-detective-latent-prints/index.md
+      - "4. Cold Case — AFIS Classification": student-investigations/cold-case-afis-classification/index.md
+      - "5. Human or Beast?": student-investigations/human-or-beast-medullary-index/index.md
+      - "6. Fiber Under Fire": student-investigations/fiber-under-fire/index.md
+      - "7. The Broken Window": student-investigations/broken-window-refractive-index/index.md
+      - "8. Which Blow Came First?": student-investigations/glass-fracture-sequencing/index.md
+      - "9. Soil Signatures": student-investigations/soil-signatures/index.md
+      - "10. Is It Blood?": student-investigations/kastle-meyer-blood-test/index.md
+      - "11. Type the Blood": student-investigations/type-the-blood/index.md
+      - "12. Reading the Spatter": student-investigations/reading-the-spatter-angle/index.md
+      - "13. Stringing the Scene": student-investigations/stringing-the-scene/index.md
+      - "14. From Strawberry to Suspect": student-investigations/dna-extraction-str-match/index.md
+      - "15. Beat the Odds": student-investigations/random-match-probability/index.md
+      - "16. Color-Test Chemistry": student-investigations/color-test-drug-screening/index.md
+      - "17. Point of Origin": student-investigations/point-of-origin-burn-pattern/index.md
+      - "18. Bones Tell Tales": student-investigations/bones-tell-tales/index.md
+      - "19. The Bug Clock": student-investigations/the-bug-clock-pmi/index.md
+      - "20. Toolmarks & Impressions": student-investigations/toolmarks-impressions/index.md
+      - "21. Which Pen Wrote the Note?": student-investigations/ink-chromatography/index.md
+      - "22. Forged or Genuine?": student-investigations/handwriting-examination/index.md
+      - "23. Hash It Out": student-investigations/hash-it-out/index.md
+      - "24. Metadata Detective": student-investigations/metadata-detective-exif/index.md
+      - "25. Locate the Phone": student-investigations/cell-tower-triangulation/index.md
+      - "26. Mapping the Conspiracy": student-investigations/mapping-the-conspiracy/index.md
+      - "27. Reconstructing the Debris Field": student-investigations/debris-field-reconstruction/index.md
+      - "28. Face in the Crowd": student-investigations/face-in-the-crowd/index.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
@@ -192,6 +222,7 @@ nav:
 
   - FAQ: faq.md
   - Glossary: glossary.md
+  - Teacher's Guide: teachers-guide/index.md
 
   - License: license.md
   - Contact: contact.md
