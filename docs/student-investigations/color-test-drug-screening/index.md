@@ -3,6 +3,8 @@ title: Color-Test Chemistry — Presumptive Drug Screening
 description: A combination lab where investigators run safe household color spot tests on simulant powders, build a color key, then use a simulated GC-MS peak match to confirm an identity — learning why field color tests can only ever be presumptive.
 ---
 
+![Cover Image](./cover.png)
+
 # Color-Test Chemistry — Presumptive Drug Screening
 
 !!! mascot-welcome "Welcome, Investigators!"

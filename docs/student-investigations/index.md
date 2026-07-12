@@ -145,6 +145,8 @@ one student or a small group.
 
 -   **[Color-Test Chemistry](color-test-drug-screening/index.md)**
 
+    ![Color-Test Chemistry — Presumptive Drug Screening cover](color-test-drug-screening/cover.png)
+
     🔀 Combination · Ch 9
 
     Screen safe unknown powders with color spot tests, then confirm by simulated GC-MS.
