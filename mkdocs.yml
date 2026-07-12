@@ -316,6 +316,7 @@ exclude_docs: |
   **/image-prompt*.md
   **/image-prompts*.md
   **/cover-prompt.md
+  **/cover-image-prompt.md
   img/cover-image-prompt.md
   img/mascot/character-sheet.md
   **/TODO.md
