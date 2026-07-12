@@ -225,6 +225,8 @@ one student or a small group.
 
 -   **[Mapping the Conspiracy](mapping-the-conspiracy/index.md)**
 
+    ![Mapping the Conspiracy — Social Network Analysis cover](mapping-the-conspiracy/cover.png)
+
     💻 Virtual · Ch 18
 
     Build a network graph and find the ringleader using centrality.

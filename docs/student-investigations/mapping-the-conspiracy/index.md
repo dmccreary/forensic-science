@@ -3,6 +3,8 @@ title: Mapping the Conspiracy — Social Network Analysis
 description: A virtual lab where investigators turn seized call logs and social-media connections into a network graph, then use degree and betweenness centrality to identify the ringleader and the broker who links two cells — proving that structure, not just content, reveals who's who.
 ---
 
+![Cover Image](./cover.png)
+
 # Mapping the Conspiracy — Social Network Analysis
 
 !!! mascot-welcome "Welcome, Investigators!"
