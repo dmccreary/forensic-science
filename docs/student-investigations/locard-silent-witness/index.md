@@ -3,6 +3,8 @@ title: Locard's Silent Witness — Trace Evidence Transfer
 description: A hands-on lab where investigators prove that every contact leaves a trace by documenting the two-way transfer of fibers, hairs, and glitter between two surfaces and using it to include or exclude a suspect.
 ---
 
+![Cover Image](./cover.png)
+
 # Locard's Silent Witness — Trace Evidence Transfer
 
 !!! mascot-welcome "Welcome, Investigators!"

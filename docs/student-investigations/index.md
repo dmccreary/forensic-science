@@ -25,6 +25,8 @@ one student or a small group.
 
 -   ✅ **[Locard's Silent Witness](locard-silent-witness/index.md)**
 
+    ![Locard's Silent Witness cover](locard-silent-witness/cover.png)
+
     🧪 Physical · Ch 1, 2, 4
 
     Prove every contact leaves a trace by documenting two-way fiber and glitter transfer between surfaces.
