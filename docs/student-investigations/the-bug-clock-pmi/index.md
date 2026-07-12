@@ -3,6 +3,8 @@ title: The Bug Clock — Estimating Time of Death
 description: A hands-on lab where investigators measure blowfly larvae, accumulate degree-hours from a temperature log, and back-calculate the minimum post-mortem interval — the insect timeline that survives when nothing else can pin down time of death.
 ---
 
+![Cover Image](./cover.png)
+
 # The Bug Clock — Estimating Time of Death
 
 !!! mascot-welcome "Welcome, Investigators!"

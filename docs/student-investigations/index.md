@@ -169,6 +169,8 @@ one student or a small group.
 
 -   **[The Bug Clock](the-bug-clock-pmi/index.md)**
 
+    ![The Bug Clock — Estimating Time of Death cover](the-bug-clock-pmi/cover.png)
+
     🔀 Combination · Ch 12
 
     Estimate time of death from larval length and accumulated degree hours.
