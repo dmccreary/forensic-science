@@ -3,6 +3,8 @@ title: Locate the Phone — Cell Tower Triangulation
 description: A virtual lab where investigators use Call Detail Records and signal data from three cell towers to triangulate a phone's probable location during the crime window, then confront the real limit of the method — a sector, not a single point on the map.
 ---
 
+![Cover Image](./cover.png)
+
 # Locate the Phone — Cell Tower Triangulation
 
 !!! mascot-welcome "Welcome, Investigators!"

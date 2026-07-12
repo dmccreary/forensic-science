@@ -217,6 +217,8 @@ one student or a small group.
 
 -   **[Locate the Phone](cell-tower-triangulation/index.md)**
 
+    ![Locate the Phone — Cell Tower Triangulation cover](cell-tower-triangulation/cover.png)
+
     💻 Virtual · Ch 17
 
     Triangulate a phone from cell-tower records and state the uncertainty.
