@@ -3,6 +3,8 @@ title: Map the Scene — Triangulation Documentation
 description: A hands-on lab where investigators produce a scaled crime-scene sketch by triangulating each piece of evidence from two fixed reference points, then prove its accuracy when a rival team reconstructs the scene from the sketch alone.
 ---
 
+![Cover Image](./cover.png)
+
 # Map the Scene — Triangulation Documentation
 
 !!! mascot-welcome "Welcome, Investigators!"

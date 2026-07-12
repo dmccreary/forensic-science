@@ -33,6 +33,8 @@ one student or a small group.
 
 -   ✅ **[Map the Scene — Triangulation](map-the-scene-triangulation/index.md)**
 
+    ![Map the Scene — Triangulation Documentation cover](map-the-scene-triangulation/cover.png)
+
     🧪 Physical · Ch 2
 
     Produce a scaled crime-scene sketch by triangulation, then prove it by reconstruction.
