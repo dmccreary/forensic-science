@@ -23,13 +23,18 @@ level.
 **28 investigations:** 9 Hands-on Physical · 8 Pure Virtual · 11 Hybrid.
 
 <style>
-.si-table-wrap{overflow-x:auto;margin:1.2rem 0;-webkit-overflow-scrolling:touch;}
-table.si-table{border-collapse:collapse;width:100%;font-size:.78rem;min-width:52rem;}
-table.si-table th,table.si-table td{border:1px solid var(--md-default-fg-color--lightest);padding:.5rem .6rem;text-align:left;vertical-align:top;}
-table.si-table thead th{background:var(--md-primary-fg-color);color:var(--md-primary-bg-color);white-space:nowrap;user-select:none;position:sticky;top:0;z-index:1;}
+.si-table-wrap{overflow-x:auto;margin:1.2rem 0;-webkit-overflow-scrolling:touch;max-width:100%;}
+table.si-table{border-collapse:collapse;width:100%;font-size:.78rem;table-layout:fixed;}
+table.si-table col.si-c-name{width:22%;}
+table.si-table col.si-c-type{width:16%;}
+table.si-table col.si-c-cost{width:8%;}
+table.si-table col.si-c-risk{width:8%;}
+table.si-table col.si-c-desc{width:46%;}
+table.si-table th,table.si-table td{border:1px solid var(--md-default-fg-color--lightest);padding:.5rem .55rem;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:break-word;}
+table.si-table thead th{background:var(--md-primary-fg-color);color:var(--md-primary-bg-color);user-select:none;position:sticky;top:0;z-index:1;}
 table.si-table thead th.si-sortable{cursor:pointer;}
 table.si-table thead th.si-sortable:hover{filter:brightness(1.08);}
-table.si-table thead th .si-caret{font-size:.72em;opacity:.7;margin-left:.25rem;}
+table.si-table thead th .si-caret{font-size:.72em;opacity:.7;margin-left:.2rem;}
 table.si-table thead th[aria-sort="ascending"] .si-caret,
 table.si-table thead th[aria-sort="descending"] .si-caret{opacity:1;}
 table.si-table tbody tr:nth-child(even){background:var(--md-default-fg-color--lightest);}
@@ -39,12 +44,18 @@ table.si-table td a{font-weight:600;}
 .si-risk-low{background:#d7f2dd;color:#116139;}
 .si-risk-med{background:#ffedcc;color:#8a4b00;}
 .si-risk-high{background:#ffd8d5;color:#a2140b;}
-.si-type{white-space:nowrap;}
-.si-cost{white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums;}
+.si-cost{white-space:nowrap;font-variant-numeric:tabular-nums;}
+@media (max-width:480px){
+  table.si-table{font-size:.72rem;}
+  table.si-table th,table.si-table td{padding:.4rem .38rem;}
+}
 </style>
 
 <div class="si-table-wrap" markdown="0">
 <table class="si-table" id="siTable">
+<colgroup>
+<col class="si-c-name"><col class="si-c-type"><col class="si-c-cost"><col class="si-c-risk"><col class="si-c-desc">
+</colgroup>
 <thead>
 <tr>
 <th class="si-sortable" data-type="text" aria-sort="none">Investigation<span class="si-caret">⇅</span></th>
