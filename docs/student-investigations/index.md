@@ -113,6 +113,8 @@ one student or a small group.
 
 -   **[Reading the Spatter](reading-the-spatter-angle/index.md)**
 
+    ![Reading the Spatter — Angle of Impact cover](reading-the-spatter-angle/cover.png)
+
     🔀 Combination · Ch 7
 
     Measure stains and calculate the impact angle from width and length.

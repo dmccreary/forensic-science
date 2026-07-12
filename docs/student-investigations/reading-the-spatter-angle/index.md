@@ -3,6 +3,8 @@ title: Reading the Spatter — Angle of Impact
 description: A hands-on lab where investigators drip a blood simulant onto paper set at known angles, measure each stain's width and length, and calculate the angle of impact with the arcsin(W/L) formula, then compare their results to the true angles.
 ---
 
+![Cover Image](./cover.png)
+
 # Reading the Spatter — Angle of Impact
 
 !!! mascot-welcome "Welcome, Investigators!"
