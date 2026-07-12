@@ -97,6 +97,8 @@ one student or a small group.
 
 -   **[Is It Blood?](kastle-meyer-blood-test/index.md)**
 
+    ![Is It Blood? The Kastle-Meyer Presumptive Test cover](kastle-meyer-blood-test/cover.png)
+
     🧪 Physical · Ch 6
 
     Run a presumptive blood test and reason about false positives.

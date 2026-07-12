@@ -3,6 +3,8 @@ title: Is It Blood? The Kastle-Meyer Presumptive Test
 description: A physical bench lab where investigators run a Kastle-Meyer-style presumptive test on four reddish-brown stains, interpret the pink color change, and reason about false positives and why a presumptive test only screens.
 ---
 
+![Cover Image](./cover.png)
+
 # Is It Blood? The Kastle-Meyer Presumptive Test
 
 !!! mascot-welcome "Welcome, Investigators!"
