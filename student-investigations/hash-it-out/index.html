@@ -1,0 +1,2313 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A digital lab where investigators compute MD5 and SHA-256 hashes of an evidence file, watch a single changed character rewrite the entire hash, and use hash matching to prove which of three seized files is the untouched original.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/student-investigations/hash-it-out/">
+      
+      
+        <link rel="prev" href="../handwriting-examination/">
+      
+      
+        <link rel="next" href="../metadata-detective-exif/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Hash It Out — Digital Evidence Integrity - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7NNDDETC34"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7NNDDETC34",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7NNDDETC34",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hash-it-out-digital-evidence-integrity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hash It Out — Digital Evidence Integrity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Student Investigations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Student Investigations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab Idea Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../locard-silent-witness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Locard's Silent Witness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-the-scene-triangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Map the Scene — Triangulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dusting-detective-latent-prints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. The Dusting Detective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cold-case-afis-classification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Cold Case — AFIS Classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-or-beast-medullary-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Human or Beast?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiber-under-fire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Fiber Under Fire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../broken-window-refractive-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. The Broken Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glass-fracture-sequencing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Which Blow Came First?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soil-signatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Soil Signatures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kastle-meyer-blood-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Is It Blood?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type-the-blood/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Type the Blood
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reading-the-spatter-angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Reading the Spatter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stringing-the-scene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Stringing the Scene
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dna-extraction-str-match/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. From Strawberry to Suspect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random-match-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Beat the Odds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../color-test-drug-screening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Color-Test Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../point-of-origin-burn-pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Point of Origin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bones-tell-tales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Bones Tell Tales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-bug-clock-pmi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. The Bug Clock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolmarks-impressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Toolmarks & Impressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ink-chromatography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Which Pen Wrote the Note?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwriting-examination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Forged or Genuine?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    23. Hash It Out
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    23. Hash It Out
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-a-fingerprint-for-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background: A Fingerprint for Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background: A Fingerprint for Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-the-forensic-imaging-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore: The Forensic Imaging Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-microsim-live-hash-tamper-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposed MicroSim: Live Hash &amp; Tamper Detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teacher-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teacher Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata-detective-exif/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Metadata Detective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cell-tower-triangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Locate the Phone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping-the-conspiracy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Mapping the Conspiracy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debris-field-reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Reconstructing the Debris Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../face-in-the-crowd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    28. Face in the Crowd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teachers-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teacher's Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-a-fingerprint-for-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background: A Fingerprint for Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background: A Fingerprint for Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-the-forensic-imaging-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore: The Forensic Imaging Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-microsim-live-hash-tamper-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposed MicroSim: Live Hash &amp; Tamper Detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teacher-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teacher Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/student-investigations/hash-it-out/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="hash-it-out-digital-evidence-integrity">Hash It Out — Digital Evidence Integrity<a class="headerlink" href="#hash-it-out-digital-evidence-integrity" title="Permanent link">&para;</a></h1>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" /></p>
+<p>A hard drive can hold a case's entire story — but how do you prove that not
+one single bit changed between the crime scene and the courtroom? Today you'll
+learn the trick digital investigators trust: a <strong>cryptographic hash</strong>, a tiny
+fingerprint that betrays even the smallest tampering. Follow the evidence!</p>
+</div>
+<h2 id="the-case">The Case<a class="headerlink" href="#the-case" title="Permanent link">&para;</a></h2>
+<p>A laptop was seized from a suspect and handed to the digital-forensics unit.
+Before anyone opened a single file, an analyst made a <strong>bit-stream copy</strong> — an
+exact, bit-for-bit duplicate of the drive — so the original could stay untouched
+in the evidence locker. Weeks later, the defense claims the copy was <strong>altered</strong>
+after seizure.</p>
+<p>You have three files that all claim to be the original evidence file, plus the
+<strong>hash value</strong> the analyst recorded the day it was seized. Only one of the three
+is the genuine, unaltered original. Your job: use hashing to prove — mathematically
+— which file is authentic and which two have been changed, even if the change is
+a single character.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this investigation you will be able to:</p>
+<ol>
+<li><strong>Explain</strong> why investigators hash a drive <em>before and after</em> imaging.</li>
+<li><strong>Compute</strong> the MD5 and SHA-256 hash of an evidence file.</li>
+<li><strong>Analyze</strong> the avalanche effect by altering one character and re-hashing.</li>
+<li><strong>Evaluate</strong> three files against a known hash to authenticate the original.</li>
+</ol>
+<h2 id="quick-facts">Quick Facts<a class="headerlink" href="#quick-facts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lab type</strong></td>
+<td>🔀 Combination (hands-on tool + reasoning)</td>
+</tr>
+<tr>
+<td><strong>Group size</strong></td>
+<td>2 investigators</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>40–50 minutes</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>$0 — computer-based</td>
+</tr>
+<tr>
+<td><strong>Ties to</strong></td>
+<td><a href="../../chapters/15-digital-forensics/">Ch 15 — MD5 &amp; SHA-256 Hash Functions, Hash Verification, Forensic Imaging, Bit-Stream Copy, Write-Blocker Hardware</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
+<p>Per group:</p>
+<ul>
+<li><strong>None — a laptop and a browser.</strong></li>
+<li>The instructor's provided sample evidence files and the recorded "day-of-seizure"
+  hash card.</li>
+<li><em>Assumes access to one computer per group.</em></li>
+</ul>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Data-Integrity Ground Rules</p>
+<p><img alt="Trace looking alert" class="mascot-admonition-img" src="../../img/mascot/warning.png" /></p>
+<ul>
+<li>Hash <strong>only the sample files</strong> the instructor provides. Never hash a real
+  person's private files "to test it" — that is someone else's evidence.</li>
+<li>In a real case, altering a seized file is a <strong>crime</strong> and breaks the chain
+  of custody. In this lab you <em>simulate</em> tampering to learn how it's caught.</li>
+<li>A hash proves a file <strong>changed</strong>; it does not prove <strong>who</strong> changed it or
+  <strong>what</strong> the file contains. Keep your claims to what the math supports.</li>
+</ul>
+</div>
+<h2 id="background-a-fingerprint-for-data">Background: A Fingerprint for Data<a class="headerlink" href="#background-a-fingerprint-for-data" title="Permanent link">&para;</a></h2>
+<p>A <strong>cryptographic hash function</strong> takes any input — a word, a file, a whole drive
+— and produces a fixed-length string of characters called a <strong>hash</strong> or <strong>digest</strong>.
+<strong>MD5</strong> always returns 128 bits (32 hex characters); <strong>SHA-256</strong> always returns
+256 bits (64 hex characters). The same input always produces the same hash, but
+the function only runs <strong>one way</strong> — you cannot reverse a hash back into the file.</p>
+<p>The property that makes hashing powerful for evidence is the <strong>avalanche effect</strong>:
+change a single bit of the input and roughly <em>half</em> of the output bits flip. Add
+one space, swap one letter, and the new hash looks completely unrelated to the
+old one. There is no "close" — a hash either matches exactly or it doesn't.</p>
+<p>This is how investigators prove a copy is perfect. Before imaging, the analyst
+runs the drive (behind a <strong>write-blocker</strong>, so the act of reading can't alter it)
+and records its hash. After making the bit-stream copy, they hash the copy. If the
+two hashes match, the copy is a verifiable, court-ready twin of the original. If a
+single byte were disturbed, the hashes would diverge and everyone would know.</p>
+<h3 id="explore-the-forensic-imaging-workflow">Explore: The Forensic Imaging Workflow<a class="headerlink" href="#explore-the-forensic-imaging-workflow" title="Permanent link">&para;</a></h3>
+<iframe src="../../sims/forensic-imaging-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Forensic Imaging Workflow Interactive MicroSim</summary>
+<p>Type: microsim<br/>
+<strong>sim-id:</strong> forensic-imaging-workflow<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Sequence the forensic-imaging workflow and identify where
+hashing verifies integrity at each step (Bloom Level 2 — Understand).</p>
+</details>
+<p>Step through the workflow and notice <strong>where the hash is taken</strong> — once on the
+original, once on the copy. That before-and-after pair is the whole point. Now
+you'll compute those hashes yourself.</p>
+<h3 id="proposed-microsim-live-hash-tamper-detector">Proposed MicroSim: Live Hash &amp; Tamper Detector<a class="headerlink" href="#proposed-microsim-live-hash-tamper-detector" title="Permanent link">&para;</a></h3>
+<details>
+<summary>Live Hash &amp; Tamper Detector Interactive MicroSim</summary>
+<p>Type: microsim<br/>
+<strong>sim-id:</strong> live-hash-tamper-detector<br/>
+<strong>Library:</strong> HTML / JavaScript (Web Crypto API, in-browser)<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Compute and compare MD5 and SHA-256 digests and demonstrate
+the avalanche effect from a single-character change (Bloom Level 3 — Apply).</p>
+<p>Design: A text box holds the "evidence" content. A <strong>Hash</strong> button computes the
+MD5 and SHA-256 digests live and displays both in full. A <strong>Tamper</strong> toggle flips
+one byte of the input and re-hashes, coloring every changed hex character so the
+avalanche effect is visible at a glance. A <strong>Compare</strong> mode accepts two files (or
+two text blocks), hashes both, and reports a green <strong>MATCH</strong> or a red <strong>MISMATCH</strong>
+with the count of differing characters. Controls: a text input, a <code>Hash</code> button,
+a <code>Tamper</code> checkbox, and a <code>Compare</code> button.</p>
+</details>
+<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
+<p><strong>Part 1 — Hash the original.</strong></p>
+<ol>
+<li>Open the hashing tool in your browser. Load the instructor's <strong>original
+   evidence file</strong> (<code>evidence.txt</code>).</li>
+<li>Compute its <strong>MD5</strong> and <strong>SHA-256</strong> hashes. Record the first 8 and last 8
+   characters of each in your data table (writing all 64 is optional — the ends
+   are enough to compare).</li>
+<li>Compare your hashes to the <strong>"day-of-seizure" hash card</strong>. They should match
+   exactly. You have now verified the original.</li>
+</ol>
+<p><strong>Part 2 — Watch the avalanche.</strong></p>
+<ol>
+<li>Change <strong>one</strong> character in the file — flip a single letter, or add one space.</li>
+<li>Re-compute both hashes. Record them. Compare, character by character, to your
+   Part 1 hashes.</li>
+<li>Count roughly how many characters changed. This is the <strong>avalanche effect</strong>:
+   a one-character edit rewrites nearly the whole fingerprint.</li>
+</ol>
+<p><strong>Part 3 — Find the untouched original.</strong></p>
+<ol>
+<li>The instructor gives you three files: <code>seized_A</code>, <code>seized_B</code>, <code>seized_C</code>. Each
+   claims to be the original.</li>
+<li>Hash all three and compare each hash to the recorded day-of-seizure hash.</li>
+<li>Exactly <strong>one</strong> will match. That file is the authentic, unaltered original —
+   the other two have been tampered with. Record your verdict and the evidence.</li>
+</ol>
+<h2 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h2>
+<p>Record the first-8 and last-8 hex characters of each hash.</p>
+<table>
+<thead>
+<tr>
+<th>File / step</th>
+<th>MD5 (first…last)</th>
+<th>SHA-256 (first…last)</th>
+<th>Matches seizure hash?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original (Part 1)</td>
+<td></td>
+<td></td>
+<td>—</td>
+</tr>
+<tr>
+<td>After 1-char edit (Part 2)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>seized_A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>seized_B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>seized_C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="analysis-questions">Analysis Questions<a class="headerlink" href="#analysis-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Which seized file is the authentic original? State the exact hash evidence
+   that lets you <strong>exclude</strong> the other two.</li>
+<li>In Part 2, about how many hash characters changed when you edited a single
+   character? What does this tell you about detecting "small" tampering?</li>
+<li>Why does an investigator hash the drive <strong>both</strong> before and after imaging,
+   rather than just once?</li>
+<li>A hash proves a file changed but not <em>what</em> it now contains or <em>who</em> changed
+   it. Write one sentence a careful investigator could testify to, and one an
+   over-reaching one might wrongly claim.</li>
+<li>MD5 is older and has known weaknesses; modern practice prefers SHA-256. Why
+   might a lab still record <strong>both</strong> hashes for the same evidence file?</li>
+</ol>
+<h2 id="deliverable">Deliverable<a class="headerlink" href="#deliverable" title="Permanent link">&para;</a></h2>
+<p>Turn in a one-page <strong>Evidence Integrity Report</strong> that names the authentic original,
+lists the recorded seizure hash and the matching computed hash, and explains — in
+plain language a jury could follow — how the avalanche effect let you rule out the
+two tampered files.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Does the Data Tell Us?</p>
+<p><img alt="Trace peering through a magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" /></p>
+<p>A hash match doesn't tell you the file is <em>innocent</em> — it tells you the file
+is <strong>unchanged since it was hashed</strong>. That's a narrower, stronger claim, and
+it's exactly the kind of precision a courtroom rewards. Say what the math
+proves, and nothing more.</p>
+</div>
+<details class="question">
+<summary>Extension Challenge: The Collision Question</summary>
+<p>A <strong>hash collision</strong> is when two <em>different</em> inputs produce the <em>same</em> hash.
+Researchers have engineered MD5 collisions on purpose; nobody has done it for
+SHA-256. Research one real MD5 collision example and write a short paragraph:
+why does the mere <em>possibility</em> of a collision matter for evidence, and why is
+SHA-256 the safer choice today?</p>
+</details>
+<h2 id="teacher-notes">Teacher Notes<a class="headerlink" href="#teacher-notes" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>Setup, timing, and grading (click to expand)</summary>
+<ul>
+<li><strong>Prep:</strong> Create <code>evidence.txt</code> with a short paragraph. Make <code>seized_A/B/C</code>
+  by copying it three times, then quietly editing two of the three (change one
+  character in each). Record the true hash of the untouched copy on the "hash
+  card" you hand out. Any browser-based hasher works; the proposed MicroSim
+  keeps everything offline and private.</li>
+<li><strong>The reveal:</strong> Have groups commit to which file is authentic <strong>before</strong> you
+  confirm — this rewards trusting the math over guessing.</li>
+<li><strong>Differentiation:</strong> For a quicker run, use SHA-256 only. For a challenge,
+  add a fourth file that is byte-identical to the original (same hash) to show
+  that identical content = identical hash, regardless of filename.</li>
+<li><strong>Assessment focus:</strong> Reward students who cite the exact matching/mismatching
+  hash as evidence and who state the <em>narrow</em> claim a hash supports (unchanged
+  since hashing), not an over-broad one.</li>
+</ul>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising a magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" /></p>
+<p>You just caught a single altered character hiding inside a file — using nothing
+but a fingerprint made of math. That's the quiet superpower behind every piece
+of digital evidence that ever held up in court. <strong>Follow the evidence!</strong></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../handwriting-examination/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 22. Forged or Genuine?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                22. Forged or Genuine?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../metadata-detective-exif/" class="md-footer__link md-footer__link--next" aria-label="Next: 24. Metadata Detective">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                24. Metadata Detective
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

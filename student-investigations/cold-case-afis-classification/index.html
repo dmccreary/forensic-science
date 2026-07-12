@@ -1,0 +1,2391 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A virtual investigation where investigators classify a museum-heist latent print, count its minutiae, and search a six-suspect database to learn why AFIS ranks candidates while a human examiner makes the final call.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/student-investigations/cold-case-afis-classification/">
+      
+      
+        <link rel="prev" href="../dusting-detective-latent-prints/">
+      
+      
+        <link rel="next" href="../human-or-beast-medullary-index/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Cold Case — AFIS Classification Challenge - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7NNDDETC34"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7NNDDETC34",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7NNDDETC34",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cold-case-afis-classification-challenge" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cold Case — AFIS Classification Challenge
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Student Investigations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Student Investigations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab Idea Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../locard-silent-witness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Locard's Silent Witness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-the-scene-triangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Map the Scene — Triangulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dusting-detective-latent-prints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. The Dusting Detective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Cold Case — AFIS Classification
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4. Cold Case — AFIS Classification
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-how-a-machine-reads-a-fingerprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background: How a Machine Reads a Fingerprint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background: How a Machine Reads a Fingerprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-afis-search-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore: AFIS Search Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-microsim-minutiae-tagging-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposed MicroSim: Minutiae-Tagging Canvas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teacher-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teacher Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-or-beast-medullary-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Human or Beast?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiber-under-fire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Fiber Under Fire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../broken-window-refractive-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. The Broken Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glass-fracture-sequencing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Which Blow Came First?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soil-signatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Soil Signatures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kastle-meyer-blood-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Is It Blood?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type-the-blood/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Type the Blood
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reading-the-spatter-angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Reading the Spatter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stringing-the-scene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Stringing the Scene
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dna-extraction-str-match/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. From Strawberry to Suspect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random-match-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Beat the Odds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../color-test-drug-screening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Color-Test Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../point-of-origin-burn-pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Point of Origin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bones-tell-tales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Bones Tell Tales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-bug-clock-pmi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. The Bug Clock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolmarks-impressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Toolmarks & Impressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ink-chromatography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Which Pen Wrote the Note?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwriting-examination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Forged or Genuine?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hash-it-out/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Hash It Out
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata-detective-exif/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Metadata Detective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cell-tower-triangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Locate the Phone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping-the-conspiracy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Mapping the Conspiracy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debris-field-reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Reconstructing the Debris Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../face-in-the-crowd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    28. Face in the Crowd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teachers-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teacher's Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-how-a-machine-reads-a-fingerprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background: How a Machine Reads a Fingerprint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background: How a Machine Reads a Fingerprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-afis-search-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore: AFIS Search Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-microsim-minutiae-tagging-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposed MicroSim: Minutiae-Tagging Canvas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teacher-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teacher Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/student-investigations/cold-case-afis-classification/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="cold-case-afis-classification-challenge">Cold Case — AFIS Classification Challenge<a class="headerlink" href="#cold-case-afis-classification-challenge" title="Permanent link">&para;</a></h1>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" /></p>
+<p>A print sat in an evidence file for eleven years waiting for someone patient
+enough to work it. Today that someone is you. You'll classify it, count its
+tiny landmarks, and let the database hand you a ranked list of suspects —
+then decide who's really guilty. The computer narrows the field; <strong>you</strong> make
+the call. Follow the evidence!</p>
+</div>
+<h2 id="the-case">The Case<a class="headerlink" href="#the-case" title="Permanent link">&para;</a></h2>
+<p>Eleven years ago, a jade figurine vanished from the Meridian Museum during a
+private after-hours event. The only physical evidence was a single <strong>latent
+print</strong> lifted from the empty display mount — smudged, partial, and never
+matched. The case went cold. Now a grant has funded a re-examination, and six
+people from the original guest-and-staff list are still on record in the
+database:</p>
+<table>
+<thead>
+<tr>
+<th>Suspect</th>
+<th>Role that night</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-1</td>
+<td>Night security guard</td>
+</tr>
+<tr>
+<td>S-2</td>
+<td>Visiting curator</td>
+</tr>
+<tr>
+<td>S-3</td>
+<td>Catering staff</td>
+</tr>
+<tr>
+<td>S-4</td>
+<td>Donor / VIP guest</td>
+</tr>
+<tr>
+<td>S-5</td>
+<td>Cleaning contractor</td>
+</tr>
+<tr>
+<td>S-6</td>
+<td>Museum board member</td>
+</tr>
+</tbody>
+</table>
+<p>Your job: classify the cold-case print, count its minutiae, run it against all
+six database records the way an <strong>Automated Fingerprint Identification System
+(AFIS)</strong> would, and produce a <strong>ranked candidate list</strong> — then explain why the
+top rank is a <em>lead</em>, not a <em>verdict</em>.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this investigation you will be able to:</p>
+<ol>
+<li><strong>Classify</strong> a latent print by pattern type (loop, whorl, or arch) and locate
+   its core and delta.</li>
+<li><strong>Identify</strong> and count minutiae — ridge endings and bifurcations — on a
+   partial print.</li>
+<li><strong>Explain</strong> how an AFIS search produces a ranked candidate list from minutiae
+   coordinates rather than a single yes/no match.</li>
+<li><strong>Evaluate</strong> why a human examiner, not the computer, makes the final
+   identification.</li>
+</ol>
+<h2 id="quick-facts">Quick Facts<a class="headerlink" href="#quick-facts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lab type</strong></td>
+<td>💻 Virtual</td>
+</tr>
+<tr>
+<td><strong>Group size</strong></td>
+<td>1–2 investigators (one workstation)</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>35–45 minutes</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>$0 — no consumables</td>
+</tr>
+<tr>
+<td><strong>Ties to</strong></td>
+<td><a href="../../chapters/03-fingerprint-analysis/">Ch 3 — AFIS Database, Fingerprint Individualization, Minutiae Points, Pattern Classification</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
+<p>Per workstation:</p>
+<ul>
+<li>1 computer, tablet, or laptop with a browser</li>
+<li>The AFIS Search Workflow MicroSim (linked below)</li>
+<li>A printout of the six suspect exemplar cards (provided by your teacher) <strong>or</strong>
+  the on-screen database</li>
+<li>Scratch paper for tallying minutiae counts</li>
+</ul>
+<p><em>No physical consumables — this is a fully digital lab.</em></p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Fair-Search Rules</p>
+<p><img alt="Trace looking alert" class="mascot-admonition-img" src="../../img/mascot/warning.png" /></p>
+<ul>
+<li><strong>Count before you compare.</strong> Tally the cold-case print's minutiae <em>before</em>
+  you look at the suspects, so you don't unconsciously bend the evidence to
+  fit a favorite.</li>
+<li>AFIS returns a <strong>ranked list, never a "guilty" stamp.</strong> Treat the top
+  candidate as the start of your work, not the end.</li>
+<li>Record your reasoning as you go. In a real cold case, an examiner has to
+  defend every decision years later.</li>
+</ul>
+</div>
+<h2 id="background-how-a-machine-reads-a-fingerprint">Background: How a Machine Reads a Fingerprint<a class="headerlink" href="#background-how-a-machine-reads-a-fingerprint" title="Permanent link">&para;</a></h2>
+<p>An <strong>AFIS</strong> does not compare pictures of fingerprints the way you compare two
+photos. Instead, it reduces each print to a <strong>map of minutiae</strong> — the exact
+coordinates and directions of every ridge ending and <strong>bifurcation</strong> (a point
+where one ridge splits into two). A print might yield 40–100 of these points; a
+smudged partial from a crime scene might give only 8 or 10. The system then looks
+for database records whose minutiae maps <strong>overlap</strong> the crime-scene map and
+scores each one.</p>
+<p>The output is a <strong>ranked candidate list</strong>: the records most similar to the
+unknown, ordered by match score, highest first. Crucially, AFIS is a <strong>search
+tool, not a decision tool</strong>. It might return ten close candidates; it never
+declares a winner. A trained <strong>latent print examiner</strong> then compares the top
+candidates side by side and makes the actual identification — or rules them all
+out. This human-in-the-loop design exists precisely because automated scores can
+be fooled by smudges, partials, and coincidental similarity.</p>
+<p>That distinction matters for justice. In the 2004 Madrid train bombing, the FBI's
+AFIS returned Oregon lawyer <strong>Brandon Mayfield</strong> as a candidate for a latent
+found on a bag of detonators. Human examiners then <em>wrongly confirmed</em> the match,
+and he was jailed for two weeks before Spanish police identified the real source.
+The lesson forensic science took from it: a candidate list is a starting point,
+and even expert human verification carries an error rate. Now try the search
+yourself.</p>
+<h3 id="explore-afis-search-workflow">Explore: AFIS Search Workflow<a class="headerlink" href="#explore-afis-search-workflow" title="Permanent link">&para;</a></h3>
+<iframe src="../../sims/afis-search-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>AFIS Search Workflow Interactive MicroSim</summary>
+<p>Type: microsim<br/>
+<strong>sim-id:</strong> afis-search-workflow<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Explain how an AFIS search converts minutiae into a ranked
+candidate list that a human examiner then verifies (Bloom Level 2 — Understand).</p>
+</details>
+<p>Walk through each stage of the workflow: capture, feature extraction, search,
+and the ranked candidate list. Watch how the match <strong>score</strong> drops off after the
+top few candidates — that gap between rank 1 and rank 2 is a signal an examiner
+weighs, but never treats as proof on its own.</p>
+<h3 id="proposed-microsim-minutiae-tagging-canvas">Proposed MicroSim: Minutiae-Tagging Canvas<a class="headerlink" href="#proposed-microsim-minutiae-tagging-canvas" title="Permanent link">&para;</a></h3>
+<details>
+<summary>Minutiae-Tagging Canvas — proposed interactive widget (not yet built)</summary>
+<p>Type: microsim<br/>
+<strong>sim-id:</strong> minutiae-tagging-canvas<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified (proposed — no iframe yet)</p>
+<p><strong>Concept.</strong> A zoomable canvas displays a latent print image. Investigators
+click each <strong>ridge ending</strong> and each <strong>bifurcation</strong> they find. The sim scores
+the tagged points against a hidden <strong>ground-truth</strong> set (rewarding correct
+placements, penalizing missed or invented points) and then returns a <strong>ranked
+candidate list</strong> of suspects by minutiae overlap — turning the abstract "AFIS
+score" into something the investigator generates by hand.</p>
+<p><strong>Proposed controls (p5.js built-ins).</strong></p>
+<ul>
+<li><code>createButton('Reset')</code> — clear all tagged points and start over.</li>
+<li><code>createSelect()</code> — choose the print's pattern type (loop / whorl / arch)
+  before tagging.</li>
+<li><code>createSlider(1, 8, 3, 1)</code> — zoom level for inspecting fine ridge detail.</li>
+</ul>
+<p>Learning Objective: Locate and tag minutiae on a zoomable print and interpret
+the resulting ranked candidate list (Bloom Level 4 — Analyze).</p>
+<p>Until this widget is built, tag minutiae by hand on the printed exemplar cards
+using the paper procedure in Part 2 below.</p>
+</details>
+<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
+<p><strong>Part 1 — Classify the cold-case print.</strong></p>
+<ol>
+<li>Open the cold-case latent print (on screen or on your printout).</li>
+<li>Locate the <strong>core</strong> (center) and any <strong>delta</strong> (triangular ridge meeting).
+   Use the delta count to classify: <strong>arch</strong> = no delta, <strong>loop</strong> = one delta,
+   <strong>whorl</strong> = two deltas.</li>
+<li>Record the pattern type on your data sheet.</li>
+</ol>
+<p><strong>Part 2 — Tag and count the minutiae.</strong></p>
+<ol>
+<li>Working across the print, mark every <strong>ridge ending</strong> (a ridge that just
+   stops) and every <strong>bifurcation</strong> (a ridge that forks). On paper, circle each
+   one; in the proposed canvas widget, click each one.</li>
+<li>Tally your totals: number of ridge endings, number of bifurcations, and the
+   combined minutiae count. This is your unknown's "feature map."</li>
+</ol>
+<p><strong>Part 3 — Search the database and rank.</strong></p>
+<ol>
+<li>Run the AFIS Search Workflow MicroSim, or compare your feature map against
+   each of the six suspect exemplars by hand.</li>
+<li>For each suspect, note how many minutiae fall in the <strong>same relative
+   position</strong> as the unknown. Assign a rough match score.</li>
+<li>Order the six suspects into a <strong>ranked candidate list</strong>, highest score first.</li>
+<li>Take the <strong>top candidate</strong> and verify it as an examiner would: confirm the
+   pattern type agrees <em>and</em> that specific minutiae line up. Decide whether the
+   evidence supports an identification or whether the print is too limited to
+   individualize.</li>
+</ol>
+<h2 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Suspect</th>
+<th>Pattern type</th>
+<th>Ridge endings in agreement</th>
+<th>Bifurcations in agreement</th>
+<th>Match score (rank)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S-2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S-3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S-4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S-5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S-6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Cold-case print — pattern type: <strong><em>_</em></strong><em>  Total minutiae counted: <strong><em>_</em></strong></em></em></p>
+<h2 id="analysis-questions">Analysis Questions<a class="headerlink" href="#analysis-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>What pattern type is the cold-case print, and which suspects can you
+   <strong>exclude</strong> immediately on pattern type alone?</li>
+<li>Which suspect ranked <strong>first</strong> on your candidate list? Cite the specific
+   minutiae that put them at the top.</li>
+<li>AFIS returned a <em>ranked list</em>, not a single name. Explain in your own words
+   why the system is designed to rank rather than to decide.</li>
+<li>The print is a <strong>partial</strong> with fewer minutiae than a full rolled print. How
+   does a low minutiae count affect how confident your identification can be?</li>
+<li>Using the <strong>Brandon Mayfield</strong> case, explain why a human examiner's
+   confirmation is still not a guarantee. What safeguard would you add before
+   making an arrest?</li>
+</ol>
+<h2 id="deliverable">Deliverable<a class="headerlink" href="#deliverable" title="Permanent link">&para;</a></h2>
+<p>Turn in your completed <strong>ranked candidate list</strong> for all six suspects plus a
+short <strong>examiner's statement</strong>: name your top candidate, state the pattern type
+and the minutiae that support the ranking, and state honestly whether the
+partial print is sufficient to individualize or only to include. Precision of
+language is graded.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Does the Data Tell Us?</p>
+<p><img alt="Trace peering through a magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" /></p>
+<p>Here's the twist most people miss: AFIS never says "match." It says "here are
+the closest records — now a human decides." The computer is fast and tireless
+but blind to context; the examiner is slow and fallible but can reason. The
+strongest cold-case work pairs both and stays honest about the limits of a
+smudged partial print.</p>
+</div>
+<details class="question">
+<summary>Extension Challenge: The Twelve-Point Debate</summary>
+<p>Some countries once required a fixed minimum number of matching minutiae
+(often cited as 12 or 16) before declaring an identification; the United
+States uses a holistic examiner judgment instead. Research one argument for a
+numeric standard and one against it, then write which approach you'd defend
+if you were testifying — and why.</p>
+</details>
+<h2 id="teacher-notes">Teacher Notes<a class="headerlink" href="#teacher-notes" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>Setup, timing, and grading (click to expand)</summary>
+<ul>
+<li><strong>Prep:</strong> Load the AFIS Search Workflow MicroSim on each workstation and
+  print the six suspect exemplar cards plus the cold-case latent at high
+  resolution. Decide in advance which suspect is the "true" source so you can
+  confirm rankings, but keep it sealed until groups commit.</li>
+<li><strong>Sequencing matters:</strong> Insist students count minutiae in Part 2 <em>before</em>
+  seeing the suspects. This models blind analysis and blocks confirmation
+  bias — the exact failure mode behind the Mayfield error.</li>
+<li><strong>Differentiation:</strong> For a shorter run, provide the pattern-type
+  classification and have students focus only on ranking. For a challenge,
+  include two suspects with the same pattern type so minutiae are the only
+  way to separate them.</li>
+<li><strong>Assessment focus:</strong> Reward correct pattern classification, honest
+  minutiae counting, a defensible ranked list, and — above all — an
+  examiner's statement that distinguishes <em>include</em> from <em>individualize</em> and
+  acknowledges the partial-print limitation.</li>
+</ul>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising a magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" /></p>
+<p>Eleven years cold, and you just handed the ranked list that reopens the file.
+You did what AFIS can't: you reasoned. The machine narrowed six suspects to a
+front-runner, but the judgment was yours — exactly as it should be. <strong>Follow
+the evidence!</strong></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../dusting-detective-latent-prints/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. The Dusting Detective">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. The Dusting Detective
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../human-or-beast-medullary-index/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Human or Beast?">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Human or Beast?
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2291 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A hands-on lab where investigators run strings back from directional bloodstains to locate the 2D area of convergence, then use impact angles to project the strings into 3D and pinpoint the area of origin where the victim was struck.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/forensic-science/student-investigations/stringing-the-scene/">
+      
+      
+        <link rel="prev" href="../reading-the-spatter-angle/">
+      
+      
+        <link rel="next" href="../dna-extraction-str-match/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Stringing the Scene — Finding the Area of Origin - Forensic Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7NNDDETC34"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7NNDDETC34",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7NNDDETC34",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stringing-the-scene-finding-the-area-of-origin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Forensic Science" class="md-header__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Forensic Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stringing the Scene — Finding the Area of Origin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Forensic Science" class="md-nav__button md-logo" aria-label="Forensic Science" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Forensic Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/forensic-science" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Student Investigations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Student Investigations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab Idea Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../locard-silent-witness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Locard's Silent Witness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-the-scene-triangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Map the Scene — Triangulation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dusting-detective-latent-prints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. The Dusting Detective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cold-case-afis-classification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Cold Case — AFIS Classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-or-beast-medullary-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Human or Beast?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiber-under-fire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Fiber Under Fire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../broken-window-refractive-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. The Broken Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glass-fracture-sequencing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Which Blow Came First?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soil-signatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Soil Signatures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kastle-meyer-blood-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Is It Blood?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type-the-blood/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Type the Blood
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reading-the-spatter-angle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Reading the Spatter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    13. Stringing the Scene
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    13. Stringing the Scene
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-from-a-wall-of-stains-to-a-point-in-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background: From a Wall of Stains to a Point in Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background: From a Wall of Stains to a Point in Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-area-of-origin-stringing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore: Area of Origin Stringing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teacher-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teacher Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dna-extraction-str-match/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. From Strawberry to Suspect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random-match-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Beat the Odds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../color-test-drug-screening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Color-Test Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../point-of-origin-burn-pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Point of Origin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bones-tell-tales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Bones Tell Tales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-bug-clock-pmi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. The Bug Clock
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolmarks-impressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Toolmarks & Impressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ink-chromatography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Which Pen Wrote the Note?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwriting-examination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22. Forged or Genuine?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hash-it-out/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Hash It Out
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata-detective-exif/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    24. Metadata Detective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cell-tower-triangulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    25. Locate the Phone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping-the-conspiracy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    26. Mapping the Conspiracy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debris-field-reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    27. Reconstructing the Debris Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../face-in-the-crowd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    28. Face in the Crowd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teachers-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teacher's Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Case
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Facts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-from-a-wall-of-stains-to-a-point-in-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background: From a Wall of Stains to a Point in Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background: From a Wall of Stains to a Point in Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explore-area-of-origin-stringing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explore: Area of Origin Stringing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliverable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deliverable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teacher-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teacher Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/forensic-science/blob/main/docs/student-investigations/stringing-the-scene/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="stringing-the-scene-finding-the-area-of-origin">Stringing the Scene — Finding the Area of Origin<a class="headerlink" href="#stringing-the-scene-finding-the-area-of-origin" title="Permanent link">&para;</a></h1>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators!</p>
+<p><img alt="Trace waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" /></p>
+<p>Every drop on this wall came <em>from somewhere</em>. Trace each one backward along
+its flight path and the lines all crowd toward a single region of space — the
+spot where the blood was set flying. Today you'll find that spot with nothing
+but string, pins, and the angles you already know how to measure. Follow the
+evidence!</p>
+</div>
+<h2 id="the-case">The Case<a class="headerlink" href="#the-case" title="Permanent link">&para;</a></h2>
+<p>A struggle in the corner of a garage left a spray of bloodstains across the wall.
+<strong>Detective Reyes</strong> is back, and this time the question is bigger than any single
+drop: <strong>where in the room was the victim when the blow landed?</strong> The suspect,
+<strong>Mr. Halloran</strong>, claims the victim was struck while lying on the floor. The
+prosecution says the victim was standing. The bloodstains on the wall can settle
+it — if you can reconstruct the <strong>area of origin</strong>.</p>
+<p>Your job: from a set of directional stains, run strings back to the <strong>area of
+convergence</strong> in two dimensions, then use each stain's <strong>impact angle</strong> to lift
+those strings into three dimensions and estimate the <strong>height</strong> of the origin.
+Then answer the question — <strong>standing, or on the floor?</strong></p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this investigation you will be able to:</p>
+<ol>
+<li><strong>Determine</strong> the direction of travel of a directional bloodstain from its shape.</li>
+<li><strong>Locate</strong> the 2D area of convergence by extending strings back along stain paths.</li>
+<li><strong>Reconstruct</strong> the 3D area of origin using impact angle and the stringing method.</li>
+<li><strong>Interpret</strong> the height of the area of origin to test a claim about the event.</li>
+</ol>
+<h2 id="quick-facts">Quick Facts<a class="headerlink" href="#quick-facts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lab type</strong></td>
+<td>🔀 Combination (physical stringing + virtual check)</td>
+</tr>
+<tr>
+<td><strong>Group size</strong></td>
+<td>2–4 investigators</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>50–60 minutes</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>≈ $16 per group (reusable)</td>
+</tr>
+<tr>
+<td><strong>Ties to</strong></td>
+<td><a href="../../chapters/07-bloodstain-pattern-analysis/">Ch 7 — Area of Convergence, Area of Origin in 3D Space, Stringing Technique, Cast-Off Bloodstains</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h2>
+<p>Per group (≈ $16, mostly reusable):</p>
+<ul>
+<li>A <strong>mock wall + floor corner</strong> built from foam board or a cardboard box</li>
+<li>A printed <strong>directional bloodstain pattern</strong> taped to the wall (from the <em>Reading the Spatter</em> lab, or a supplied sheet)</li>
+<li>Colored <strong>string or yarn</strong> (one length per stain used)</li>
+<li><strong>Push pins</strong> or low-tack putty to anchor each string</li>
+<li><strong>Protractor</strong> and metric ruler</li>
+<li>A tape measure or meter stick to record the origin height</li>
+<li>Fine-tip marker and small angle labels for each stain</li>
+</ul>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Safety &amp; Fair-Test Rules</p>
+<p><img alt="Trace looking alert" class="mascot-admonition-img" src="../../img/mascot/warning.png" /></p>
+<ul>
+<li>Push pins are sharp — pin <strong>into the board, not toward your hand</strong>, and
+  count them back in at cleanup.</li>
+<li>Use <strong>only the well-formed elliptical stains</strong> for stringing. A round drop
+  or a smeared blob has no reliable direction and will throw your convergence
+  off.</li>
+<li>Keep each string <strong>taut and straight</strong>. A sagging string is a lie about the
+  flight path.</li>
+</ul>
+</div>
+<h2 id="background-from-a-wall-of-stains-to-a-point-in-space">Background: From a Wall of Stains to a Point in Space<a class="headerlink" href="#background-from-a-wall-of-stains-to-a-point-in-space" title="Permanent link">&para;</a></h2>
+<p>A well-formed bloodstain is directional: its <strong>narrow, pointed end shows the
+direction the drop was traveling.</strong> Draw a straight line back through the long
+axis of each stain and you're tracing its flight path in reverse. Do that for
+several stains and the lines crowd together in one small region of the wall — the
+<strong>area of convergence</strong>. That's a <strong>2D</strong> answer: it tells you <em>where on the wall
+plane</em> the drops were headed away from, but not how far out into the room, and
+not how high.</p>
+<p>To get the third dimension you add the <strong>impact angle</strong> you learned to calculate
+from width and length. Anchor a string at each stain and raise it to that stain's
+impact angle above the wall. Where the strings from several stains cross in space
+is the <strong>area of origin</strong> — the actual 3D region where the blood source was when
+it was struck. The height of that crossing is the payoff: a low origin supports
+"on the floor," a chest-high origin supports "standing." Try it clean in the
+simulator first.</p>
+<h3 id="explore-area-of-origin-stringing">Explore: Area of Origin Stringing<a class="headerlink" href="#explore-area-of-origin-stringing" title="Permanent link">&para;</a></h3>
+<iframe src="../../sims/area-of-origin-stringing/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Area of Origin Stringing Interactive MicroSim</summary>
+<p>Type: microsim<br/>
+<strong>sim-id:</strong> area-of-origin-stringing<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Learning Objective: Reconstruct the 3D area of origin of a bloodstain pattern by
+stringing stains back along their flight paths using impact angle (Bloom Level 4
+— Analyze).</p>
+</details>
+<p>Add strings one at a time and watch the <strong>area of convergence</strong> tighten as more
+stains agree, then raise them to their impact angles to see the <strong>area of origin</strong>
+lift off the wall. Notice how one bad angle spreads the whole cluster — a preview
+of the error you'll manage on the real wall.</p>
+<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
+<p><strong>Part 1 — Read direction and convergence (2D).</strong></p>
+<ol>
+<li>Number each usable directional stain on the pattern. For each, mark the
+   <strong>pointed end</strong> — that's the direction of travel.</li>
+<li>Draw (or pin a string along) the <strong>long axis</strong> of each stain and extend it
+   back across the wall.</li>
+<li>The region where the back-extended lines <strong>cross</strong> is your <strong>area of
+   convergence.</strong> Mark it and note its position on the wall.</li>
+</ol>
+<p><strong>Part 2 — Add angle to reach 3D origin.</strong></p>
+<ol>
+<li>From the <em>Reading the Spatter</em> method, record each stain's <strong>impact angle</strong>
+   (arcsin of width ÷ length). Label each stain with its angle.</li>
+<li>Anchor a string at each stain with a push pin. Raise each string <strong>out from
+   the wall at that stain's impact angle</strong>, keeping it aligned with the stain's
+   direction line.</li>
+<li>Hold or prop the strings taut. Where they <strong>converge in space</strong> is the <strong>area
+   of origin.</strong></li>
+</ol>
+<p><strong>Part 3 — Measure and decide.</strong></p>
+<ol>
+<li>Measure the <strong>height</strong> of the area of origin above the floor and its distance
+   out from the wall.</li>
+<li>Compare that height to Mr. Halloran's claim (victim on the floor) versus the
+   prosecution's (victim standing). Decide which the evidence supports.</li>
+</ol>
+<h2 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Stain #</th>
+<th>Direction (points toward…)</th>
+<th>Impact angle (°)</th>
+<th>Reaches convergence?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Area of convergence (on wall):</strong> <strong><em>_</em></strong><strong><em>_</em>  <strong>Area of origin height:</strong> </strong><strong><em>_ cm  <strong>Distance out from wall:</strong> </em></strong>___ cm</p>
+<h2 id="analysis-questions">Analysis Questions<a class="headerlink" href="#analysis-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>How did you determine each stain's <strong>direction of travel</strong> from its shape?</li>
+<li>What is the difference between the <strong>area of convergence</strong> and the <strong>area of
+   origin</strong>? Which one required the impact angles, and why?</li>
+<li>Based on your measured origin <strong>height</strong>, was the victim more likely
+   <strong>standing</strong> or <strong>on the floor</strong> when struck? Cite your number.</li>
+<li>One stain's string clearly missed the cluster. Give two reasons a single stain
+   might not converge with the others, and explain why analysts use <strong>many</strong>
+   stains rather than one.</li>
+<li>Why is an <strong>area</strong> of origin (a region) a more honest result than a single
+   exact point? Connect your answer to measurement error.</li>
+</ol>
+<h2 id="deliverable">Deliverable<a class="headerlink" href="#deliverable" title="Permanent link">&para;</a></h2>
+<p>Turn in a <strong>Reconstruction Report</strong>: your completed stain table, the measured
+area-of-origin height and distance from the wall, and a one-paragraph conclusion
+stating whether the evidence supports "standing" or "on the floor" — with the
+height that backs it up. Include a labeled photo or sketch of your strung scene.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Does the Data Tell Us?</p>
+<p><img alt="Trace peering through a magnifying glass" class="mascot-admonition-img" src="../../img/mascot/thinking.png" /></p>
+<p>Your strings don't meet at a perfect dot — they meet in a fuzzy little cloud,
+and that's correct. Real reconstructions report an <em>area</em> of origin, not a
+pinpoint, because every stain carries a little measurement error. Naming the
+uncertainty isn't weakness; it's what makes your conclusion hold up.</p>
+</div>
+<details class="question">
+<summary>Extension Challenge: Cast-Off vs. Impact</summary>
+<p>Not every pattern comes from a single origin. A <strong>cast-off</strong> pattern — blood
+flung from a swinging object — forms a line of stains that <em>won't</em> converge to
+one region. Add three stains that trend in a line rather than a cluster.
+Re-run your stringing. How would you tell an investigator you're looking at
+cast-off, not a single impact site?</p>
+</details>
+<h2 id="teacher-notes">Teacher Notes<a class="headerlink" href="#teacher-notes" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>Setup, timing, and grading (click to expand)</summary>
+<ul>
+<li><strong>Prep:</strong> Build reusable foam-board wall/floor corners once and they'll last
+  for years. Print directional patterns with a <strong>known</strong> true origin height so
+  you can score accuracy. Six to eight clean elliptical stains string best —
+  more just adds tangle.</li>
+<li><strong>Pair it with the angle lab.</strong> This investigation assumes students can
+  already compute impact angle from width ÷ length. Run <em>Reading the Spatter</em>
+  first, or supply pre-labeled angles for a shorter version.</li>
+<li><strong>Differentiation:</strong> For a shorter lab, do the 2D convergence only (no
+  angles). For a challenge, hide the true origin height and grade on how close
+  the strung estimate lands, plus a stated uncertainty range.</li>
+<li><strong>Assessment focus:</strong> Reward correct direction-of-travel reads, taut and
+  correctly-angled strings, an origin <em>region</em> rather than a false pinpoint,
+  and a conclusion tied to an actual measured height.</li>
+</ul>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Case Closed — For Now</p>
+<p><img alt="Trace raising a magnifying glass in celebration" class="mascot-admonition-img" src="../../img/mascot/celebration.png" /></p>
+<p>From a scatter of stains on a wall, you rebuilt a moment in space — how high
+off the floor the blood began its flight. That's the whole promise of
+bloodstain pattern analysis: the scene remembers, if you know how to ask.
+<strong>Follow the evidence!</strong></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../reading-the-spatter-angle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 12. Reading the Spatter">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                12. Reading the Spatter
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dna-extraction-str-match/" class="md-footer__link md-footer__link--next" aria-label="Next: 14. From Strawberry to Suspect">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                14. From Strawberry to Suspect
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
