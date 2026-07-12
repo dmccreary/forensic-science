@@ -9,11 +9,16 @@ hide:
 
 Every investigation below hands you a **mystery** and asks the evidence to
 answer it. Each one is a self-contained **Hands-On Lab** a teacher can assign to
-one student or a small group.
+one student or a small group.  We try to make every student investigation focus
+on hands on real bench skills unless the cost of doing so are out-of-range
+for a typical high-school lab.  When this occurs we use a on-line simulated
+lab.
 
-**Lab types:** 🧪 **Physical** (a real bench lab under $100 per group) · 💻
-**Virtual** (solved with stories and interactive MicroSims) · 🔀 **Combination**
-(a physical step plus a virtual step that simulates an expensive instrument).
+**Lab types:** 
+
+1. 🧪 **Physical** (a real bench lab with consumables under $50 per group)
+2. 💻 **Virtual** (solved with stories and interactive MicroSims)
+3. 🔀 **Combination** (a physical step plus a virtual step that simulates an expensive instrument)
 
 !!! tip "Two labs are ready to run"
     **[Locard's Silent Witness](locard-silent-witness/index.md)** and

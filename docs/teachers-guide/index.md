@@ -847,3 +847,11 @@ theme throughout.
 - **Reinforce lab safety** — Trace's "warning" admonitions double as the
   safety and fair-test rules for each Student Investigation; read them aloud
   before students begin bench work.
+
+## Summary of Student Investigations
+
+[Student Investigation Summary](./student-investigations-summary.md)
+
+## Forensic Science Products
+
+[Forensic Science Products](teachers-guide/products.md)

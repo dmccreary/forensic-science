@@ -212,8 +212,6 @@ nav:
     - TLC Ink Separation Interactive Diagram: sims/tlc-ink-separation/index.md
     - Triangulation Measurement Technique: sims/triangulation-measurement/index.md
 
-
-
   - Stories:
       - Overview: stories/index.md
       - Story Ideas: stories/story-ideas.md
@@ -233,8 +231,9 @@ nav:
   - FAQ: faq.md
   - Glossary: glossary.md
   - Teacher's Guide:
-      - teachers-guide/index.md
+      - Main Teachers Guide: teachers-guide/index.md
       - Student Investigations Summary: teachers-guide/student-investigations-summary.md
+      - Forensic Science Product and Kits: teachers-guide/products.md
   - License: license.md
   - Contact: contact.md
 
@@ -320,7 +319,6 @@ exclude_docs: |
   img/cover-image-prompt.md
   img/mascot/character-sheet.md
   **/TODO.md
-  teachers-guide/products.md
 
 # Rebuild on changes during `mkdocs serve`
 watch:
