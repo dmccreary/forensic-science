@@ -3,6 +3,8 @@ title: Face in the Crowd — Recognition & Algorithmic Bias
 description: A virtual lab where investigators step through a facial-recognition pipeline, run an audit that exposes uneven accuracy across demographic groups, and reach an evidence-based judgment on why a face match is an investigative lead — not proof.
 ---
 
+![Cover Image](./cover.png)
+
 # Face in the Crowd — Recognition & Algorithmic Bias
 
 !!! mascot-welcome "Welcome, Investigators!"

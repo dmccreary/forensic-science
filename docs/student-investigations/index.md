@@ -241,6 +241,8 @@ one student or a small group.
 
 -   **[Face in the Crowd](face-in-the-crowd/index.md)**
 
+    ![Face in the Crowd — Recognition & Algorithmic Bias cover](face-in-the-crowd/cover.png)
+
     💻 Virtual · Ch 16
 
     Trace a facial-recognition pipeline and evaluate its bias and admissibility.
