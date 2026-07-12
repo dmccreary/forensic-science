@@ -3,6 +3,8 @@ title: Toolmarks & Impressions — Matching the Instrument
 description: A hands-on lab where investigators press suspect tools into clay to make known impressions, then compare class and individual characteristics against a crime-scene pry mark under magnification to identify the tool that forced the door.
 ---
 
+![Cover Image](./cover.png)
+
 # Toolmarks & Impressions — Matching the Instrument
 
 !!! mascot-welcome "Welcome, Investigators!"

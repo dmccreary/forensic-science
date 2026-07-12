@@ -177,6 +177,8 @@ one student or a small group.
 
 -   **[Toolmarks & Impressions](toolmarks-impressions/index.md)**
 
+    ![Toolmarks & Impressions — Matching the Instrument cover](toolmarks-impressions/cover.png)
+
     🧪 Physical · Ch 13
 
     Match a pry mark to a tool by class and individual characteristics.
