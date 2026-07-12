@@ -233,6 +233,8 @@ one student or a small group.
 
 -   **[Reconstructing the Debris Field](debris-field-reconstruction/index.md)**
 
+    ![Reconstructing the Debris Field — Aviation Forensics cover](debris-field-reconstruction/cover.png)
+
     💻 Virtual · Ch 19
 
     Classify a crash debris field and build a probable-cause hypothesis.

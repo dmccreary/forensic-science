@@ -3,6 +3,8 @@ title: Reconstructing the Debris Field — Aviation Forensics
 description: A capstone virtual investigation where students classify a crash debris field as in-flight breakup or intact impact, sequence the wreckage, fold in radar and ADS-B path data, and run the full NTSB party-system workflow to build a probable-cause hypothesis.
 ---
 
+![Cover Image](./cover.png)
+
 # Reconstructing the Debris Field — Aviation Forensics
 
 !!! mascot-welcome "Welcome, Investigators!"
