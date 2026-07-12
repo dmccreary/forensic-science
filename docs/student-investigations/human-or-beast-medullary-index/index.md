@@ -3,6 +3,8 @@ title: Human or Beast? The Medullary Index Mystery
 description: A combination lab where investigators mount human and animal hairs, measure the medulla and shaft under a microscope, compute the medullary index, and classify a hair found clutched in a victim's hand as human or non-human.
 ---
 
+![Cover Image](./cover.png)
+
 # Human or Beast? The Medullary Index Mystery
 
 !!! mascot-welcome "Welcome, Investigators!"

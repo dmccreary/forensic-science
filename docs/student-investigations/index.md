@@ -57,6 +57,8 @@ one student or a small group.
 
 -   **[Human or Beast?](human-or-beast-medullary-index/index.md)**
 
+    ![Human or Beast? The Medullary Index Mystery cover](human-or-beast-medullary-index/cover.png)
+
     🔀 Combination · Ch 4
 
     Measure hair under a microscope and compute the medullary index to sort human from animal.
